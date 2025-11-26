@@ -2,6 +2,7 @@ import React from 'react'
 import Title from '../UiUx/Title'
 import Image from 'next/image';
 import titlewhitebg from "../../../../public/images/titlewhitebg.webp"
+import Description from '../UiUx/Description';
 
 export const logos = [
     {
@@ -51,6 +52,10 @@ const Professionalskill = () => {
             >
                 <Title
                     title={'We help students build real <br/> <sapn class="text-primary"> professional skills </span>'}
+                    text_color={'text-secondary'}
+                />
+                <Description
+                    description={'Learn what works in the real world, not just in theory'}
                     text_color={'text-secondary'}
                 />
             </div>

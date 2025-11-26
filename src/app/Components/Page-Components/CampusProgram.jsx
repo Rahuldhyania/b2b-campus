@@ -4,6 +4,7 @@ import smallbublebg from "../../../../public/images/smallbublebg.webp";
 import leaf from "../../../../public/images/leaf.webp";
 import Certificate from './Certificate';
 import Description from '../UiUx/Description';
+import Buttons from '../UiUx/Buttons';
 const items = [
     {
         icon: "/images/leaf.webp",
@@ -34,7 +35,7 @@ const items = [
 const CampusProgram = () => {
     return (
         <div>
-            <div className="skill-title-container  bg-[length:43%] bg-no-repeat bg-top py-6 relative mb-[8%]"
+            <div className="skill-title-container  bg-[length:43%] bg-no-repeat bg-top py-6 relative"
                 style={{ backgroundImage: `url(${smallbublebg.src})` }}
             >
                 <Title
@@ -47,6 +48,10 @@ const CampusProgram = () => {
                 />
             </div>
             <Certificate />
+            <div className="buttons text-[25px] flex justify-center m-auto mb-[8%]">
+                <Buttons btnname='Start Your Career Journey Today!' text_color={'text-white'} />
+            </div>
+
 
             <div className="w-full relative bottom-[56px] m-auto  max-w-[1650px] p-[1%] border-none rounded-[50px] mt-[2%] bg-[#E9E5FF] flex justify-between items-center ">
 
@@ -86,6 +91,8 @@ const CampusProgram = () => {
                 ))}
 
             </div>
+
+
         </div>
     )
 }

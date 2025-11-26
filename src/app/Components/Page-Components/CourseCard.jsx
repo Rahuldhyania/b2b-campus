@@ -2,6 +2,8 @@ import Image from "next/image";
 import graphicdesigner from "../../../../public/images/graphicdesigner.webp";
 import Truck from "../../../../public/images/Truck.webp";
 import videoeditting from "../../../../public/images/videoeditting.webp";
+import development from "../../../../public/images/development.png";
+import digitalmarketing from "../../../../public/images/digitalmarketing.webp";
 import arrowicon from "../../../../public/images/arrowicon.webp";
 
 
@@ -50,7 +52,7 @@ const courseData = [
         arrowIcon: arrowicon
     },
     {
-        image: videoeditting,
+        image: development,
         craftedBy: "Crafted by Base2Brand Infotech - A Creative Agency",
         title: "Video Editing",
         duration: ["12 Weeks", "8 Modules", "Offline/Online Training"],
@@ -64,7 +66,7 @@ const courseData = [
         arrowIcon: arrowicon
     },
     {
-        image: videoeditting,
+        image: digitalmarketing,
         craftedBy: "Crafted by Base2Brand Infotech - A Creative Agency",
         title: "Video Editing",
         duration: ["12 Weeks", "8 Modules", "Offline/Online Training"],
@@ -83,7 +85,7 @@ const CourseCard = ({ id }) => {
 
 
     return (
-        <div className="w-full max-w-[1703px] mx-auto flex flex-wrap justify-center gap-6">
+        <div className="w-full max-w-[1703px] mx-auto flex flex-wrap justify-center gap-6 mb-[4%]">
 
             {courseData.map((data, index) => (
                 <div

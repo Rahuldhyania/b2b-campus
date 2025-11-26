@@ -1,64 +1,76 @@
 import React from 'react'
+import titlewhitebg from "../../../../public/images/titlewhitebg.webp"
 import Title from '../UiUx/Title'
 import Image from 'next/image';
-import titlewhitebg from "../../../../public/images/titlewhitebg.webp"
 import Description from '../UiUx/Description';
+import Buttons from '../UiUx/Buttons';
 
 export const logos = [
     {
         id: 1,
-        src: "/images/iso.webp",
+        src: "/images/beatum.webp",
         alt: "ISO Certified"
     },
     {
         id: 2,
-        src: "/images/semrush.webp",
+        src: "/images/equatis.webp",
         alt: "Semrush Academy"
     },
     {
         id: 3,
-        src: "/images/google.webp",
+        src: "/images/b2b.webp",
         alt: "Google 5 Star"
     },
     {
         id: 4,
-        src: "/images/placement.webp",
+        src: "/images/softer.webp",
         alt: "100% Placement"
     },
     {
         id: 5,
-        src: "/images/hubspot.webp",
+        src: "/images/pixa.png",
         alt: "HubSpot Academy"
     },
     {
         id: 6,
-        src: "/images/meta.webp",
+        src: "/images/nutrition.webp",
         alt: "Meta Certification"
     },
     {
         id: 7,
-        src: "/images/facebook.webp",
+        src: "/images/bitpixel.webp",
+        alt: "Facebook Blueprint"
+    }
+    ,
+    {
+        id: 7,
+        src: "/images/amr.webp",
+        alt: "Facebook Blueprint"
+    },
+    {
+        id: 7,
+        src: "/images/billsby.webp",
+        alt: "Facebook Blueprint"
+    },
+    {
+        id: 7,
+        src: "/images/fedex.webp",
         alt: "Facebook Blueprint"
     }
 ];
-
-
-const Professionalskill = () => {
+const TopCompanys = () => {
     return (
-        <div className="bg-[linear-gradient(0deg,rgba(247,247,245,1)_0%,rgba(221,214,255,1)_100%)]  
-        style={{ backgroundSize: '100% 1300px' }}">
-            <div className="skill-title-container bg-no-repeat bg-bottom py-6"
+        <div className='main-bg'>
+            <div className="skill-title-container bg-no-repeat bg-bottom py-6 relative mb-[8%]"
                 style={{ backgroundImage: `url(${titlewhitebg.src})` }}
             >
                 <Title
-                    title={'We help students build real <br/> <sapn class="text-primary"> professional skills </span>'}
+                    title={'Students Recruited by   <br/> <sapn class="text-primary"> Top Companies </span>'}
                     text_color={'text-secondary'}
                 />
-                <Description
-                    description={'Learn what works in the real world, not just in theory'}
-                    text_color={'text-secondary'}
-                />
+
             </div>
+
             <div className="w-full">
                 <div className="flex flex-wrap justify-center gap-[15px] px-[5%] mb-[3%] mt-[3%] place-items-center">
 
@@ -79,10 +91,16 @@ const Professionalskill = () => {
 
                 </div>
             </div>
+            <Description
+                description={'Dreaming of your first big placement?'}
+                text_color={'text-secondary'}
+            />
+
+            <div className="buttons text-[25px] flex justify-center m-auto mt-[2%]">
+                <Buttons btnname='Start Your Career Journey Today!' text_color={'text-white'} />
+            </div>
         </div>
-
-
     )
 }
 
-export default Professionalskill
+export default TopCompanys

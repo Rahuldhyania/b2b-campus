@@ -39,50 +39,53 @@ export default function ScratchCards() {
     ];
 
     return (
-        <div className=" max-w-[900px] mx-auto h-[600px] w-full flex flex-wrap justify-center gap-12 mt-10 px-4">
-            {scratchCards.map((item, index) => (
-                <div
-                    key={index}
-                    className={`
+        <div className=" absolute inset-0 m-auto z-10  top-0 w-full h-full max-w-none mx-auto flex flex-wrap justify-center gap-12 mt-10 px-4">
+
+            <div className="grid grid-cols-2 max-w-[80%] w-full">
+                {scratchCards.map((item, index) => (
+                    <div
+                        key={index}
+                        className={`
             flex flex-col justify-center items-center
             transform transition duration-500
             hover:scale-105
             cursor-pointer
             ${item.rotate}
           `}
-                >
-                    {/* Card container */}
-                    <div
-                        className={`
+                    >
+                        {/* Card container */}
+                        <div
+                            className={`
               relative rounded-[30px] px-10 py-10 flex flex-col items-center
               ${item.bgColor} shadow-md shadow-opacity-50
               hover:shadow-[0_0_20px_5px_rgba(255,255,255,0.8)]
               transition-shadow duration-500
             `}
-                    >
-                        {/* Scratch image overlay */}
-                        <Image
-                            src={item.scratchImg}
-                            alt="scratch"
-                            width={220}
-                            height={80}
-                            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[75%] object-contain"
-                            priority
-                        />
+                        >
+                            {/* Scratch image overlay */}
+                            <Image
+                                src={item.scratchImg}
+                                alt="scratch"
+                                width={220}
+                                height={80}
+                                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[75%] object-contain"
+                                priority
+                            />
 
-                        {/* Title */}
-                        <h2 className="text-[42px] font-semibold text-center text-[#6346FA] tracking-wide">
-                            {item.title}
-                        </h2>
+                            {/* Title */}
+                            <h2 className="text-[42px] font-semibold text-center text-[#6346FA] tracking-wide">
+                                {item.title}
+                            </h2>
 
-                        {/* Subtitle */}
-                        <p className="text-[20px] text-black text-center mt-3 leading-tight">
-                            {item.subtitle}
-                        </p>
+                            {/* Subtitle */}
+                            <p className="text-[20px] text-black text-center mt-3 leading-tight">
+                                {item.subtitle}
+                            </p>
+                        </div>
                     </div>
-                </div>
-            ))}
+                ))}
 
+            </div>
         </div>
     );
 }

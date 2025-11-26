@@ -28,7 +28,7 @@ export default function Teachcareer() {
   ];
 
   return (
-    <div className='main-bg relative mt-[10%]'>
+    <div className='main-bg relative mt-[8%] mb-[8%]'>
       <div className="w-full relative bottom-[56px] m-auto  max-w-[1450px] p-[1%] border-none rounded-[50px] mt-[2%] bg-[#E9E5FF] flex justify-between items-center ">
 
         {items.map((item, index) => (

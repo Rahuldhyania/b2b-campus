@@ -4,6 +4,8 @@ import Banner from '../UiUx/Banner'
 import PopularCourses from './PopularCourses'
 import Teachcareer from './Teachcareer'
 import CampusProgram from './CampusProgram'
+import TopCompanys from './TopCompanys'
+import FeaturedIn from './FeaturedIn'
 
 const Homewrap = () => {
     return (
@@ -13,6 +15,8 @@ const Homewrap = () => {
             <PopularCourses />
             <Teachcareer />
             <CampusProgram />
+            <TopCompanys />
+            <FeaturedIn />
         </div>
     )
 }

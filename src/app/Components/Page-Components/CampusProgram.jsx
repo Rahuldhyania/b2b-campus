@@ -34,7 +34,7 @@ const items = [
 ];
 const CampusProgram = () => {
     return (
-        <div>
+        <div className='bg-[#F7F7F5]'>
             <div className="skill-title-container  bg-[length:43%] bg-no-repeat bg-top py-6 relative"
                 style={{ backgroundImage: `url(${smallbublebg.src})` }}
             >
@@ -48,48 +48,8 @@ const CampusProgram = () => {
                 />
             </div>
             <Certificate />
-            <div className="buttons text-[25px] flex justify-center m-auto mb-[8%]">
-                <Buttons btnname='Start Your Career Journey Today!' text_color={'text-white'} />
-            </div>
-
-
-            <div className="w-full relative bottom-[56px] m-auto  max-w-[1650px] p-[1%] border-none rounded-[50px] mt-[2%] bg-[#E9E5FF] flex justify-between items-center ">
-
-                {items.map((item, index) => (
-                    <div
-                        key={index}
-                        className="flex items-center w-full justify-center group relative"
-                    >
-
-
-                        <div className="wrap-div flex justify-center items-center gap-10 ">
-                            <div className=" flex justify-center items-center rounded-[50px]  h-[76px] w-[76px] ">
-                                <img
-                                    src={item.icon}
-                                    alt="icon"
-                                    className="w-[53px] h-[53px] object-contain"
-                                />
-                            </div>
-                            <div className='text-center '>
-                                <h3 className="text-[#6346FA] text-[36px]">
-                                    {item.title}
-                                </h3>
-                                <p className=" text-[17px]">{item.subtitle}</p>
-                            </div>
-                            <div className=" flex justify-center items-center rounded-[50px]  h-[76px] w-[76px] ">
-                                <img
-                                    src={item.icon2}
-                                    alt="icon"
-                                    className="w-[53px] h-[53px] object-contain"
-                                />
-                            </div>
-                        </div>
-
-
-
-                    </div>
-                ))}
-
+            <div className="buttons text-[25px] flex justify-center m-auto mb-[25%] sm:mb-0">
+                <Buttons btnname='Get Skilled with B2B Campus' text_color={'text-white'} />
             </div>
 
 

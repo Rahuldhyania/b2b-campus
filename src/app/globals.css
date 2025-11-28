@@ -40,3 +40,46 @@ body {
   background: #F7F7F5;
   background: linear-gradient(0deg, rgba(247, 247, 245, 1) 0%, rgba(221, 214, 255, 1) 100%);
 }
+
+.bg-purple-gradient {
+  background: radial-gradient(circle at top,
+      #d1b3ff 0%,
+      #c7a0ff 40%,
+      #ffffff 90%);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #6346FA !important;
+
+  /* arrow color */
+  width: 40px;
+  height: 40px;
+}
+
+.swiper-button-next {
+  right: -35px !important;
+  /* Right arrow ko bahar push */
+}
+
+.swiper-button-prev {
+  left: -35px !important;
+  /* Left arrow ko bahar push */
+}
+
+
+@keyframes bounceBall {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-25px);
+  }
+}
+
+.tool1 {
+  animation: bounceBall 1.8s infinite ease-in-out;
+}

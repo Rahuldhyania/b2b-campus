@@ -1,6 +1,8 @@
 import React from 'react'
 import titlewhitebg from "../../../../public/images/titlewhitebg.webp"
 import scoopearth from "../../../../public/images/scoopearth.webp"
+import Newsbrak from "../../../../public/images/Newsbrak.webp"
+import publicist from "../../../../public/images/publicist.webp"
 import timebussines from "../../../../public/images/timebussines.webp"
 import Title from '../UiUx/Title'
 import Image from 'next/image'
@@ -19,10 +21,10 @@ const FeaturedIn = () => {
                     text_color={'text-secondary'}
                 />
             </div>
-            <div className="card-wrap flex justify-center items-center">
-                <div className="card-img bg-white">
-                    <div className="text-card text-start     text-[16px] max-w-[370px] text-center p-[10px] border-[#6346FA4D] rounded-[29px]">
-                        <div className="img">
+            {/* <div className="card-wrap flex justify-center items-center gap-10">
+                <div className="  max-w-[360px] h-[377px] card-img bg-white border-none rounded-[32px] ">
+                    <div className="text-card text-start text-[16px] p-[10px]">
+                        <div className="img  mt-[22px] p-[6px] ">
                             <Image
                                 src={scoopearth}
                                 alt="Certificate"
@@ -30,53 +32,148 @@ const FeaturedIn = () => {
                                 height={500}
                                 className="max-w-[201px]" />
                         </div>
-                        <p className='text-[#5D38DE]'> <span className='text-black'> Scoop Earth, a news Magzine has ranked number one to B2B Campus for providing the best graphic designing course in Chandigarh. This recognition highlights B2B Campus’s commitment to delivering unparalleled excellence in graphic designing education.</span></p>
-                    </div>
 
+                        <div className="text h-[257px] flex justify-center items-center bg-[#F3F0FF] mt-[22px] border-none rounded-[20px] p-[10px]">
+                            <span className='text-black '> Scoop Earth, a news Magzine has ranked number one to B2B Campus for providing the best graphic designing course in Chandigarh. This recognition highlights B2B Campus’s commitment to delivering unparalleled excellence in graphic designing education. </span>
+                        </div>
+                    </div>
                 </div>
-                <div className="card-img bg-[white]">
-                    <div className="text-card text-start     text-[16px] max-w-[370px] text-center p-[10px] border-[#6346FA4D] rounded-[29px]">
-                        <div className="img">
+                <div className="  max-w-[360px] h-[377px] card-img bg-white border-none rounded-[32px] ">
+                    <div className="text-card text-start text-[16px] p-[10px]">
+                        <div className="img  mt-[30px] p-[6px] ">
                             <Image
                                 src={timebussines}
                                 alt="Certificate"
                                 width={1000}
                                 height={500}
-                                className="max-w-[301px]" />
+                                className="max-w-[330px]" />
                         </div>
-                        <p className='text-[#5D38DE] '> <span className='text-black bg-[#F3F0FF]'> With their exceptional curriculum and industry-relevant training, B2B Campus sets the benchmark for web designing education in Chandigarh, as acknowledged by Time Business News’s prestigious ranking.</span></p>
+
+                        <div className="text h-[257px] flex justify-center items-center bg-[#F3F0FF] mt-[30px] border-none rounded-[20px] p-[10px]">
+                            <span className='text-black '> With their exceptional curriculum and industry-relevant training, B2B Campus sets the benchmark for web designing education in Chandigarh, as acknowledged by Time Business News’s prestigious ranking.</span>
+                        </div>
                     </div>
 
                 </div>
-                <div className="card-img bg-[white]">
-                    <div className="text-card text-start     text-[16px] max-w-[370px] text-center p-[10px] border-[#6346FA4D] rounded-[29px]">
-                        <div className="img">
+                <div className="  max-w-[360px] h-[377px] card-img bg-white border-none rounded-[32px] ">
+                    <div className="text-card text-start text-[16px] p-[10px]">
+                        <div className="img  mt-[22px] p-[6px] ">
+                            <Image
+                                src={Newsbrak}
+                                alt="Certificate"
+                                width={1000}
+                                height={500}
+                                className="max-w-[242px]" />
+                        </div>
+
+                        <div className="text h-[257px] flex justify-center items-center bg-[#F3F0FF] mt-[18px] border-none rounded-[20px] p-[10px]">
+                            <span className='text-black '> B2B Campus secures the top spot for digital marketing courses in Chandigarh, according to leading news agency News Break. Their exceptional training is highlighted, focusing on delivering impactful and comprehensive education in the field.</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div className="  max-w-[360px] h-[377px] card-img bg-white border-none rounded-[32px] ">
+                    <div className="text-card text-start text-[16px] p-[10px]">
+                        <div className="img  mt-[22px] p-[6px] ">
+                            <Image
+                                src={publicist}
+                                alt="Certificate"
+                                width={1000}
+                                height={500}
+                                className="max-w-[150px]" />
+                        </div>
+
+                        <div className="text h-[257px] flex justify-center items-center bg-[#F3F0FF] mt-[18px] border-none rounded-[20px] p-[10px]">
+                            <span className='text-black '> B2B Campus has been recognized as the leading institution for digital marketing courses in Mohali by Publicist News, demonstrating their expertise in delivering comprehensive and industry-focused training programs.</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div> */}
+
+            <div className="card-wrap flex flex-wrap justify-center items-center gap-5 sm:gap-10">
+                <div className="max-w-[360px] w-full sm:w-[45%] md:w-[30%] h-[auto] sm:h-[377px] card-img bg-white border-none rounded-[32px]">
+                    <div className="text-card text-start text-[16px] p-[10px]">
+                        <div className="img mt-[22px] p-[6px] flex justify-center">
                             <Image
                                 src={scoopearth}
                                 alt="Certificate"
                                 width={1000}
                                 height={500}
-                                className="max-w-[201px]" />
+                                className="max-w-[201px] w-full h-auto"
+                            />
                         </div>
-                        <p className='text-[#5D38DE]'> <span className='text-black'> Scoop Earth, a news Magzine has ranked number one to B2B Campus for providing the best graphic designing course in Chandigarh. This recognition highlights B2B Campus’s commitment to delivering unparalleled excellence in graphic designing education.</span></p>
-                    </div>
 
+                        <div className="text h-[auto] sm:h-[257px] flex justify-center items-center bg-[#F3F0FF] mt-[22px] border-none rounded-[20px] p-[10px]">
+                            <span className="text-black">
+                                Scoop Earth, a news Magzine has ranked number one to B2B Campus for providing the best graphic designing course in Chandigarh. This recognition highlights B2B Campus’s commitment to delivering unparalleled excellence in graphic designing education.
+                            </span>
+                        </div>
+                    </div>
                 </div>
-                <div className="card-img bg-[white] ">
-                    <div className="text-card text-start     text-[16px] max-w-[370px] text-center p-[10px] border-[#6346FA4D] rounded-[29px]">
-                        <div className="img">
+
+                <div className="max-w-[360px] w-full sm:w-[45%] md:w-[30%] h-[auto] sm:h-[377px] card-img bg-white border-none rounded-[32px]">
+                    <div className="text-card text-start text-[16px] p-[10px]">
+                        <div className="img mt-[22px] sm:mt-[30px] p-[6px] flex justify-center">
                             <Image
-                                src={scoopearth}
+                                src={timebussines}
                                 alt="Certificate"
                                 width={1000}
                                 height={500}
-                                className="max-w-[201px]" />
+                                className="max-w-[330px] w-full h-auto"
+                            />
                         </div>
-                        <p className='text-[#5D38DE]'> <span className='text-black'> Scoop Earth, a news Magzine has ranked number one to B2B Campus for providing the best graphic designing course in Chandigarh. This recognition highlights B2B Campus’s commitment to delivering unparalleled excellence in graphic designing education.</span></p>
-                    </div>
 
+                        <div className="text h-[auto] sm:h-[257px] flex justify-center items-center bg-[#F3F0FF] mt-[22px] sm:mt-[30px] border-none rounded-[20px] p-[10px]">
+                            <span className="text-black">
+                                With their exceptional curriculum and industry-relevant training, B2B Campus sets the benchmark for web designing education in Chandigarh, as acknowledged by Time Business News’s prestigious ranking.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="max-w-[360px] w-full sm:w-[45%] md:w-[30%] h-[auto] sm:h-[377px] card-img bg-white border-none rounded-[32px]">
+                    <div className="text-card text-start text-[16px] p-[10px]">
+                        <div className="img mt-[22px] p-[6px] flex justify-center">
+                            <Image
+                                src={Newsbrak}
+                                alt="Certificate"
+                                width={1000}
+                                height={500}
+                                className="max-w-[242px] w-full h-auto"
+                            />
+                        </div>
+
+                        <div className="text h-[auto] sm:h-[257px] flex justify-center items-center bg-[#F3F0FF] mt-[18px] sm:mt-[18px] border-none rounded-[20px] p-[10px]">
+                            <span className="text-black">
+                                B2B Campus secures the top spot for digital marketing courses in Chandigarh, according to leading news agency News Break. Their exceptional training is highlighted, focusing on delivering impactful and comprehensive education in the field.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="max-w-[360px] w-full sm:w-[45%] md:w-[30%] h-[auto] sm:h-[377px] card-img bg-white border-none rounded-[32px]">
+                    <div className="text-card text-start text-[16px] p-[10px]">
+                        <div className="img mt-[22px] p-[6px] flex justify-center">
+                            <Image
+                                src={publicist}
+                                alt="Certificate"
+                                width={1000}
+                                height={500}
+                                className="max-w-[150px] w-full h-auto"
+                            />
+                        </div>
+
+                        <div className="text h-[auto] sm:h-[257px] flex justify-center items-center bg-[#F3F0FF] mt-[18px] sm:mt-[18px] border-none rounded-[20px] p-[10px]">
+                            <span className="text-black">
+                                B2B Campus has been recognized as the leading institution for digital marketing courses in Mohali by Publicist News, demonstrating their expertise in delivering comprehensive and industry-focused training programs.
+                            </span>
+                        </div>
+                    </div>
                 </div>
             </div>
+
         </div>
     )
 }

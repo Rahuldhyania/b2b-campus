@@ -39,8 +39,7 @@ const TestimonialsSlider = () => {
             <div className="w-[90%] md:w-[70%] relative">
 
                 {/* Custom Left Arrow */}
-                <div className="custom-prev hidden sm:flex w-[42px] h-[42px] justify-center items-center rounded-full bg-black absolute top-1/2 left-[-50px] -translate-y-1/2 cursor-pointer z-20
-    transition-transform duration-300 hover:scale-110 hover:bg-purple-700">
+                <div className="custom-prev hidden sm:flex w-[42px] h-[42px] justify-center items-center rounded-full bg-black absolute top-1/2 left-[-50px] -translate-y-1/2 cursor-pointer z-20 transition-transform duration-300 hover:scale-110 hover:bg-purple-700">
                     <Image
                         src={leftarrow}
                         width={1000}

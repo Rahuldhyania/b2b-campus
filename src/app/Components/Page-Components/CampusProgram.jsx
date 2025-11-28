@@ -34,7 +34,7 @@ const items = [
 ];
 const CampusProgram = () => {
     return (
-        <div className='bg-[#F7F7F5]'>
+        <div className='bg-[#F7F7F5] py-6'>
             <div className="skill-title-container  bg-[length:43%] bg-no-repeat bg-top py-6 relative"
                 style={{ backgroundImage: `url(${smallbublebg.src})` }}
             >

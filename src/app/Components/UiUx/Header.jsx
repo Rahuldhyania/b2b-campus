@@ -63,7 +63,7 @@ export default function Header() {
 
     return (
         <nav>
-            <div className="flex py-5  justify-between lg:justify-around items-center flex-wrap gap-4">
+            <div className="flex justify-between lg:justify-around items-center flex-wrap gap-4" style={{ padding: '20px 20px' }}>
 
                 {/* Logo */}
                 <div className="Logo-img">

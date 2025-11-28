@@ -83,3 +83,9 @@ body {
 .tool1 {
   animation: bounceBall 1.8s infinite ease-in-out;
 }
+
+@media (max-width: 1520px) {
+  .banner_button {
+    font-size: 14px;
+  }
+}

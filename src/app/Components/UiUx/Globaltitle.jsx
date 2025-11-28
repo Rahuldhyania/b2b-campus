@@ -9,7 +9,7 @@ const Globaltitle = ({
     return (
         <div>
             <div className="text-center py-10 px-4" >
-                <h1 className=" text-[32px] 2xl:text-[100px]  font-bold text-gray-900 leading-snug  " >
+                <h1 className=" text-[32px] md:text-[70px] 2xl:text-[100px]  font-bold text-gray-900 leading-snug  " >
                     {titleStart}{" "}
                     <span className=" px-3 py-1 rounded-xl text-[#6346FA]">
                         {highlightText} <br />

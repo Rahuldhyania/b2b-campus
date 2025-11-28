@@ -9,11 +9,10 @@ import Image from 'next/image'
 
 const FeaturedIn = () => {
     return (
-        <div className='main-bg'>
-            <div className="skill-title-container bg-no-repeat   bg-bottom py-6"
+        <div className='main-bg py-6'>
+            <div className="skill-title-container bg-no-repeat bg-bottom bg-containe hidden sm:block"
                 style={{
-                    backgroundImage: `url(${titlewhitebg.src}) `,
-                    backgroundSize: '732px auto'
+                    backgroundImage: `url(${titlewhitebg.src}) `
                 }}
             >
                 <Title
@@ -92,7 +91,7 @@ const FeaturedIn = () => {
 
             </div> */}
 
-            <div className="card-wrap flex flex-wrap justify-center items-center gap-5 sm:gap-10">
+            <div className="card-wrap flex flex-wrap justify-center items-center py-10 gap-5 sm:gap-10">
                 <div className="max-w-[360px] w-full sm:w-[45%] md:w-[30%] h-[auto] sm:h-[377px] card-img bg-white border-none rounded-[32px]">
                     <div className="text-card text-start text-[16px] p-[10px]">
                         <div className="img mt-[22px] p-[6px] flex justify-center">

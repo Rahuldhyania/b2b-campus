@@ -45,17 +45,17 @@ export const logos = [
 
 const Professionalskill = () => {
     return (
-        <div className="bg-[linear-gradient(0deg,rgba(247,247,245,1)_0%,rgba(221,214,255,1)_100%)]  
-        style={{ backgroundSize: '100% 1300px' }}">
-            <div className="skill-title-container bg-no-repeat bg-bottom py-6"
+
+
+
+        <div className="main-bg py-6"
+        >
+            <div
+                className="skill-title-container bg-no-repeat bg-bottom py-6 bg-containe relative "
                 style={{ backgroundImage: `url(${titlewhitebg.src})` }}
             >
                 <Title
-                    title={'We help students build real <br/> <sapn class="text-primary"> professional skills </span>'}
-                    text_color={'text-secondary'}
-                />
-                <Description
-                    description={'Learn what works in the real world, not just in theory'}
+                    title={'We help students build real <br/> <span class="text-primary">professional skills</span>'}
                     text_color={'text-secondary'}
                 />
             </div>

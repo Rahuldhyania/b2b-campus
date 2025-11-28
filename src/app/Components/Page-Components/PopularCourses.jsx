@@ -71,12 +71,9 @@ const PopularCourses = () => {
 
                     {Coursesbtn.map((item) => (
                         <div key={item.id} className="cursor-pointer">
-                            <p className="
-          bg-[#E4DFFF] text-[16px] sm:text-[17px] md:text-[18px] lg:text-[19px] 
-          p-[16px] sm:p-[17px] md:p-[18px] coures-btn rounded-[20px]
-          transition-all duration-300 ease-in-out
-          hover:bg-[#6346FA] hover:text-white hover:scale-105 hover:shadow-lg
-        ">
+                            <p className="bg-[#E4DFFF] text-[16px] sm:text-[17px] md:text-[18px] lg:text-[19px] 
+    p-[16px] sm:p-[17px] md:p-[18px] coures-btn rounded-[20px] transition-all duration-300 ease-in-out 
+    hover:bg-[#6346FA] hover:text-white hover:scale-105 hover:shadow-lg">
                                 {item.btn}
                             </p>
                         </div>

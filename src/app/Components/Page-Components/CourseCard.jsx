@@ -93,11 +93,7 @@ const CourseCard = ({ id }) => {
             {courseData.map((data, index) => (
                 <div
                     key={index}
-                    className="
-                bg-white rounded-[30px] shadow-md overflow-hidden
-                w-full sm:w-[90%] md:w-[520px] lg:w-[520px] max-w-[520px]
-                transition-all duration-300 hover:shadow-xl hover:-translate-y-2
-            "
+                    className="bg-white rounded-[30px] shadow-md overflow-hidden w-full sm:w-[90%] md:w-[520px] lg:w-[520px] max-w-[520px] transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
                 >
                     {/* Top Image */}
                     <div className="overflow-hidden">
@@ -112,7 +108,7 @@ const CourseCard = ({ id }) => {
                     </div>
 
                     {/* Content */}
-                    <div className="p-6 bg-[#EBE9F3] leading-[40px] p-[15px]">
+                    <div className=" bg-[#EBE9F3] leading-[40px] p-[15px]">
 
                         <p className="text-[14px] text-[#6346FA] underline mb-3 mx-[15px]">
                             {data.craftedBy}
@@ -126,10 +122,7 @@ const CourseCard = ({ id }) => {
                             {data.duration.map((item, i) => (
                                 <span
                                     key={i}
-                                    className="
-                              px-4 py-1 text-[13px] sm:text-[14px] shadow-sm rounded-full
-                              transition-all duration-300 hover:bg-[#6346fa] hover:text-white
-                            "
+                                    className="px-4 py-1 text-[13px] sm:text-[14px] shadow-sm rounded-full transition-all duration-300 hover:bg-[#6346fa] hover:text-white"
                                 >
                                     {item}
                                 </span>
@@ -140,10 +133,7 @@ const CourseCard = ({ id }) => {
                             {data.features.map((f, i) => (
                                 <li
                                     key={i}
-                                    className="
-                              flex items-start gap-3 text-[15px] sm:text-[16px] md:text-[18px] text-[#333]
-                              transition-all duration-300 hover:text-[#6346FA]
-                            "
+                                    className="flex items-start gap-3 text-[15px] sm:text-[16px] md:text-[18px] text-[#333] transition-all duration-300 hover:text-[#6346FA]"
                                 >
                                     <span className="text-[#6B4EFF] text-lg mx-[15px]">→</span>
                                     {f}
@@ -160,11 +150,7 @@ const CourseCard = ({ id }) => {
                                 {data.buttonText}
                             </span>
 
-                            <div className="
-                        w-[40px] h-[40px] sm:w-[45px] sm:h-[45px] rounded-full bg-[#CEC5FF] 
-                        flex items-center justify-center transition-all duration-300
-                        group-hover:translate-x-1 hover:bg-[#b8aaff]
-                    ">
+                            <div className="w-[40px] h-[40px] sm:w-[45px] sm:h-[45px] rounded-full bg-[#CEC5FF] flex items-center justify-center transition-all duration-300 group-hover:translate-x-1 hover:bg-[#b8aaff]">
                                 <Image
                                     src={data.arrowIcon}
                                     alt="arrow"
@@ -178,102 +164,6 @@ const CourseCard = ({ id }) => {
                 </div>
             ))}
         </div>
-        // <div className="w-full max-w-[1703px] mx-auto 
-        //         flex flex-wrap justify-center gap-6 mb-[4%]
-        //         px-4 sm:px-0">
-
-        //     {courseData.map((data, index) => (
-        //         <div
-        //             key={index}
-        //             className="
-        //         bg-white rounded-[30px] shadow-md overflow-hidden
-        //         w-full
-        //         sm:w-[calc(50%-12px)]          /* Tablet 2 per row with gap consideration */
-        //         lg:w-[calc(33.33%-12px)]       /* Desktop 3 per row first row */
-        //         xl:w-[calc(33.33%-12px)]
-        //         max-w-[520px]
-        //         transition-all duration-300 hover:shadow-xl hover:-translate-y-2
-        //     "
-        //         >
-        //             {/* Top Image */}
-        //             <div className="overflow-hidden">
-        //                 <Image
-        //                     src={data.image}
-        //                     alt="graphicdesigner"
-        //                     width={700}
-        //                     height={300}
-        //                     className="w-full h-[200px] sm:h-[220px] md:h-[240px] object-cover 
-        //                        transition-transform duration-500 hover:scale-110"
-        //                 />
-        //             </div>
-
-        //             {/* Content */}
-        //             <div className="p-6 bg-[#EBE9F3] leading-[40px] p-[15px]">
-
-        //                 <p className="text-[14px] text-[#6346FA] underline mb-3 mx-[15px]">
-        //                     {data.craftedBy}
-        //                 </p>
-
-        //                 <h3 className="text-[28px] sm:text-[30px] md:text-[34px] font-semibold text-[#1C1C1C] mb-4 mx-[15px]">
-        //                     {data.title}
-        //                 </h3>
-
-        //                 <div className="flex flex-wrap gap-3 mb-4">
-        //                     {data.duration.map((item, i) => (
-        //                         <span
-        //                             key={i}
-        //                             className="
-        //                       px-4 py-1 text-[13px] sm:text-[14px] shadow-sm rounded-full
-        //                       transition-all duration-300 hover:bg-[#6346fa] hover:text-white
-        //                     "
-        //                         >
-        //                             {item}
-        //                         </span>
-        //                     ))}
-        //                 </div>
-
-        //                 <ul className="space-y-2 mb-6">
-        //                     {data.features.map((f, i) => (
-        //                         <li
-        //                             key={i}
-        //                             className="
-        //                       flex items-start gap-3 text-[15px] sm:text-[16px] md:text-[18px] text-[#333]
-        //                       transition-all duration-300 hover:text-[#6346FA]
-        //                     "
-        //                         >
-        //                             <span className="text-[#6B4EFF] text-lg mx-[15px]">→</span>
-        //                             {f}
-        //                         </li>
-        //                     ))}
-        //                 </ul>
-
-        //                 <div className="
-        //             flex justify-between items-center bg-white border border-[#6346FA4D] 
-        //             rounded-full p-[2%] cursor-pointer transition-all duration-300 
-        //             hover:bg-[#F3F0FF] hover:shadow-md hover:-translate-y-1
-        //         ">
-        //                     <span className="text-[18px] sm:text-[20px] md:text-[22px] font-medium text-[#1C1C1C]">
-        //                         {data.buttonText}
-        //                     </span>
-
-        //                     <div className="
-        //                 w-[40px] h-[40px] sm:w-[45px] sm:h-[45px] rounded-full bg-[#CEC5FF] 
-        //                 flex items-center justify-center transition-all duration-300
-        //                 group-hover:translate-x-1 hover:bg-[#b8aaff]
-        //             ">
-        //                         <Image
-        //                             src={data.arrowIcon}
-        //                             alt="arrow"
-        //                             width={12}
-        //                             height={12}
-        //                         />
-        //                     </div>
-        //                 </div>
-
-        //             </div>
-        //         </div>
-        //     ))}
-        // </div>
 
 
 

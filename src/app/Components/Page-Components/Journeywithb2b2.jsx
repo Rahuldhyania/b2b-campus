@@ -1,6 +1,7 @@
 import React from 'react'
 import Title from '../UiUx/Title'
 import smallbublebg from "../../../../public/images/smallbublebg.webp";
+import smbg from "../../../../public/images/smbg.webp"
 import mobilegrp from "../../../../public/images/mobilegrp.webp";
 import Description from '../UiUx/Description';
 import Buttons from '../UiUx/Buttons';
@@ -9,18 +10,21 @@ import Image from 'next/image';
 const Journeywithb2b2 = () => {
     return (
         <div>
-            <div className="skill-title-container bg-no-repeat bg-bottom py-10 relative mb-[8%]"
-                style={{ backgroundImage: `url(${smallbublebg.src})` }}
+            <div
+                className="skill-title-container bg-no-repeat  bg-[length:30%] bg-bottom py-6 bg-containe relative "
+                style={{ backgroundImage: `url(${smbg.src})` }}
             >
                 <Title
-                    title={'Begin Your Skill Journey With <br/> <sapn class="text-primary">  B2B Campus   </span>'}
+                    title={'Begin Your Skill Journey With   <br/> <span class="text-primary">  B2B Campus </span>'}
                     text_color={'text-secondary'}
                 />
+
+            </div>
+            <div className="description">
                 <Description
                     description={'Build confidence, gain real experience, and move closer to your goals'}
                     text_color={'text-secondary'}
                 />
-
             </div>
             <div className="">
                 <div className=" relative mobil-grp">
@@ -32,14 +36,14 @@ const Journeywithb2b2 = () => {
                         alt="group img"
                     />
 
-                    <section className="relative w-full flex justify-center px-4 pt-12 sm:pt-20 lg:pt-32 pb-12 md:bottom-[10rem] lg:bottom-[38rem]">
+                    <section className=" w-full flex justify-center px-4 relative lg:absolute top-[48%] left-1/2 -translate-x-1/2 translate-y-0">
                         <div className="max-w-2xl w-full text-center sm:text-left">
                             {/* Header */}
                             <h2 className="text-[28px] sm:text-[47px] font-semibold text-[#6346FA]">
-                                Let’s connect constellations
+                                Let&apos;s connect constellations
                             </h2>
                             <p className="text-gray-600 mb-6 sm:mb-10 text-[16px] sm:text-[20px]">
-                                Let’s align our constellations! Reach out and let the magic of collaboration illuminate our skies.
+                                Let&apos;s align our constellations! Reach out and let the magic of collaboration illuminate our skies.
                             </p>
 
                             {/* Form */}

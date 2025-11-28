@@ -19,7 +19,7 @@ const TestimonialsSlider = () => {
             image: "/images/sliderdpman.webp",
             stars: 5,
             review:
-                "Hi, My name is Aditya Kapoor. I have completed my graduation then I joined Web Designing course in B2B Campus. I think it's the best institute for learning web designing and faculty is very very good. The way they are teaching the subject is awesome. So if you want to join web designing course, B2B Campus is the Best.",
+                "Hi My name is Aditya Kapoor. I have completed my graduation then I joined Web Designing course in B2B Campus. I think it the best institute for learning web designing and faculty is very very good. The way they are teaching the subject is awesome. So if you want to join web designing course B2B Campus is the Best.",
         },
         {
             id: 2,
@@ -27,7 +27,7 @@ const TestimonialsSlider = () => {
             image: "/images/sliderdpman.webp",
             stars: 5,
             review:
-                "Hi, My name is Aditya Kapoor. I have completed my graduation then I joined Web Designing course in B2B Campus. I think it's the best institute for learning web designing and faculty is very very good. The way they are teaching the subject is awesome. So if you want to join web designing course, B2B Campus is the Best.",
+                "Hi My name is Aditya Kapoor. I have completed my graduation then I joined Web Designing course in B2B Campus. I think it the best institute for learning web designing and faculty is very very good. The way they are teaching the subject is awesome. So if you want to join web designing course B2B Campus is the Best.",
         },
         // Add more slides if needed
     ];
@@ -74,8 +74,7 @@ const TestimonialsSlider = () => {
                 >
                     {data.map((item) => (
                         <SwiperSlide key={item.id}>
-                            <div className="bg-white p-8 rounded-[44px] p-[11%] border-2 border-[#6346FA80] shadow-md relative
-                          transition-transform duration-500 hover:shadow-xl hover:-translate-y-2">
+                            <div className="bg-white  rounded-[44px] p-[11%] border-2 border-[#6346FA80] shadow-md transition-transform duration-500 hover:shadow-xl hover:-translate-y-2">
                                 <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
 
                                     <Image

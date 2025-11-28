@@ -57,7 +57,7 @@ const SearchBar = ({
 
                     {/* Button */}
                     <button
-                        className="w-[142px] lg:w-[160px] xl:w-[90px] text-[16px] xl:p-[8px] 2xl:p-[13px] flex justify-center items-center outline-none border-none rounded-[12px] cursor-pointer"
+                        className="w-[142px] lg:w-[160px] xl:w-[90px] text-[16px] xl:p-[8px] p-[13px] flex justify-center items-center outline-none border-none rounded-[12px] cursor-pointer"
                         style={{
                             backgroundColor: buttonBg,
                             color: buttonTextColor,

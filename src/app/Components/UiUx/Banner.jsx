@@ -30,7 +30,7 @@ const Banner = () => {
       <Header />
 
       <div
-        className="skill-title-container bg-no-repeat bg-bottom bg-contain  py-6 relative"
+        className="skill-title-container bg-no-repeat bg-top bg-[length-80%] bg-contain  py-6 relative"
         style={{ backgroundImage: `url(${bublebg.src})` }}
       >
         <Globaltitle
@@ -50,7 +50,7 @@ const Banner = () => {
             width={1000}
             height={500}
             alt="boy"
-            className="max-w-[280px] md:max-w-[420px] lg:max-w-[320px] xl:max-w-[320px] 2xl:max-w-[420px] mx-auto"
+            className="max-w-[420px] mx-auto"
           />
 
           <div className="relative flex tools-img">
@@ -63,7 +63,7 @@ const Banner = () => {
               <Image src={tool2} width={1000} height={500} className="w-[69px]" />
             </div>
 
-            <div className="absolute bottom-[30rem] lg:bottom-[22rem] right-[8rem] lg:right-[5rem] tool1">
+            <div className="absolute bottom-[27rem] lg:bottom-[22rem] 2xl:bottom-[27rem] right-[8rem] lg:right-[5rem] tool1">
               <Image src={tool4} width={1000} height={500} className="w-[66px]" />
             </div>
 
@@ -75,7 +75,7 @@ const Banner = () => {
         </div>
 
 
-        <div className="div w-full lg:w-auto">
+        <div className=" w-full lg:w-auto">
           <div className="w-full py-6">
             <div className="w-full m-auto flex flex-wrap md:flex-nowrap gap-10 justify-center items-center">
 
@@ -118,13 +118,8 @@ const Banner = () => {
           </div>
 
           <div className="baner-btn flex flex-wrap justify-center gap-4">
-            <div className="buttons text-[18px] sm:text-[22px] lg:text-[25px] p-[9px] flex justify-center">
-              <Buttons btnname="Explore All Courses" text_color="text-white" />
-            </div>
-
-            <div className="buttons text-[18px] sm:text-[22px] lg:text-[25px] p-[9px] flex justify-center">
-              <Buttons btnname="Start Learning Today" text_color="text-black" btn_primary={false} btn_bg="bg-[#E4DFFF]" />
-            </div>
+            <Buttons btnname="Explore All Courses" text_color="text-white" />
+            <Buttons btnname="Start Learning Today" text_color="text-black" btn_primary={false} btn_bg="bg-[#E4DFFF]" />
           </div>
 
           <div className="mt-4 px-3 sm:px-0">
@@ -177,7 +172,7 @@ const Banner = () => {
             width={1000}
             height={500}
             alt="boy"
-            className="max-w-[280px] sm:max-w-[350px] md:max-w-[420px] lg:max-w-[332px] 2xl:max-w-[461px] mx-auto"
+            className=" max-w-[420px] 2xl:max-w-[463px] mx-auto"
           />
 
           <div className="relative flex tools-img">
@@ -186,7 +181,7 @@ const Banner = () => {
               <Image src={tool6} width={1000} height={500} className="w-[82px]" />
             </div>
 
-            <div className="absolute bottom-[30rem] lg:bottom-[22rem] right-[8rem] lg:right-[5rem] tool1">
+            <div className="absolute bottom-[27rem] lg:bottom-[22rem] right-[8rem] lg:right-[5rem] tool1">
               <Image src={tool5} width={1000} height={500} className="w-[95px]" />
             </div>
 
@@ -200,7 +195,7 @@ const Banner = () => {
 
       </div>
 
-    </div>
+    </div >
   );
 };
 

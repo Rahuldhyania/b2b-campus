@@ -31,40 +31,7 @@ export default function Teachcareer() {
   return (
     <div className='main-bg relative mt-[8%] mb-[8%]'>
 
-      {/* <div className="w-full relative bottom-[56px] m-auto max-w-[1450px] p-[1%]
-                border-none rounded-[50px] mt-[2%] bg-[#E9E5FF]
-                flex flex-wrap lg:flex-nowrap justify-center lg:justify-between items-center gap-6">
 
-        {items.map((item, index) => (
-          <div
-            key={index}
-            className="flex items-center w-full sm:w-auto justify-center group relative"
-          >
-            <div className="wrap-div flex flex-col sm:flex-row justify-center items-center 
-                        gap-4 sm:gap-10 text-center sm:text-left">
-
-              <div className="bg-white flex justify-center items-center rounded-[50px]
-                          h-[60px] w-[60px] sm:h-[76px] sm:w-[76px]">
-                <img
-                  src={item.icon}
-                  alt="icon"
-                  className="w-[40px] h-[40px] sm:w-[53px] sm:h-[53px] object-contain"
-                />
-              </div>
-
-              <div>
-                <h3 className="text-[#6346FA] text-[26px] sm:text-[32px] md:text-[38px] lg:text-[42px]">
-                  {item.title}
-                </h3>
-                <p className="text-[14px] sm:text-[17px] md:text-[19px] lg:text-[21px]">
-                  {item.subtitle}
-                </p>
-              </div>
-
-            </div>
-          </div>
-        ))}
-      </div> */}
 
       <div className="w-full relative bottom-[56px] m-auto max-w-[1450px] p-[1%]
             border-none rounded-[50px] mt-[2%] bg-[#E9E5FF]
@@ -73,16 +40,13 @@ export default function Teachcareer() {
         {items.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col sm:flex-row items-center w-full sm:w-auto justify-center group relative
-                 transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg
+            className="flex flex-col sm:flex-row items-center w-full sm:w-auto justify-center group relative transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg
                  animate-float"
           >
             <div className="wrap-div flex flex-col sm:flex-row justify-center items-center 
                       gap-4 sm:gap-10 text-center sm:text-left">
 
-              <div className="bg-white flex justify-center items-center rounded-[50px]
-                    h-[60px] w-[60px] sm:h-[76px] sm:w-[76px]
-                    transition-all duration-300 hover:scale-110">
+              <div className="bg-white flex justify-center items-center rounded-[50px] h-[60px] w-[60px] sm:h-[76px] sm:w-[76px] transition-all duration-300 hover:scale-110">
                 <img
                   src={item.icon}
                   alt="icon"
@@ -91,12 +55,10 @@ export default function Teachcareer() {
               </div>
 
               <div>
-                <h3 className="text-[#6346FA] text-[26px] sm:text-[32px] md:text-[38px] lg:text-[42px]
-                         transition-all duration-300 group-hover:text-purple-600">
+                <h3 className="text-[#6346FA] text-[26px] sm:text-[32px] md:text-[38px] lg:text-[42px] transition-all duration-300 group-hover:text-purple-600">
                   {item.title}
                 </h3>
-                <p className="text-[14px] sm:text-[17px] md:text-[19px] lg:text-[21px]
-                        transition-all duration-300 group-hover:text-gray-700">
+                <p className="text-[14px] sm:text-[17px] md:text-[19px] lg:text-[21px] transition-all duration-300 group-hover:text-gray-700">
                   {item.subtitle}
                 </p>
               </div>
@@ -107,26 +69,18 @@ export default function Teachcareer() {
       </div>
 
 
-      <div className="skill-title-container bg-no-repeat bg-bottom py-6 relative mb-[8%]"
+      <div
+        className="skill-title-container bg-no-repeat bg-bottom py-6 bg-containe relative "
         style={{ backgroundImage: `url(${titlewhitebg.src})` }}
       >
         <Title
-          title={'Other Institutes Teach Chapters  <br/> <sapn class="text-primary"> We Teach Careers </span>'}
+          title={'Other Institutes Teach Chapters<br/> <span class="text-primary"> We Teach Careers </span>'}
           text_color={'text-secondary'}
         />
       </div>
 
       <div className="laptopwithman  relative">
-        {/* <div className="w-full bg-center bg-contain bg-no-repeat" style={{ backgroundImage: `url(${cloud.src})` }}>
-          <Image
-            src={manlaptop}
-            alt="main"
-            width={1000}
-            height={500}
-            className="relative max-w-[735px] m-auto  h-auto object-cover z-10"
-          />
 
-        </div> */}
         <div
           className="w-full bg-center bg-contain bg-no-repeat relative "
           style={{ backgroundImage: `url(${cloud.src})` }}
@@ -147,7 +101,7 @@ export default function Teachcareer() {
           </div>
 
           {/* ScratchCards overlay */}
-          <div className="md:absolute inset-0 flex justify-center items-center z-20 pointer-events-none">
+          <div className="lg:absolute inset-0 flex justify-center items-center z-20 pointer-events-none">
             <ScratchCards />
           </div>
         </div>

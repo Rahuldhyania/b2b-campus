@@ -14,7 +14,7 @@ const features = [
 export default function TrainingSection() {
     return (
         <section
-            className="relative py-32 px-6 overflow-hidden"
+            className="relative py-16 px-6 overflow-hidden"
             style={{ backgroundColor: "#DDD6FF" }} // MAIN BACKGROUND COLOR
         >
 

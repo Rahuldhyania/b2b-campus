@@ -17,13 +17,15 @@ const Homewrap = () => {
     return (
         <div>
             <Banner />
+            <TrainingSection />
             <Professionalskill />
+
             <PopularCourses />
             <Teachcareer />
             <CampusProgram />
             <TestimonialsSlider />
             <TopCompanys />
-            <TrainingSection />
+
             <FeaturedIn />
             <FaqSection />
             <Journeywithb2b2 />

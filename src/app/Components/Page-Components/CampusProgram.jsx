@@ -58,7 +58,7 @@ const CampusProgram = () => {
             </div>
 
             <Certificate />
-            <div className="buttons text-[25px] flex justify-center m-auto mb-[25%] sm:mb-0">
+            <div className="buttons text-[25px] flex justify-center m-auto sm:mb-0">
                 <Buttons btnname='Get Skilled with B2B Campus' text_color={'text-white'} />
             </div>
 

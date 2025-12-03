@@ -1,0 +1,96 @@
+"use client";
+
+import { motion } from "framer-motion";
+
+const features = [
+    "100% practical sessions",
+    "Beginner-friendly curriculum",
+    "Real project work",
+    "Daily tasks + weekly assessments",
+    "Soft skills + interview training",
+    "Resume building & mock interviews",
+];
+
+export default function TrainingSection() {
+    return (
+        <section
+            className="relative py-32 px-6 overflow-hidden"
+            style={{ backgroundColor: "#DDD6FF" }} // MAIN BACKGROUND COLOR
+        >
+
+            {/* Decorative Gradient Blobs */}
+            <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-purple-300/40 blur-[150px] rounded-full -translate-x-1/3 -translate-y-1/3"></div>
+            <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-200/40 blur-[150px] rounded-full translate-x-1/4 translate-y-1/4"></div>
+
+            {/* Floating Circles Animation */}
+            <motion.div
+                animate={{ y: [0, -20, 0] }}
+                transition={{ duration: 6, repeat: Infinity }}
+                className="absolute w-40 h-40 bg-purple-300/30 rounded-full blur-xl top-20 right-40"
+            ></motion.div>
+
+            <motion.div
+                animate={{ y: [0, 20, 0] }}
+                transition={{ duration: 6, repeat: Infinity }}
+                className="absolute w-32 h-32 bg-purple-200/30 rounded-full blur-xl bottom-32 left-20"
+            ></motion.div>
+
+            <div className="max-w-6xl mx-auto relative z-10">
+
+                {/* Heading Section */}
+                <motion.h2
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.9 }}
+                    viewport={{ once: true }}
+                    className="text-5xl md:text-6xl font-extrabold text-[#6346FA] text-center drop-shadow-lg"
+                >
+                    Industry-Ready Software Training
+                </motion.h2>
+
+                <motion.p
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.9, delay: 0.2 }}
+                    viewport={{ once: true }}
+                    className="text-2xl text-[black] text-center mt-4"
+                >
+                    Designed for Real Jobs with Practical Skills
+                </motion.p>
+
+                <motion.p
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.9, delay: 0.4 }}
+                    viewport={{ once: true }}
+                    className="text-xl text-purple-700 text-center mt-6 italic"
+                >
+                    We don’t just teach — we train you for a job.
+                </motion.p>
+
+                {/* Features Grid — Glass Effect */}
+                <div className="grid md:grid-cols-2 gap-10 mt-20">
+                    {features.map((item, index) => (
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.6, delay: index * 0.15 }}
+                            viewport={{ once: true }}
+                            className="p-8 bg-white/50 backdrop-blur-xl border border-purple-200/60
+                         rounded-3xl shadow-xl hover:shadow-2xl transition-all hover:scale-[1.03] 
+                         flex items-center gap-4"
+                        >
+                            <div className="w-10 h-10 bg-purple-300/60 rounded-full flex items-center justify-center shadow-md">
+                                <span className="text-purple-900 text-2xl">★</span>
+                            </div>
+                            <p className="text-black text-xl font-semibold leading-relaxed">
+                                {item}
+                            </p>
+                        </motion.div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+}

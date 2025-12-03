@@ -29,19 +29,16 @@ export default function Teachcareer() {
   ];
 
   return (
-    <div className='main-bg relative mt-[8%] mb-[8%]'>
-
-
-
-      <div className="w-full relative bottom-[56px] m-auto max-w-[1450px] p-[1%]
-            border-none rounded-[50px] mt-[2%] bg-[#E9E5FF]
+    <div className='main-bg relative '>
+      <div className="w-[90%] relative bottom-[56px] m-auto max-w-[1450px] p-[1%]
+            border-none rounded-[50px] bg-[#E9E5FF]
             flex flex-wrap lg:flex-nowrap justify-center lg:justify-between items-center gap-6">
 
         {items.map((item, index) => (
           <div
             key={index}
             className="flex flex-col sm:flex-row items-center w-full sm:w-auto justify-center group relative transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg
-                 animate-float"
+                 animate-float p-[6px] rounded-[19px]"
           >
             <div className="wrap-div flex flex-col sm:flex-row justify-center items-center 
                       gap-4 sm:gap-10 text-center sm:text-left">
@@ -67,18 +64,24 @@ export default function Teachcareer() {
           </div>
         ))}
       </div>
+      <div className="relative py-14 flex justify-center items-center">
 
-
-      <div
-        className="skill-title-container bg-no-repeat bg-bottom py-6 bg-containe relative "
-        style={{ backgroundImage: `url(${titlewhitebg.src})` }}
-      >
-        <Title
-          title={'Other Institutes Teach Chapters<br/> <span class="text-primary"> We Teach Careers </span>'}
-          text_color={'text-secondary'}
+        {/* Background Image */}
+        <img
+          src={titlewhitebg.src}
+          alt="background-bubble"
+          className="absolute  top-1/2  left-1/2 -translate-x-1/2  -translate-y-1/2 w-[480px] md:w-[900px] sm:w-[240px] pointer-events-none
+      select-none"
         />
-      </div>
 
+        {/* Title On Top */}
+        <div className="relative z-10 text-center">
+          <Title
+            title={'Other Institutes Teach Chapters<br/> <span class="text-primary"> We Teach Careers </span>'}
+            text_color={'text-secondary'}
+          />
+        </div>
+      </div>
       <div className="laptopwithman  relative">
 
         <div

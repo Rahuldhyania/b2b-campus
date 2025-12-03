@@ -51,7 +51,7 @@ export default function ScratchCards() {
                                 alt="scratch"
                                 width={220}
                                 height={80}
-                                className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 object-contain"
+                                className="absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 object-contain"
                                 priority
                             />
                             <h2 className="text-[42px] font-semibold text-center text-[#6346FA] tracking-wide">{item.title}</h2>

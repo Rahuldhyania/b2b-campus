@@ -2,6 +2,7 @@ import React from 'react'
 import Title from '../UiUx/Title'
 import Image from 'next/image';
 import titlewhitebg from "../../../../public/images/titlewhitebg.webp"
+import hasimg from "../../../../public/images/hasimg.webp"
 import Description from '../UiUx/Description';
 
 export const logos = [
@@ -45,27 +46,50 @@ export const logos = [
 
 const Professionalskill = () => {
     return (
-
-
-
         <div className="main-bg py-6"
         >
-            <div
-                className="skill-title-container bg-no-repeat bg-bottom py-6 bg-containe relative "
-                style={{ backgroundImage: `url(${titlewhitebg.src})` }}
-            >
-                <Title
-                    title={'We help students build real <br/> <span class="text-primary">professional skills</span>'}
-                    text_color={'text-secondary'}
+            <div className="relative flex justify-center items-center">
+
+                {/* Background Image */}
+                <Image
+                    src={titlewhitebg.src}
+                    width={1000}
+                    height={500}
+                    alt="bg-shape"
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[480px]  md:w-[756px] sm:w-[240px] opacity-100 pointer-events-none select-none"
                 />
+
+                {/* Title On Top */}
+                <div className="relative z-10 text-center">
+                    <Title
+                        title={'We help students build real <br/> <span class="text-primary">professional skills</span>'}
+                        text_color={'text-secondary'}
+                    />
+                </div>
             </div>
+
+
+            {/* <div className="  w-full hasimg relative left-[11%] max-w-[118px]">
+                <Image
+                    src={hasimg}
+                    width={1000}
+                    height={5000}
+                    className='w-full ' />
+            </div> */}
             <div className="w-full">
                 <div className="flex flex-wrap justify-center gap-[15px] px-[5%] mb-[3%] mt-[3%] place-items-center">
-
                     {logos.map((item) => (
                         <div
                             key={item.id}
-                            className="bg-[white] m-[0px] cursor-pointer shadow-sm rounded-xl p-6 flex items-center justify-center border-none rounded-[25px] w-full h-28 max-w-[340px] h-[158px]"
+                            className="
+          bg-white m-0 cursor-pointer rounded-[25px] p-6 flex items-center justify-center border-none w-full max-w-[340px] h-[158px] 
+          shadow-md transition-shadow duration-500 ease-in-out
+          hover:shadow-[0_0_20px_4px_rgba(93,56,222,0.5)]
+          hover:animate-pulse
+          hover:-rotate-1
+          hover:scale-105
+          will-change-transform
+        "
                         >
                             <Image
                                 src={item.src}
@@ -76,9 +100,9 @@ const Professionalskill = () => {
                             />
                         </div>
                     ))}
-
                 </div>
             </div>
+
         </div>
 
 

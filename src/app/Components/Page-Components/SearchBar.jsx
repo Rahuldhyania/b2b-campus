@@ -1,4 +1,6 @@
 import React from 'react'
+import Image from 'next/image';
+import SearchIcon from '../../../../public/images/SearchIcon.webp';
 
 const SearchBar = ({
     placeholder = "What do you want to learn?",
@@ -11,68 +13,48 @@ const SearchBar = ({
 }) => {
     return (
         <div>
-            {/* <div className=" flex justify-center mt-10">
-                <div
-                    className=" w-full max-w-[489px] p-[13px] flex items-center gap-2 rounded-full "
-                    style={{
-                        backgroundColor: bgColor,
-                        border: `4px solid ${borderColor}`,
-                    }}
-                >
-             
-                    <input
-                        type="text"
-                        placeholder={placeholder}
-                        className="text-[16px] flex-1 bg-transparent outline-none border-none"
-                        style={{ color: textColor }}
-                    />
-
-              
-                    <button
-                        className="w-[142px] text-[16px] p-[13px] flex justify-center items-center outline-none border-none rounded-[12px] cursor-pointer"
-                        style={{
-                            backgroundColor: buttonBg,
-                            color: buttonTextColor,
-                        }}
-                    >
-                        {buttonText}
-                    </button>
-                </div>
-            </div> */}
             <div className="flex justify-center mt-10">
+
                 <div
-                    className="w-full  max-w-[489px] lg:max-w-[550px] xl:max-w-[400px] 2xl:max-w-[600px] p-[13px] flex items-center gap-2 rounded-full"
+                    className="relative w-full max-w-[489px] lg:max-w-[550px] xl:max-w-[400px] 2xl:max-w-[600px] p-[13px] flex items-center gap-2 rounded-full"
                     style={{
                         backgroundColor: bgColor,
                         border: `4px solid ${borderColor}`,
-                    }}
-                >
-                    {/* Input */}
+                    }}>
+
                     <input
                         type="text"
                         placeholder={placeholder}
-                        className="text-[16px] flex-1 bg-transparent outline-none border-none"
+                        className="text-[16px] flex-1 bg-transparent outline-none border-none   "
                         style={{ color: textColor }}
                     />
 
-                    {/* Button */}
+                    {/* 🔍 Search Button with Icon */}
                     <button
-                        className="w-[142px] lg:w-[160px] xl:w-[90px] text-[16px] xl:p-[8px] p-[13px] flex justify-center items-center outline-none border-none rounded-[12px] cursor-pointer"
+                        className="w-[142px] lg:w-[160px] xl:w-[142px] text-[16px] xl:p-[8px] p-[13px] flex justify-center items-center gap-2 outline-none border-none rounded-[12px] cursor-pointer"
                         style={{
                             backgroundColor: buttonBg,
                             color: buttonTextColor,
-                        }}
-                    >
+                        }}>
+
+                        {/* Icon */}
+                        <Image
+                            src={SearchIcon}
+                            alt="search"
+                            width={18}
+                            height={18}
+                            className="opacity-90"
+                        />
+
+                        {/* Text */}
                         {buttonText}
+
                     </button>
+
                 </div>
             </div>
-
         </div>
     )
 }
 
 export default SearchBar
-
-
-

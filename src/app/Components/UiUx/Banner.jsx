@@ -28,19 +28,28 @@ const Banner = () => {
   return (
     <div className="">
       <Header />
+      <div className="skill-title-container py-10 relative flex justify-centeritems-center">
+        <div
+          className="absolute inset-0 flex justify-center items-centerpointer-events-none"
+        >
+          <Image
+            src={bublebg}
+            alt="bg"
+            className="w-[500px] md:w-[1682px] sm:w-[280px] opacity-90 object-contain mx-auto " />
+        </div>
 
-      <div
-        className="skill-title-container bg-no-repeat bg-top bg-[length-80%] bg-contain  py-6 relative"
-        style={{ backgroundImage: `url(${bublebg.src})` }}
-      >
-        <Globaltitle
-          titleStart={"Bored of "}
-          highlightText={"“average”?"}
-          titleEnd={"Build skills that actually pay"}
-          description={"Learn real-world B2B skills that help you earn faster, grow smarter, and stand out louder"} />
+        {/* Title Component Above Background */}
+        <div className="relative z-10 w-full">
+          <Globaltitle
+            titleStart={"Bored of "}
+            highlightText={"“average”?"}
+            titleEnd={"Build skills that actually pay"}
+            description={
+              "Learn real-world B2B skills that help you earn faster, grow smarter, and stand out louder"
+            }
+          />
+        </div>
       </div>
-
-
 
       <div className="banner-wrap flex flex-wrap lg:flex-nowrap justify-evenly items-center gap-6 lg:gap-0">
 
@@ -126,46 +135,7 @@ const Banner = () => {
             <SearchBar />
           </div>
         </div>
-        {/* <div className="gril relative">
-          <Image
-            src={girllearn}
-            width={1000}
-            height={500}
-            alt="boy"
-            className="max-w-[280px] sm:max-w-[350px] md:max-w-[420px] lg:max-w-[332px] mx-auto"
-          />
 
-          <div className="relative flex tools-img">
-
-            <div className="absolute bottom-[7rem] tool1">
-              <Image
-                src={tool6}
-                width={1000}
-                height={500}
-                className="w-[82px]"
-              />
-            </div>
-
-            <div className="absolute bottom-[30rem] right-[8rem] tool1">
-              <Image
-                src={tool5}
-                width={1000}
-                height={500}
-                className="w-[95px]"
-              />
-            </div>
-
-            <div className="absolute bottom-[9rem] right-[2rem] tool1">
-              <Image
-                src={tool7}
-                width={1000}
-                height={500}
-                className="w-[100px]"
-              />
-            </div>
-
-          </div>
-        </div> */}
         <div className="gril relative">
           <Image
             src={girllearn}
@@ -181,7 +151,7 @@ const Banner = () => {
               <Image src={tool6} width={1000} height={500} className="w-[82px]" />
             </div>
 
-            <div className="absolute bottom-[27rem] lg:bottom-[22rem] right-[8rem] lg:right-[5rem] tool1">
+            <div className="absolute bottom-[22rem] lg:bottom-[22rem] right-[8rem] lg:right-[5rem] tool1">
               <Image src={tool5} width={1000} height={500} className="w-[95px]" />
             </div>
 
@@ -194,7 +164,6 @@ const Banner = () => {
 
 
       </div>
-
     </div >
   );
 };

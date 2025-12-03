@@ -35,18 +35,28 @@ const items = [
 const CampusProgram = () => {
     return (
         <div className='bg-[#F7F7F5] py-6'>
-            <div className="skill-title-container  bg-[length:43%] bg-no-repeat bg-top py-6 relative"
-                style={{ backgroundImage: `url(${smallbublebg.src})` }}
-            >
-                <Title
-                    title={'<span class="text-primary">B2B Campus Programs </span> <br/>  Trained 100+ Learners Through '}
-                    text_color={'text-secondary'}
+            <div className="relative py-14">
+
+                {/* Background Image */}
+                <img
+                    src={smallbublebg.src}
+                    alt="bubble-bg"
+                    className="absolute  top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 w-[480px] md:w-[900px]  sm:w-[240px] pointer-events-none select-none opacity-90"
                 />
-                <Description
-                    description={'Helping learners gain the skills, confidence, and direction to <br /> move ahead in their careers.'}
-                    text_color={'text-secondary'}
-                />
+
+                {/* Your Existing Text Components */}
+                <div className="relative z-10 text-center">
+                    <Title
+                        title={'<span class="text-primary">B2B Campus Programs </span> <br/>  Trained 100+ Learners Through'}
+                        text_color={'text-secondary'}
+                    />
+                    <Description
+                        description={'Helping learners gain the skills, confidence, and direction to <br /> move ahead in their careers.'}
+                        text_color={'text-secondary'}
+                    />
+                </div>
             </div>
+
             <Certificate />
             <div className="buttons text-[25px] flex justify-center m-auto mb-[25%] sm:mb-0">
                 <Buttons btnname='Get Skilled with B2B Campus' text_color={'text-white'} />

@@ -10,16 +10,24 @@ import Image from 'next/image';
 const Journeywithb2b2 = () => {
     return (
         <div>
-            <div
-                className="skill-title-container bg-no-repeat  bg-[length:30%] bg-bottom py-6 bg-containe relative "
-                style={{ backgroundImage: `url(${smbg.src})` }}
-            >
-                <Title
-                    title={'Begin Your Skill Journey With   <br/> <span class="text-primary">  B2B Campus </span>'}
-                    text_color={'text-secondary'}
+            <div className="relative py-14">
+
+                {/* Background Image */}
+                <img
+                    src={smbg.src}
+                    alt="background-bubble"
+                    className="absolute  top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[480px] md:w-[860px]  sm:w-[240px] pointer-events-none select-none opacity-90"
                 />
 
+                {/* Title (unchanged) */}
+                <div className="relative z-10 text-center">
+                    <Title
+                        title={'Begin Your Skill Journey With   <br/> <span class="text-primary">  B2B Campus </span>'}
+                        text_color={'text-secondary'}
+                    />
+                </div>
             </div>
+
             <div className="description">
                 <Description
                     description={'Build confidence, gain real experience, and move closer to your goals'}
@@ -55,7 +63,7 @@ const Journeywithb2b2 = () => {
                             </form>
 
                             {/* Submit Button */}
-                            <div className="buttons text-[25px] flex justify-center  mt-6">
+                            <div className="buttons text-[25px] flex justify-center  mt-6 mb-6">
                                 <Buttons btnname="Send it to the Moon" text_color="text-white" />
                             </div>
                         </div>

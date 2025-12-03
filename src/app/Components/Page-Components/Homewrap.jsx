@@ -9,6 +9,9 @@ import FeaturedIn from './FeaturedIn'
 import Journeywithb2b2 from './Journeywithb2b2'
 import TestimonialsSlider from './TestimonialsSlider'
 import Footer from '../UiUx/Footer'
+import TrainingSection from './TrainingSection'
+import FaqSection from './FaqSection'
+
 
 const Homewrap = () => {
     return (
@@ -20,8 +23,11 @@ const Homewrap = () => {
             <CampusProgram />
             <TestimonialsSlider />
             <TopCompanys />
+            <TrainingSection />
             <FeaturedIn />
+            <FaqSection />
             <Journeywithb2b2 />
+
             <Footer />
         </div>
     )

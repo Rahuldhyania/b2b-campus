@@ -64,7 +64,7 @@ export default function Teachcareer() {
           </div>
         ))}
       </div>
-      <div className="relative py-14 flex justify-center items-center">
+      <div className="relative flex justify-center items-center">
 
         {/* Background Image */}
         <img
@@ -99,7 +99,7 @@ export default function Teachcareer() {
           />
 
           {/* Button */}
-          <div className="buttons text-[25px] flex justify-center m-auto mb-[25%] sm:mb-0 z-10 relative">
+          <div className="buttons text-[25px] flex justify-center m-auto sm:mb-0 z-10 relative">
             <Buttons btnname='Backed by a Successful Agency' text_color={'text-white'} />
           </div>
 

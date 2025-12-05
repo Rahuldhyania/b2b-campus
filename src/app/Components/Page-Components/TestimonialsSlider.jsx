@@ -68,7 +68,7 @@ const TestimonialsSlider = () => {
             leaf1: leaf1,
             value: "12+",
             text: "Industry-focused courses available",
-            leaf: leaf1,
+            leaf: leaf2,
         },
         {
             leaf1: leaf1,

@@ -55,7 +55,7 @@ const allVideoCourses = [
         title: "Graphic Motion Design",
         des: "Animate your designs",
         category: "Logistics",
-        videoLink: "https://www.youtube.com/watch?v=rcEgXYU9Qeo&t=2s",
+        videoLink: "https://www.youtube.com/watch?v=LuqZqP4nUqg",
     },
     {
         id: 7,

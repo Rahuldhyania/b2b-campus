@@ -13,7 +13,7 @@ export default function Teachcareer() {
   const items = [
     {
       icon: "/images/arrowup.webp",
-      title: "126%",
+      title: "170%",
       subtitle: "170% Average Salary Hike",
     },
     {
@@ -29,7 +29,7 @@ export default function Teachcareer() {
   ];
 
   return (
-    <div className='main-bg relative '>
+    <div className='main-bg  '>
       <div className="w-[90%] relative bottom-[56px] m-auto max-w-[1450px] p-[1%]
             border-none rounded-[50px] bg-[#E9E5FF]
             flex flex-wrap lg:flex-nowrap justify-center lg:justify-between items-center gap-6">
@@ -84,30 +84,43 @@ export default function Teachcareer() {
       </div>
       <div className="laptopwithman  relative">
 
-        <div
-          className="w-full bg-center bg-contain bg-no-repeat relative "
-          style={{ backgroundImage: `url(${cloud.src})` }}
-        >
-          {/* Main image */}
-          <Image
-            src={manlaptop}
-            alt="main"
-            width={1000}
-            height={500}
-            className="relative max-w-[735px] w-full sm:w-[90%] md:w-[735px] m-auto h-auto object-cover z-10
-               transition-transform duration-500 hover:scale-105 hidden lg:block"
-          />
+        <div className="relative w-full">
+
+          {/* Background Cloud Image */}
+          <div className="w-full h-full absolute inset-0 z-0">
+            <Image
+              src={cloud}
+              alt="Cloud Background"
+              className="w-full h-full object-contain object-center"
+              priority
+              fill
+            />
+          </div>
+
+          {/* Main Laptop Image */}
+          <div className="relative z-10">
+            <Image
+              src={manlaptop}
+              alt="main"
+              width={1000}
+              height={500}
+              className="relative max-w-[735px] w-full sm:w-[90%] md:w-[456px] m-auto h-auto object-cover
+                 transition-transform duration-500 hover:scale-105 hidden lg:block"
+            />
+          </div>
 
           {/* Button */}
-          <div className="buttons text-[25px] flex justify-center m-auto sm:mb-0 z-10 relative">
-            <Buttons btnname='Backed by a Successful Agency' text_color={'text-white'} />
+          <div className="relative z-10 flex justify-center m-auto mt-4 sm:mb-0">
+            <Buttons btnname="Backed by a Successful Agency" text_color={"text-white"} />
           </div>
 
           {/* ScratchCards overlay */}
-          <div className="lg:absolute inset-0 flex justify-center items-center z-20 pointer-events-none">
+          <div className="absolute inset-0 flex justify-center items-center z-20 pointer-events-none">
             <ScratchCards />
           </div>
+
         </div>
+
 
 
 

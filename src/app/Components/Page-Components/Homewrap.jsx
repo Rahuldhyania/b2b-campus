@@ -11,6 +11,7 @@ import TestimonialsSlider from './TestimonialsSlider'
 import Footer from '../UiUx/Footer'
 import TrainingSection from './TrainingSection'
 import FaqSection from './FaqSection'
+import WhyChooseSection from './WhyChooseSection'
 
 
 const Homewrap = () => {
@@ -19,6 +20,7 @@ const Homewrap = () => {
             <Banner />
             <TrainingSection />
             <Professionalskill />
+            <WhyChooseSection />
 
             <PopularCourses />
             <Teachcareer />

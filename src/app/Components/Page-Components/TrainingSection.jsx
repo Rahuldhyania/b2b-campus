@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Title from "../UiUx/Title";
+import Description from "../UiUx/Description";
 
 const features = [
     "100% practical sessions",
@@ -14,7 +16,7 @@ const features = [
 export default function TrainingSection() {
     return (
         <section
-            className="relative py-16 px-6 overflow-hidden"
+            className="relative py-3 px-6 overflow-hidden"
             style={{ backgroundColor: "#DDD6FF" }} // MAIN BACKGROUND COLOR
         >
 
@@ -45,7 +47,12 @@ export default function TrainingSection() {
                     viewport={{ once: true }}
                     className="text-5xl md:text-6xl font-extrabold text-[#6346FA] text-center drop-shadow-lg"
                 >
-                    Industry-Ready Software Training
+                    <div className="relative z-10 text-center">
+                        <Title
+                            title={'<span class="text-primary">About Our  </span>Course '}
+                            text_color={'text-secondary'}
+                        />
+                    </div>
                 </motion.h2>
 
                 <motion.p
@@ -55,7 +62,12 @@ export default function TrainingSection() {
                     viewport={{ once: true }}
                     className="text-2xl text-[black] text-center mt-4"
                 >
-                    Designed for Real Jobs with Practical Skills
+                    <div className="relative z-10 text-center">
+                        <Description
+                            description={'Industry-Ready Software Training Designed for Real Jobs <br />'}
+                            text_color={'text-secondary'}
+                        />
+                    </div>
                 </motion.p>
 
                 <motion.p
@@ -71,23 +83,41 @@ export default function TrainingSection() {
                 {/* Features Grid — Glass Effect */}
                 <div className="grid md:grid-cols-2 gap-10 mt-20">
                     {features.map((item, index) => (
+                        // <motion.div
+                        //     key={index}
+                        //     initial={{ opacity: 0, scale: 0.8 }}
+                        //     whileInView={{ opacity: 1, scale: 1 }}
+                        //     transition={{ duration: 0.6, delay: index * 0.15 }}
+                        //     viewport={{ once: true }}
+                        //     className="p-8 bg-white/50 backdrop-blur-xl border border-purple-200/60
+                        //  rounded-3xl shadow-xl hover:shadow-2xl transition-all hover:scale-[1.03] 
+                        //  flex items-center gap-4"
+                        // >
+                        //     <div className="w-10 h-10 bg-purple-300/60 rounded-full flex items-center justify-center shadow-md">
+                        //         <span className="text-purple-900 text-2xl">★</span>
+                        //     </div>
+                        //     <p className="text-black text-xl font-semibold leading-relaxed">
+                        //         {item}
+                        //     </p>
+                        // </motion.div>
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, scale: 0.8 }}
+                            initial={{ opacity: 0, scale: 0.9 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.6, delay: index * 0.15 }}
                             viewport={{ once: true }}
-                            className="p-8 bg-white/50 backdrop-blur-xl border border-purple-200/60
-                         rounded-3xl shadow-xl hover:shadow-2xl transition-all hover:scale-[1.03] 
-                         flex items-center gap-4"
+                            className="p-5 bg-white/50 backdrop-blur-xl border border-purple-200/60
+        rounded-2xl shadow-md hover:shadow-xl transition-all hover:scale-[1.02]
+        flex items-center gap-3"
                         >
-                            <div className="w-10 h-10 bg-purple-300/60 rounded-full flex items-center justify-center shadow-md">
-                                <span className="text-purple-900 text-2xl">★</span>
+                            <div className="w-8 h-8 bg-purple-300/60 rounded-full flex items-center justify-center shadow-md">
+                                <span className="text-purple-900 text-xl">★</span>
                             </div>
-                            <p className="text-black text-xl font-semibold leading-relaxed">
+                            <p className="text-black text-lg font-semibold leading-relaxed">
                                 {item}
                             </p>
                         </motion.div>
+
                     ))}
                 </div>
             </div>

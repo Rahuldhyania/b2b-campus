@@ -37,14 +37,12 @@ const CampusProgram = () => {
         <div className='bg-[#F7F7F5] py-6'>
             <div className="relative py-14">
 
-                {/* Background Image */}
                 <img
                     src={smallbublebg.src}
                     alt="bubble-bg"
                     className="absolute  top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 w-[480px] md:w-[900px]  sm:w-[240px] pointer-events-none select-none opacity-90"
                 />
 
-                {/* Your Existing Text Components */}
                 <div className="relative z-10 text-center">
                     <Title
                         title={'<span class="text-primary">B2B Campus Programs </span> <br/>  Trained 100+ Learners Through'}
@@ -68,3 +66,4 @@ const CampusProgram = () => {
 }
 
 export default CampusProgram
+

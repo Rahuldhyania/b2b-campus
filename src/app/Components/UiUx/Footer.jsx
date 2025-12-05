@@ -196,26 +196,23 @@ const Footer = () => {
                     </div>
 
                     <div className="w-full flex flex-col">
-                        <h3 className="text-[22px] sm:text-[28px] md:text-[30px] font-semibold mb-4">Courses</h3>
+                        <h3 className="text-[22px] sm:text-[28px] md:text-[30px] font-semibold mb-4">Development</h3>
                         <ul className="space-y-1 sm:space-y-2 text-[14px] sm:text-[16px] md:text-[18px]">
-                            <li className="transition-all duration-300 hover:text-blue-500 hover:translate-x-1">Graphic Design</li>
-                            <li className="transition-all duration-300 hover:text-blue-500 hover:translate-x-1">Digital Marketing</li>
-                            <li className="transition-all duration-300 hover:text-blue-500 hover:translate-x-1">Python</li>
-                            <li className="transition-all duration-300 hover:text-blue-500 hover:translate-x-1">WordPress</li>
-                            <li className="transition-all duration-300 hover:text-blue-500 hover:translate-x-1">Web Designing</li>
                             <li className="transition-all duration-300 hover:text-blue-500 hover:translate-x-1">Web Development</li>
+                            <li className="transition-all duration-300 hover:text-blue-500 hover:translate-x-1">WordPress</li>
+                            <li className="transition-all duration-300 hover:text-blue-500 hover:translate-x-1">React Js</li>
+                            <li className="transition-all duration-300 hover:text-blue-500 hover:translate-x-1">Shopify Development</li>
+                            <li className="transition-all duration-300 hover:text-blue-500 hover:translate-x-1">PHP</li>
+                            <li className="transition-all duration-300 hover:text-blue-500 hover:translate-x-1">Personality</li>
                         </ul>
                     </div>
 
                     <div className="w-full flex flex-col">
-                        <h3 className="text-[22px] sm:text-[28px] md:text-[30px] font-semibold mb-4">More Courses</h3>
+                        <h3 className="text-[22px] sm:text-[28px] md:text-[30px] font-semibold mb-4">Graphics</h3>
                         <ul className="space-y-1 sm:space-y-2 text-[14px] sm:text-[16px] md:text-[18px]">
-                            <li className="transition-all duration-300 hover:text-blue-500 hover:translate-x-1">Development</li>
-                            <li className="transition-all duration-300 hover:text-blue-500 hover:translate-x-1">PHP</li>
-                            <li className="transition-all duration-300 hover:text-blue-500 hover:translate-x-1">Laravel</li>
-                            <li className="transition-all duration-300 hover:text-blue-500 hover:translate-x-1">React Native</li>
-                            <li className="transition-all duration-300 hover:text-blue-500 hover:translate-x-1">React Js</li>
-                            <li className="transition-all duration-300 hover:text-blue-500 hover:translate-x-1">Personality</li>
+                            <li className="transition-all duration-300 hover:text-blue-500 hover:translate-x-1">Graphic Design</li>
+                            <li className="transition-all duration-300 hover:text-blue-500 hover:translate-x-1">Video Editing</li>
+
                         </ul>
                     </div>
 
@@ -224,8 +221,6 @@ const Footer = () => {
                         <ul className="space-y-1 sm:space-y-2 text-[14px] sm:text-[16px] md:text-[18px] opacity-90">
                             <li className="transition-all duration-300 hover:text-blue-500 hover:translate-x-1">Shopify App Development</li>
                             <li className="transition-all duration-300 hover:text-blue-500 hover:translate-x-1">Shopify Theme</li>
-                            <li className="transition-all duration-300 hover:text-blue-500 hover:translate-x-1">C and C++</li>
-                            <li className="transition-all duration-300 hover:text-blue-500 hover:translate-x-1">Flutter</li>
                             <li className="transition-all duration-300 hover:text-blue-500 hover:translate-x-1">Video Editing</li>
                         </ul>
                     </div>
@@ -236,7 +231,7 @@ const Footer = () => {
 
             <div className="border-t border-white/20 mt-8 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0">
 
-                <p className="text-sm opacity-80 text-center sm:text-left">© B2B Campus. All Rights Reserved.</p>
+                <p className="text-sm opacity-80 text-center sm:text-left">© B2B Campus. All Rights Reserved 2025.</p>
 
                 <div className="flex gap-3 sm:gap-4 mt-2 sm:mt-0">
                     {socialLinks.map((item, i) => (

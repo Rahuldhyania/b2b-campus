@@ -44,60 +44,125 @@ export default function FaqSection() {
                     Clear answers — so you feel confident before joining.
                 </p>
 
-                {/* FAQ Container */}
-                <div className="mt-16 space-y-6">
-                    {faqs.map((faq, index) => {
-                        const isOpen = openIndex === index;
+                {/* Grid with 2 Independent Columns */}
+                <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6">
 
-                        return (
-                            <motion.div
-                                key={index}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.4 }}
-                                viewport={{ once: true }}
-                                className="bg-white/60 backdrop-blur-md rounded-2xl shadow-xl border border-purple-200/60"
-                            >
-                                {/* Question Box */}
-                                <button
-                                    onClick={() => setOpenIndex(isOpen ? null : index)}
-                                    className="w-full flex justify-between items-center p-6 text-left"
-                                >
-                                    <span className="text-xl text-black">
-                                        {faq.q}
-                                    </span>
+                    {/* LEFT COLUMN */}
+                    <div className="space-y-6">
+                        {faqs
+                            .filter((_, i) => i % 2 === 0)
+                            .map((faq, i) => {
+                                const actualIndex = i * 2;
+                                const isOpen = openIndex === actualIndex;
 
-                                    <motion.span
-                                        animate={{ rotate: isOpen ? 180 : 0 }}
-                                        transition={{ duration: 0.3 }}
-                                        className="text-black text-2xl"
+                                return (
+                                    <motion.div
+                                        key={actualIndex}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 0.4 }}
+                                        viewport={{ once: true }}
+                                        className="bg-white/60 backdrop-blur-md rounded-2xl shadow-xl border border-purple-200/60"
                                     >
-                                        {isOpen ? "−" : "+"}
-                                    </motion.span>
-                                </button>
-
-                                {/* Smooth Animated Answer */}
-                                <AnimatePresence>
-                                    {isOpen && (
-                                        <motion.div
-                                            initial={{ height: 0, opacity: 0 }}
-                                            animate={{ height: "auto", opacity: 1 }}
-                                            exit={{ height: 0, opacity: 0 }}
-                                            transition={{ duration: 0.35, ease: "easeInOut" }}
-                                            className="overflow-hidden"
+                                        {/* Question Box */}
+                                        <button
+                                            onClick={() =>
+                                                setOpenIndex(isOpen ? null : actualIndex)
+                                            }
+                                            className="w-full flex justify-between items-center p-6 text-left"
                                         >
-                                            <div className="px-6 pb-6 text-black whitespace-pre-line leading-relaxed">
-                                                {faq.a}
-                                            </div>
-                                        </motion.div>
-                                    )}
-                                </AnimatePresence>
-                            </motion.div>
-                        );
-                    })}
+                                            <span className="text-xl text-black">{faq.q}</span>
+
+                                            <motion.span
+                                                animate={{ rotate: isOpen ? 180 : 0 }}
+                                                transition={{ duration: 0.3 }}
+                                                className="text-black text-2xl"
+                                            >
+                                                {isOpen ? "−" : "+"}
+                                            </motion.span>
+                                        </button>
+
+                                        {/* Smooth Answer */}
+                                        <AnimatePresence>
+                                            {isOpen && (
+                                                <motion.div
+                                                    initial={{ height: 0, opacity: 0 }}
+                                                    animate={{ height: "auto", opacity: 1 }}
+                                                    exit={{ height: 0, opacity: 0 }}
+                                                    transition={{ duration: 0.35 }}
+                                                    className="overflow-hidden"
+                                                >
+                                                    <div className="px-6 pb-6 text-black leading-relaxed">
+                                                        {faq.a}
+                                                    </div>
+                                                </motion.div>
+                                            )}
+                                        </AnimatePresence>
+                                    </motion.div>
+                                );
+                            })}
+                    </div>
+
+                    {/* RIGHT COLUMN */}
+                    <div className="space-y-6">
+                        {faqs
+                            .filter((_, i) => i % 2 !== 0)
+                            .map((faq, i) => {
+                                const actualIndex = i * 2 + 1;
+                                const isOpen = openIndex === actualIndex;
+
+                                return (
+                                    <motion.div
+                                        key={actualIndex}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 0.4 }}
+                                        viewport={{ once: true }}
+                                        className="bg-white/60 backdrop-blur-md rounded-2xl shadow-xl border border-purple-200/60"
+                                    >
+                                        {/* Question Box */}
+                                        <button
+                                            onClick={() =>
+                                                setOpenIndex(isOpen ? null : actualIndex)
+                                            }
+                                            className="w-full flex justify-between items-center p-6 text-left"
+                                        >
+                                            <span className="text-xl text-black">{faq.q}</span>
+
+                                            <motion.span
+                                                animate={{ rotate: isOpen ? 180 : 0 }}
+                                                transition={{ duration: 0.3 }}
+                                                className="text-black text-2xl"
+                                            >
+                                                {isOpen ? "−" : "+"}
+                                            </motion.span>
+                                        </button>
+
+                                        {/* Answer */}
+                                        <AnimatePresence>
+                                            {isOpen && (
+                                                <motion.div
+                                                    initial={{ height: 0, opacity: 0 }}
+                                                    animate={{ height: "auto", opacity: 1 }}
+                                                    exit={{ height: 0, opacity: 0 }}
+                                                    transition={{ duration: 0.35 }}
+                                                    className="overflow-hidden"
+                                                >
+                                                    <div className="px-6 pb-6 text-black leading-relaxed">
+                                                        {faq.a}
+                                                    </div>
+                                                </motion.div>
+                                            )}
+                                        </AnimatePresence>
+                                    </motion.div>
+                                );
+                            })}
+                    </div>
+
                 </div>
 
             </div>
         </section>
+
     );
 }

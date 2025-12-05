@@ -241,44 +241,59 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Image from "next/image";
-import qoutes from '../../../../public/images/qoutes.webp'
-import leftarrow from '../../../../public/images/leftarrow.webp'
-import sliderrightarrow from '../../../../public/images/sliderrightarrow.webp'
+import qoutes from '../../../../public/images/qoutes.webp';
+import leftarrow from '../../../../public/images/leftarrow.webp';
+import sliderrightarrow from '../../../../public/images/sliderrightarrow.webp';
 import leaf1 from "../../../../public/images/leaf.webp";
 import leaf2 from "../../../../public/images/leaf2.webp";
-
 
 const TestimonialsSlider = () => {
     const data = [
         {
             id: 1,
-            name: "Aditya Kapoor",
-            image: "/images/sliderdpman.webp",
+            name: "Sanjeev Kumar",
+            image: "/images/sanjeevkumar.webp",
             stars: 5,
             review:
-                "Hi My name is Aditya Kapoor. I have completed my graduation then I joined Web Designing course in B2B Campus. I think it the best institute for learning web designing and faculty is very very good. The way they are teaching the subject is awesome. So if you want to join web designing course B2B Campus is the Best.",
+                "I have joined B2B CAMPUS for training in video editing, and I am fully satisfied. Qualified and cooperative staff. Specially, my trainer's teaching style is very easy to understand. According to my opinion, this is the best IT training centre.",
         },
         {
             id: 2,
-            name: "Aditya Kapoor",
-            image: "/images/sliderdpman.webp",
+            name: "Babli",
+            image: "", // No image, placeholder will show
             stars: 5,
             review:
-                "Hi My name is Aditya Kapoor. I have completed my graduation then I joined Web Designing course in B2B Campus. I think it the best institute for learning web designing and faculty is very very good. The way they are teaching the subject is awesome. So if you want to join web designing course B2B Campus is the Best.",
+                "I completed a 3-month Digital Marketing course at B2B Campus. It was a fantastic learning experience. The curriculum was well-structured, covering Google Ads, Meta Ads, SEO, etc. Trainers were knowledgeable and supportive.",
         },
-        // Add more slides if needed
+        {
+            id: 3,
+            name: "Sushmita Sharma",
+            image: "", // No image, placeholder will show
+            stars: 5,
+            review:
+                "Im currently learning the Digital Marketing course at B2B Campus, and its been a great experience so far The trainers are knowledgeable, and the course covers practical, realworld strategies",
+        },
+        {
+            id: 3,
+            name: "Tanish Kumar",
+            image: "", // No image, placeholder will show
+            stars: 5,
+            review:
+                "Excellent training at B2B Campus! The instructors were knowledgeable and supportive.The program was designed in a very practical and hands-on manner, which helped me gain valuable skills that I can use in",
+        },
+        // Add more slides here
     ];
 
     const statsData = [
         {
             leaf1: leaf1,
-            value: "1500+",
+            value: "1485+",
             text: "Learners trained with practical skills",
             leaf: leaf2,
         },
         {
             leaf1: leaf1,
-            value: "10,000+",
+            value: "9,874+",
             text: "Hours of real project based learning",
             leaf: leaf2,
         },
@@ -300,17 +315,14 @@ const TestimonialsSlider = () => {
         <div>
             {/* Stats Section */}
             <div className="w-full flex justify-center py-10">
-                <div
-                    className="w-[90%] md:w-[85%] bg-[#EFE8FF] rounded-3xl py-8 px-6
-                      flex flex-col md:flex-row items-center justify-between gap-2 md:gap-8"
-                >
+                <div className="w-[90%] md:w-[85%] bg-[#EFE8FF] rounded-3xl py-8 px-6 flex flex-col md:flex-row items-center justify-between gap-2 md:gap-8">
                     {statsData.map((item, index) => (
                         <StatItem key={index} item={item} isLast={index === statsData.length - 1} />
                     ))}
                 </div>
             </div>
 
-            {/* Testimonials Slider Section */}
+            {/* Testimonials Slider */}
             <div className="relative w-full flex justify-center py-10">
                 <div className="w-[90%] md:w-[70%] relative">
 
@@ -336,7 +348,6 @@ const TestimonialsSlider = () => {
                         />
                     </div>
 
-                    {/* Swiper Slider */}
                     <Swiper
                         modules={[Navigation, Pagination]}
                         navigation={{
@@ -352,13 +363,20 @@ const TestimonialsSlider = () => {
                                 <div className="bg-white rounded-[44px] p-[11%] border-2 border-[#6346FA80] shadow-md transition-transform duration-500 hover:shadow-xl hover:-translate-y-2">
                                     <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
 
-                                        <Image
-                                            src={item.image}
-                                            width={90}
-                                            height={90}
-                                            className="rounded-full transition-transform duration-500 hover:scale-110"
-                                            alt="user"
-                                        />
+                                        {/* User Image or Placeholder */}
+                                        {item.image ? (
+                                            <Image
+                                                src={item.image}
+                                                width={90}
+                                                height={90}
+                                                className="rounded-full transition-transform duration-500 hover:scale-110"
+                                                alt={item.name}
+                                            />
+                                        ) : (
+                                            <div className="w-[90px] h-[90px] flex items-center justify-center rounded-full bg-purple-200 text-white text-3xl font-bold">
+                                                {item.name[0].toUpperCase()}
+                                            </div>
+                                        )}
 
                                         <div className="text-center sm:text-left">
                                             <h2 className="text-[27px] font-bold text-[#5D38DE]">{item.name}</h2>
@@ -391,7 +409,7 @@ const TestimonialsSlider = () => {
                     />
                 </div>
 
-                {/* Swiper Default Arrows Already Styled */}
+                {/* Swiper Custom Styling */}
                 <style jsx global>{`
                     .swiper-button-prev,
                     .swiper-button-next {
@@ -430,7 +448,6 @@ const TestimonialsSlider = () => {
 };
 
 function StatItem({ item, isLast }) {
-    // Parsing numeric value out of value string (e.g. "10,000+", "98%")
     const parseValue = (val) => {
         if (typeof val === "number") return val;
         let cleaned = val.replace(/[+, %]/g, "").replace(/,/g, "");
@@ -438,31 +455,23 @@ function StatItem({ item, isLast }) {
     };
 
     const numericValue = parseValue(item.value);
-
     const [count, setCount] = useState(0);
 
     useEffect(() => {
-        let start = 0;
-        const duration = 1500;
         let startTimestamp = null;
+        const duration = 1500;
 
         const step = (timestamp) => {
             if (!startTimestamp) startTimestamp = timestamp;
             const progress = timestamp - startTimestamp;
             const progressPercent = Math.min(progress / duration, 1);
-            const currentCount = Math.floor(progressPercent * numericValue);
-            setCount(currentCount);
-            if (progress < duration) {
-                requestAnimationFrame(step);
-            } else {
-                setCount(numericValue);
-            }
+            setCount(Math.floor(progressPercent * numericValue));
+            if (progress < duration) requestAnimationFrame(step);
         };
 
         requestAnimationFrame(step);
     }, [numericValue]);
 
-    // Show suffix like "+" or "%" if present
     const suffix = item.value.replace(/[0-9,]/g, "");
 
     return (
@@ -492,11 +501,10 @@ function StatItem({ item, isLast }) {
                 />
             </div>
 
-            {!isLast && (
-                <div className="hidden md:block w-[1px] h-16 bg-[#C9B8FF]"></div>
-            )}
+            {!isLast && <div className="hidden md:block w-[1px] h-16 bg-[#C9B8FF]"></div>}
         </div>
     );
 }
 
 export default TestimonialsSlider;
+

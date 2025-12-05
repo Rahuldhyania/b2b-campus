@@ -1,7 +1,6 @@
 import Image from "next/image";
-import fontscratch from "../../../../public/images/fontscratch.webp"
-import manlaptop from "../../../../public/images/manlaptop.webp"
-import cloud from "../../../../public/images/cloud.webp"
+import fontscratch from "../../../../public/images/fontscratch.webp";
+
 export default function ScratchCards() {
     const scratchCards = [
         {
@@ -13,24 +12,24 @@ export default function ScratchCards() {
             rotate: "-rotate-3",
         },
         {
-            title: "COURSES",
-            subtitle: "Learn From Real Instructors",
+            title: "TUTORS",
+            subtitle: "Train With People Who Work in the Industry Daily",
             scratchImg: fontscratch,
             bgColor: "bg-white",
             shadowColor: "shadow-yellow-400",
             rotate: "rotate-2",
         },
         {
-            title: "TUTORIALS",
-            subtitle: "Step-by-Step Learning",
+            title: "TEXTBOOKS",
+            subtitle: "Learn From Practical Case Breakdowns",
             scratchImg: fontscratch,
             bgColor: "bg-white",
             shadowColor: "shadow-green-400",
             rotate: "-rotate-2",
         },
         {
-            title: "PROJECTS",
-            subtitle: "Hands-on Practical Experience",
+            title: "ZOOM-ONLY",
+            subtitle: "Get Real Mentoring, Face to Face",
             scratchImg: fontscratch,
             bgColor: "bg-white",
             shadowColor: "shadow-pink-400",
@@ -39,28 +38,34 @@ export default function ScratchCards() {
     ];
 
     return (
-
-
         <div className="relative w-full flex justify-center px-4 mt-10">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 max-w-[80%] w-full">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-30 max-w-[90%] w-full">
                 {scratchCards.map((item, index) => (
-                    <div key={index} className={`flex flex-col justify-center items-center transform transition duration-500 hover:scale-105 cursor-pointer ${item.rotate}`}>
-                        <div className={`relative rounded-[30px] p-6 flex flex-col items-center ${item.bgColor} shadow-md hover:shadow-lg transition-shadow duration-500`}>
+                    <div
+                        key={index}
+                        className={`flex flex-col justify-center items-center transform transition duration-500 hover:scale-105 cursor-pointer ${item.rotate}`}
+                    >
+                        <div
+                            className={`relative rounded-[30px] p-6 flex flex-col items-center ${item.bgColor} shadow-md hover:shadow-lg transition-shadow duration-500`}
+                        >
                             <Image
                                 src={item.scratchImg}
                                 alt="scratch"
-                                width={220}
+                                width={159}
                                 height={80}
                                 className="absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 object-contain"
                                 priority
                             />
-                            <h2 className="text-[42px] font-semibold text-center text-[#6346FA] tracking-wide">{item.title}</h2>
-                            <p className="text-[20px] text-black text-center mt-3 leading-tight">{item.subtitle}</p>
+                            <h2 className="text-[28px] font-semibold text-center text-[#6346FA] tracking-wide">
+                                {item.title}
+                            </h2>
+                            <p className="text-[14px] text-black text-center mt-3 leading-tight">
+                                {item.subtitle}
+                            </p>
                         </div>
                     </div>
                 ))}
             </div>
         </div>
-
     );
 }

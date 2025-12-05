@@ -13,6 +13,7 @@ import TrainingSection from './TrainingSection'
 import FaqSection from './FaqSection'
 import WhyChooseSection from './WhyChooseSection'
 import Whatstudentget from './Whatstudentget'
+import Youtubevideo from './Youtubevideo'
 
 
 const Homewrap = () => {
@@ -32,6 +33,7 @@ const Homewrap = () => {
 
             <FeaturedIn />
             <FaqSection />
+            <Youtubevideo />
             <Journeywithb2b2 />
 
             <Footer />

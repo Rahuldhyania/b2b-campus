@@ -107,12 +107,12 @@ import "swiper/css/pagination";
 const items = [
     {
         img: certificateone,
-        text: "Learners Have Launched Their Own Startups After Training",
+        text: "Learners have gained hands-on coding skills, empowering them to build innovative web and software solutions.",
         layout: "text-top",
     },
     {
         img: certificate2,
-        text: "Our Training Helped Learners Launch Innovative Startup Ideas",
+        text: "Learners mastered digital marketing strategies that help brands grow and succeed in competitive markets.",
         layout: "img-top",
     },
     {
@@ -122,7 +122,7 @@ const items = [
     },
     {
         img: certificate4,
-        text: "Learners Transformed Their Skills Into Real Startup Ventures ",
+        text: "Learners acquired practical logistics knowledge to optimize transport routes and improve freight management.",
         layout: "img-top",
     },
 ];

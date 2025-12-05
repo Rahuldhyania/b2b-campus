@@ -1,4 +1,5 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import titlewhitebg from "../../../../public/images/titlewhitebg.webp"
 import Title from '../UiUx/Title'
 import Image from 'next/image';
@@ -24,12 +25,20 @@ export const logos = [
 ];
 
 const TopCompanys = () => {
+    const [mobileVisibleCount, setMobileVisibleCount] = useState(5);
+
+    const handleLoadMore = () => {
+        setMobileVisibleCount(prev => prev + 5);
+    };
+
+    const mobileLogosToShow = logos.slice(0, mobileVisibleCount);
+
     return (
         <div className='main-bg py-6'>
 
             {/* Title */}
             <div
-                className="skill-title-container bg-no-repeat bg-bottom bg-containe relative"
+                className="skill-title-container bg-no-repeat bg-bottom bg-contain relative"
                 style={{ backgroundImage: `url(${titlewhitebg.src})` }}
             >
                 <Title
@@ -38,10 +47,9 @@ const TopCompanys = () => {
                 />
             </div>
 
-            {/* Cards Section */}
-            <div className="w-full">
+            {/* Cards Section - Desktop */}
+            <div className="w-full hidden md:block">
                 <div className="flex flex-wrap justify-center gap-[20px] px-[5%] mb-[3%] mt-[3%] place-items-center">
-
                     {logos.map((item) => (
                         <div
                             key={item.id}
@@ -55,8 +63,7 @@ const TopCompanys = () => {
                                 border border-purple-200/50
                             "
                         >
-
-                            {/* Logo Section */}
+                            {/* Logo */}
                             <div className="
                                 flex items-center justify-center 
                                 h-[70%] p-6 
@@ -76,7 +83,7 @@ const TopCompanys = () => {
                                 />
                             </div>
 
-                            {/* Purple Gradient Description */}
+                            {/* Description */}
                             <div className="
                                 bg-gradient-to-r from-[#8c5fef] to-[#7154FF] 
                                 text-white text-center 
@@ -87,11 +94,69 @@ const TopCompanys = () => {
                             ">
                                 {item.desc}
                             </div>
-
                         </div>
                     ))}
-
                 </div>
+            </div>
+
+            {/* Cards Section - Mobile with Load More */}
+            <div className="md:hidden">
+                <div className="flex flex-wrap justify-center gap-[20px] px-[5%] mb-[3%] mt-[3%] place-items-center">
+                    {mobileLogosToShow.map((item) => (
+                        <div
+                            key={item.id}
+                            className="
+                                bg-white/80 backdrop-blur-lg 
+                                cursor-pointer shadow-md rounded-[25px] 
+                                flex flex-col justify-between 
+                                w-full sm:w-[48%] max-w-[340px] h-[170px] overflow-hidden
+                                transition-all duration-300 
+                                hover:scale-[1.07] hover:shadow-xl hover:-translate-y-2
+                                border border-purple-200/50
+                            "
+                        >
+                            <div className="
+                                flex items-center justify-center 
+                                h-[70%] p-6 
+                                transition-all duration-300 
+                                hover:scale-110
+                            ">
+                                <Image
+                                    src={item.src}
+                                    alt={item.alt}
+                                    width={140}
+                                    height={70}
+                                    className="
+                                        object-contain
+                                        transition duration-300 
+                                        hover:brightness-110 hover:scale-[1.08]
+                                    "
+                                />
+                            </div>
+                            <div className="
+                                bg-gradient-to-r from-[#8c5fef] to-[#7154FF] 
+                                text-white text-center 
+                                h-[30%] flex items-center justify-center 
+                                text-[16px] font-semibold
+                                transition-all duration-300 
+                                hover:from-[#732dec] hover:to-[#6346FA]
+                            ">
+                                {item.desc}
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                {mobileVisibleCount < logos.length && (
+                    <div className="flex justify-center mt-4">
+                        <button
+                            onClick={handleLoadMore}
+                            className="px-6 py-3 rounded-xl bg-[#6346FA] text-white text-[16px] transition-all duration-300 hover:bg-[#4a2fd1]"
+                        >
+                            Load More
+                        </button>
+                    </div>
+                )}
             </div>
 
             {/* Description + Button */}
@@ -100,7 +165,7 @@ const TopCompanys = () => {
                 text_color={'text-secondary'}
             />
 
-            <div className="buttons text-[25px] flex justify-center m-auto mt-[2%]">
+            <div className="buttons text-[25px] hidden md:flex justify-center m-auto mt-[2%]">
                 <Buttons btnname='Enroll Now' text_color={'text-white'} />
             </div>
 

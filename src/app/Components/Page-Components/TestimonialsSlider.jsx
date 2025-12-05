@@ -41,7 +41,7 @@ const TestimonialsSlider = () => {
                 "Im currently learning the Digital Marketing course at B2B Campus, and its been a great experience so far The trainers are knowledgeable, and the course covers practical, realworld strategies",
         },
         {
-            id: 3,
+            id: 4,
             name: "Tanish Kumar",
             image: "", // No image, placeholder will show
             stars: 5,

@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useState } from "react";
@@ -24,7 +23,7 @@ import arrows2 from "../../../../public/images/arrows2.webp";
 import arrows3 from "../../../../public/images/arrows3.webp";
 import arrows4 from "../../../../public/images/arrows4.webp";
 import arrows5 from "../../../../public/images/arrows5.webp";
-import titlewhitebg from "../../../../public/images/titlewhitebg.webp"
+import titlewhitebg from "../../../../public/images/titlewhitebg.webp";
 import Title from "../UiUx/Title";
 import Description from "../UiUx/Description";
 
@@ -48,15 +47,14 @@ const allCourses = [
     { id: 9, title: "Python / Java", des: "Master coding with real projects", category: "Development", icon: icon6, color: "#0A9DFF", buttonText: "Learn more", img: arrows4 },
     { id: 10, title: "Web Designing", des: "Designs that shape great websites", category: "Development", icon: icon8, color: "#0A9DFF", buttonText: "Learn more", img: arrows4 },
     { id: 11, title: "Wordpress", des: "Build websites fast and easy ", category: "Development", icon: icon9, color: "#0A9DFF", buttonText: "Learn more", img: arrows4 },
-    { id: 10, title: "IOT", des: "Automate, connect, and control", category: "Development", icon: icon11, color: "#0A9DFF", buttonText: "Learn more", img: arrows4 },
-    { id: 12, title: "Digital Marketing", des: "PGrow your brand online", category: "Marketing & Bussiness", icon: icon10, color: "#0A9DFF", buttonText: "Learn more", img: arrows5 },
+    { id: 12, title: "Digital Marketing", des: "Grow your brand online", category: "Marketing & Bussiness", icon: icon10, color: "#0A9DFF", buttonText: "Learn more", img: arrows5 },
+    { id: 13, title: "IOT Advanced", des: "Automate, connect, and control", category: "Development", icon: icon11, color: "#0A9DFF", buttonText: "Learn more", img: arrows4 },
 ];
 
-
 export default function PopularCourses() {
-
     const [activeTab, setActiveTab] = useState("All Courses");
     const [filteredCourses, setFilteredCourses] = useState(allCourses);
+    const [mobileVisibleCount, setMobileVisibleCount] = useState(5); // mobile pagination
 
     const handleTabClick = (tab) => {
         setActiveTab(tab);
@@ -65,43 +63,57 @@ export default function PopularCourses() {
         } else {
             setFilteredCourses(allCourses.filter(c => c.category === tab));
         }
+        setMobileVisibleCount(5); // reset mobile visible count on tab change
     };
+
+    const handleLoadMore = () => {
+        setMobileVisibleCount(prev => prev + 5);
+    };
+
+    const mobileCoursesToShow = filteredCourses.slice(0, mobileVisibleCount);
 
     return (
         <div className="main-bg py-9">
-
             <div className="relative py-3">
-
                 <img
                     src={titlewhitebg.src}
                     alt="bubble-bg"
-                    className="absolute  top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 w-[480px] md:w-[530px]  sm:w-[240px] pointer-events-none select-none opacity-90"
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[480px] md:w-[530px] sm:w-[240px] pointer-events-none select-none opacity-90"
                 />
-
                 <div className="relative z-10 text-center">
                     <Title
-                        title={'<span class="text-primary">Popular </span>  Courses'}
+                        title={'<span class="text-primary">Popular </span> Courses'}
                         text_color={'text-secondary'}
                     />
-
                 </div>
             </div>
 
-            {/* Tabs */}
-            <div className="w-[55%] m-auto flex flex-wrap justify-center gap-3 bg-[#CEC5FF] p-4 rounded-2xl">
+            {/* Desktop Tabs */}
+            <div className="lg:w-[55%] m-auto hidden md:flex flex-wrap justify-center gap-3 bg-[#CEC5FF] p-4 rounded-2xl">
                 {Coursesbtn.map((item) => (
                     <button
                         key={item.id}
-                        onClick={() => {
-                            handleTabClick(item.btn);
-                            setActiveTab(item.btn);
-                        }}
-                        className={`
-                    px-6 py-3 rounded-xl text-[16px] transition-all duration-300 ease-in-out
-                    ${activeTab === item.btn
-                                ? "bg-[#6346FA] text-white"
-                                : "bg-[#E4DFFF] hover:bg-[#6346FA] hover:text-white"}
-                `}
+                        onClick={() => handleTabClick(item.btn)}
+                        className={`px-6 py-3 rounded-xl text-[16px] transition-all duration-300 ease-in-out ${activeTab === item.btn
+                            ? "bg-[#6346FA] text-white"
+                            : "bg-[#E4DFFF] hover:bg-[#6346FA] hover:text-white"
+                            }`}
+                    >
+                        {item.btn}
+                    </button>
+                ))}
+            </div>
+
+            {/* Mobile Tabs */}
+            <div className="lg:w-[55%] m-auto flex md:hidden flex-wrap justify-center gap-3 bg-[#CEC5FF] p-4 rounded-2xl">
+                {Coursesbtn.map((item) => (
+                    <button
+                        key={item.id}
+                        onClick={() => handleTabClick(item.btn)}
+                        className={`px-6 py-3 rounded-xl text-[16px] transition-all duration-300 ease-in-out ${activeTab === item.btn
+                            ? "bg-[#6346FA] text-white"
+                            : "bg-[#E4DFFF] hover:bg-[#6346FA] hover:text-white"
+                            }`}
                     >
                         {item.btn}
                     </button>
@@ -109,10 +121,24 @@ export default function PopularCourses() {
             </div>
 
             {/* Cards */}
-            <ServicesSection courses={filteredCourses} />
+            <div className="lg:block hidden">
+                <ServicesSection courses={filteredCourses} />
+            </div>
+
+            {/* Mobile Cards with Load More */}
+            <div className="md:hidden">
+                <ServicesSection courses={mobileCoursesToShow} />
+                {mobileVisibleCount < filteredCourses.length && (
+                    <div className="flex justify-center  pb-8">
+                        <button
+                            onClick={handleLoadMore}
+                            className="px-6 py-3 rounded-xl bg-[#6346FA] text-white text-[16px] transition-all duration-300 hover:bg-[#4a2fd1]"
+                        >
+                            Load More
+                        </button>
+                    </div>
+                )}
+            </div>
         </div>
-
-
-
     );
 }

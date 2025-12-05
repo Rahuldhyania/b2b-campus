@@ -6,10 +6,10 @@ import Title from "../UiUx/Title";
 // Tabs for filtering categories
 export const Coursesbtn = [
     { id: 1, btn: "All Courses" },
-    { id: 2, btn: "Logistics" },
-    { id: 3, btn: "Development" },
-    { id: 4, btn: "Graphics" },
-    { id: 5, btn: "Marketing & Bussiness" },
+    // { id: 2, btn: "Logistics" },
+    { id: 2, btn: "Development" },
+    { id: 3, btn: "Graphics" },
+    { id: 4, btn: "Marketing & Bussiness" },
 
 ];
 

@@ -1,0 +1,48 @@
+<form onSubmit={handleSubmit} className="crm-form">
+    <h2 className="title">Let's Discuss Your Project!</h2>
+
+    <div className="grid">
+        <div className="form-group">
+            <label>First Name*</label>
+            <input type="text" name="firstname" required value={formData.firstname} onChange={handleChange} />
+        </div>
+
+        <div className="form-group">
+            <label>Last Name*</label>
+            <input type="text" name="lastname" required value={formData.lastname} onChange={handleChange} />
+        </div>
+
+        <div className="form-group">
+            <label>Mobile Phone*</label>
+            <input type="text" name="mobile" required value={formData.mobile} onChange={handleChange} />
+        </div>
+
+        <div className="form-group">
+            <label>Email*</label>
+            <input type="email" name="email" required value={formData.email} onChange={handleChange} />
+        </div>
+
+        <div className="form-group full">
+            <label>Services</label>
+            <select name="services" className="service_select" value={formData.services} onChange={handleChange}>
+                <option value="Shopify Development">Shopify Development</option>
+                <option value="Digital Marketing">Digital Marketing</option>
+                <option value="Graphic & UI/UX Marketing">
+                    Graphic & UI/UX Marketing
+                </option>
+                <option value="Ecommerce">Ecommerce</option>
+                <option value="Web Development">Web Development</option>
+                <option value="Mobile App Development">
+                    Mobile App Development
+                </option>
+                <option value="DevOps Services">DevOps Services</option>
+                <option value="AI Services">AI Services</option>
+                <option value="Back Office Services">Back Office Services</option>
+            </select>
+        </div>
+    </div>
+
+    <button className="submit-btn" type="submit">
+        Submit
+    </button>
+</form>

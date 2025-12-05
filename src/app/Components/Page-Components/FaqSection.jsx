@@ -2,6 +2,9 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import titlewhitebg from "../../../../public/images/titlewhitebg.webp"
+import Title from "../UiUx/Title";
+import Description from "../UiUx/Description";
 
 const faqs = [
     { q: "Is this course good for beginners?", a: "Yes! Even if you have zero experience, we teach from basics to advanced in a simple and friendly way." },
@@ -21,28 +24,37 @@ export default function FaqSection() {
 
     return (
         <section
-            className="py-28 px-6 relative overflow-hidden"
-            style={{ backgroundColor: "#DDD6FF" }}
+            className="py-12 2xl:py-16 px-6 relative overflow-hidden main-bg"
+        // style={{ backgroundColor: "#DDD6FF" }}
         >
             {/* Background Decorative Blobs */}
             <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-purple-300/40 blur-[150px] rounded-full -translate-x-1/3 -translate-y-1/3"></div>
             <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-200/50 blur-[150px] rounded-full translate-x-1/3 translate-y-1/3"></div>
 
-            <div className="max-w-4xl mx-auto relative z-10">
+            <div className="max-w-6xl mx-auto relative z-10">
 
                 {/* Title */}
-                <motion.h2
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                    className="text-5xl font-bold text-[#6346FA] text-center"
-                >
-                    Frequently Asked Questions
-                </motion.h2>
+                <div className="relative ">
 
-                <p className="text-center text-black text-xl mt-3">
-                    Clear answers — so you feel confident before joining.
-                </p>
+                    <img
+                        src={titlewhitebg.src}
+                        alt="bubble-bg"
+                        className="absolute  top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 w-[480px] md:w-[745px]  sm:w-[240px] pointer-events-none select-none opacity-90"
+                    />
+
+                    <div className="relative z-10 text-center">
+                        <Title
+                            title={'<span class="text-primary">  Frequently Asked Questions</span> <br/>  '}
+                            text_color={'text-secondary'}
+                        />
+                        <Description
+                            description={' Clear answers — so you feel confident before joining.'}
+                            text_color={'text-secondary'}
+                        />
+                    </div>
+                </div>
+
+
 
                 {/* Grid with 2 Independent Columns */}
                 <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -69,7 +81,7 @@ export default function FaqSection() {
                                             onClick={() =>
                                                 setOpenIndex(isOpen ? null : actualIndex)
                                             }
-                                            className="w-full flex justify-between items-center p-6 text-left"
+                                            className="w-full flex justify-between items-center py-3 px-6 text-left"
                                         >
                                             <span className="text-xl text-black">{faq.q}</span>
 
@@ -125,7 +137,7 @@ export default function FaqSection() {
                                             onClick={() =>
                                                 setOpenIndex(isOpen ? null : actualIndex)
                                             }
-                                            className="w-full flex justify-between items-center p-6 text-left"
+                                            className="w-full flex justify-between items-center py-3 px-6 text-left"
                                         >
                                             <span className="text-xl text-black">{faq.q}</span>
 

@@ -34,8 +34,8 @@ const items = [
 ];
 const CampusProgram = () => {
     return (
-        <div className='bg-[#F7F7F5] py-6'>
-            <div className="relative py-14">
+        <div className='bg-[#F7F7F5] py-12'>
+            <div className="relative ">
 
                 <img
                     src={smallbublebg.src}

@@ -9,8 +9,8 @@ import Image from 'next/image';
 
 const Journeywithb2b2 = () => {
     return (
-        <div>
-            <div className="relative py-14">
+        <div className='p-12 pb-0' >
+            <div className="relative">
 
                 {/* Background Image */}
                 <img
@@ -22,7 +22,7 @@ const Journeywithb2b2 = () => {
                 {/* Title (unchanged) */}
                 <div className="relative z-10 text-center">
                     <Title
-                        title={'Begin Your Skill Journey With   <br/> <span class="text-primary">  B2B Campus </span>'}
+                        title={'Begin Your Skill Journey With   <span class="text-primary"> <br />B2B Campus  </span>'}
                         text_color={'text-secondary'}
                     />
                 </div>

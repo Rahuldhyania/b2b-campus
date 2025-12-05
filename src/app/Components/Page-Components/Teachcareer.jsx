@@ -18,7 +18,7 @@ export default function Teachcareer() {
     },
     {
       icon: "/images/bag.webp",
-      title: "50+",
+      title: "518+",
       subtitle: "Job Placements",
     },
     {
@@ -115,7 +115,7 @@ export default function Teachcareer() {
           </div>
 
           {/* ScratchCards overlay */}
-          <div className="absolute inset-0 flex justify-center items-center z-20 pointer-events-none">
+          <div className="absolute screcth-relative inset-0 flex justify-center items-center z-20 pointer-events-none">
             <ScratchCards />
           </div>
 

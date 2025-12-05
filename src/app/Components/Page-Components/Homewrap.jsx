@@ -12,6 +12,7 @@ import Footer from '../UiUx/Footer'
 import TrainingSection from './TrainingSection'
 import FaqSection from './FaqSection'
 import WhyChooseSection from './WhyChooseSection'
+import Whatstudentget from './Whatstudentget'
 
 
 const Homewrap = () => {
@@ -21,6 +22,7 @@ const Homewrap = () => {
             <TrainingSection />
             <Professionalskill />
             <WhyChooseSection />
+            <Whatstudentget />
 
             <PopularCourses />
             <Teachcareer />

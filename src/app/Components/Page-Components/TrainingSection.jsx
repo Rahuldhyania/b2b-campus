@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Title from "../UiUx/Title";
 import Description from "../UiUx/Description";
+import titlewhitebg from "../../../../public/images/titlewhitebg.webp"
 
 const features = [
     "100% practical sessions",
@@ -47,38 +48,27 @@ export default function TrainingSection() {
                     viewport={{ once: true }}
                     className="text-5xl md:text-6xl font-extrabold text-[#6346FA] text-center drop-shadow-lg"
                 >
-                    <div className="relative z-10 text-center">
-                        <Title
-                            title={'<span class="text-primary">About Our  </span>Course '}
-                            text_color={'text-secondary'}
+                    <div className="relative">
+
+                        <img
+                            src={titlewhitebg.src}
+                            alt="bubble-bg"
+                            className="absolute  top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 w-[480px] md:w-[900px]  sm:w-[240px] pointer-events-none select-none opacity-90"
                         />
+
+                        <div className="relative z-10 text-center">
+                            <Title
+                                title={'<span class="text-primary">About Our Course</span> <br/> Industry-Ready Software Training Designed for Real Jobs'}
+                                text_color={'text-secondary'}
+                            />
+                            <Description
+                                description={'We dont just teach — we train you for a job. <br /> '}
+                                text_color={'text-secondary'}
+                            />
+                        </div>
                     </div>
+
                 </motion.h2>
-
-                <motion.p
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.9, delay: 0.2 }}
-                    viewport={{ once: true }}
-                    className="text-2xl text-[black] text-center mt-4"
-                >
-                    <div className="relative z-10 text-center">
-                        <Description
-                            description={'Industry-Ready Software Training Designed for Real Jobs <br />'}
-                            text_color={'text-secondary'}
-                        />
-                    </div>
-                </motion.p>
-
-                <motion.p
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.9, delay: 0.4 }}
-                    viewport={{ once: true }}
-                    className="text-xl text-purple-700 text-center mt-6 italic"
-                >
-                    We don’t just teach — we train you for a job.
-                </motion.p>
 
                 {/* Features Grid — Glass Effect */}
                 <div className="grid md:grid-cols-2 gap-10 mt-20">

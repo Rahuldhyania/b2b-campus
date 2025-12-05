@@ -89,3 +89,9 @@ body {
     font-size: 14px;
   }
 }
+
+@media (min-width: 375px) and (max-width: 1024px) {
+  .screcth-relative {
+    position: relative;
+  }
+}

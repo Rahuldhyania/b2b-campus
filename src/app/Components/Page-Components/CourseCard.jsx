@@ -142,10 +142,10 @@ const CourseCard = ({ id }) => {
                         </ul>
 
                         <div className="
-                    flex justify-between items-center bg-white border border-[#6346FA4D] 
-                    rounded-full p-[2%] cursor-pointer transition-all duration-300 
-                    hover:bg-[#F3F0FF] hover:shadow-md hover:-translate-y-1
-                ">
+                        flex justify-between items-center bg-white border border-[#6346FA4D] 
+                        rounded-full p-[2%] cursor-pointer transition-all duration-300 
+                        hover:bg-[#F3F0FF] hover:shadow-md hover:-translate-y-1
+                    ">
                             <span className="text-[18px] sm:text-[20px] md:text-[22px] font-medium text-[#1C1C1C]">
                                 {data.buttonText}
                             </span>

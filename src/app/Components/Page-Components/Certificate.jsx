@@ -107,13 +107,13 @@ import "swiper/css/pagination";
 const items = [
     {
         img: certificateone,
-        text: "10+ Learners Have Launched Their Own Startups After Training",
-        layout: "text-top", // text ऊपर
+        text: "Learners Have Launched Their Own Startups After Training",
+        layout: "text-top",
     },
     {
         img: certificate2,
-        text: "10+ Learners Have Launched Their Own Startups After Training",
-        layout: "img-top", // img ऊपर
+        text: "Our Training Helped Learners Launch Innovative Startup Ideas",
+        layout: "img-top",
     },
     {
         img: certificate3,
@@ -122,7 +122,7 @@ const items = [
     },
     {
         img: certificate4,
-        text: "10+ Learners Have Launched Their Own Startups After Training",
+        text: "Learners Transformed Their Skills Into Real Startup Ventures ",
         layout: "img-top",
     },
 ];
@@ -147,7 +147,7 @@ const Certificate = () => {
                                 transition-all duration-300 hover:bg-[#F5F0FF]"
                             >
                                 <p className="text-[#5D38DE]">
-                                    10+ <span className="text-black">{item.text.replace("10+ ", "")}</span>
+                                    {i == 0 ? '10+' : ''}   <span className="text-black">{item.text}</span>
                                 </p>
                             </div>
                         )}
@@ -169,7 +169,7 @@ const Certificate = () => {
                                 transition-all duration-300 hover:bg-[#F5F0FF]"
                             >
                                 <p className="text-[#5D38DE]">
-                                    10+ <span className="text-black">{item.text.replace("10+ ", "")}</span>
+                                    {i == 0 ? '10+' : ''}   <span className="text-black">{item.text}</span>
                                 </p>
                             </div>
                         )}

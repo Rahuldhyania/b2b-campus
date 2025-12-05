@@ -1,4 +1,3 @@
-
 import React from 'react'
 import titlewhitebg from "../../../../public/images/titlewhitebg.webp"
 import Title from '../UiUx/Title'
@@ -7,113 +6,39 @@ import Description from '../UiUx/Description';
 import Buttons from '../UiUx/Buttons';
 
 export const logos = [
-    {
-        id: 1,
-        src: "/images/beatum.webp",
-        alt: "ISO Certified",
-        desc: "10+ Students Recruited"
-    },
-    {
-        id: 2,
-        src: "/images/equatis.webp",
-        alt: "Semrush Academy",
-        desc: "6+ Students Recruited"
-    },
-    {
-        id: 3,
-        src: "/images/b2b.webp",
-        alt: "Google 5 Star",
-        desc: "30+ Students Recruited"
-    },
-    {
-        id: 4,
-        src: "/images/softer.webp",
-        alt: "100% Placement",
-        desc: "12+ Students Recruited"
-    },
-    {
-        id: 5,
-        src: "/images/pixa.png",
-        alt: "HubSpot Academy",
-        desc: "4+ Students Recruited"
-    },
-    {
-        id: 6,
-        src: "/images/nutrition.webp",
-        alt: "Meta Certification",
-        desc: "6+ Students Recruited"
-    },
-    {
-        id: 7,
-        src: "/images/bitpixel.webp",
-        alt: "Facebook Blueprint",
-        desc: "8+ Students Recruited"
-    },
-    {
-        id: 8,
-        src: "/images/amr.webp",
-        alt: "Facebook Blueprint",
-        desc: "7+ Students Recruited"
-    },
-    {
-        id: 9,
-        src: "/images/arvik.webp",
-        alt: "Facebook Blueprint",
-        desc: "10+ Students Recruited"
-    },
-    {
-        id: 10,
-        src: "/images/pal.webp",
-        alt: "Facebook Blueprint",
-        desc: "4+ Students Recruited"
-    },
-    {
-        id: 11,
-        src: "/images/weballures.webp",
-        alt: "Facebook Blueprint",
-        desc: "9+ Students Recruited"
-    },
-    {
-        id: 12,
-        src: "/images/oryn.webp",
-        alt: "Facebook Blueprint",
-        desc: "11+ Students Recruited"
-    },
-    {
-        id: 13,
-        src: "/images/logoxmart.webp",
-        alt: "Facebook Blueprint",
-        desc: "4+ Students Recruited"
-    },
-    {
-        id: 14,
-        src: "/images/jaseir.webp",
-        alt: "Facebook Blueprint",
-        desc: "3+ Students Recruited"
-    },
-    {
-        id: 15,
-        src: "/images/cyberzenix.webp",
-        alt: "Facebook Blueprint",
-        desc: "5+ Students Recruited"
-    },
-
-
+    { id: 1, src: "/images/beatum.webp", alt: "ISO Certified", desc: "10+ Students Recruited" },
+    { id: 2, src: "/images/equatis.webp", alt: "Semrush Academy", desc: "6+ Students Recruited" },
+    { id: 3, src: "/images/b2b.webp", alt: "Google 5 Star", desc: "30+ Students Recruited" },
+    { id: 4, src: "/images/softer.webp", alt: "100% Placement", desc: "12+ Students Recruited" },
+    { id: 5, src: "/images/pixa.png", alt: "HubSpot Academy", desc: "4+ Students Recruited" },
+    { id: 6, src: "/images/nutrition.webp", alt: "Meta Certification", desc: "6+ Students Recruited" },
+    { id: 7, src: "/images/bitpixel.webp", alt: "Facebook Blueprint", desc: "8+ Students Recruited" },
+    { id: 8, src: "/images/amr.webp", alt: "Facebook Blueprint", desc: "7+ Students Recruited" },
+    { id: 9, src: "/images/arvik.webp", alt: "Facebook Blueprint", desc: "10+ Students Recruited" },
+    { id: 10, src: "/images/pal.webp", alt: "Facebook Blueprint", desc: "4+ Students Recruited" },
+    { id: 11, src: "/images/weballures.webp", alt: "Facebook Blueprint", desc: "9+ Students Recruited" },
+    { id: 12, src: "/images/oryn.webp", alt: "Facebook Blueprint", desc: "11+ Students Recruited" },
+    { id: 13, src: "/images/logoxmart.webp", alt: "Facebook Blueprint", desc: "4+ Students Recruited" },
+    { id: 14, src: "/images/jaseir.webp", alt: "Facebook Blueprint", desc: "3+ Students Recruited" },
+    { id: 15, src: "/images/cyberzenix.webp", alt: "Facebook Blueprint", desc: "5+ Students Recruited" },
 ];
 
 const TopCompanys = () => {
     return (
         <div className='main-bg py-6'>
+
+            {/* Title */}
             <div
-                className="skill-title-container bg-no-repeat bg-bottom py-6 bg-containe relative "
+                className="skill-title-container bg-no-repeat bg-bottom bg-containe relative"
                 style={{ backgroundImage: `url(${titlewhitebg.src})` }}
             >
                 <Title
-                    title={'Students Recruited by   <br/> <span class="text-primary"> Top Companies </span>'}
+                    title={'Students Recruited by <br/> <span class="text-primary"> Top Companies </span>'}
                     text_color={'text-secondary'}
                 />
             </div>
 
+            {/* Cards Section */}
             <div className="w-full">
                 <div className="flex flex-wrap justify-center gap-[20px] px-[5%] mb-[3%] mt-[3%] place-items-center">
 
@@ -121,45 +46,45 @@ const TopCompanys = () => {
                         <div
                             key={item.id}
                             className="
-                    bg-white/80 backdrop-blur-lg 
-                    cursor-pointer shadow-md rounded-[25px] 
-                    flex flex-col justify-between 
-                    w-full sm:w-[48%] md:w-[32%] lg:w-[23%] max-w-[340px] h-[170px] overflow-hidden
-                    transition-all duration-300 
-                    hover:scale-[1.07] hover:shadow-xl hover:-translate-y-2
-                    border border-purple-200/50
-                "
+                                bg-white/80 backdrop-blur-lg 
+                                cursor-pointer shadow-md rounded-[25px] 
+                                flex flex-col justify-between 
+                                w-full sm:w-[48%] md:w-[32%] lg:w-[18%] max-w-[340px] h-[170px] overflow-hidden
+                                transition-all duration-300 
+                                hover:scale-[1.07] hover:shadow-xl hover:-translate-y-2
+                                border border-purple-200/50
+                            "
                         >
 
                             {/* Logo Section */}
                             <div className="
-                    flex items-center justify-center 
-                    h-[70%] p-6 
-                    transition-all duration-300 
-                    hover:scale-110
-                ">
+                                flex items-center justify-center 
+                                h-[70%] p-6 
+                                transition-all duration-300 
+                                hover:scale-110
+                            ">
                                 <Image
                                     src={item.src}
                                     alt={item.alt}
                                     width={140}
                                     height={70}
                                     className="
-                            object-contain
-                            transition duration-300 
-                            hover:brightness-110 hover:scale-[1.08]
-                        "
+                                        object-contain
+                                        transition duration-300 
+                                        hover:brightness-110 hover:scale-[1.08]
+                                    "
                                 />
                             </div>
 
                             {/* Purple Gradient Description */}
                             <div className="
-                    bg-gradient-to-r from-[#8c5fef] to-[#7154FF] 
-                    text-white text-center 
-                    h-[30%] flex items-center justify-center 
-                    text-[16px] font-semibold
-                    transition-all duration-300 
-                    hover:from-[#732dec] hover:to-[#6346FA]
-                ">
+                                bg-gradient-to-r from-[#8c5fef] to-[#7154FF] 
+                                text-white text-center 
+                                h-[30%] flex items-center justify-center 
+                                text-[16px] font-semibold
+                                transition-all duration-300 
+                                hover:from-[#732dec] hover:to-[#6346FA]
+                            ">
                                 {item.desc}
                             </div>
 
@@ -169,40 +94,7 @@ const TopCompanys = () => {
                 </div>
             </div>
 
-            {/* <div className="w-full">
-                <div className="flex flex-wrap justify-center gap-[15px] px-[5%] mb-[3%] mt-[3%] place-items-center">
-
-                    {logos.map((item) => (
-                        <div
-                            key={item.id}
-                            className="bg-white cursor-pointer shadow-sm rounded-[25px] 
-                   flex flex-col justify-between 
-                   w-full sm:w-[48%] md:w-[32%] lg:w-[23%] max-w-[340px] h-[158px] overflow-hidden
-                   transition-transform duration-300 hover:scale-105 hover:shadow-lg"
-                        >
-                
-                            <div className="flex items-center justify-center h-[70%] p-6 transition-transform duration-300 hover:scale-110">
-                                <Image
-                                    src={item.src}
-                                    alt={item.alt}
-                                    width={120}
-                                    height={60}
-                                    className="object-contain"
-                                />
-                            </div>
-
-                            <div className="bg-[#6346FA] text-white text-center 
-                        h-[30%] flex items-center justify-center 
-                        text-[16px] font-semibold
-                        transition-colors duration-300 hover:bg-[#7f63ff]">
-                                {item.desc}
-                            </div>
-                        </div>
-                    ))}
-
-                </div>
-            </div> */}
-
+            {/* Description + Button */}
             <Description
                 description={'Dreaming of your first big placement?'}
                 text_color={'text-secondary'}
@@ -211,6 +103,7 @@ const TopCompanys = () => {
             <div className="buttons text-[25px] flex justify-center m-auto mt-[2%]">
                 <Buttons btnname='Enroll Now' text_color={'text-white'} />
             </div>
+
         </div>
     )
 }

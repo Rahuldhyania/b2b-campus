@@ -147,7 +147,7 @@ const Certificate = () => {
                                 transition-all duration-300 hover:bg-[#F5F0FF]"
                             >
                                 <p className="text-[#5D38DE]">
-                                    {i == 0 ? '10+' : ''}   <span className="text-black">{item.text}</span>
+                                    <span className="text-black">{item.text}</span>
                                 </p>
                             </div>
                         )}

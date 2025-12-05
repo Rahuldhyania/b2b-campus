@@ -142,18 +142,17 @@ function Contactfrom({ onCloseModal }) {
                                         required
                                     >
                                         <option value="">Select Value</option>
+                                        <option value="Truck Dispatching">Truck Dispatching</option>
+                                        <option value="Truck Dispatching Freight Broker">Truck Dispatching Freight Broker</option>
+                                        <option value="AI">AI</option>
+                                        <option value="Flutter">IOT</option>
+                                        <option value="Web Designing">Web Designing</option>
+                                        <option value="Web Development">Web Development</option>
                                         <option value="Digital marketing">Digital marketing</option>
                                         <option value="Video Editing">Video Editing</option>
                                         <option value="Graphic Designing">Graphic Designing</option>
-                                        <option value="Web Designing">Web Designing</option>
-                                        <option value="Web Development">Web Development</option>
-
                                         <option value="Wordpress">Wordpress</option>
                                         <option value="Php">Php</option>
-
-                                        <option value="AI">AI</option>
-
-                                        <option value="Flutter">IOT</option>
                                         <option value="React Js">React Js</option>
                                         <option value="React Native">React Native</option>
                                         <option value="Python">Python</option>
@@ -161,8 +160,7 @@ function Contactfrom({ onCloseModal }) {
                                         <option value="Shopify App Development">Shopify App Development</option>
                                         <option value="Shopify Theme Development">Shopify Theme Development</option>
                                         <option value="Personality Development">Personality Development</option>
-                                        <option value="Truck Dispatching">Truck Dispatching</option>
-                                        <option value="Truck Dispatching Freight Broker">Truck Dispatching Freight Broker</option>
+
                                     </select>
 
                                     <div className="buttons text-[25px] flex justify-center mt-6 mb-6 sm:col-span-2">

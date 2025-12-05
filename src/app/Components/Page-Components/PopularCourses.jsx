@@ -29,10 +29,11 @@ import Description from "../UiUx/Description";
 
 export const Coursesbtn = [
     { id: 1, btn: "All Courses" },
-    { id: 2, btn: "logistics" },
+    { id: 2, btn: "Logistics" },
+    { id: 5, btn: "Marketing & Bussiness" },
     { id: 3, btn: "Development" },
     { id: 4, btn: "Graphics" },
-    { id: 5, btn: "Marketing & Bussiness" },
+
 ];
 
 const allCourses = [
@@ -40,15 +41,16 @@ const allCourses = [
     { id: 2, title: "Truck Dispatch", des: "Optimized trips, better earnings", category: "logistics", icon: TruckIcon, color: "#60A5FA", buttonText: "Learn more", img: arrows2 },
     { id: 3, title: "IOT", des: "Automate, connect, and control", category: "Development", icon: icon11, color: "#0A9DFF", buttonText: "Learn more", img: arrows4 },
     { id: 4, title: "AI Course", des: "Master future-ready skills", category: "Development", icon: icon12, color: "#0A9DFF", buttonText: "Learn more", img: arrows4 },
+    { id: 8, title: "Web Development", des: "Your vision—built for the web", category: "Development", icon: DevIcon, color: "#0A9DFF", buttonText: "Learn more", img: arrows4 },
+    { id: 7, title: "Full Stack Development", des: "Building end-to-end digital solutions", category: "Development", icon: icon7, color: "#0A9DFF", buttonText: "Learn more", img: arrows4 },
+    { id: 11, title: "Wordpress", des: "Build websites fast and easy ", category: "Development", icon: icon9, color: "#0A9DFF", buttonText: "Learn more", img: arrows4 },
+    { id: 13, title: "ReactJs", des: "Automate, connect, and control", category: "Development", icon: icon11, color: "#0A9DFF", buttonText: "Learn more", img: arrows4 },
+
+    { id: 10, title: "Web Designing", des: "Designs that shape great websites", category: "Development", icon: icon8, color: "#0A9DFF", buttonText: "Learn more", img: arrows4 },
+
     { id: 5, title: "Video Editing", des: "Edit that tells your story", category: "Graphics", icon: VideoIcon, color: "#0A9DFF", buttonText: "Learn more", img: arrow1 },
     { id: 6, title: "Freight Broker", des: "Connecting shippers and carriers", category: "logistics", icon: icon4, color: "#60A5FA", buttonText: "Learn more", img: arrows2 },
-    { id: 7, title: "Full Stack Development", des: "Building end-to-end digital solutions", category: "Development", icon: icon7, color: "#0A9DFF", buttonText: "Learn more", img: arrows4 },
-    { id: 8, title: "Web Development", des: "Your vision—built for the web", category: "Development", icon: DevIcon, color: "#0A9DFF", buttonText: "Learn more", img: arrows4 },
-    { id: 9, title: "Python / Java", des: "Master coding with real projects", category: "Development", icon: icon6, color: "#0A9DFF", buttonText: "Learn more", img: arrows4 },
-    { id: 10, title: "Web Designing", des: "Designs that shape great websites", category: "Development", icon: icon8, color: "#0A9DFF", buttonText: "Learn more", img: arrows4 },
-    { id: 11, title: "Wordpress", des: "Build websites fast and easy ", category: "Development", icon: icon9, color: "#0A9DFF", buttonText: "Learn more", img: arrows4 },
     { id: 12, title: "Digital Marketing", des: "Grow your brand online", category: "Marketing & Bussiness", icon: icon10, color: "#0A9DFF", buttonText: "Learn more", img: arrows5 },
-    { id: 13, title: "IOT Advanced", des: "Automate, connect, and control", category: "Development", icon: icon11, color: "#0A9DFF", buttonText: "Learn more", img: arrows4 },
 ];
 
 export default function PopularCourses() {

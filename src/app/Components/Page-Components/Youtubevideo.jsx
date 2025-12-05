@@ -2,18 +2,18 @@
 
 import React, { useState } from "react";
 import Title from "../UiUx/Title";
+import youtube from '../../../../public/images/youtube.webp'
+import Image from "next/image";
 
-// Tabs for filtering categories
+// Tabs
 export const Coursesbtn = [
     { id: 1, btn: "All Courses" },
-    // { id: 2, btn: "Logistics" },
+    { id: 4, btn: "Marketing & Bussiness" },
     { id: 2, btn: "Development" },
     { id: 3, btn: "Graphics" },
-    { id: 4, btn: "Marketing & Bussiness" },
-
 ];
 
-// Demo array of video courses with standard YouTube watch links
+// All Videos
 const allVideoCourses = [
     {
         id: 1,
@@ -54,7 +54,7 @@ const allVideoCourses = [
         id: 6,
         title: "Graphic Motion Design",
         des: "Animate your designs",
-        category: "Logistics",
+        category: "Graphics",
         videoLink: "https://www.youtube.com/watch?v=LuqZqP4nUqg",
     },
     {
@@ -78,12 +78,12 @@ const allVideoCourses = [
         category: "Marketing & Bussiness",
         videoLink: "https://www.youtube.com/watch?v=WT5Egh-WPdg&t=1s",
     },
-    // add more as needed
 ];
 
-// Helper functions
+// Helper Functions
 const getYoutubeId = (url) => {
-    const regex = /(?:youtube\.com\/watch\?v=|youtube\.com\/embed\/|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
+    const regex =
+        /(?:youtube\.com\/watch\?v=|youtube\.com\/embed\/|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
     const match = url.match(regex);
     return match ? match[1] : null;
 };
@@ -91,7 +91,7 @@ const getYoutubeId = (url) => {
 const getYoutubeEmbed = (url) => {
     const id = getYoutubeId(url);
     return id
-        ? `https://www.youtube.com/embed/${id}?autoplay=1&controls=0&modestbranding=1&rel=0&showinfo=0`
+        ? `https://www.youtube.com/embed/${id}?autoplay=1&controls=1&modestbranding=1&rel=0&showinfo=0`
         : null;
 };
 
@@ -106,17 +106,19 @@ export default function Youtubevideo() {
     const [playingVideo, setPlayingVideo] = useState(null);
     const [mobileVisibleCount, setMobileVisibleCount] = useState(5);
 
+    // Tabs
     const handleTabClick = (tab) => {
         setActiveTab(tab);
-        if (tab === "All Courses") {
-            setFilteredCourses(allVideoCourses);
-        } else {
-            setFilteredCourses(allVideoCourses.filter((c) => c.category === tab));
-        }
+        setFilteredCourses(
+            tab === "All Courses"
+                ? allVideoCourses
+                : allVideoCourses.filter((c) => c.category === tab)
+        );
         setPlayingVideo(null);
-        setMobileVisibleCount(5); // reset for mobile when tab changes
+        setMobileVisibleCount(5);
     };
 
+    // Play Video
     const handleVideoClick = (id) => {
         setPlayingVideo((prev) => (prev === id ? null : id));
     };
@@ -132,8 +134,10 @@ export default function Youtubevideo() {
             {/* Title */}
             <div className="relative py-3 text-center">
                 <Title
-                    title={'<span class="text-primary">Voices of Success:</span> Student Testimonials'}
-                    text_color={'text-secondary'}
+                    title={
+                        '<span class="text-primary">Voices of Success:</span> Student Testimonials'
+                    }
+                    text_color={"text-secondary"}
                 />
             </div>
 
@@ -143,7 +147,7 @@ export default function Youtubevideo() {
                     <button
                         key={item.id}
                         onClick={() => handleTabClick(item.btn)}
-                        className={`px-6 py-3 rounded-xl text-[16px] transition-all duration-300 ease-in-out ${activeTab === item.btn
+                        className={`px-6 py-3 rounded-xl text-[16px] transition-all duration-300 ${activeTab === item.btn
                             ? "bg-[#6346FA] text-white"
                             : "bg-[#E4DFFF] hover:bg-[#6346FA] hover:text-white"
                             }`}
@@ -153,14 +157,28 @@ export default function Youtubevideo() {
                 ))}
             </div>
 
-            {/* Video Cards - Desktop */}
+            {/* Desktop Grid */}
             <div className="hidden md:grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 py-12 px-[3.5%] max-w-[1660px] m-auto">
                 {filteredCourses.map((course) => (
                     <div
                         key={course.id}
-                        className="bg-white rounded-xl overflow-hidden shadow-md cursor-pointer transition-transform hover:scale-105"
+                        className="relative bg-white rounded-xl overflow-hidden shadow-md cursor-pointer transition-transform hover:scale-105"
                         onClick={() => handleVideoClick(course.id)}
                     >
+                        {/* YouTube Icon */}
+                        {playingVideo !== course.id && (
+                            <div className="absolute inset-0 flex items-center justify-center z-10">
+                                <Image
+                                    src={youtube}
+                                    alt="Play"
+                                    width={90}
+                                    height={90}
+                                    className="opacity-90 z-20"
+                                />
+                            </div>
+                        )}
+
+                        {/* Video Player */}
                         {playingVideo === course.id ? (
                             <iframe
                                 width="100%"
@@ -170,6 +188,7 @@ export default function Youtubevideo() {
                                 frameBorder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowFullScreen
+                                className="relative z-0"
                             ></iframe>
                         ) : (
                             <img
@@ -182,14 +201,27 @@ export default function Youtubevideo() {
                 ))}
             </div>
 
-            {/* Video Cards - Mobile with Load More */}
+            {/* Mobile Grid */}
             <div className="md:hidden grid grid-cols-1 sm:grid-cols-2 gap-6 py-12 px-[3.5%]">
                 {mobileCoursesToShow.map((course) => (
                     <div
                         key={course.id}
-                        className="bg-white rounded-xl overflow-hidden shadow-md cursor-pointer transition-transform hover:scale-105"
+                        className="relative bg-white rounded-xl overflow-hidden shadow-md cursor-pointer transition-transform hover:scale-105"
                         onClick={() => handleVideoClick(course.id)}
                     >
+                        {/* YouTube Icon */}
+                        {playingVideo !== course.id && (
+                            <div className="absolute inset-0 flex items-center justify-center z-10">
+                                <Image
+                                    src={youtube}
+                                    alt="Play"
+                                    width={70}
+                                    height={70}
+                                    className="opacity-90"
+                                />
+                            </div>
+                        )}
+
                         {playingVideo === course.id ? (
                             <iframe
                                 width="100%"
@@ -199,6 +231,7 @@ export default function Youtubevideo() {
                                 frameBorder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowFullScreen
+                                className="relative z-0"
                             ></iframe>
                         ) : (
                             <img
@@ -214,7 +247,7 @@ export default function Youtubevideo() {
                     <div className="flex justify-center mt-4 col-span-full">
                         <button
                             onClick={handleLoadMore}
-                            className="px-6 py-3 rounded-xl bg-[#6346FA] text-white text-[16px] transition-all duration-300 hover:bg-[#4a2fd1]"
+                            className="px-6 py-3 rounded-xl bg-[#6346FA] text-white text-[16px] hover:bg-[#4a2fd1]"
                         >
                             Load More
                         </button>

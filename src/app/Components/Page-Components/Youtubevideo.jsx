@@ -132,7 +132,7 @@ export default function Youtubevideo() {
             {/* Title */}
             <div className="relative py-3 text-center">
                 <Title
-                    title={'<span class="text-primary">Popular </span> Video Courses'}
+                    title={'<span class="text-primary">Voices of Success:</span> Student Testimonials'}
                     text_color={'text-secondary'}
                 />
             </div>

@@ -34,7 +34,7 @@ const items = [
 ];
 const CampusProgram = () => {
     return (
-        <div className='bg-[#F7F7F5] py-12'>
+        <div className=' py-12'>
             <div className="relative ">
 
                 <img

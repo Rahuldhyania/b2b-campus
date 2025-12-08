@@ -19,7 +19,7 @@ export default function Header() {
             name: "Courses",
             path: "/courses",
             dropdown: [
-                { name: "Truck Dispatcher", path: "/truckDispatcher" },
+                { name: "Truck Dispatcher", path: "/truckdispatcher" },
                 { name: "Full Stack Development", path: "/courses/full-stack" },
                 { name: "Digital Marketing", path: "/courses/digital-marketing" },
                 { name: "Data Science", path: "/courses/data-science" },

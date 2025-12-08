@@ -89,10 +89,10 @@ function Contactfrom({ onCloseModal }) {
                         <section className="middle w-full flex justify-center items-center px-4 relative">
                             <div className="max-w-2xl w-full text-center sm:text-left">
                                 <h2 className="text-[28px] sm:text-[30px] font-semibold text-[#6346FA] text-center">
-                                    Let’s Connect
+                                    Start Your Campus Journey With Confidence
                                 </h2>
                                 <p className="text-gray-600 mb-6 sm:mb-4 text-[16px] sm:text-[20px] text-center">
-                                    Let's align our constellations! Reach out and let the magic of collaboration illuminate our skies.
+                                    Let us help you with enrollment, courses, and more.
                                 </p>
 
                                 {/* Bind form to handleSubmit */}

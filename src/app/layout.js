@@ -1,5 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import Header from "./Components/UiUx/Header";
+import Footer from "./Components/UiUx/Footer";
 
 export const metadata = {
   title: "b2bCampus",
@@ -17,8 +19,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${KodchasanMedium.variable}`}>
+        <Header />
         {/* ${kodchasanNormal.variable} ${kodchasanLight.variable} */}
         {children}
+
+        <Footer />
       </body>
     </html>
   );

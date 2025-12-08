@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+.main-container {
+  max-width: 1654px;
+}
 
 :root {
   --primary: #6346FA;

@@ -2,17 +2,30 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation"; // App Router compatible
+import { usePathname } from "next/navigation";
 import B2BCAMPUSLOGO from "../../../../public/images/B2B CAMPUS LOGO-02 1.webp";
 import Buttons from "./Buttons";
+import TruckDispatcher from '../Page-Components/TruckDispatcher'
 
 export default function Header() {
     const [open, setOpen] = useState(false);
-    const pathname = usePathname(); // useRouter() की जगह App Router hook
+    const [courseOpen, setCourseOpen] = useState(false); // Dropdown state
+    const pathname = usePathname();
 
     const menuItems = [
         { name: "Home", path: "/" },
-        { name: "Courses", path: "/courses" },
+
+        {
+            name: "Courses",
+            path: "/courses",
+            dropdown: [
+                { name: "Truck Dispatcher", path: "/truckDispatcher" },
+                { name: "Full Stack Development", path: "/courses/full-stack" },
+                { name: "Digital Marketing", path: "/courses/digital-marketing" },
+                { name: "Data Science", path: "/courses/data-science" },
+            ],
+        },
+
         { name: "Placement", path: "/placement" },
         { name: "Our Story", path: "/our-story" },
         { name: "Resources", path: "/resources" },
@@ -64,21 +77,67 @@ export default function Header() {
                 <div className="menu hidden lg:block">
                     <ul className="flex items-center gap-10 text-[21px] font-medium">
                         {menuItems.map((item) => (
-                            <li key={item.name}>
-                                <Link href={item.path}>
-                                    <span
-                                        className={`
-                                            relative px-1 cursor-pointer
-                                            ${pathname === item.path ? "text-purple-600 " : "text-gray-700"}
-                                            hover:text-purple-500 transition-colors
-                                        `}
+                            <li key={item.name} className="relative">
+
+                                {/* ❗ Courses Dropdown with Arrow */}
+                                {item.dropdown ? (
+                                    <div
+                                        className="relative flex items-center gap-1 cursor-pointer"
+                                        onMouseEnter={() => setCourseOpen(true)}
+                                        onMouseLeave={() => setCourseOpen(false)}
                                     >
-                                        {item.name}
-                                        {pathname === item.path && (
-                                            <span className="absolute left-0 -bottom-1 w-full h-[2px] bg-purple-600 rounded"></span>
+                                        <span
+                                            className={`
+                                                relative px-1
+                                                ${pathname.startsWith(item.path) ? "text-purple-600" : "text-gray-700"}
+                                                hover:text-purple-500 transition-colors
+                                            `}
+                                        >
+                                            {item.name}
+                                        </span>
+
+                                        {/* ▼ Drop down Icon */}
+                                        <span
+                                            className={`
+                                                text-gray-700 text-[16px] transition-transform duration-300
+                                                ${courseOpen ? "rotate-180 text-purple-600" : ""}
+                                            `}
+                                        >
+                                            ▼
+                                        </span>
+
+                                        {/* Dropdown Box */}
+                                        {courseOpen && (
+                                            <ul className="absolute left-0 top-full bg-white shadow-lg rounded-md w-[220px] py-3 z-50">
+                                                {item.dropdown.map((sub) => (
+                                                    <li key={sub.name}>
+                                                        <Link href={sub.path}>
+                                                            <span className="block px-4 py-2 text-gray-700 hover:text-purple-600 hover:bg-gray-100">
+                                                                {sub.name}
+                                                            </span>
+                                                        </Link>
+                                                    </li>
+                                                ))}
+                                            </ul>
                                         )}
-                                    </span>
-                                </Link>
+                                    </div>
+
+                                ) : (
+                                    <Link href={item.path}>
+                                        <span
+                                            className={`
+                                                relative px-1 cursor-pointer
+                                                ${pathname === item.path ? "text-purple-600 " : "text-gray-700"}
+                                                hover:text-purple-500 transition-colors
+                                            `}
+                                        >
+                                            {item.name}
+                                            {pathname === item.path && (
+                                                <span className="absolute left-0 -bottom-1 w-full h-[2px] bg-purple-600 rounded"></span>
+                                            )}
+                                        </span>
+                                    </Link>
+                                )}
                             </li>
                         ))}
                     </ul>
@@ -96,15 +155,14 @@ export default function Header() {
                         transition-[max-height,opacity] duration-500 ease-in-out
                         ${open ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}
                     `}
-                    style={{ willChange: "max-height, opacity" }}
                 >
                     <ul className="flex flex-col gap-4 text-[18px] font-medium px-4 py-4">
                         {menuItems.map((item) => (
-                            <li key={item.name} className="bg-white">
+                            <li key={item.name}>
                                 <Link href={item.path}>
                                     <span
                                         className={`
-                                            block py-2 px-2 cursor-pointer
+                                            block py-2 px-2
                                             ${pathname === item.path ? "text-purple-600 font-semibold" : "text-gray-700"}
                                             hover:text-purple-500 transition-colors
                                         `}
@@ -115,6 +173,7 @@ export default function Header() {
                                 </Link>
                             </li>
                         ))}
+
                         <div className="text-[20px] lg:hidden bg-white mt-4">
                             <Buttons btnname="Register now" text_color="text-white" />
                         </div>

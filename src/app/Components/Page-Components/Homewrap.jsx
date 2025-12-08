@@ -36,7 +36,7 @@ const Homewrap = () => {
             <Youtubevideo />
             <Journeywithb2b2 />
 
-            <Footer />
+            {/* <Footer /> */}
         </div>
     )
 }

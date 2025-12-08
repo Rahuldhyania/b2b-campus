@@ -68,7 +68,7 @@ const features = [
 
 export default function WhyChooseSection() {
     return (
-        <section className="main-bg px-6 md:px-20 mx-auto py-12 lg:py-16">
+        <section className="main-bg px-6 mx-auto py-6">
             <div className="relative py-3">
                 <img
                     src={titlewhitebg.src}

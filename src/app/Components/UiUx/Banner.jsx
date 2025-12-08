@@ -30,7 +30,7 @@ import Contactfrom from "../Page-Components/Contactfrom";
 const Banner = () => {
   return (
     <div className="">
-      <Header />
+
       <div className="skill-title-container py-2 relative flex justify-centeritems-center">
         <div
           className="absolute inset-0 flex justify-center items-centerpointer-events-none"
@@ -211,6 +211,7 @@ const Banner = () => {
             </div>
           </div>
         </section> */}
+
         <Contactfrom />
 
         {/* Right girl */}
@@ -243,45 +244,3 @@ const Banner = () => {
 
 export default Banner;
 
-{/* <div className=" w-full lg:w-auto">
-          <div className="w-full py-6">
-            <div className="w-full m-auto flex flex-wrap md:flex-nowrap gap-10 justify-center items-center">
-              <div className="items-center flex flex-col gap-3">
-                <div className="flex -space-x-4 justify-center">
-                  <Image src={man1} width={60} height={60} className="rounded-full border-4 border-white shadow" alt="tutor" />
-                  <Image src={man2} width={60} height={60} className="rounded-full border-4 border-white shadow" alt="tutor" />
-                  <Image src={girl1} width={60} height={60} className="rounded-full border-4 border-white shadow" alt="tutor" />
-                </div>
-                <div className="text-center">
-                  <p className="text-purple-600 text-lg sm:text-xl font-semibold">10+</p>
-                  <p className="text-gray-700 text-xs sm:text-sm">Experienced Tutors</p>
-                </div>
-              </div>
-              <div className="items-center flex flex-col gap-3">
-                <div className="flex -space-x-4 justify-center">
-                  <Image src={man3} width={60} height={60} className="rounded-full border-4 border-white shadow" alt="reviewer" />
-                  <Image src={man4} width={60} height={60} className="rounded-full border-4 border-white shadow" alt="reviewer" />
-                  <Image src={man5} width={60} height={60} className="rounded-full border-4 border-white shadow" alt="reviewer" />
-                </div>
-                <div className="text-center">
-                  <div className="flex justify-center text-yellow-400 text-xl">
-                    <Image
-                      src={ratingstar}
-                      width={90}
-                      height={30}
-                      className="rounded-full border-4 border-white shadow"
-                      alt="reviewer"
-                    />
-                  </div>
-                  <p className="text-purple-600 text-lg font-semibold">4.8K</p>
-                  <p className="text-gray-700 text-xs sm:text-sm">Reviews</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="baner-btn flex flex-wrap justify-center gap-4">
-            <Link href={"/#"}>
-              <Buttons btnname="Join Our Courses" text_color="text-white" /></Link>
-            <Link href={"/#"}><Buttons btnname="Start your Training Today " text_color="text-black" btn_primary={false} btn_bg="bg-[#E4DFFF]" /></Link>
-          </div>
-        </div> */}

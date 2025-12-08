@@ -132,18 +132,27 @@ const Certificate = () => {
         <div className="w-full mt-10">
 
             {/* ⭐ DESKTOP/LAPTOP GRID (4 Cards) */}
-            <div className="hidden lg:grid grid-cols-4 gap-8 px-10">
+            <div
+                className="
+                    hidden lg:grid 
+                    grid-cols-4 
+                    gap-6 xl:gap-4 2xl:gap-4 
+                    px-6 xl:px-4 2xl:px-4
+                    max-w-[1500px] mx-auto
+                "
+            >
                 {items.map((item, i) => (
                     <div
                         key={i}
                         className="border-none rounded-[19px] flex flex-col items-center gap-4
-                        transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg p-[10px]
-                        max-w-[300px] mx-auto"
+                            transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg p-[10px]
+                            max-w-[330px] xl:max-w-[350px] 2xl:max-w-[380px]
+                            w-full mx-auto"
                     >
 
                         {/* ---- TEXT TOP ---- */}
                         {item.layout === "text-top" && item.text && (
-                            <div className="text-card text-[18px] sm:text-[20px] max-w-[260px] text-center p-[10px] border-1 border-[#6346FA80] rounded-[29px]
+                            <div className="text-card text-[18px] sm:text-[20px] max-w-[300px] text-center p-[10px] border-1 border-[#6346FA80] rounded-[29px]
                                 transition-all duration-300 hover:bg-[#F5F0FF]"
                             >
                                 <p className="text-[#5D38DE]">
@@ -157,19 +166,20 @@ const Certificate = () => {
                             <Image
                                 src={item.img}
                                 alt="Certificate"
-                                width={500}
-                                height={300}
+                                width={600}
+                                height={380}
                                 className="w-full h-auto object-cover"
                             />
                         </div>
 
                         {/* ---- TEXT BOTTOM ---- */}
                         {item.layout === "img-top" && item.text && (
-                            <div className="text-card text-[18px] sm:text-[20px] max-w-[260px] text-center p-[10px] border-1 border-[#6346FA80] rounded-[29px]
+                            <div className="text-card text-[18px] sm:text-[20px] max-w-[300px] text-center p-[10px] border-1 border-[#6346FA80] rounded-[29px]
                                 transition-all duration-300 hover:bg-[#F5F0FF]"
                             >
                                 <p className="text-[#5D38DE]">
-                                    {i == 0 ? '10+' : ''}   <span className="text-black">{item.text}</span>
+                                    {i == 0 ? "10+" : ""}{" "}
+                                    <span className="text-black">{item.text}</span>
                                 </p>
                             </div>
                         )}
@@ -186,14 +196,14 @@ const Certificate = () => {
                     pagination={{ clickable: true }}
                     modules={[Pagination]}
                     breakpoints={{
-                        640: { slidesPerView: 2 }, // tablet 2 cards
+                        640: { slidesPerView: 2 },
                     }}
                 >
                     {items.map((item, i) => (
                         <SwiperSlide key={i}>
                             <div
                                 className="border-none rounded-[19px] flex flex-col items-center gap-4
-                                transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg p-[10px]"
+                                    transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg p-[10px]"
                             >
 
                                 {/* ---- TEXT TOP ---- */}
@@ -240,5 +250,3 @@ const Certificate = () => {
 };
 
 export default Certificate;
-
-

@@ -1,6 +1,8 @@
+export const runtime = "nodejs";      // Ensures this runs on the server
+export const dynamic = "force-dynamic"; // Prevent static export
+
 export async function POST(req) {
     const body = await req.json();
-
     const payload = new URLSearchParams(body).toString();
 
     try {
@@ -14,7 +16,6 @@ export async function POST(req) {
                 body: payload,
             }
         );
-
         const text = await res.text();
 
         return new Response(JSON.stringify({ success: true, response: text }), {

@@ -1,5 +1,5 @@
 'use client'
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import Professionalskill from "./Professionalskill";
 import Banner from "../UiUx/Banner";
 import PopularCourses from "./PopularCourses";
@@ -18,12 +18,21 @@ import Youtubevideo from "./Youtubevideo";
 
 const Homewrap = () => {
     const enrolRef = useRef(null);
-    const width = window.innerWidth;
-    console.log(width ,'inndewidth');
-    
+    const [width, setWidth] = useState(1200); // default
+
+    // 👉 window only available in the browser
+    useEffect(() => {
+        setWidth(window.innerWidth);
+        console.log(window.innerWidth, "innerWidth");
+    }, []);
+
     const scrollToEnrolment = () => {
-        enrolRef.current?.scrollIntoView({ behavior: "smooth", top: width < 768 ? 700 : 0 });
+        enrolRef.current?.scrollIntoView({
+            behavior: "smooth",
+            top: width < 768 ? 700 : 0,
+        });
     };
+
     return (
         <div>
             <div className="" ref={enrolRef}>

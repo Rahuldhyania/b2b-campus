@@ -20,14 +20,14 @@ const ServiceCard = ({ title, icon, color, arrowicon, des, buttonText,clickscrol
             <h2 className="text-[#6346FA] text-[20px] ">{title}</h2>
             <p className="text-black text-[12px]" >{des}</p>
 
-            <div className="flex justify-between items-center bg-white border border-[#6346FA4D] rounded-[12px] p-[2%] cursor-pointer transition-all duration-300  hover:bg-[#F3F0FF] hover:shadow-md hover:-translate-y-1 "
+            <div className="flex justify-between items-center bg-white border border-[#6346FA4D] rounded-xl p-[2%] cursor-pointer transition-all duration-300  hover:bg-[#F3F0FF] hover:shadow-md hover:-translate-y-1 "
             onClick={clickscroll}
             >
                 <span className="text-[18px] sm:text-[20px] md:text-[13px] font-medium text-[#1C1C1C]">
                     {buttonText}
                 </span>
 
-                <div className="w-[40px] h-[40px] sm:w-[28px] sm:h-[28px] rounded-full bg-[#CEC5FF] flex items-center justify-center transition-all duration-300 group-hover:translate-x-1 hover:bg-[#b8aaff]">
+                <div className="w-10 h-10 sm:w-7 sm:h-7 rounded-full bg-[#CEC5FF] flex items-center justify-center transition-all duration-300 group-hover:translate-x-1 hover:bg-[#b8aaff]">
                     <Image
                         src={arrowiconcvgv}
                         alt="arrow"

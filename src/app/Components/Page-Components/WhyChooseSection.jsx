@@ -163,7 +163,7 @@ function Card({ title, description, img, variant }) {
 
         case "D":
             return (
-                <div className="relative h-80 rounded-3xl overflow-hidden shadow-lg group cursor-pointer max-w-[302px] m-auto h-86">
+                <div className="relative h-80 rounded-3xl overflow-hidden shadow-lg group cursor-pointer max-w-[302px] m-auto">
                     <Image
                         src={img}
                         alt={title}
@@ -171,7 +171,7 @@ function Card({ title, description, img, variant }) {
                         className="object-cover brightness-75 group-hover:brightness-90 
                         transition-all duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-black/20 
+                    <div className="absolute inset-0 bg-linear-to-t from-black/30 to-black/20 
                     flex flex-col justify-center items-center text-center px-4">
                         <h3 className="text-3xl font-extrabold text-white mb-3 drop-shadow-lg">
                             {title}

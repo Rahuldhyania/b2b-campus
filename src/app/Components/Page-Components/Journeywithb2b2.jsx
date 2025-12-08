@@ -18,7 +18,7 @@ const Journeywithb2b2 = () => {
                 <img
                     src={smbg.src}
                     alt="background-bubble"
-                    className="absolute  top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[480px] md:w-[860px]  sm:w-[240px] pointer-events-none select-none opacity-90"
+                    className="absolute  top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[480px] md:w-[860px]  sm:w-60 pointer-events-none select-none opacity-90"
                 />
 
                 {/* Title (unchanged) */}

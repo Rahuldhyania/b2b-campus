@@ -40,7 +40,7 @@ const CampusProgram = ({clickscroll}) => {
                 <img
                     src={smallbublebg.src}
                     alt="bubble-bg"
-                    className="absolute  top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 w-[480px] md:w-[900px]  sm:w-[240px] pointer-events-none select-none opacity-90"
+                    className="absolute  top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 w-[480px] md:w-[900px]  sm:w-60 pointer-events-none select-none opacity-90"
                 />
 
                 <div className="relative z-10 text-center">

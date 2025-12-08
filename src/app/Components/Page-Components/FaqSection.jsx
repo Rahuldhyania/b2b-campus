@@ -74,10 +74,10 @@ export default function FaqSection() {
             <img
               src={titlewhitebg.src}
               alt="bubble-bg"
-              className="absolute  md:top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 w-[480px] md:w-[745px]  sm:w-[240px] pointer-events-none select-none opacity-90"
+              className="absolute  md:top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 w-[480px] md:w-[745px]  sm:w-60 pointer-events-none select-none opacity-90"
             />
 
-            <div className="relative z-[3]">
+            <div className="relative z-3">
               <Title
                 title={
                   '<span class="text-primary">  Frequently Asked Questions</span> <br/>  '
@@ -87,7 +87,7 @@ export default function FaqSection() {
             </div>
           </div>
 
-          <div className="text-center relative z-[2]">
+          <div className="text-center relative z-2">
             <Description
               description={
                 " Clear answers — so you feel confident before joining."

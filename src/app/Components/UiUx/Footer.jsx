@@ -56,7 +56,7 @@ const Footer = () => {
 
                     </div>
 
-                    <div className="flex flex-col gap-[20px] ">
+                    <div className="flex flex-col gap-5 ">
                         <div className="email max-w-[382px] ">
                             <div className="relative w-full">
                                 <Image
@@ -69,7 +69,7 @@ const Footer = () => {
                                 <input
                                     type="email"
                                     placeholder="Email address"
-                                    className="text-[19px] border p-[14px] pl-12 rounded-[16px] w-full 
+                                    className="text-[19px] border p-3.5 pl-12 rounded-2xl w-full 
                            transition-all duration-300 
                            hover:border-[#5D38DE] focus:border-[#5D38DE] outline-none"
                                 />
@@ -77,7 +77,7 @@ const Footer = () => {
                         </div>
 
                         <Link href="/#">
-                            <button className="bg-white text-[#5D38DE] px-6 sm:px-10 py-2 text-[16px] sm:text-[18px] rounded-[16px] 
+                            <button className="bg-white text-[#5D38DE] px-6 sm:px-10 py-2 text-[16px] sm:text-[18px] rounded-2xl 
                            w-full sm:w-auto 
                            transition-all duration-300 
                            hover:bg-[#f3efff] hover:scale-[1.03]">

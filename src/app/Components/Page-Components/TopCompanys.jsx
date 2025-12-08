@@ -42,7 +42,7 @@ const TopCompanys = ({clickscroll}) => {
                 <img
                     src={titlewhitebg.src}
                     alt="bubble-bg"
-                    className="absolute  top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 w-[480px] md:w-[900px]  sm:w-[240px] pointer-events-none select-none opacity-90"
+                    className="absolute  top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 w-[480px] md:w-[900px]  sm:w-60 pointer-events-none select-none opacity-90"
                 />
 
                 <div className="relative z-10 text-center">
@@ -92,7 +92,7 @@ const TopCompanys = ({clickscroll}) => {
 
                             {/* Description */}
                             <div className="
-                                bg-gradient-to-r from-[#8c5fef] to-[#7154FF] 
+                                bg-linear-to-r from-[#8c5fef] to-[#7154FF] 
                                 text-white text-center 
                                 h-[30%] flex items-center justify-center 
                                 text-[16px] font-semibold
@@ -108,7 +108,7 @@ const TopCompanys = ({clickscroll}) => {
 
             {/* Cards Section - Mobile with Load More */}
             <div className="md:hidden">
-                <div className="flex flex-wrap justify-center gap-[20px] px-[5%] mb-[3%] mt-[3%] place-items-center">
+                <div className="flex flex-wrap justify-center gap-5 px-[5%] mb-[3%] mt-[3%] place-items-center">
                     {mobileLogosToShow.map((item) => (
                         <div
                             key={item.id}
@@ -141,7 +141,7 @@ const TopCompanys = ({clickscroll}) => {
                                 />
                             </div>
                             <div className="
-                                bg-gradient-to-r from-[#8c5fef] to-[#7154FF] 
+                                bg-linear-to-r from-[#8c5fef] to-[#7154FF] 
                                 text-white text-center 
                                 h-[30%] flex items-center justify-center 
                                 text-[16px] font-semibold

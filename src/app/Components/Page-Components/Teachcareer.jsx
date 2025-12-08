@@ -38,7 +38,7 @@ export default function Teachcareer({clickscroll}) {
           <div
             key={index}
             className="flex flex-col sm:flex-row items-center w-full sm:w-auto justify-center group relative transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg
-                 animate-float p-[6px] rounded-[19px]"
+                 animate-float p-1.5 rounded-[19px]"
           >
             <div className="wrap-div flex flex-col sm:flex-row justify-center items-center 
                       gap-4 sm:gap-10 text-center sm:text-left">
@@ -47,7 +47,7 @@ export default function Teachcareer({clickscroll}) {
                 <img
                   src={item.icon}
                   alt="icon"
-                  className="w-[40px] h-[40px] sm:w-[53px] sm:h-[53px] object-contain"
+                  className="w-10 h-10 sm:w-[53px] sm:h-[53px] object-contain"
                 />
               </div>
 
@@ -70,7 +70,7 @@ export default function Teachcareer({clickscroll}) {
         <img
           src={titlewhitebg.src}
           alt="background-bubble"
-          className="absolute  top-1/2  left-1/2 -translate-x-1/2  -translate-y-1/2 w-[480px] md:w-[900px] sm:w-[240px] pointer-events-none
+          className="absolute  top-1/2  left-1/2 -translate-x-1/2  -translate-y-1/2 w-[480px] md:w-[900px] sm:w-60 pointer-events-none
       select-none"
         />
 

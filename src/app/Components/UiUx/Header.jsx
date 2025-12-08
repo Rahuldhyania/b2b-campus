@@ -114,7 +114,7 @@ export default function Header() {
                     >
                       {item.name}
                       {pathname === item.path &&
-                        <span className="absolute left-0 -bottom-1 w-full h-[2px] bg-purple-600 rounded" />}
+                        <span className="absolute left-0 -bottom-1 w-full h-0.5 bg-purple-600 rounded" />}
                     </span>
                   </Link>}
               </li>

@@ -102,7 +102,7 @@ const TestimonialsSlider = () => {
               src={leftarrow}
               width={1000}
               height={500}
-              className="w-[10px] h-[10px]"
+              className="w-2.5 h-2.5"
               alt="Prev"
             />
           </div>
@@ -373,7 +373,7 @@ function StatItem({ item, isLast }) {
         />
       </div>
 
-      {!isLast && <div className="hidden md:block w-[1px] h-16 bg-[#C9B8FF]" />}
+      {!isLast && <div className="hidden md:block w-px h-16 bg-[#C9B8FF]" />}
     </div>
   );
 }

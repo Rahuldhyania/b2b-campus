@@ -17,7 +17,7 @@ const FeaturedIn = () => {
                 <img
                     src={titlewhitebg.src}
                     alt="bubble-bg"
-                    className="absolute  top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 w-[480px] md:w-[510px]  sm:w-[240px] pointer-events-none select-none opacity-90"
+                    className="absolute  top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 w-[480px] md:w-[510px]  sm:w-60 pointer-events-none select-none opacity-90"
                 />
 
                 <div className="relative z-10 text-center">
@@ -37,7 +37,7 @@ const FeaturedIn = () => {
                 >
                     <div className=" transition-all duration-300 hover:-translate-y-5 card-img bg-white border-none rounded-4xl h-full">
                         <div className="text-card text-start text-[15px] p-[11px] h-full">
-                            <div className="img mt-[22px] p-[6px] flex justify-center">
+                            <div className="img mt-[22px] p-1.5 flex justify-center">
                                 <Image
                                     src={scoopearth}
                                     alt="Certificate"
@@ -47,7 +47,7 @@ const FeaturedIn = () => {
                                 />
                             </div>
 
-                            <div className="text h-[65%] flex justify-center items-center bg-[#F3F0FF] mt-[22px] border-none rounded-[20px] p-[10px]">
+                            <div className="text h-[65%] flex justify-center items-center bg-[#F3F0FF] mt-[22px] border-none rounded-[20px] p-2.5">
                                 <span className="text-black text-base 2xl:text-lg">
                                     Scoop Earth, a news Magzine has ranked number one to B2B Campus for providing the best graphic designing course in Chandigarh. This recognition highlights B2B Campus’s commitment to delivering unparalleled excellence in graphic designing education.
                                 </span>
@@ -61,7 +61,7 @@ const FeaturedIn = () => {
                 >
                     <div className=" transition-all duration-300 hover:-translate-y-5 card-img bg-white border-none rounded-4xl h-full">
                         <div className="text-card text-start text-[15px] p-[11px] h-full">
-                            <div className="img mt-[22px] sm:mt-[30px] p-[6px] flex justify-center">
+                            <div className="img mt-[22px] sm:mt-[30px] p-1.5 flex justify-center">
                                 <Image
                                     src={timebussines}
                                     alt="Certificate"
@@ -71,7 +71,7 @@ const FeaturedIn = () => {
                                 />
                             </div>
 
-                            <div className="text h-[65%] flex justify-center items-center bg-[#F3F0FF] mt-[22px] sm:mt-[30px] border-none rounded-[20px] p-[10px]">
+                            <div className="text h-[65%] flex justify-center items-center bg-[#F3F0FF] mt-[22px] sm:mt-[30px] border-none rounded-[20px] p-2.5">
                                 <span className="text-black text-base 2xl:text-lg">
                                     With their exceptional curriculum and industry-relevant training, B2B Campus sets the benchmark for web designing education in Chandigarh, as acknowledged by Time Business News’s prestigious ranking.
                                 </span>
@@ -85,7 +85,7 @@ const FeaturedIn = () => {
                 >
                     <div className=" transition-all duration-300 hover:-translate-y-5 card-img bg-white border-none rounded-4xl h-full">
                         <div className="text-card text-start text-[15px] p-[11px] h-full">
-                            <div className="img mt-[22px] p-[6px] flex justify-center">
+                            <div className="img mt-[22px] p-1.5 flex justify-center">
                                 <Image
                                     src={Newsbrak}
                                     alt="Certificate"
@@ -95,7 +95,7 @@ const FeaturedIn = () => {
                                 />
                             </div>
 
-                            <div className="text h-[65%] flex justify-center items-center bg-[#F3F0FF] mt-[18px] sm:mt-[18px] border-none rounded-[20px] p-[10px]">
+                            <div className="text h-[65%] flex justify-center items-center bg-[#F3F0FF] mt-[18px] sm:mt-[18px] border-none rounded-[20px] p-2.5">
                                 <span className="text-black text-base 2xl:text-lg">
                                     B2B Campus secures the top spot for digital marketing courses in Chandigarh, according to leading news agency News Break. Their exceptional training is highlighted, focusing on delivering impactful and comprehensive education in the field.
                                 </span>
@@ -109,7 +109,7 @@ const FeaturedIn = () => {
                 >
                     <div className=" transition-all duration-300 hover:-translate-y-5 card-img bg-white border-none rounded-4xl h-full">
                         <div className="text-card text-start text-[15px] p-[11px] h-full">
-                            <div className="img mt-[22px] p-[6px] flex justify-center">
+                            <div className="img mt-[22px] p-1.5 flex justify-center">
                                 <Image
                                     src={publicist}
                                     alt="Certificate"
@@ -119,7 +119,7 @@ const FeaturedIn = () => {
                                 />
                             </div>
 
-                            <div className="text h-[65%] flex justify-center items-center bg-[#F3F0FF] mt-[18px] sm:mt-[18px] border-none rounded-[20px] p-[10px]">
+                            <div className="text h-[65%] flex justify-center items-center bg-[#F3F0FF] mt-[18px] sm:mt-[18px] border-none rounded-[20px] p-2.5">
                                 <span className="text-black text-base 2xl:text-lg">
                                     B2B Campus has been recognized as the leading institution for digital marketing courses in Mohali by Publicist News, demonstrating their expertise in delivering comprehensive and industry-focused training programs.
                                 </span>

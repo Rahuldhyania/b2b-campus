@@ -38,7 +38,8 @@ export const Coursesbtn = [
 
 const allCourses = [
     { id: 1, title: "Graphic Design", des: "Create visuals that stand out", category: "Graphics", icon: GraphicIcon, color: "#0A9DFF", buttonText: "Learn more", img: arrowicon },
-    { id: 2, title: "Truck Dispatch", des: "Optimized trips, better earnings", category: "logistics", icon: TruckIcon, color: "#60A5FA", buttonText: "Learn more", img: arrows2 },
+    { id: 2, title: "Truck Dispatch", des: "Optimized trips, better earnings", category: "Logistics", icon: TruckIcon, color: "#60A5FA", buttonText: "Learn more", img: arrows2 },
+    { id: 6, title: "Freight Broker", des: "Connecting shippers and carriers", category: "Logistics", icon: icon4, color: "#60A5FA", buttonText: "Learn more", img: arrows2 },
     { id: 3, title: "IOT", des: "Automate, connect, and control", category: "Development", icon: icon11, color: "#0A9DFF", buttonText: "Learn more", img: arrows4 },
     { id: 4, title: "AI Course", des: "Master future-ready skills", category: "Development", icon: icon12, color: "#0A9DFF", buttonText: "Learn more", img: arrows4 },
     { id: 8, title: "Web Development", des: "Your vision—built for the web", category: "Development", icon: DevIcon, color: "#0A9DFF", buttonText: "Learn more", img: arrows4 },
@@ -49,11 +50,11 @@ const allCourses = [
     { id: 10, title: "Web Designing", des: "Designs that shape great websites", category: "Development", icon: icon8, color: "#0A9DFF", buttonText: "Learn more", img: arrows4 },
 
     { id: 5, title: "Video Editing", des: "Edit that tells your story", category: "Graphics", icon: VideoIcon, color: "#0A9DFF", buttonText: "Learn more", img: arrow1 },
-    { id: 6, title: "Freight Broker", des: "Connecting shippers and carriers", category: "logistics", icon: icon4, color: "#60A5FA", buttonText: "Learn more", img: arrows2 },
+    
     { id: 12, title: "Digital Marketing", des: "Grow your brand online", category: "Marketing & Bussiness", icon: icon10, color: "#0A9DFF", buttonText: "Learn more", img: arrows5 },
 ];
 
-export default function PopularCourses() {
+export default function PopularCourses({clickscroll}) {
     const [activeTab, setActiveTab] = useState("All Courses");
     const [filteredCourses, setFilteredCourses] = useState(allCourses);
     const [mobileVisibleCount, setMobileVisibleCount] = useState(5); // mobile pagination
@@ -91,8 +92,9 @@ export default function PopularCourses() {
             </div>
 
             {/* Desktop Tabs */}
-            <div className="lg:w-[55%] m-auto hidden md:flex flex-wrap justify-center gap-3 bg-[#CEC5FF] p-4 rounded-2xl">
-                {Coursesbtn.map((item) => (
+            <div className=" hidden md:flex flex-wrap justify-center gap-3  m-auto">
+              <div className="bg-[#CEC5FF] gap-3 p-4 grid grid-cols-5 rounded-2xl">
+                  {Coursesbtn.map((item) => (
                     <button
                         key={item.id}
                         onClick={() => handleTabClick(item.btn)}
@@ -104,6 +106,7 @@ export default function PopularCourses() {
                         {item.btn}
                     </button>
                 ))}
+              </div>
             </div>
 
             {/* Mobile Tabs */}
@@ -124,12 +127,12 @@ export default function PopularCourses() {
 
             {/* Cards */}
             <div className="lg:block hidden">
-                <ServicesSection courses={filteredCourses} />
+                <ServicesSection courses={filteredCourses} clickscroll={clickscroll} />
             </div>
 
             {/* Mobile Cards with Load More */}
             <div className="md:hidden">
-                <ServicesSection courses={mobileCoursesToShow} />
+                <ServicesSection courses={mobileCoursesToShow} clickscroll={clickscroll} />
                 {mobileVisibleCount < filteredCourses.length && (
                     <div className="flex justify-center  pb-8">
                         <button

@@ -9,7 +9,7 @@ import Title from '../UiUx/Title';
 
 import ScratchCards from './ScratchCard';
 import Buttons from '../UiUx/Buttons';
-export default function Teachcareer() {
+export default function Teachcareer({clickscroll}) {
   const items = [
     {
       icon: "/images/arrowup.webp",
@@ -30,9 +30,9 @@ export default function Teachcareer() {
 
   return (
     <div className='main-bg  '>
-      <div className="w-[90%] relative bottom-[56px] m-auto max-w-[1450px] p-[1%]
+      <div className="w-[90%] relative bottom-[57px] m-auto max-w-[1450px] p-[1%]
             border-none rounded-[50px] bg-[#E9E5FF]
-            flex flex-wrap lg:flex-nowrap justify-center lg:justify-between items-center gap-6">
+            flex flex-wrap lg:flex-nowrap justify-center lg:justify-between items-center gap-2 md:gap-6">
 
         {items.map((item, index) => (
           <div
@@ -110,7 +110,7 @@ export default function Teachcareer() {
           </div>
 
           {/* Button */}
-          <div className="relative z-10 flex justify-center m-auto mt-4 sm:mb-0">
+          <div className="relative z-10 flex justify-center m-auto mt-4 sm:mb-0" onClick={clickscroll}>
             <Buttons btnname="Backed by a Successful Agency" text_color={"text-white"} />
           </div>
 

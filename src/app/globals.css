@@ -11,6 +11,8 @@
 
 body {
   font-family: var(--font-kodchasan-medium);
+  max-width: 1950px;
+  margin: auto;
 }
 
 .text-primary {
@@ -98,3 +100,4 @@ body {
     position: relative;
   }
 }
+

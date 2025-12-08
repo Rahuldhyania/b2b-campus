@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import arrowiconcvgv from "../../../../public/images/arrowicon.webp";
-const ServiceCard = ({ title, icon, color, arrowicon, des, buttonText, }) => {
+const ServiceCard = ({ title, icon, color, arrowicon, des, buttonText,clickscroll }) => {
     return (
         <div
             className="group relative w-full h-[200px] rounded-2xl p-3 
@@ -20,10 +20,9 @@ const ServiceCard = ({ title, icon, color, arrowicon, des, buttonText, }) => {
             <h2 className="text-[#6346FA] text-[20px] ">{title}</h2>
             <p className="text-black text-[12px]" >{des}</p>
 
-            <div className="flex justify-between items-center bg-white border border-[#6346FA4D] 
-                                    rounded-[12px] p-[2%] cursor-pointer transition-all duration-300 
-                                    hover:bg-[#F3F0FF] hover:shadow-md hover:-translate-y-1
-                                ">
+            <div className="flex justify-between items-center bg-white border border-[#6346FA4D] rounded-[12px] p-[2%] cursor-pointer transition-all duration-300  hover:bg-[#F3F0FF] hover:shadow-md hover:-translate-y-1 "
+            onClick={clickscroll}
+            >
                 <span className="text-[18px] sm:text-[20px] md:text-[13px] font-medium text-[#1C1C1C]">
                     {buttonText}
                 </span>
@@ -41,7 +40,7 @@ const ServiceCard = ({ title, icon, color, arrowicon, des, buttonText, }) => {
     );
 };
 
-export default function ServicesSection({ courses }) {
+export default function ServicesSection({ courses ,clickscroll }) {
     return (
         <div className="py-10">
             <div className="w-[90%] max-w-7xl mx-auto grid 
@@ -55,6 +54,7 @@ export default function ServicesSection({ courses }) {
                         color={item.color}
                         buttonText={item.buttonText}
                         img={item.arrowIcon}
+                        clickscroll={clickscroll}
                     />
                 ))}
             </div>

@@ -24,7 +24,7 @@ export const logos = [
     { id: 15, src: "/images/cyberzenix.webp", alt: "Facebook Blueprint", desc: "5+ Students Recruited" },
 ];
 
-const TopCompanys = () => {
+const TopCompanys = ({clickscroll}) => {
     const [mobileVisibleCount, setMobileVisibleCount] = useState(5);
 
     const handleLoadMore = () => {
@@ -34,7 +34,7 @@ const TopCompanys = () => {
     const mobileLogosToShow = logos.slice(0, mobileVisibleCount);
 
     return (
-        <div className='main-bg py-6'>
+        <div className='main-bg py-16'>
 
             {/* Title */}
             <div className="relative ">
@@ -56,7 +56,7 @@ const TopCompanys = () => {
 
             {/* Cards Section - Desktop */}
             <div className="w-full hidden md:block">
-                <div className="flex flex-wrap justify-center gap-[20px] px-[5%] mb-[3%] mt-[3%] place-items-center">
+                <div className="flex flex-wrap justify-center gap-5 px-[5%] mb-[3%]  place-items-center">
                     {logos.map((item) => (
                         <div
                             key={item.id}
@@ -172,7 +172,7 @@ const TopCompanys = () => {
                 text_color={'text-secondary'}
             />
 
-            <div className="buttons text-[25px] hidden md:flex justify-center m-auto mt-[2%]">
+            <div className="buttons text-[25px] hidden md:flex justify-center m-auto mt-[2%]" onClick={clickscroll}>
                 <Buttons btnname='Enroll Now' text_color={'text-white'} />
             </div>
 

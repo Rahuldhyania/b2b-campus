@@ -105,6 +105,7 @@ export default function Youtubevideo() {
     const [filteredCourses, setFilteredCourses] = useState(allVideoCourses);
     const [playingVideo, setPlayingVideo] = useState(null);
     const [mobileVisibleCount, setMobileVisibleCount] = useState(5);
+    const [deskVisibleCount, setdeskVisibleCount] = useState(8);
 
     // Tabs
     const handleTabClick = (tab) => {
@@ -116,6 +117,7 @@ export default function Youtubevideo() {
         );
         setPlayingVideo(null);
         setMobileVisibleCount(5);
+        setdeskVisibleCount(8)
     };
 
     // Play Video
@@ -125,9 +127,11 @@ export default function Youtubevideo() {
 
     const handleLoadMore = () => {
         setMobileVisibleCount((prev) => prev + 5);
+        setdeskVisibleCount((pre)=>pre + 4)
     };
 
     const mobileCoursesToShow = filteredCourses.slice(0, mobileVisibleCount);
+    const deskCoursesToShow = filteredCourses.slice(0, deskVisibleCount);
 
     return (
         <div className="main-bg py-9">
@@ -142,24 +146,27 @@ export default function Youtubevideo() {
             </div>
 
             {/* Tabs */}
-            <div className="md:w-[55%] m-auto flex flex-wrap justify-center gap-3 bg-[#CEC5FF] p-4 rounded-2xl">
-                {Coursesbtn.map((item) => (
-                    <button
-                        key={item.id}
-                        onClick={() => handleTabClick(item.btn)}
-                        className={`px-6 py-3 rounded-xl text-[16px] transition-all duration-300 ${activeTab === item.btn
-                            ? "bg-[#6346FA] text-white"
-                            : "bg-[#E4DFFF] hover:bg-[#6346FA] hover:text-white"
-                            }`}
-                    >
-                        {item.btn}
-                    </button>
-                ))}
+            <div className="flex justify-center">
+                <div className="m-auto flex flex-wrap justify-center gap-3 bg-[#CEC5FF] p-4 rounded-2xl">
+                    {Coursesbtn.map((item) => (
+                        <button
+                            key={item.id}
+                            onClick={() => handleTabClick(item.btn)}
+                            className={`px-6 py-3 rounded-xl text-[16px] transition-all duration-300 ${activeTab === item.btn
+                                ? "bg-[#6346FA] text-white"
+                                : "bg-[#E4DFFF] hover:bg-[#6346FA] hover:text-white"
+                                }`}
+                        >
+                            {item.btn}
+                        </button>
+                    ))}
+                </div>
             </div>
 
+
             {/* Desktop Grid */}
-            <div className="hidden md:grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 py-12 px-[3.5%] max-w-[1660px] m-auto">
-                {filteredCourses.map((course) => (
+            <div className="hidden md:grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 pt-12 px-[3.5%] max-w-[1660px] m-auto">
+                {deskCoursesToShow.map((course) => (
                     <div
                         key={course.id}
                         className="relative bg-white rounded-xl overflow-hidden shadow-md cursor-pointer transition-transform hover:scale-105"
@@ -199,10 +206,20 @@ export default function Youtubevideo() {
                         )}
                     </div>
                 ))}
+                 {mobileVisibleCount < filteredCourses.length && (
+                    <div className="flex justify-center mt-4 col-span-full">
+                        <button
+                            onClick={handleLoadMore}
+                            className="px-6 py-3 rounded-xl bg-[#6346FA] text-white text-[16px] hover:bg-[#4a2fd1]"
+                        >
+                            Load More
+                        </button>
+                    </div>
+                )}
             </div>
 
             {/* Mobile Grid */}
-            <div className="md:hidden grid grid-cols-1 sm:grid-cols-2 gap-6 py-12 px-[3.5%]">
+            <div className="md:hidden grid grid-cols-1 sm:grid-cols-2 gap-6 pt-12 md:pb-12 px-[3.5%]">
                 {mobileCoursesToShow.map((course) => (
                     <div
                         key={course.id}

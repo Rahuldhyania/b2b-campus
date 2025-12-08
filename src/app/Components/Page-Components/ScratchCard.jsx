@@ -39,7 +39,7 @@ export default function ScratchCards() {
 
     return (
         <div className="relative w-full flex justify-center px-4 mt-10">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-30 max-w-[90%] w-full">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-30 max-w-[90%] w-full">
                 {scratchCards.map((item, index) => (
                     <div
                         key={index}

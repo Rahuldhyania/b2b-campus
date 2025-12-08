@@ -117,8 +117,8 @@ const items = [
     },
     {
         img: certificate3,
-        text: "",
-        layout: "img-top",
+        text: "Handling real dispatch operations with confidence and great performance.",
+        layout: "text-top",
     },
     {
         img: certificate4,

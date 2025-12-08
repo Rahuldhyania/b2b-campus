@@ -15,21 +15,21 @@ export default function Header() {
   const menuItems = [
     { name: "Home", path: "/" },
 
-    {
-      name: "Courses",
-      path: "/courses",
-      dropdown: [
-        { name: "Truck Dispatcher", path: "/truckDispatcher" },
-        { name: "Full Stack Development", path: "/courses/full-stack" },
-        { name: "Digital Marketing", path: "/courses/digital-marketing" },
-        { name: "Data Science", path: "/courses/data-science" }
-      ]
-    },
+        {
+            name: "Courses",
+            path: "/",
+            dropdown: [
+                { name: "Truck Dispatcher", path: "/" },
+                { name: "Full Stack Development", path: "/" },
+                { name: "Digital Marketing", path: "/" },
+                { name: "Data Science", path: "/" },
+            ],
+        },
 
-    { name: "Placement", path: "/placement" },
-    { name: "Our Story", path: "/our-story" },
-    { name: "Resources", path: "/resources" },
-    { name: "Connect", path: "/connect" }
+    { name: "Placement", path: "/" },
+    { name: "Our Story", path: "/" },
+    { name: "Resources", path: "/" },
+    { name: "Connect", path: "/" }
   ];
 
   return (

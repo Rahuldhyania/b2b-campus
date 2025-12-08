@@ -11,6 +11,7 @@ export const Coursesbtn = [
     { id: 4, btn: "Marketing & Bussiness" },
     { id: 2, btn: "Development" },
     { id: 3, btn: "Graphics" },
+    { id: 5, btn: "Truck Dispatching" },
 ];
 
 // All Videos
@@ -78,6 +79,42 @@ const allVideoCourses = [
         category: "Marketing & Bussiness",
         videoLink: "https://www.youtube.com/watch?v=WT5Egh-WPdg&t=1s",
     },
+
+    {
+        id: 10,
+        title: "Truck Dispatching",
+        des: "Boost your website traffic",
+        category: "Truck Dispatching",
+        videoLink: "https://www.youtube.com/watch?v=yVaIRbl-Bm8",
+    },
+    {
+        id: 11,
+        title: "Truck Dispatching",
+        des: "Boost your website traffic",
+        category: "Truck Dispatching",
+        videoLink: "https://www.youtube.com/watch?v=QYWr2y0o6RU",
+    },
+    {
+        id: 12,
+        title: "Truck Dispatching",
+        des: "Boost your website traffic",
+        category: "Truck Dispatching",
+        videoLink: "https://www.youtube.com/watch?v=NjL6LuZ1T-k",
+    },
+        {
+        id: 13,
+        title: "Marketing & Bussiness",
+        des: "Boost your website traffic",
+        category: "Marketing & Bussiness",
+        videoLink: "https://www.youtube.com/watch?v=53GuCL_Y5hg",
+    },
+    {
+        id: 14,
+        title: "Marketing & Bussiness",
+        des: "Boost your website traffic",
+        category: "Marketing & Bussiness",
+        videoLink: "https://www.youtube.com/watch?v=HJwRUpkgY3Q",
+    }
 ];
 
 // Helper Functions
@@ -127,7 +164,7 @@ export default function Youtubevideo() {
 
     const handleLoadMore = () => {
         setMobileVisibleCount((prev) => prev + 5);
-        setdeskVisibleCount((pre)=>pre + 4)
+        setdeskVisibleCount((pre) => pre + 4)
     };
 
     const mobileCoursesToShow = filteredCourses.slice(0, mobileVisibleCount);
@@ -206,7 +243,7 @@ export default function Youtubevideo() {
                         )}
                     </div>
                 ))}
-                 {mobileVisibleCount < filteredCourses.length && (
+                {mobileVisibleCount < filteredCourses.length && (
                     <div className="flex justify-center mt-4 col-span-full">
                         <button
                             onClick={handleLoadMore}

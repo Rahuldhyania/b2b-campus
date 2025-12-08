@@ -63,6 +63,7 @@ const Footer = () => {
                                     src={footermiallogo}
                                     width={1000}
                                     height={500}
+                                    alt=''
                                     className="w-5 h-5 absolute left-4 top-1/2 -translate-y-1/2 opacity-70"
                                 />
 

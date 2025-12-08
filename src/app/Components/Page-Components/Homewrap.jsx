@@ -15,6 +15,7 @@ import FaqSection from "./FaqSection";
 import WhyChooseSection from "./WhyChooseSection";
 import Whatstudentget from "./Whatstudentget";
 import Youtubevideo from "./Youtubevideo";
+import FooterNew from "../UiUx/FooterNew";
 
 const Homewrap = () => {
     const enrolRef = useRef(null);
@@ -53,6 +54,7 @@ const Homewrap = () => {
             <FaqSection />
             <Youtubevideo />
             <Journeywithb2b2 />
+            {/* <FooterNew/> */}
         </div>
     );
 };

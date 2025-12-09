@@ -3,64 +3,80 @@ import Link from "next/link";
 import React, { useState } from "react";
 import footerlogo from "../../../../public/images/footerlogo.webp";
 import Image from "next/image";
-import footermiallogo from "../../../../public/images/footermiallogo.webp";
+
 import Footerfacebook from "../../../../public/images/Footerfacebook.webp";
 import linkedin from "../../../../public/images/linkedin.webp";
 import insta from "../../../../public/images/insta.webp";
+import pinterest from "../../../../public/icons/pinterest.svg";
+import twitter from "../../../../public/icons/twitter.svg";
+import youtube from "../../../../public/icons/youtube.svg";
+import { Newletterfrom } from "../Page-Components/Newletterfrom";
 const footerData = [
   {
     title: "Industrial Training",
     links: [
-      { id: 1, page_name: "PHP", page_links: "/php-training" },
-      { id: 2, page_name: "JAVA", page_links: "/java-training" },
-      { id: 3, page_name: "ASP.NET", page_links: "/aspnet-training" },
+      {
+        id: 1,
+        page_name: "Graphic Design",
+        page_links: "/graphic-design-training"
+      },
+      {
+        id: 2,
+        page_name: "Truck Dispatch",
+        page_links: "/truck-dispatch-training"
+      },
+      {
+        id: 3,
+        page_name: "Freight Broker",
+        page_links: "/freight-broker-training"
+      },
       {
         id: 4,
+        page_name: "IOT",
+        page_links: "/iot-training"
+      },
+      {
+        id: 5,
+        page_name: "AI Course",
+        page_links: "/ai-course-training"
+      },
+      {
+        id: 6,
+        page_name: "Web Development",
+        page_links: "/web-development-training"
+      },
+      {
+        id: 7,
+        page_name: "Full Stack Development",
+        page_links: "/full-stack-development-training"
+      },
+      {
+        id: 8,
+        page_name: "Wordpress",
+        page_links: "/wordpress-training"
+      },
+      {
+        id: 9,
+        page_name: "ReactJs",
+        page_links: "/reactjs-training"
+      },
+      {
+        id: 10,
         page_name: "Web Designing",
         page_links: "/web-designing-training"
       },
       {
-        id: 5,
+        id: 11,
+        page_name: "Video Editing",
+        page_links: "/video-editing-training"
+      },
+      {
+        id: 12,
         page_name: "Digital Marketing",
         page_links: "/digital-marketing-training"
-      },
-      { id: 6, page_name: "Networking", page_links: "/networking-training" },
-      {
-        id: 7,
-        page_name: "Ethical Hacking",
-        page_links: "/ethical-hacking-training"
-      },
-      {
-        id: 8,
-        page_name: "Embedded System",
-        page_links: "/embedded-system-training"
-      },
-      { id: 9, page_name: "C/C++", page_links: "/c-cpp-training" },
-
-      { id: 10, page_name: "Oracle 9i/10g", page_links: "/oracle-training" },
-      {
-        id: 11,
-        page_name: "PLC Automation",
-        page_links: "/plc-automation-training"
-      },
-      { id: 12, page_name: "VLSI", page_links: "/vlsi-training" },
-      {
-        id: 13,
-        page_name: "Cloud Computing",
-        page_links: "/cloud-computing-training"
-      },
-      {
-        id: 14,
-        page_name: "Android Application",
-        page_links: "/android-training"
-      },
-      { id: 15, page_name: "iPhone", page_links: "/iphone-training" },
-      { id: 16, page_name: "SEO / SMO", page_links: "/seo-smo-training" },
-      { id: 17, page_name: "PLC Scada", page_links: "/plc-scada-training" },
-      { id: 18, page_name: "CCNA", page_links: "/ccna-training" }
+      }
     ]
   },
-
   {
     title: "Useful Links",
     links: [
@@ -161,7 +177,11 @@ const footerData = [
 const socialLinks = [
   { icon: Footerfacebook, url: "https://www.facebook.com/CampusB2B" },
   { icon: insta, url: "https://www.instagram.com/b2bcampus/?hl=en" },
-  { icon: linkedin, url: "https://www.linkedin.com/company/b2b-campus/" }
+  { icon: linkedin, url: "https://www.linkedin.com/company/b2b-campus/" },
+  { icon: youtube, url: "https://www.youtube.com/channel/UCs1sxcuHQ7GWgB9gMyRXwXQ/featured" },
+  { icon: twitter, url: "https://x.com/B2bCampus" },
+  { icon: pinterest, url: "https://in.pinterest.com/b2bcampus/" },
+
 ];
 const FooterNew = () => {
   const [showitem, setShowitem] = useState({
@@ -194,31 +214,7 @@ const FooterNew = () => {
             </Link>
           </div>
           <div>
-            <div className="flex flex-col md:flex-row items-center gap-5 ">
-              <div className="email w-full md:max-w-[382px] ">
-                <div className="relative w-full">
-                  <Image
-                    src={footermiallogo}
-                    width={1000}
-                    height={500}
-                    alt=""
-                    className="w-6 h-6 absolute left-4 top-1/2 -translate-y-1/2 opacity-70 "
-                  />
-
-                  <input
-                    type="email"
-                    placeholder="Email address"
-                    className="text-[19px] placeholder-white py-3 pe-3.5 pl-12 rounded-2xl w-full transition-all duration-300 border-2 border-white border-solid outline-none"
-                  />
-                </div>
-              </div>
-
-              {/* <Link href="/#"> */}
-              <button className="bg-white text-[#5D38DE] px-6 sm:px-10 py-3 text-[16px] sm:text-[18px] rounded-2xl w-max sm:w-auto transition-all duration-300 hover:bg-[#f3efff] hover:scale-[1.03] cursor-pointer ">
-                Submit
-              </button>
-              {/* </Link> */}
-            </div>
+            <Newletterfrom />
           </div>
         </div>
         <div className="grid grid-cols-1 xl:grid-cols-[2fr_3fr]">

@@ -39,76 +39,37 @@ const features = [
         img: successImg,
         variant: "D",
     },
-    {
-        title: "Expert Trainers",
-        description: "Reliable, experienced trainers guiding you throughout your journey.",
-        img: trainerImg,
-        variant: "A",
-    },
-    {
-        title: "Hands-on Training",
-        description: "100% practical, skill-based training designed for real jobs.",
-        img: trainingImg,
-        variant: "B",
-    },
-    {
-        title: "Career Support",
-        description: "Placement focused training with interview prep and life-changing support.",
-        img: supportImg,
-        variant: "C",
-    },
-    {
-        title: "Success Focused",
-        description: "We train for real success, not just certificates.",
-        img: successImg,
-        variant: "D",
-    },
 
 ];
 
 export default function WhyChooseSection() {
     return (
         <div className="pb-6 md:pb-16">
-             <section className="md:pt-6 cus_container ">
-            <div className="relative py-3">
-                <img
-                    src={titlewhitebg.src}
-                    alt="bubble-bg"
-                    className="absolute hidden md:block top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
+            <section className="md:pt-6 cus_container ">
+                <div className="relative py-3">
+                    <img
+                        src={titlewhitebg.src}
+                        alt="bubble-bg"
+                        className="absolute hidden md:block top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
                     w-[480px] md:w-[670px] sm:w-[241px] pointer-events-none select-none opacity-90"
-                />
-
-                <div className="relative z-10 text-center md:pt-5 pb-4 md:pb-12">
-                    <Title
-                        title={'<span class="text-primary"> Why Choose </span> Our Institute'}
-                        text_color={'text-secondary'}
                     />
-                </div>
-            </div>
 
-            {/* 🚀 Slider Starts Here */}
-            <Swiper
-                modules={[Pagination, Autoplay]}
-                // autoplay={{ delay: 2500, disableOnInteraction: false }}
-                spaceBetween={30}
-                loop={true}
-                speed={1200}
-                breakpoints={{
-                    0: { slidesPerView: 1 },
-                    640: { slidesPerView: 1 },
-                    768: { slidesPerView: 2 },
-                    1024: { slidesPerView: 3 },
-                    1280: { slidesPerView: 4 },
-                }}
-                className="py-8"
-            >
-                {features.map((feature, idx) => (
-                    <SwiperSlide key={idx}>
-                        <Card {...feature} />
-                    </SwiperSlide>
-                ))}
-            </Swiper>
-        </section>
+                    <div className="relative z-10 text-center md:pt-5 pb-4 md:pb-12">
+                        <Title
+                            title={'<span class="text-primary"> Why Choose </span> Our Institute'}
+                            text_color={'text-secondary'}
+                        />
+                    </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+                    {features.map((feature, idx) => (
+                        <div className="" key={idx}>
+                            <Card {...feature} />
+                        </div>
+                    ))}
+                </div>
+            </section>
         </div>
     );
 }

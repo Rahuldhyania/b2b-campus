@@ -26,13 +26,14 @@ import arrows5 from "../../../../public/images/arrows5.webp";
 import titlewhitebg from "../../../../public/images/titlewhitebg.webp";
 import Title from "../UiUx/Title";
 import Description from "../UiUx/Description";
+import Buttons from "../UiUx/Buttons";
 
 export const Coursesbtn = [
     { id: 1, btn: "All Courses" },
     { id: 2, btn: "Logistics" },
     { id: 5, btn: "Marketing & Bussiness" },
-    { id: 3, btn: "Development" },
     { id: 4, btn: "Graphics" },
+    { id: 3, btn: "Development" },
 
 ];
 
@@ -111,7 +112,7 @@ export default function PopularCourses({ clickscroll }) {
 
             {/* Mobile Tabs */}
             <div className="px-3">
-                <div className="lg:w-[55%] m-auto flex md:hidden flex-wrap justify-center gap-3 bg-[#CEC5FF] p-4 rounded-2xl">
+                <div className="lg:w-[55%] m-auto flex md:hidden flex-wrap justify-start md:justify-center gap-3 bg-[#CEC5FF] p-4 rounded-2xl">
                     {Coursesbtn.map((item) => (
                         <button
                             key={item.id}
@@ -134,17 +135,10 @@ export default function PopularCourses({ clickscroll }) {
 
             {/* Mobile Cards with Load More */}
             <div className="md:hidden">
-                <ServicesSection courses={mobileCoursesToShow} clickscroll={clickscroll} />
-                {mobileVisibleCount < filteredCourses.length && (
-                    <div className="flex justify-center  md:pb-8">
-                        <button
-                            onClick={handleLoadMore}
-                            className="px-6 py-3 rounded-xl bg-[#6346FA] text-white text-[16px] transition-all duration-300 hover:bg-[#4a2fd1]"
-                        >
-                            Load More
-                        </button>
-                    </div>
-                )}
+                <ServicesSection courses={filteredCourses} clickscroll={clickscroll} />
+                 <div className="buttons text-[25px] flex justify-center m-auto mt-[2%]" onClick={clickscroll}>
+                    <Buttons btnname='Enquire Now' text_color={'text-white'} />
+                </div>
             </div>
         </div>
     );

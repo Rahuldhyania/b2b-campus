@@ -184,7 +184,7 @@ export default function Youtubevideo() {
 
             {/* Tabs */}
             <div className="flex justify-center px-2">
-                <div className="m-auto flex flex-wrap justify-center gap-3 bg-[#CEC5FF] p-4 rounded-2xl">
+                <div className="m-auto flex flex-wrap justify-start md:justify-center gap-3 bg-[#CEC5FF] p-4 rounded-2xl">
                     {Coursesbtn.map((item) => (
                         <button
                             key={item.id}

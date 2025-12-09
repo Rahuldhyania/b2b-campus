@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Title from "../UiUx/Title";
 import Description from "../UiUx/Description";
 import titlewhitebg from "../../../../public/images/titlewhitebg.webp"
+import Buttons from "../UiUx/Buttons";
 
 const features = [
     "100% practical sessions",
@@ -14,7 +15,7 @@ const features = [
     "Resume building & mock interviews",
 ];
 
-export default function TrainingSection() {
+export default function TrainingSection({clickscroll}) {
     return (
         <section
             className="relative py-12 px-2 md:px-6 overflow-hidden"
@@ -115,6 +116,9 @@ export default function TrainingSection() {
                         </motion.div>
 
                     ))}
+                </div>
+                 <div className="buttons text-[25px] md:hidden flex justify-center m-auto mt-[2%]" onClick={clickscroll}>
+                    <Buttons btnname='Enquire Now' text_color={'text-white'} />
                 </div>
             </div>
         </section>

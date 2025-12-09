@@ -8,8 +8,9 @@ import Title from '../UiUx/Title'
 import Image from 'next/image'
 import Description from '../UiUx/Description'
 import Link from 'next/link'
+import Buttons from '../UiUx/Buttons'
 
-const FeaturedIn = () => {
+const FeaturedIn = ({clickscroll}) => {
     return (
         <div className='main-bg py-12 md:py-16'>
             <div className="cus_container">
@@ -126,6 +127,10 @@ const FeaturedIn = () => {
                             </div>
                         </div>
                     </Link>
+                </div>
+
+                 <div className="buttons text-[25px]  md:hidden flex justify-center m-auto mt-[2%]" onClick={clickscroll}>
+                    <Buttons btnname='Enquire Now' text_color={'text-white'} />
                 </div>
             </div>
         </div>

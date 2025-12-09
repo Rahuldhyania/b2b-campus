@@ -36,12 +36,13 @@ const Homewrap = () => {
                 <Banner />
             </div>
             <div className="main-bg">
-                <TrainingSection />
+                
                 <WhyChooseSection />
             </div>
             <PopularCourses clickscroll={scrollToEnrolment} />
             <Youtubevideo />
-            <Professionalskill />
+            <TrainingSection clickscroll={scrollToEnrolment}/>
+            <Professionalskill clickscroll={scrollToEnrolment}/>
             <Whatstudentget />
             <div className="main-bg">
                 <Teachcareer clickscroll={scrollToEnrolment} />
@@ -49,7 +50,7 @@ const Homewrap = () => {
             </div>
             <TestimonialsSlider />
             <TopCompanys clickscroll={scrollToEnrolment} />
-            <FeaturedIn />
+            <FeaturedIn clickscroll={scrollToEnrolment}/>
             <FaqSection />
             <Journeywithb2b2 />
         </div>

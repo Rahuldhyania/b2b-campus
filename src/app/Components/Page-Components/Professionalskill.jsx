@@ -4,6 +4,7 @@ import Image from 'next/image';
 import titlewhitebg from "../../../../public/images/titlewhitebg.webp"
 import hasimg from "../../../../public/images/hasimg.webp"
 import Description from '../UiUx/Description';
+import Buttons from '../UiUx/Buttons';
 
 export const logos = [
     {
@@ -44,7 +45,7 @@ export const logos = [
 ];
 
 
-const Professionalskill = () => {
+const Professionalskill = ({clickscroll}) => {
     return (
         <div className=" pb-6 cus_container"
         >
@@ -93,6 +94,10 @@ const Professionalskill = () => {
                         </div>
                     ))}
                 </div>
+            </div>
+
+            <div className="buttons text-[25px] md:hidden flex justify-center m-auto mt-[2%]" onClick={clickscroll}>
+                <Buttons btnname='Enquire Now' text_color={'text-white'} />
             </div>
 
         </div>

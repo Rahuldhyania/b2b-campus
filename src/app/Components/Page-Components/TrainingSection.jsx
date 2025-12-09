@@ -17,13 +17,13 @@ const features = [
 export default function TrainingSection() {
     return (
         <section
-            className="relative py-12 px-6 overflow-hidden"
+            className="relative py-12 px-2 md:px-6 overflow-hidden"
             // style={{ backgroundColor: "#DDD6FF" }} // MAIN BACKGROUND COLOR
         >
 
             {/* Decorative Gradient Blobs */}
-            <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-purple-300/40 blur-[150px] rounded-full -translate-x-1/3 -translate-y-1/3"></div>
-            <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-200/40 blur-[150px] rounded-full translate-x-1/4 translate-y-1/4"></div>
+            {/* <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-purple-300/40 blur-[150px] rounded-full -translate-x-1/3 -translate-y-1/3"></div>
+            <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-200/40 blur-[150px] rounded-full translate-x-1/4 translate-y-1/4"></div> */}
 
             {/* Floating Circles Animation */}
             <motion.div
@@ -53,18 +53,24 @@ export default function TrainingSection() {
                         <img
                             src={titlewhitebg.src}
                             alt="bubble-bg"
-                            className="absolute  top-[50%] md:top-[60%] left-1/2  -translate-x-1/2 -translate-y-1/2 w-full md:w-[900px]  sm:w-[241px] pointer-events-none select-none opacity-90 max-w-[900px] m-auto"
+                            className="absolute hidden md:block  top-[50%] md:top-[60%] left-1/2  -translate-x-1/2 -translate-y-1/2 w-full md:w-[900px]  sm:w-[241px] pointer-events-none select-none opacity-90 max-w-[900px] m-auto"
                         />
 
                         <div className="relative z-10 text-center">
                             <Title
-                                title={'<span class="text-primary">About Our Course</span> <br/> Industry-Ready Software Training <br/> Designed for Real Jobs'}
+                                title={'About Our Course'}
+                                text_color={'text-primary'}
+                            />
+                            <Title
+                                title={'Industry-Ready Software Training <br/> Designed for Real Jobs'}
                                 text_color={'text-secondary'}
                             />
-                            <Description
+                           <div className="pt-3">
+                             <Description
                                 description={'We dont just teach — we train you for a job. <br /> '}
                                 text_color={'text-secondary'}
                             />
+                           </div>
                         </div>
                     </div>
 

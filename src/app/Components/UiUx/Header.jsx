@@ -34,7 +34,7 @@ export default function Header() {
  
     return (
         <nav className="relative bg-white z-50">
-            <div className="flex justify-between xl:justify-around items-center flex-wrap gap-4 relative py-5 px-5">
+            <div className="flex justify-between xl:justify-around items-center flex-wrap gap-4 relative py-5 px-5 cus_container">
                 {/* Logo */}
                 <div className="Logo-img">
                     <Link
@@ -125,7 +125,7 @@ export default function Header() {
                 {/* Desktop Button */}
                 <div className="flex items-center gap-3">
                     <div className="buttons hidden md:flex text-[25px]">
-                        <Buttons btnname="Enroll Now" text_color="text-white" />
+                        <Buttons btnname="Enquire Now" text_color="text-white" />
                     </div>
                     <div
                         className="xl:hidden  top-5 right-5 z-50 cursor-pointer"
@@ -186,7 +186,7 @@ export default function Header() {
                         )}
  
                         <div className="text-[20px] md:hidden bg-white mt-4">
-                            <Buttons btnname="Enroll Now" text_color="text-white" />
+                            <Buttons btnname="Enquire Now" text_color="text-white" />
                         </div>
                     </ul>
                 </div>

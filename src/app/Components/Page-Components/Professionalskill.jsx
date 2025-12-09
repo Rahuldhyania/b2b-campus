@@ -46,7 +46,7 @@ export const logos = [
 
 const Professionalskill = () => {
     return (
-        <div className=" pb-6"
+        <div className=" pb-6 cus_container"
         >
             <div className="relative flex justify-center items-center">
 
@@ -77,19 +77,11 @@ const Professionalskill = () => {
                     className='w-full ' />
             </div> */}
             <div className="w-full">
-                <div className="flex flex-wrap justify-center gap-[15px] px-[5%] mb-[3%] mt-[3%] place-items-center">
+                <div className="grid grid-cols-2 md:flex flex-wrap justify-center gap-[15px] mb-[3%] mt-[3%] place-items-center pt-6">
                     {logos.map((item) => (
                         <div
                             key={item.id}
-                            className="
-          bg-white m-0 cursor-pointer rounded-[25px] p-6 flex items-center justify-center border-none w-full max-w-[340px] h-[158px] 
-          shadow-md transition-shadow duration-500 ease-in-out
-          hover:shadow-[0_0_20px_4px_rgba(93,56,222,0.5)]
-          hover:animate-pulse
-          hover:-rotate-1
-          hover:scale-105
-          will-change-transform
-        "
+                            className="bg-white m-0 cursor-pointer rounded-[25px] p-6 flex items-center justify-center border-none w-full max-w-[340px] h-[158px]     md:shadow-md shadow-[0_0_20px_4px_rgba(93,56,222,0.5)] transition-shadow duration-500 ease-in-out hover:shadow-[0_0_20px_4px_rgba(93,56,222,0.5)] hover:animate-pulse hover:-rotate-1 hover:scale-105 will-change-transform"
                         >
                             <Image
                                 src={item.src}

@@ -81,8 +81,8 @@ const TestimonialsSlider = () => {
   return (
     <div className="py-12 md:py-16">
       {/* Stats Section */}
-      <div className="w-full flex justify-center">
-        <div className="w-[90%] md:w-[85%] bg-[#EFE8FF] rounded-3xl py-8 px-6 flex flex-col md:flex-row items-center justify-between gap-2 md:gap-8">
+      <div className="w-full flex justify-center cus_container">
+        <div className="bg-[#EFE8FF] rounded-3xl py-8 px-6 flex flex-col md:flex-row items-center justify-between gap-2 md:gap-8">
           {statsData.map((item, index) =>
             <StatItem
               key={index}
@@ -94,8 +94,8 @@ const TestimonialsSlider = () => {
       </div>
 
       {/* Testimonials Slider */}
-      <div className="relative w-full flex flex-col lg:flex-row pt-10 max-w-[1660px] m-auto justify-around">
-        <div className="w-[90%] md:w-[60%] relative m-auto">
+      <div className="relative w-full flex flex-col lg:flex-row pt-10 cus_container justify-around">
+        <div className="w-[100%] md:w-[60%] relative m-auto">
           {/* Custom Left Arrow */}
           <div className="custom-prev hidden sm:flex w-[42px] h-[42px] justify-center items-center rounded-full bg-black absolute top-1/2 left-[-50px] -translate-y-1/2 cursor-pointer z-20 transition-transform duration-300 hover:scale-110 hover:bg-purple-700">
             <Image

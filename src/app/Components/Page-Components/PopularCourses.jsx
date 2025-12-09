@@ -50,14 +50,14 @@ const allCourses = [
     { id: 10, title: "Web Designing", des: "Designs that shape great websites", category: "Development", icon: icon8, color: "#0A9DFF", buttonText: "Learn more", img: arrows4 },
 
     { id: 5, title: "Video Editing", des: "Edit that tells your story", category: "Graphics", icon: VideoIcon, color: "#0A9DFF", buttonText: "Learn more", img: arrow1 },
-    
+
     { id: 12, title: "Digital Marketing", des: "Grow your brand online", category: "Marketing & Bussiness", icon: icon10, color: "#0A9DFF", buttonText: "Learn more", img: arrows5 },
 ];
 
-export default function PopularCourses({clickscroll}) {
+export default function PopularCourses({ clickscroll }) {
     const [activeTab, setActiveTab] = useState("All Courses");
     const [filteredCourses, setFilteredCourses] = useState(allCourses);
-    const [mobileVisibleCount, setMobileVisibleCount] = useState(5); // mobile pagination
+    const [mobileVisibleCount, setMobileVisibleCount] = useState(5);
 
     const handleTabClick = (tab) => {
         setActiveTab(tab);
@@ -66,7 +66,7 @@ export default function PopularCourses({clickscroll}) {
         } else {
             setFilteredCourses(allCourses.filter(c => c.category === tab));
         }
-        setMobileVisibleCount(5); // reset mobile visible count on tab change
+        setMobileVisibleCount(5);
     };
 
     const handleLoadMore = () => {
@@ -81,7 +81,7 @@ export default function PopularCourses({clickscroll}) {
                 <img
                     src={titlewhitebg.src}
                     alt="bubble-bg"
-                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[480px] md:w-[530px] sm:w-60 pointer-events-none select-none opacity-90"
+                    className="absolute hidden md:block top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[480px] md:w-[530px] sm:w-60 pointer-events-none select-none opacity-90"
                 />
                 <div className="relative z-10 text-center">
                     <Title
@@ -93,36 +93,38 @@ export default function PopularCourses({clickscroll}) {
 
             {/* Desktop Tabs */}
             <div className=" hidden md:flex flex-wrap justify-center gap-3  m-auto">
-              <div className="bg-[#CEC5FF] gap-3 p-4 grid grid-cols-5 rounded-2xl">
-                  {Coursesbtn.map((item) => (
-                    <button
-                        key={item.id}
-                        onClick={() => handleTabClick(item.btn)}
-                        className={`px-6 py-3 rounded-xl text-[16px] transition-all duration-300 ease-in-out ${activeTab === item.btn
-                            ? "bg-[#6346FA] text-white"
-                            : "bg-[#E4DFFF] hover:bg-[#6346FA] hover:text-white"
-                            }`}
-                    >
-                        {item.btn}
-                    </button>
-                ))}
-              </div>
+                <div className="bg-[#CEC5FF] gap-3 p-4 grid grid-cols-5 rounded-2xl">
+                    {Coursesbtn.map((item) => (
+                        <button
+                            key={item.id}
+                            onClick={() => handleTabClick(item.btn)}
+                            className={`px-6 py-3 rounded-xl text-[16px] transition-all duration-300 ease-in-out ${activeTab === item.btn
+                                ? "bg-[#6346FA] text-white"
+                                : "bg-[#E4DFFF] hover:bg-[#6346FA] hover:text-white"
+                                }`}
+                        >
+                            {item.btn}
+                        </button>
+                    ))}
+                </div>
             </div>
 
             {/* Mobile Tabs */}
-            <div className="lg:w-[55%] m-auto flex md:hidden flex-wrap justify-center gap-3 bg-[#CEC5FF] p-4 rounded-2xl">
-                {Coursesbtn.map((item) => (
-                    <button
-                        key={item.id}
-                        onClick={() => handleTabClick(item.btn)}
-                        className={`px-6 py-3 rounded-xl text-[16px] transition-all duration-300 ease-in-out ${activeTab === item.btn
-                            ? "bg-[#6346FA] text-white"
-                            : "bg-[#E4DFFF] hover:bg-[#6346FA] hover:text-white"
-                            }`}
-                    >
-                        {item.btn}
-                    </button>
-                ))}
+            <div className="px-3">
+                <div className="lg:w-[55%] m-auto flex md:hidden flex-wrap justify-center gap-3 bg-[#CEC5FF] p-4 rounded-2xl">
+                    {Coursesbtn.map((item) => (
+                        <button
+                            key={item.id}
+                            onClick={() => handleTabClick(item.btn)}
+                            className={`px-6 py-3 rounded-xl text-[16px] transition-all duration-300 ease-in-out ${activeTab === item.btn
+                                ? "bg-[#6346FA] text-white"
+                                : "bg-[#E4DFFF] hover:bg-[#6346FA] hover:text-white"
+                                }`}
+                        >
+                            {item.btn}
+                        </button>
+                    ))}
+                </div>
             </div>
 
             {/* Cards */}
@@ -134,7 +136,7 @@ export default function PopularCourses({clickscroll}) {
             <div className="md:hidden">
                 <ServicesSection courses={mobileCoursesToShow} clickscroll={clickscroll} />
                 {mobileVisibleCount < filteredCourses.length && (
-                    <div className="flex justify-center  pb-8">
+                    <div className="flex justify-center  md:pb-8">
                         <button
                             onClick={handleLoadMore}
                             className="px-6 py-3 rounded-xl bg-[#6346FA] text-white text-[16px] transition-all duration-300 hover:bg-[#4a2fd1]"

@@ -5,6 +5,7 @@ import Footer from "./Components/UiUx/Footer";
 import Image from "next/image";
 import Whatsapp from "./Components/Page-Components/Whatsapp";
 import Helpline from "./Components/Page-Components/Helpline";
+import FooterNew from "./Components/UiUx/FooterNew";
 
 export const metadata = {
   title: "b2bCampus",
@@ -32,7 +33,7 @@ export default function RootLayout({ children }) {
         <div className="fixed bottom-4 right-4 z-50">
           <Helpline />
         </div>
-        <Footer />
+        <FooterNew />
       </body>
     </html>
   );

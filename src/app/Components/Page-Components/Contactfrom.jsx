@@ -10,7 +10,7 @@ function Contactfrom({ onCloseModal }) {
     lastname: "",
     mobile: "",
     email: "",
-    services: ""
+    course: ""
   });
   const [thankyou, setthankyou] = useState(false);
   const handleChange = e => {
@@ -24,15 +24,15 @@ function Contactfrom({ onCloseModal }) {
     e.preventDefault();
 
     const payload = {
-      __vtrftk: "sid:49a43073c52509949b7ebf78f93d918471f523f3",
-      publicid: "6d0d19741a038631a27222bf5cd1d919",
+      __vtrftk: "sid:5fd0ebe73d5ae63b11e53b8e94a7b63892025362,1765278059",
+      publicid: "b1d358f820e3c28e411b9058299241a5",
       urlencodeenable: "1",
-      name: "B2B website",
+      name: "b2bcampus",
       firstname: formData.firstname,
       lastname: formData.lastname,
       mobile: formData.mobile,
       email: formData.email,
-      "cf_1188[]": formData.services
+      "cf_1192[]": formData.course
     };
 
     try {
@@ -54,7 +54,7 @@ function Contactfrom({ onCloseModal }) {
           lastname: "",
           mobile: "",
           email: "",
-          services: "Shopify Development"
+          course: "Shopify Development"
         });
         setthankyou(true);
         onCloseModal();
@@ -128,21 +128,21 @@ function Contactfrom({ onCloseModal }) {
                     />
 
                     <select
-                      name="services"
-                      value={formData.services}
+                      name="course"
+                      value={formData.course}
                       onChange={handleChange}
                       className="border border-gray-300 rounded-lg px-4 py-3 bg-purple-50  sm:col-span-2"
                       required
                     >
                       <option value="">Select Cource</option>
-                      <option value="Truck Dispatching">
-                        Truck Dispatching
+                      <option value="Truck Dispatch">
+                        Truck Dispatch
                       </option>
-                      <option value="Truck Dispatching Freight Broker">
-                        Truck Dispatching Freight Broker
+                      <option value="Freight Broker">
+                        Freight Broker
                       </option>
-                      <option value="AI">AI</option>
-                      <option value="Flutter">IOT</option>
+                      <option value="Artificial intelligence & Data Science">Artificial Intelligence / Data Science</option>
+                      <option value="IOT">Internet Of Things(IOT)</option>
                       <option value="Web Designing">Web Designing</option>
                       <option value="Web Development">Web Development</option>
                       <option value="Digital marketing">
@@ -171,7 +171,7 @@ function Contactfrom({ onCloseModal }) {
 
                     <div className="buttons text-[25px] flex justify-center mt-6 mb-6 sm:col-span-2">
                       <Buttons
-                        btnname="Enroll Now"
+                        btnname="Enquire Now"
                         text_color="text-white"
                         type="submit"
                       />

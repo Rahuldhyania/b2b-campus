@@ -61,11 +61,7 @@ export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <section className="py-12 2xl:py-16 px-6 relative overflow-hidden main-bg">
-    {/* // style={{ backgroundColor: "#DDD6FF" }} */}
-      {/* Background Decorative Blobs */}
-      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-purple-300/40 blur-[150px] rounded-full -translate-x-1/3 -translate-y-1/3" />
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-200/50 blur-[150px] rounded-full translate-x-1/3 translate-y-1/3" />
+    <section className="py-12 2xl:py-16 px-4 md:px-6 relative overflow-hidden main-bg">
 
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Title */}
@@ -74,7 +70,7 @@ export default function FaqSection() {
             <img
               src={titlewhitebg.src}
               alt="bubble-bg"
-              className="absolute  md:top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 w-[480px] md:w-[745px]  sm:w-60 pointer-events-none select-none opacity-90"
+              className="absolute hidden md:block md:top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 w-[480px] md:w-[745px]  sm:w-60 pointer-events-none select-none opacity-90"
             />
 
             <div className="relative z-3">
@@ -100,7 +96,7 @@ export default function FaqSection() {
         {/* Grid with 2 Independent Columns */}
         <div className="mt-6 md:mt-16 grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* LEFT COLUMN */}
-          <div className="space-y-6">
+          <div className="space-y-3 md:space-y-6">
             {faqs.filter((_, i) => i % 2 === 0).map((faq, i) => {
               const actualIndex = i * 2;
               const isOpen = openIndex === actualIndex;
@@ -119,7 +115,7 @@ export default function FaqSection() {
                     onClick={() => setOpenIndex(isOpen ? null : actualIndex)}
                     className="w-full flex justify-between items-center py-3 px-6 text-left"
                   >
-                    <span className="text-xl text-black">
+                    <span className="text-lg md:text-xl text-black">
                       {faq.q}
                     </span>
 
@@ -153,7 +149,7 @@ export default function FaqSection() {
           </div>
 
           {/* RIGHT COLUMN */}
-          <div className="space-y-6">
+          <div className="space-y-3 md:space-y-6">
             {faqs.filter((_, i) => i % 2 !== 0).map((faq, i) => {
               const actualIndex = i * 2 + 1;
               const isOpen = openIndex === actualIndex;
@@ -172,7 +168,7 @@ export default function FaqSection() {
                     onClick={() => setOpenIndex(isOpen ? null : actualIndex)}
                     className="w-full flex justify-between items-center py-3 px-6 text-left"
                   >
-                    <span className="text-xl text-black">
+                    <span className="text-lg md:text-xl text-black">
                       {faq.q}
                     </span>
 

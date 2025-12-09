@@ -16,7 +16,7 @@ export default function Whatstudentget() {
 
     return (
         <section className="main-bg py-12 md:py-16">
-            <div className="max-w-5xl mx-auto px-6">
+            <div className="max-w-5xl mx-auto px-4 md:px-6">
 
                 {/* Section Header */}
                 <div className="relative text-center pb-3">
@@ -24,7 +24,7 @@ export default function Whatstudentget() {
                         <img
                             src={titlewhitebg.src}
                             alt="bubble-bg"
-                            className="absolute  top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 w-[480px] md:w-[670px]  sm:w-[241px] pointer-events-none select-none opacity-90"
+                            className="absolute hidden md:block top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 w-[480px] md:w-[670px]  sm:w-[241px] pointer-events-none select-none opacity-90"
                         />
                         <Title
                             title={'<span class="text-primary"> What Students </span>  Receive'}

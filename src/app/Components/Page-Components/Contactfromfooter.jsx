@@ -11,7 +11,7 @@ function Contactfromfooter({ onCloseModal }) {
         lastname: "",
         mobile: "",
         email: "",
-        services: ""
+        course: ""
     });
     const [thankyou, setthankyou] = useState(false);
     const handleChange = e => {
@@ -25,15 +25,15 @@ function Contactfromfooter({ onCloseModal }) {
         e.preventDefault();
 
         const payload = {
-            __vtrftk: "sid:49a43073c52509949b7ebf78f93d918471f523f3",
-            publicid: "6d0d19741a038631a27222bf5cd1d919",
+            __vtrftk: "sid:5fd0ebe73d5ae63b11e53b8e94a7b63892025362,1765278059",
+            publicid: "b1d358f820e3c28e411b9058299241a5",
             urlencodeenable: "1",
-            name: "B2B website",
+            name: "B2B Campus",
             firstname: formData.firstname,
             lastname: formData.lastname,
             mobile: formData.mobile,
             email: formData.email,
-            "cf_1188[]": formData.services
+            "cf_1192[]": formData.course
         };
 
         try {
@@ -55,7 +55,7 @@ function Contactfromfooter({ onCloseModal }) {
                     lastname: "",
                     mobile: "",
                     email: "",
-                    services: "Shopify Development"
+                    course: "Shopify Development"
                 });
                 setthankyou(true);
                 onCloseModal();
@@ -119,19 +119,21 @@ function Contactfromfooter({ onCloseModal }) {
                                     className="border border-gray-300 rounded-lg px-4 py-3 bg-purple-50 focus:outline-none focus:ring-2 focus:ring-purple-400"
                                 />
                                 <select
-                                    name="services"
-                                    value={formData.services}
+                                    name="course"
+                                    value={formData.course}
                                     onChange={handleChange}
                                     className="border border-gray-300 rounded-lg px-4 py-3 bg-purple-50  sm:col-span-2"
                                     required
                                 >
                                     <option value="">Select Cource</option>
-                                    <option value="Truck Dispatching">Truck Dispatching</option>
-                                    <option value="Truck Dispatching Freight Broker">
-                                        Truck Dispatching Freight Broker
+                                    <option value="Truck Dispatch">
+                                        Truck Dispatch
                                     </option>
-                                    <option value="AI">AI</option>
-                                    <option value="Flutter">IOT</option>
+                                    <option value="Freight Broker">
+                                        Freight Broker
+                                    </option>
+                                    <option value="Artificial intelligence & Data Science">Artificial Intelligence / Data Science</option>
+                                    <option value="IOT">Internet Of Things(IOT)</option>
                                     <option value="Web Designing">Web Designing</option>
                                     <option value="Web Development">Web Development</option>
                                     <option value="Digital marketing">Digital marketing</option>
@@ -160,7 +162,7 @@ function Contactfromfooter({ onCloseModal }) {
                             <div className="lg:absolute w-full flex justify-center left-0 -bottom-20">
                                 <button type="submit" className="border-none outline-none transition-all duration-300 hover:-translate-y-1 text-2xl py-3 px-8 rounded-2xl text-white  bg-cover bg-center cursor-pointer banner_button"
                                     style={{ backgroundImage: `url(${mainbtnng.src})` }}
-                                >Enroll Now</button>
+                                >Enquire Now</button>
                             </div>
 
                         </form>}

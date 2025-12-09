@@ -12,8 +12,12 @@
 
 body {
   font-family: var(--font-kodchasan-medium);
-  max-width: 1950px;
+}
+
+.cus_container {
+  max-width: 1670px;
   margin: auto;
+  padding-inline: 4%;
 }
 
 .text-primary {
@@ -102,3 +106,8 @@ body {
   }
 }
 
+@media screen and (max-width:768px) {
+   br {
+    display: none;
+   }
+}

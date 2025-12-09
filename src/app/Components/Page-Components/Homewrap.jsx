@@ -9,19 +9,15 @@ import TopCompanys from "./TopCompanys";
 import FeaturedIn from "./FeaturedIn";
 import Journeywithb2b2 from "./Journeywithb2b2";
 import TestimonialsSlider from "./TestimonialsSlider";
-import Footer from "../UiUx/Footer";
 import TrainingSection from "./TrainingSection";
 import FaqSection from "./FaqSection";
 import WhyChooseSection from "./WhyChooseSection";
 import Whatstudentget from "./Whatstudentget";
 import Youtubevideo from "./Youtubevideo";
-import FooterNew from "../UiUx/FooterNew";
 
 const Homewrap = () => {
     const enrolRef = useRef(null);
-    const [width, setWidth] = useState(1200); // default
-
-    // 👉 window only available in the browser
+    const [width, setWidth] = useState(1200); 
     useEffect(() => {
         setWidth(window.innerWidth);
         console.log(window.innerWidth, "innerWidth");
@@ -41,20 +37,21 @@ const Homewrap = () => {
             </div>
             <div className="main-bg">
                 <TrainingSection />
-                <Professionalskill />
                 <WhyChooseSection />
             </div>
+            <PopularCourses clickscroll={scrollToEnrolment} />
+            <Youtubevideo />
+            <Professionalskill />
             <Whatstudentget />
-            <PopularCourses clickscroll={scrollToEnrolment}/>
-            <Teachcareer clickscroll={scrollToEnrolment}/>
-            <CampusProgram clickscroll={scrollToEnrolment}/>
+            <div className="main-bg">
+                <Teachcareer clickscroll={scrollToEnrolment} />
+                <CampusProgram clickscroll={scrollToEnrolment} />
+            </div>
             <TestimonialsSlider />
-            <TopCompanys clickscroll={scrollToEnrolment}/>
+            <TopCompanys clickscroll={scrollToEnrolment} />
             <FeaturedIn />
             <FaqSection />
-            <Youtubevideo />
             <Journeywithb2b2 />
-            {/* <FooterNew/> */}
         </div>
     );
 };

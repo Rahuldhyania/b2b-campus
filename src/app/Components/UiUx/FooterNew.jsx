@@ -188,8 +188,6 @@ const FooterNew = () => {
     0: 6,
     1: 6
   });
-
-  console.log("showitem", showitem);
   const handelshow = index => {
     setShowitem(prev => ({
       ...prev,

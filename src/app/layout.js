@@ -6,6 +6,7 @@ import Image from "next/image";
 import Whatsapp from "./Components/Page-Components/Whatsapp";
 import Helpline from "./Components/Page-Components/Helpline";
 import FooterNew from "./Components/UiUx/FooterNew";
+import Canonical from "./Canonical";
 
 export const metadata = {
   title: "b2bCampus",
@@ -20,12 +21,14 @@ const KodchasanMedium = localFont({
 
 
 export default function RootLayout({ children }) {
-  
+
   return (
     <html lang="en">
+      <head >
+        <Canonical />
+      </head>
       <body className={`${KodchasanMedium.variable}`}>
         <Header />
-        {/* ${kodchasanNormal.variable} ${kodchasanLight.variable} */}
         {children}
         <div className="fixed bottom-4 left-4 z-50">
           <Whatsapp />

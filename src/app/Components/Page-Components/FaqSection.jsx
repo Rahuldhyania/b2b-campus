@@ -6,58 +6,9 @@ import titlewhitebg from "../../../../public/images/titlewhitebg.webp";
 import Title from "../UiUx/Title";
 import Description from "../UiUx/Description";
 
-const faqs = [
-  {
-    q: "Is this course good for beginners?",
-    a:
-      "Yes! Even if you have zero experience, we teach from basics to advanced in a simple and friendly way."
-  },
-  {
-    q: "Will I really learn practical skills?",
-    a:
-      "Definitely. You will learn 100% practical skills, real projects, assignments, and hands-on sessions — exactly what companies want."
-  },
-  {
-    q: "How will this course help my career?",
-    a:
-      "This course is designed to make you job-ready, build real skills, and help you create a stable, successful future."
-  },
-  {
-    q: "Do you provide placement support?",
-    a:
-      "Yes. We help with resume making, interview preparation, mock interviews, and job opportunities through our network."
-  },
-  {
-    q: "Who are the teachers?",
-    a:
-      "You will learn from experienced and reliable trainers who explain everything clearly and support you throughout the journey."
-  },
-  {
-    q: "What makes your teaching style unique?",
-    a:
-      "We use a smart, modern, student-friendly teaching method with easy examples, practical demos, and step-by-step explanation."
-  },
-  {
-    q: "Is the course affordable for students?",
-    a:
-      "Yes. We provide high-quality training at student-friendly fees, with the best value in the market."
-  },
-  {
-    q: "How do you help in interviews?",
-    a: `We train you with:\n• Mock interviews\n• Confidence-building sessions\n• Communication tips\n• Company-level interview questions`
-  },
-  {
-    q: "What do current students like the most?",
-    a: `Students love our:\n• Trendy, modern learning environment\n• Friendly teachers\n• Practical approach\n• Real project experience\n• Motivating atmosphere\n• Personal attention\n• Easy explanations\n• Lifetime guidance\n• Strong career focus`
-  },
-  {
-    q: "How can I join the course?",
-    a:
-      "Simple! Just contact us → Attend a quick counseling session → Choose batch → Start learning."
-  }
-];
 
-export default function FaqSection() {
+
+export default function FaqSection({faq_data}) {
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
@@ -66,7 +17,7 @@ export default function FaqSection() {
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Title */}
         <div className="relative ">
-          <div className="relative z-10 text-center">
+          <div className="relative z-2 text-center">
             <img
               src={titlewhitebg.src}
               alt="bubble-bg"
@@ -83,7 +34,7 @@ export default function FaqSection() {
             </div>
           </div>
 
-          <div className="text-center relative z-2">
+          <div className="text-center relative z-3">
             <Description
               description={
                 " Clear answers — so you feel confident before joining."
@@ -97,7 +48,7 @@ export default function FaqSection() {
         <div className="mt-6 md:mt-16 grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* LEFT COLUMN */}
           <div className="space-y-3 md:space-y-6">
-            {faqs.filter((_, i) => i % 2 === 0).map((faq, i) => {
+            {faq_data.filter((_, i) => i % 2 === 0).map((faq, i) => {
               const actualIndex = i * 2;
               const isOpen = openIndex === actualIndex;
 
@@ -150,7 +101,7 @@ export default function FaqSection() {
 
           {/* RIGHT COLUMN */}
           <div className="space-y-3 md:space-y-6">
-            {faqs.filter((_, i) => i % 2 !== 0).map((faq, i) => {
+            {faq_data.filter((_, i) => i % 2 !== 0).map((faq, i) => {
               const actualIndex = i * 2 + 1;
               const isOpen = openIndex === actualIndex;
 

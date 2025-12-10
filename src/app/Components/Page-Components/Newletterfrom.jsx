@@ -21,11 +21,11 @@ export const Newletterfrom = () => {
       urlencodeenable: "1",
       name: "B2bcampus Newsletter",
 
-      // CRM Fields
       email: email,
       lastname: "Newsletter User",
       leadsource: "b2bcampus newsletter"
     };
+console.log(payload, 'payload');
 
     try {
       const res = await fetch("/api/contact-from", {
@@ -39,7 +39,7 @@ export const Newletterfrom = () => {
       const data = await res.json();
 
       if (data.success) {
-        setMsg("✅ Newsletter subscribed successfully!");
+        setMsg(" Newsletter subscribed successfully!");
         setEmail("");
         toast.success("Subscribed successfully");
       } else {

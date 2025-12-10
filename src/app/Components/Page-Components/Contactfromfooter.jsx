@@ -73,11 +73,12 @@ function Contactfromfooter({ onCloseModal }) {
                 <div className="form-wrapper h-max">
                     {thankyou
                         ? <div className="flex flex-col items-center justify-center p-10 bg-purple-50 rounded-xl shadow-md">
-                            <h2 className="text-4xl font-bold text-[#6346FA] mb-4">
-                                Thank You!
+                            <h2 className="text-4xl font-bold text-[#6346FA] mb-4 text-center">
+                                Thank you for filling out the form!
                             </h2>
-                            <p className="text-gray-600 text-center mb-6">
-                                Your submission has been received successfully.
+                            <p className="text-gray-600 text-center  mb-6">
+                                Our team will get in touch with you shortly to guide you further.
+                                Get ready to start your journey with the No.1 Training Institute in Mohali!
                             </p>
                         </div>
                         : <form onSubmit={handleSubmit} className="crm-form">

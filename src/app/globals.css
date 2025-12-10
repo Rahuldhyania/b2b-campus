@@ -89,7 +89,21 @@ body {
     transform: translateY(-25px);
   }
 }
-
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+ 
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+ 
+.animate-slideDown {
+  animation: slideDown 0.25s ease-out;
+}
 .tool1 {
   animation: bounceBall 1.8s infinite ease-in-out;
 }

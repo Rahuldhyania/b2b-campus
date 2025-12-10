@@ -14,7 +14,7 @@ const Globaltitle = ({
                     <span className=" px-3 py-1 rounded-xl text-[#6346FA]">
                         {highlightText} <br />
                     </span>{" "}
-                    {titleEnd}
+                   <span className='font-normal'>{titleEnd}</span> 
                 </h1>
 
                 <p className="mt-3 text-gray-600 text-[16px]  2xl:text-[25px]">

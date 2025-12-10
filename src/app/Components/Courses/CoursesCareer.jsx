@@ -46,7 +46,7 @@ const CoursesCareer = ({ items, featuresMain ,title ,description }) => {
                             width={1000}
                             height={500}
                             alt="bg-shape"
-                            className="absolute top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[480px] md:w-[456px] sm:w-60 opacity-100 pointer-events-none select-none"
+                            className="absolute hidden md:block top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[480px] md:w-[456px] sm:w-60 opacity-100 pointer-events-none select-none"
                         />
 
                         <div className="relative z-10 text-center">
@@ -64,7 +64,7 @@ const CoursesCareer = ({ items, featuresMain ,title ,description }) => {
                     </div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] md:pt-12">
-                        <div className="boy relative w-full">
+                        <div className="boy relative w-full  hidden md:block">
                             <Image
                                 src={boylike}
                                 width={1000}
@@ -73,7 +73,7 @@ const CoursesCareer = ({ items, featuresMain ,title ,description }) => {
                                 className=" mx-auto relative top-1.5 md:top-0"
                             />
                         </div>
-                        <section className="flex items-center md:pt-6 lg:pt-0">
+                        <section className="flex items-center pt-6 lg:pt-0">
                             <div>
                                 <div className="max-w-[95%] mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6">
                                     {featuresMain.map((item, index) =>

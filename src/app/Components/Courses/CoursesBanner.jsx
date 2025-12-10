@@ -40,7 +40,7 @@ const CoursesBanner = ({ highlightText, titleEnd, description, leftposter, right
                             className=" mx-auto"
                         />
                     </div>
-                    <div className='my-auto py-12'>
+                    <div className='my-auto py-5 md:py-12'>
                         <Contactfrom />
                     </div>
                     <div className="girl relative w-full hidden lg:block">

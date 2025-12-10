@@ -20,10 +20,10 @@ const CanJoin = ({ conjoin_data }) => {
                             width={1000}
                             height={500}
                             alt="bg-shape"
-                            className="absolute top-[58%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[480px] md:w-[456px] sm:w-60 opacity-100 pointer-events-none select-none"
+                            className="absolute  hidden md:block top-[58%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[480px] md:w-[456px] sm:w-60 opacity-100 pointer-events-none select-none"
                         />
                     </div>
-                    <div className='pt-6'>
+                    <div className='md:pt-6'>
                         <Description
                             description={'Perfect for beginners & career changers.'}
                             text_color={'text-secondary'}
@@ -54,9 +54,10 @@ const CanJoin = ({ conjoin_data }) => {
                                             width={1000}
                                             height={500}
                                             alt="check"
-                                            className="w-[45px] h-[45px] 2xl:w-[55px] 2xl:h-[55px] object-contain absolute -left-4 top-0"
+                                            className="w-[38px] md:w-[45px] h-[38px] md:h-[45px] 2xl:w-[55px] 2xl:h-[55px] object-contain absolute left-2 md:-left-4 
+                                            top-2 md:top-0"
                                         />
-                                        <p className="text-lg 2xl:text-xl font-medium pl-5">
+                                        <p className="text-lg 2xl:text-xl font-medium pl-10 md:pl-5">
                                             {item.text}
                                         </p>
                                     </div>

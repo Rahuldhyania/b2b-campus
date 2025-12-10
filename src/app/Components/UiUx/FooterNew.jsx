@@ -28,52 +28,52 @@ const footerData = [
       {
         id: 3,
         page_name: "Freight Broker",
-        page_links: "/freight-broker-training"
+        page_links: ""
       },
       {
         id: 4,
         page_name: "IOT",
-        page_links: "/iot-training"
+        page_links: "/"
       },
       {
         id: 5,
         page_name: "AI Course",
-        page_links: "/ai-course-training"
+        page_links: "/"
       },
       {
         id: 6,
         page_name: "Web Development",
-        page_links: "/web-development-training"
+        page_links: "/"
       },
       {
         id: 7,
         page_name: "Full Stack Development",
-        page_links: "/full-stack-development-training"
+        page_links: "/"
       },
       {
         id: 8,
         page_name: "Wordpress",
-        page_links: "/wordpress-training"
+        page_links: "/"
       },
       {
         id: 9,
         page_name: "ReactJs",
-        page_links: "/reactjs-training"
+        page_links: "/"
       },
       {
         id: 10,
         page_name: "Web Designing",
-        page_links: "/web-designing-training"
+        page_links: "/"
       },
       {
         id: 11,
         page_name: "Video Editing",
-        page_links: "/video-editing-training"
+        page_links: "/"
       },
       {
         id: 12,
         page_name: "Digital Marketing",
-        page_links: "/digital-marketing-training"
+        page_links: "/"
       }
     ]
   },
@@ -236,7 +236,7 @@ const FooterNew = () => {
                     />
                   </svg>
                   <Link
-                    href={"/"}
+                    href={data.page_links}
                     className="text-white text-lg 2xl:text-xl hover:underline transition-all duration-500"
                   >
                     {data.page_name}

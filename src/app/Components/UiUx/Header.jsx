@@ -8,6 +8,7 @@ import Buttons from "./Buttons";
 import { motion } from "framer-motion";
  
 import arrowdown from "../../../../public/icons/arrowdown.svg";
+import menuarrow from "../../../../public/icons/menuarrow.svg";
  
 const categories = [
     { name: "All Courses", key: "AllCourses" },
@@ -20,38 +21,38 @@ const categories = [
 const coursesData = {
     Logistics: [
         { name: "Truck Dispatch", path: "/truck-dispatching" },
-        { name: "Freight Broker", path: "/freight-broker" },
+        { name: "Freight Broker", path: "/" },
     ],
     MarketingBusiness: [
-        { name: "Digital Marketing", path: "/digital-marketing" },
+        { name: "Digital Marketing", path: "/" },
     ],
     Development: [
-        { name: "IOT", path: "/iot" },
-        { name: "AI Course", path: "/ai-course" },
-        { name: "Web Development", path: "/web-development" },
-        { name: "Full Stack Development", path: "/full-stack-development" },
-        { name: "Wordpress", path: "/wordpress" },
-        { name: "ReactJs", path: "/reactjs" },
+        { name: "IOT", path: "/" },
+        { name: "AI Course", path: "/" },
+        { name: "Web Development", path: "/" },
+        { name: "Full Stack Development", path: "/" },
+        { name: "Wordpress", path: "/" },
+        { name: "ReactJs", path: "/" },
         { name: "Web Designing", path: "/web-designing" },
     ],
     Graphics: [
         { name: "Graphic Design", path: "/graphic-design-course" },
-        { name: "Video Editing", path: "/video-editing" },
+        { name: "Video Editing", path: "/" },
     ],
     AllCourses: [
         { name: "Truck Dispatch", path: "/truck-dispatching" },
         { name: "Graphic Design", path: "/graphic-design-course" },
-        { name: "Freight Broker", path: "/freight-broker" },
-        { name: "Digital Marketing", path: "/digital-marketing" },
-        { name: "IOT", path: "/iot" },
-        { name: "AI Course", path: "/ai-course" },
-        { name: "Web Development", path: "/web-development" },
-        { name: "Full Stack Development", path: "/full-stack-development" },
-        { name: "Wordpress", path: "/wordpress" },
-        { name: "ReactJs", path: "/reactjs" },
-        { name: "Web Designing", path: "/web-designing" },
+        { name: "Freight Broker", path: "/" },
+        { name: "Digital Marketing", path: "/" },
+        { name: "IOT", path: "/" },
+        { name: "AI Course", path: "/" },
+        { name: "Web Development", path: "/" },
+        { name: "Full Stack Development", path: "/" },
+        { name: "Wordpress", path: "/" },
+        { name: "ReactJs", path: "/" },
+        { name: "Web Designing", path: "/" },
         
-        { name: "Video Editing", path: "/video-editing" },
+        { name: "Video Editing", path: "/" },
     ],
 };
  
@@ -168,8 +169,8 @@ export default function Header() {
  
                     {/* MEGA MENU BOX */}
                     <div
-                        className="
-                fixed top-[86px] left-1/2 -translate-x-1/2
+                        className=" max-h-[80vh]
+                fixed top-[60px] md:top-[86px] left-1/2 -translate-x-1/2
                 bg-white border border-[#D9D4FF]
                 shadow-[0_4px_20px_rgba(93,56,222,0.15)]
                 rounded-xl p-4 z-50 flex flex-col md:flex-row w-[95%] max-w-[1282px] gap-4 overflow-hidden
@@ -186,7 +187,7 @@ export default function Header() {
                         </div>
  
                         {/* LEFT SIDEBAR */}
-                        <div className="md:w-1/4 w-full md:border-r pb-12 pr-4 mb-4 md:mb-0">
+                        <div className="md:w-1/4 w-full md:border-r md:pb-12 pr-4 md:mb-4 md:mb-0">
                             <div className="flex flex-col gap-3 mb-4">
                                 <Image
                                     src={B2BCAMPUSLOGO}
@@ -240,11 +241,15 @@ export default function Header() {
                                                 </p>
                                             </div>
  
-                                            <div className="px-2 pb-2 text-[12px] text-gray-600 leading-tight">
-                                                <span className="text-[#5D38DE] mt-1 inline-block text-[14px]">
-                                                    View course →
-                                                </span>
-                                            </div>
+                                            {/* <div className="px-2 pb-2 text-[12px] text-gray-600 leading-tight">
+                                                <Image
+                                                 src={menuarrow}
+                                                 alt="menuarrow"
+                                                 width={1000}
+                                                 height={500}
+                                                 className="max-w-6"
+                                                 />
+                                            </div> */}
                                         </motion.div>
                                     </Link>
                                 ))}

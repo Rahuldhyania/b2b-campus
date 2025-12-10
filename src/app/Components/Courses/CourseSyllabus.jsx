@@ -14,7 +14,7 @@ const CourseSyllabus = ({Syllabus_data,title}) => {
             width={1000}
             height={500}
             alt="bg-shape"
-            className="absolute top-[70%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[480px] md:w-[431px] sm:w-60 opacity-100 pointer-events-none select-none"
+            className="absolute  hidden md:block top-[70%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[480px] md:w-[431px] sm:w-60 opacity-100 pointer-events-none select-none"
           />
 
           <div className="relative z-10 text-center">

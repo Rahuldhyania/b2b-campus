@@ -36,9 +36,9 @@ const CourseProgram = ({ program_data ,title ,description }) => {
                                     alt="check"
                                     width={1000}
                                     height={500}
-                                    className="w-[42px] 2xl:w-[50px] h-[42px] 2xl:h-[50px] object-contain absolute -left-6 top-2"
+                                    className="w-[42px] 2xl:w-[50px] h-[42px] 2xl:h-[50px] object-contain absolute left-2 md:-left-5 top-2"
                                 />
-                                <p className="text-lg 2xl:text-xl font-medium pl-5">
+                                <p className="text-lg 2xl:text-xl font-medium pl-10 md:pl-5">
                                     {item.text}
                                 </p>
                             </div>

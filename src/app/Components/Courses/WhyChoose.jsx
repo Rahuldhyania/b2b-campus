@@ -19,7 +19,7 @@ const WhyChoose = ({ featuresNumbered }) => {
                         alt="bubble-bg"
                         width={1000}
                         height={500}
-                        className="absolute  top-[31%] left-1/2  -translate-x-1/2 -translate-y-1/2 w-[480px] md:w-[700px] h-20 sm:w-60 pointer-events-none select-none opacity-90"
+                        className="absolute  hidden md:block  top-[31%] left-1/2  -translate-x-1/2 -translate-y-1/2 w-[480px] md:w-[700px] h-20 sm:w-60 pointer-events-none select-none opacity-90"
                     />
 
                     <div className="relative z-10 text-center">

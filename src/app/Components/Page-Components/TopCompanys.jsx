@@ -24,7 +24,7 @@ export const logos = [
     { id: 15, src: "/images/cyberzenix.webp", alt: "Facebook Blueprint", desc: "5+ Students Recruited" },
 ];
 
-const TopCompanys = () => {
+const TopCompanys = ({clickscroll}) => {
     const [mobileVisibleCount, setMobileVisibleCount] = useState(5);
 
     const handleLoadMore = () => {
@@ -34,7 +34,7 @@ const TopCompanys = () => {
     const mobileLogosToShow = logos.slice(0, mobileVisibleCount);
 
     return (
-        <div className='main-bg py-6'>
+        <div className='main-bg py-16'>
 
             {/* Title */}
             <div className="relative ">
@@ -42,7 +42,7 @@ const TopCompanys = () => {
                 <img
                     src={titlewhitebg.src}
                     alt="bubble-bg"
-                    className="absolute  top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 w-[480px] md:w-[900px]  sm:w-[240px] pointer-events-none select-none opacity-90"
+                    className="absolute  top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 w-[480px] md:w-[900px]  sm:w-60 pointer-events-none select-none opacity-90"
                 />
 
                 <div className="relative z-10 text-center">
@@ -56,7 +56,7 @@ const TopCompanys = () => {
 
             {/* Cards Section - Desktop */}
             <div className="w-full hidden md:block">
-                <div className="flex flex-wrap justify-center gap-[20px] px-[5%] mb-[3%] mt-[3%] place-items-center">
+                <div className="flex flex-wrap justify-center gap-5 px-[5%] mb-[3%]  place-items-center">
                     {logos.map((item) => (
                         <div
                             key={item.id}
@@ -92,7 +92,7 @@ const TopCompanys = () => {
 
                             {/* Description */}
                             <div className="
-                                bg-gradient-to-r from-[#8c5fef] to-[#7154FF] 
+                                bg-linear-to-r from-[#8c5fef] to-[#7154FF] 
                                 text-white text-center 
                                 h-[30%] flex items-center justify-center 
                                 text-[16px] font-semibold
@@ -108,7 +108,7 @@ const TopCompanys = () => {
 
             {/* Cards Section - Mobile with Load More */}
             <div className="md:hidden">
-                <div className="flex flex-wrap justify-center gap-[20px] px-[5%] mb-[3%] mt-[3%] place-items-center">
+                <div className="flex flex-wrap justify-center gap-5 px-[5%] mb-[3%] mt-[3%] place-items-center">
                     {mobileLogosToShow.map((item) => (
                         <div
                             key={item.id}
@@ -141,7 +141,7 @@ const TopCompanys = () => {
                                 />
                             </div>
                             <div className="
-                                bg-gradient-to-r from-[#8c5fef] to-[#7154FF] 
+                                bg-linear-to-r from-[#8c5fef] to-[#7154FF] 
                                 text-white text-center 
                                 h-[30%] flex items-center justify-center 
                                 text-[16px] font-semibold
@@ -172,7 +172,7 @@ const TopCompanys = () => {
                 text_color={'text-secondary'}
             />
 
-            <div className="buttons text-[25px] hidden md:flex justify-center m-auto mt-[2%]">
+            <div className="buttons text-[25px] hidden md:flex justify-center m-auto mt-[2%]" onClick={clickscroll}>
                 <Buttons btnname='Enroll Now' text_color={'text-white'} />
             </div>
 

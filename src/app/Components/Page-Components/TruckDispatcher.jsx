@@ -63,7 +63,15 @@ const TruckDispatcher = () => {
       points: ["Getting the right information", "Acceptable rates and negotiation", "Negotiantion tips", "Checking broker’s credit", "Getting set up with broker"],
     },
   ];
+  const students = [
+    "/images/certifiedstudent1.webp",
+    "/images/certifiedstudent2.webp",
+    "/images/certifiedstudent3.webp",
+    "/images/certifiedstudent4.webp",
+    "/images/certifiedstudent5.webp",
+    "/images/certifiedstudent6.webp",
 
+  ];
 
   const featuresMain = [
     {
@@ -306,8 +314,8 @@ const TruckDispatcher = () => {
               src={boylike}
               width={1000}
               height={500}
-              alt="boy"
-              className="max-w-[460px] mx-auto"
+              alt="bg-shape"
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[480px]  md:w-[556px] sm:w-60 opacity-100 pointer-events-none select-none"
             />
           </div>
           <section className="w-full  py-10 px-4 sm:px-8">
@@ -765,6 +773,49 @@ const TruckDispatcher = () => {
               </div>
             );
           })}
+        </div>
+      </section>
+
+
+      <section className="py-8 main-bg ">
+        <div className="max-w-6xl mx-auto px-6">
+
+          <div className="relative flex justify-center items-center">
+            <Image
+              src={titlewhitebg.src}
+              width={1000}
+              height={500}
+              alt="bg-shape"
+              className="absolute top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[480px] md:w-[510px] sm:w-[240px] opacity-100 pointer-events-none select-none"
+            />
+
+            <div className="relative z-10 text-center">
+              <Title
+                title={'Certified<span class="text-primary"> Students </span>'}
+                text_color={'text-secondary'}
+              />
+
+            </div>
+          </div>
+
+          {/* IMAGE GRID */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-6">
+            {students.slice(0, 15).map((img, index) => (
+              <div
+                key={index}
+                className="bg-white/70 backdrop-blur-lg border border-purple-200 rounded-xl shadow-md p-2 hover:shadow-lg transition-all"
+              >
+                <Image
+                  src={img}
+                  alt={`Certified Student ${index + 1}`}
+                  width={300}
+                  height={300}
+                  className="rounded-lg object-cover w-full h-[160px] sm:h-[200px]"
+                />
+              </div>
+            ))}
+          </div>
+
         </div>
       </section>
 

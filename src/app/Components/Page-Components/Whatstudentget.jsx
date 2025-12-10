@@ -15,29 +15,28 @@ export default function Whatstudentget() {
     ];
 
     return (
-        <section className="main-bg py-5">
+        <section className="main-bg py-12 md:py-16">
             <div className="max-w-5xl mx-auto px-6">
 
                 {/* Section Header */}
-                <div className="relative py-3">
-
-                    <img
-                        src={titlewhitebg.src}
-                        alt="bubble-bg"
-                        className="absolute  top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 w-[480px] md:w-[670px]  sm:w-[240px] pointer-events-none select-none opacity-90"
-                    />
-
+                <div className="relative text-center pb-3">
                     <div className="relative z-10 text-center">
+                        <img
+                            src={titlewhitebg.src}
+                            alt="bubble-bg"
+                            className="absolute  top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 w-[480px] md:w-[670px]  sm:w-[241px] pointer-events-none select-none opacity-90"
+                        />
                         <Title
                             title={'<span class="text-primary"> What Students </span>  Receive'}
-                            text_color={'text-secondary'}
+                            text_color={'text-secondary relative z-[2]'}
                         />
-                        <Description
-                            description={'Everything you need to become job-ready and industry-prepared'}
-                            text_color={'text-secondary'}
-                        />
-
                     </div>
+                    <Description
+                        description={'Everything you need to become job-ready and industry-prepared'}
+                        text_color={'text-secondary'}
+                    />
+
+
                 </div>
 
                 {/* Features Grid */}

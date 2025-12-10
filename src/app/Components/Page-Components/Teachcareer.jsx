@@ -9,7 +9,7 @@ import Title from '../UiUx/Title';
 
 import ScratchCards from './ScratchCard';
 import Buttons from '../UiUx/Buttons';
-export default function Teachcareer() {
+export default function Teachcareer({clickscroll}) {
   const items = [
     {
       icon: "/images/arrowup.webp",
@@ -30,15 +30,15 @@ export default function Teachcareer() {
 
   return (
     <div className='main-bg  '>
-      <div className="w-[90%] relative bottom-[56px] m-auto max-w-[1450px] p-[1%]
+      <div className="w-[90%] relative bottom-[57px] m-auto max-w-[1450px] p-[1%]
             border-none rounded-[50px] bg-[#E9E5FF]
-            flex flex-wrap lg:flex-nowrap justify-center lg:justify-between items-center gap-6">
+            flex flex-wrap lg:flex-nowrap justify-center lg:justify-between items-center gap-2 md:gap-6">
 
         {items.map((item, index) => (
           <div
             key={index}
             className="flex flex-col sm:flex-row items-center w-full sm:w-auto justify-center group relative transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg
-                 animate-float p-[6px] rounded-[19px]"
+                 animate-float p-1.5 rounded-[19px]"
           >
             <div className="wrap-div flex flex-col sm:flex-row justify-center items-center 
                       gap-4 sm:gap-10 text-center sm:text-left">
@@ -47,7 +47,7 @@ export default function Teachcareer() {
                 <img
                   src={item.icon}
                   alt="icon"
-                  className="w-[40px] h-[40px] sm:w-[53px] sm:h-[53px] object-contain"
+                  className="w-10 h-10 sm:w-[53px] sm:h-[53px] object-contain"
                 />
               </div>
 
@@ -70,7 +70,7 @@ export default function Teachcareer() {
         <img
           src={titlewhitebg.src}
           alt="background-bubble"
-          className="absolute  top-1/2  left-1/2 -translate-x-1/2  -translate-y-1/2 w-[480px] md:w-[900px] sm:w-[240px] pointer-events-none
+          className="absolute  top-1/2  left-1/2 -translate-x-1/2  -translate-y-1/2 w-[480px] md:w-[900px] sm:w-60 pointer-events-none
       select-none"
         />
 
@@ -110,7 +110,7 @@ export default function Teachcareer() {
           </div>
 
           {/* Button */}
-          <div className="relative z-10 flex justify-center m-auto mt-4 sm:mb-0">
+          <div className="relative z-10 flex justify-center m-auto mt-4 sm:mb-0" onClick={clickscroll}>
             <Buttons btnname="Backed by a Successful Agency" text_color={"text-white"} />
           </div>
 

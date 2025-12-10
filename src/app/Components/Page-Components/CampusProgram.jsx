@@ -32,7 +32,7 @@ const items = [
         icon2: "/images/leaf2.webp"
     }
 ];
-const CampusProgram = () => {
+const CampusProgram = ({ clickscroll }) => {
     return (
         <div className=' py-12'>
             <div className="relative ">
@@ -40,7 +40,7 @@ const CampusProgram = () => {
                 <img
                     src={smallbublebg.src}
                     alt="bubble-bg"
-                    className="absolute  top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 w-[480px] md:w-[900px]  sm:w-[240px] pointer-events-none select-none opacity-90"
+                    className="absolute  top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 w-[480px] md:w-[900px]  sm:w-60 pointer-events-none select-none opacity-90"
                 />
 
                 <div className="relative z-10 text-center">
@@ -56,7 +56,7 @@ const CampusProgram = () => {
             </div>
 
             <Certificate />
-            <div className="buttons text-[25px] flex justify-center m-auto sm:mb-0">
+            <div className="buttons text-[25px] flex justify-center m-auto sm:mb-0" onClick={clickscroll}>
                 <Buttons btnname='Get Skilled with B2B Campus' text_color={'text-white'} />
             </div>
 

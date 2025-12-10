@@ -17,8 +17,8 @@ const features = [
 export default function TrainingSection() {
     return (
         <section
-            className="relative py-3 px-6 overflow-hidden"
-            style={{ backgroundColor: "#DDD6FF" }} // MAIN BACKGROUND COLOR
+            className="relative py-12 px-6 overflow-hidden"
+        // style={{ backgroundColor: "#DDD6FF" }} // MAIN BACKGROUND COLOR
         >
 
             {/* Decorative Gradient Blobs */}
@@ -53,12 +53,12 @@ export default function TrainingSection() {
                         <img
                             src={titlewhitebg.src}
                             alt="bubble-bg"
-                            className="absolute  top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 w-[480px] md:w-[900px]  sm:w-[240px] pointer-events-none select-none opacity-90"
+                            className="absolute  top-[50%] md:top-[60%] left-1/2  -translate-x-1/2 -translate-y-1/2 w-full md:w-[900px]  sm:w-[241px] pointer-events-none select-none opacity-90 max-w-[900px] m-auto"
                         />
 
                         <div className="relative z-10 text-center">
                             <Title
-                                title={'<span class="text-primary">About Our Course</span> <br/> Industry-Ready Software Training Designed for Real Jobs'}
+                                title={'<span class="text-primary">About Our Course</span> <br/> Industry-Ready Software Training <br/> Designed for Real Jobs'}
                                 text_color={'text-secondary'}
                             />
                             <Description
@@ -71,7 +71,7 @@ export default function TrainingSection() {
                 </motion.h2>
 
                 {/* Features Grid — Glass Effect */}
-                <div className="grid md:grid-cols-2 gap-10 mt-20">
+                <div className="grid md:grid-cols-2 gap-10 mt-6 md:mt-20">
                     {features.map((item, index) => (
                         // <motion.div
                         //     key={index}

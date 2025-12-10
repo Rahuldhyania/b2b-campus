@@ -46,7 +46,7 @@ export const logos = [
 
 const Professionalskill = () => {
     return (
-        <div className="main-bg py-6"
+        <div className=" pb-6"
         >
             <div className="relative flex justify-center items-center">
 
@@ -56,7 +56,7 @@ const Professionalskill = () => {
                     width={1000}
                     height={500}
                     alt="bg-shape"
-                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[480px]  md:w-[756px] sm:w-[240px] opacity-100 pointer-events-none select-none"
+                    className="absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[480px]  md:w-[756px] sm:w-60 opacity-100 pointer-events-none select-none"
                 />
 
                 {/* Title On Top */}

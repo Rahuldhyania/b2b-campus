@@ -68,13 +68,14 @@ const features = [
 
 export default function WhyChooseSection() {
     return (
-        <section className="main-bg px-6 mx-auto py-6">
+        <div className="pb-16">
+             <section className=" px-6 mx-auto pt-6 max-w-[1440px] ">
             <div className="relative py-3">
                 <img
                     src={titlewhitebg.src}
                     alt="bubble-bg"
                     className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
-                    w-[480px] md:w-[670px] sm:w-[240px] pointer-events-none select-none opacity-90"
+                    w-[480px] md:w-[670px] sm:w-[241px] pointer-events-none select-none opacity-90"
                 />
 
                 <div className="relative z-10 text-center">
@@ -88,8 +89,8 @@ export default function WhyChooseSection() {
             {/* 🚀 Slider Starts Here */}
             <Swiper
                 modules={[Pagination, Autoplay]}
-                autoplay={{ delay: 2500, disableOnInteraction: false }}
-                spaceBetween={30}
+                // autoplay={{ delay: 2500, disableOnInteraction: false }}
+                spaceBetween={10}
                 loop={true}
                 speed={1200}
                 breakpoints={{
@@ -108,6 +109,7 @@ export default function WhyChooseSection() {
                 ))}
             </Swiper>
         </section>
+        </div>
     );
 }
 
@@ -116,13 +118,13 @@ function Card({ title, description, img, variant }) {
         case "A":
             return (
                 <div className="relative cursor-pointer group overflow-hidden rounded-3xl shadow-lg 
-                transition-all hover:-translate-y-2 hover:shadow-2xl">
+                transition-all hover:-translate-y-2 hover:shadow-2xl mb-4 max-w-[302px] m-auto">
                     <div className="w-full h-72 overflow-hidden relative">
                         <Image src={img} alt={title} fill className="object-cover" />
                     </div>
                     <div className="p-6 bg-white">
-                        <h3 className="text-xl font-bold text-purple-700 mb-2">{title}</h3>
-                        <p className="text-gray-700">{description}</p>
+                        <h3 className="text-[22px] 2xl:text-[26px] font-bold text-purple-700 mb-2 ">{title}</h3>
+                        <p className=" text-gray-700 text-[17px]">{description}</p>
                     </div>
                 </div>
             );
@@ -130,7 +132,7 @@ function Card({ title, description, img, variant }) {
         case "B":
             return (
                 <div className="relative cursor-pointer group overflow-hidden rounded-3xl shadow-lg 
-                transition-transform duration-500 hover:scale-105 h-72">
+                transition-transform duration-500 hover:scale-105 h-86 max-w-[302px] m-auto">
                     <Image
                         src={img}
                         alt={title}
@@ -148,20 +150,20 @@ function Card({ title, description, img, variant }) {
         case "C":
             return (
                 <div className="relative cursor-pointer group overflow-hidden rounded-3xl shadow-lg 
-                transition-all hover:-translate-y-2 hover:shadow-2xl">
+                transition-all hover:-translate-y-2 hover:shadow-2xl mb-4 max-w-[302px] m-auto">
                     <div className="w-full h-72 overflow-hidden relative">
                         <Image src={img} alt={title} fill className="object-cover" />
                     </div>
                     <div className="p-6 bg-white">
-                        <h3 className="text-xl font-bold text-purple-700 mb-2">{title}</h3>
-                        <p className="text-gray-700">{description}</p>
+                        <h3 className="text-[22px] 2xl:text-[26px] font-bold text-purple-700 mb-2 ">{title}</h3>
+                        <p className=" text-gray-700 text-[17px]">{description}</p>
                     </div>
                 </div>
             );
 
         case "D":
             return (
-                <div className="relative h-80 rounded-3xl overflow-hidden shadow-lg group cursor-pointer">
+                <div className="relative h-80 rounded-3xl overflow-hidden shadow-lg group cursor-pointer max-w-[302px] m-auto">
                     <Image
                         src={img}
                         alt={title}
@@ -169,7 +171,7 @@ function Card({ title, description, img, variant }) {
                         className="object-cover brightness-75 group-hover:brightness-90 
                         transition-all duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-black/20 
+                    <div className="absolute inset-0 bg-linear-to-t from-black/30 to-black/20 
                     flex flex-col justify-center items-center text-center px-4">
                         <h3 className="text-3xl font-extrabold text-white mb-3 drop-shadow-lg">
                             {title}

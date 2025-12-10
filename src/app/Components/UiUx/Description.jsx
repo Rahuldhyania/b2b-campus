@@ -4,7 +4,7 @@ const Description = ({ description, text_color }) => {
     return (
         <div>
             <h2
-                className={` text-[12px] md:text-[20px] leading-[32px] text-center  bold-none ${text_color}`}
+                className={` text-[16px] md:text-[20px] leading-8 text-center  bold-none ${text_color}`}
                 dangerouslySetInnerHTML={{ __html: description }}
             />
         </div>

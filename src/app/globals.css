@@ -12,6 +12,8 @@
 
 body {
   font-family: var(--font-kodchasan-medium);
+  max-width: 1950px;
+  margin: auto;
 }
 
 .text-primary {
@@ -98,4 +100,20 @@ body {
   .screcth-relative {
     position: relative;
   }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slideDown {
+  animation: slideDown 0.25s ease-out;
 }

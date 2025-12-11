@@ -85,7 +85,6 @@ const Homewrap = () => {
                 <Banner />
             </div>
             <div className="main-bg">
-                
                 <WhyChooseSection />
             </div>
             <PopularCourses clickscroll={scrollToEnrolment} />

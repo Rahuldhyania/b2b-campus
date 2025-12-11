@@ -17,7 +17,7 @@ const nextConfig = {
         permanent: true
       },
       { source: "/php-training-course", destination: "/", permanent: true },
-      { source: "/laravel-course", destination: "/", permanent: true },
+      { source: "/laravel-course", destination: "/web-development-course", permanent: true },
       { source: "/ai-ml-and-data-science", destination: "/", permanent: true },
       { source: "/ai-course", destination: "/", permanent: true },
       { source: "/flutter", destination: "/", permanent: true },
@@ -35,7 +35,6 @@ const nextConfig = {
         destination: "/",
         permanent: true
       },
-      { source: "/personality-development", destination: "/", permanent: true },
       {
         source: "/graphic-designing-course-in-chandigarh",
         destination: "/",

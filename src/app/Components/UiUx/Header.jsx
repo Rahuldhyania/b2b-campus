@@ -21,7 +21,7 @@ const categories = [
 const coursesData = {
     Logistics: [
         { name: "Truck Dispatch", path: "/truck-dispatching" },
-        { name: "Freight Broker", path: "/" },
+        { name: "Freight Broker", path: "/freight-broker" },
     ],
     MarketingBusiness: [
         { name: "Digital Marketing", path: "/" },
@@ -29,30 +29,30 @@ const coursesData = {
     Development: [
         { name: "IOT", path: "/" },
         { name: "AI Course", path: "/" },
-        { name: "Web Development", path: "/" },
-        { name: "Full Stack Development", path: "/" },
-        { name: "Wordpress", path: "/" },
+        { name: "Web Development", path: "/web-development-course" },
+        { name: "Full Stack Development", path: "/full-stack-development" },
+        { name: "Wordpress", path: "/wordpress-training-course" },
         { name: "ReactJs", path: "/" },
-        { name: "Web Designing", path: "/web-designing" },
+        { name: "Web Designing", path: "/web-designing-course" },
     ],
     Graphics: [
         { name: "Graphic Design", path: "/graphic-design-course" },
-        { name: "Video Editing", path: "/" },
+        { name: "Video Editing", path: "/video-editing" },
     ],
     AllCourses: [
         { name: "Truck Dispatch", path: "/truck-dispatching" },
         { name: "Graphic Design", path: "/graphic-design-course" },
-        { name: "Freight Broker", path: "/" },
+        { name: "Freight Broker", path: "/freight-broker" },
         { name: "Digital Marketing", path: "/" },
         { name: "IOT", path: "/" },
         { name: "AI Course", path: "/" },
-        { name: "Web Development", path: "/" },
-        { name: "Full Stack Development", path: "/" },
-        { name: "Wordpress", path: "/" },
+        { name: "Web Development", path: "/web-development-course" },
+        { name: "Full Stack Development", path: "/full-stack-development" },
+        { name: "Wordpress", path: "/wordpress-training-course" },
         { name: "ReactJs", path: "/" },
-        { name: "Web Designing", path: "/" },
+        { name: "Web Designing", path: "/web-designing-course" },
         
-        { name: "Video Editing", path: "/" },
+        { name: "Video Editing", path: "/video-editing" },
     ],
 };
  

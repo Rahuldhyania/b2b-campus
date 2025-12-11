@@ -7,14 +7,11 @@ import CourseProgram from "../Courses/CourseProgram";
 import CourseCareerSupport from "../Courses/CourseCareerSupport";
 import WhyChoose from "../Courses/WhyChoose";
 import CanJoin from "../Courses/CanJoin";
-import CanadaUSA from "../Courses/CanadaUSA";
-import CourseSyllabus from "../Courses/CourseSyllabus";
 import BecomeStudent from "../Courses/BecomeStudent";
 import AboutCourse from "../Courses/AboutCourse";
-import truckdispatchgirl from "../../../../public/images/truckdispatchgirl.webp";
-import whitetruck from "../../../../public/images/whitetruck.webp";
-import boylike from "../../../../public/images/boylike.webp";
-import turckleft from "../../../../public/images/turckleft.webp";
+import videoediting_bannerleft from "../../../../public/images/videoediting_bannerleft.webp";
+import videoediting_bannerright from "../../../../public/images/videoediting_bannerright.webp";
+import video_left_banner from "../../../../public/images/video_left_banner.webp"
 const faq_data = [
   {
     q: "Is this course good for beginners?",
@@ -65,7 +62,7 @@ const faq_data = [
       "Simple! Just contact us → Attend a quick counseling session → Choose batch → Start learning."
   }
 ];
-const TruckDispatcher = () => {
+const VideoEditing = () => {
   const Syllabus_data = [
     {
       title: "Module 1 - Introduction",
@@ -104,33 +101,33 @@ const TruckDispatcher = () => {
   const featuresMain = [
     {
       icon: "/images/globe2.webp",
-      title: "Massive Global Demand",
+      title: "Massive Demand for Editors",
       subtitle:
-        "The USA & Canada logistics industry is growing fast with thousands of new dispatcher openings.",
+        "YouTube creators, brands, influencers & agencies need editors constantly.",
     },
     {
       icon: "/images/usertea.webp",
       title: "Work-from-Home Flexibility",
       subtitle:
-        "Earn from anywhere in India while working with international trucking companies.",
+        "Edit videos from home for clients across India, USA, Canada & Europe.",
     },
     {
       icon: "/images/moneyhigh.webp",
       title: "High-Income Potential",
       subtitle:
-        "Make ₹25,000–₹85,000 per month or up to $2,000/month with global clients.",
+        "Earn ₹25,000–₹1,00,000/month or more through freelance and retainer clients.",
     },
     {
       icon: "/images/digree.webp",
       title: "No Degree Required",
       subtitle:
-        "Anyone can start — strong communication skills and proper training are enough.",
+        "Creativity + right software training = strong career growth.",
     },
   ];
   const items = [
     {
       icon: "/images/45days.webp",
-      title: "45 Days",
+      title: "3 Months",
       subtitle: "Practical Training ",
     },
     {
@@ -141,118 +138,116 @@ const TruckDispatcher = () => {
     {
       icon: "/images/globeicon.webp",
       title: "Global Work",
-      subtitle: "Work-from-Home or Abroad",
+      subtitle: "Freelance or Full-Time ",
     },
     {
       icon: "/images/money.webp",
       title: "INR / USD",
-      subtitle: "Flexible Salary Opportunities",
+      subtitle: "Earning Opportunities",
     },
   ];
   const program_data = [
-    { text: "US & Canada Trucking System", icon: "/images/greencheck.webp" },
-    { text: "Live Load Booking (DAT, Truckstop)", icon: "/images/greencheck.webp" },
-    { text: "Broker Communication", icon: "/images/greencheck.webp" },
-    { text: "Rate Negotiation", icon: "/images/greencheck.webp" },
-    { text: "Load Planning & Route Optimization", icon: "/images/greencheck.webp" },
-    { text: "Safety & Compliance", icon: "/images/greencheck.webp" },
-    { text: "Carrier Packets + Invoicing", icon: "/images/greencheck.webp" },
-    { text: "Live Dispatch Practice with Real Loads", icon: "/images/greencheck.webp" },
-    { text: "Real-Time Operations", icon: "/images/greencheck.webp" },
+    { text: "Adobe Premiere Pro", icon: "/images/greencheck.webp" },
+    { text: "Color Grading & Color Correction", icon: "/images/greencheck.webp" },
+    { text: "Motion Graphics Essentials", icon: "/images/greencheck.webp" },
+    { text: "Adobe After Effects", icon: "/images/greencheck.webp" },
+    { text: "Reels Editing for Brands", icon: "/images/greencheck.webp" },
+    { text: "Sound Design & Audio Mixing", icon: "/images/greencheck.webp" },
+    { text: "Cinematic Editing Techniques", icon: "/images/greencheck.webp" },
+    { text: "YouTube Video Editing & Optimization", icon: "/images/greencheck.webp" },
+    { text: "Short-form & Long-form Editing", icon: "/images/greencheck.webp" },
   ];
   const conjoin_data = [
     { text: "Students & freshers", icon: "/images/greencheck.webp" },
     { text: "Career switchers", icon: "/images/greencheck.webp" },
-    { text: "Housewives (WFH jobs)", icon: "/images/greencheck.webp" },
-    { text: "BPO/Call center workers", icon: "/images/greencheck.webp" },
-    { text: "Anyone wanting international income", icon: "/images/greencheck.webp" },
-
+    { text: "Content creators", icon: "/images/greencheck.webp" },
+    { text: "Freelancers", icon: "/images/greencheck.webp" },
+    { text: "Anyone wanting a high-income creative career", icon: "/images/greencheck.webp" },
   ];
   const featuresNumbered = [
     {
       id: 1,
-      number: 1, // correct property name
-      title: "Expert US Logistics Trainers",
-      description: "Learn directly from professionals with 7–15 years of real industry experience.",
+      number: 1,
+      title: "Expert Video Editing Trainers",
+      description: "Learn from editors who’ve worked with YouTubers, production studios & global creators.",
     },
     {
       id: 2,
       number: 2,
-      title: "Live Dispatch Training",
-      description: "Work on real loads and real scenarios — not just theory.",
+      title: "Live Project Training",
+      description: "Edit real footage, client-style videos, and trending content formats.",
     },
     {
       id: 3,
       number: 3,
-      title: "1:1 Personal Mentorship",
-      description: "Every student gets a dedicated mentor for guidance.",
+      title: "1:1 Creative Mentorship",
+      description: "Get personalized feedback to strengthen storytelling, pacing & transitions.",
     },
     {
       id: 4,
       number: 4,
-      title: "English Skill Boost",
-      description: "Improve communication for calls, emails, and client interaction.",
+      title: "Editing & Communication Boost",
+      description: "Improve your script understanding, client coordination & content clarity.",
     },
     {
       id: 5,
       number: 5,
-      title: "Work-from-Home Setup Help",
-      description: "Get complete guidance to build a professional remote workspace.",
+      title: "Freelance Setup Support",
+      description: "Build a professional showreel + learn how to start earning from clients.",
     },
     {
       id: 6,
       number: 6,
       title: "Guaranteed Internship",
-      description: "Gain hands-on experience immediately after completing the course.",
+      description: "Work on real editing assignments immediately after the course.",
     },
   ];
+
   return (
     <div>
       <CoursesBanner
-        highlightText={'Become a Certified Truck Dispatcher'}
-        titleEnd={'in 45 Days'}
-        description={"Master US & Canada Logistics • Work-from-Home • Earn in INR or USD"}
-        leftposter={truckdispatchgirl}
-        rightposter={whitetruck}
+        highlightText={'Become a Professional Video Editor'}
+        titleEnd={'in 3 Months'}
+        description={"Master Premiere Pro • After Effects • Reels Editing • YouTube Editing • Motion Graphics"}
+        leftposter={videoediting_bannerleft}
+        rightposter={videoediting_bannerright}
       />
       <CoursesCareer
         items={items}
-        left_banner={boylike}
+        left_banner={video_left_banner}
         featuresMain={featuresMain}
-        title={'Why Truck Dispatching is the  <br/> <span class="text-primary">Next Big Career</span>'}
-        description={"Logistics industry in USA & Canada is booming — dispatchers are in massive demand."}
+        title={'Why Video Editing is the   <br/> <span class="text-primary">Next Big Career</span>'}
+        description={"Work with YouTubers, production houses, brands & international clients"}
       />
       <CourseProgram
         program_data={program_data}
-        title={'<span class="text-primary">45-Day Intensive </span> <br/> Dispatching Program'}
+        title={'<span class="text-primary">3 Months Intensive </span> <br/> Video Editing Program'}
       />
       <AboutCourse
-        title={'About Truck Dispatching Course'}
+        title={'About Video Editing Course'}
         description1={`
-        The <span class="font-semibold text-black">Truck Dispatching Class </span> is a hands-on training program that prepares you for a successful career in logistics and transportation.`}
+        Our Video Editing Course is designed to take you from a novice to a proficient video editor. We start with the fundamentals, ensuring you have a solid foundation in video formats, equipment, and software. As you progress, you’ll delve into more advanced techniques, including color grading, sound editing, and creating visually stunning effects.`}
         description2={`
-           This <span class="font-semibold text-black">truck dispatcher course</span> covers essential skills like <span class="text-[#6346FA] font-medium"> {" "}load booking, driver coordination, route planning, and dispatch software usage </span>. Perfect for aspiring dispatchers or entrepreneurs, the dispatching class offers real-world knowledge and industry insights.`}
+           At B2B Campus, we understand that storytelling is at the heart of great video content. That’s why we emphasize the art of storytelling through editing. You’ll learn how to take raw footage and turn it into a captivating narrative that engages your audience.`}
         description3={`
-           Whether you’re launching a dispatch service or joining a logistics company,this <span class="font-semibold text-black">truck dispatching class </span>
-           helps you build a solid foundation for long-term success in the freight industry.
+           Hands-on learning is essential to mastering video editing. Our state-of-the-art facilities provide you with access to the latest equipment and industry-standard software. You’ll work on real projects, gaining practical experience that you can showcase in your professional portfolio.
           `}
       />
       <CourseCareerSupport />
       <WhyChoose featuresNumbered={featuresNumbered} />
       <div className="main-bg">
         <CanJoin conjoin_data={conjoin_data} />
-        <CanadaUSA />
       </div>
-      <CourseSyllabus title={'Truck Dispatching Course<br/> <span class="text-primary"> Syllabus</span>'} Syllabus_data={Syllabus_data} />
-      <BecomeStudent
-        title={'From Training to Truck <sapn class="text-primary"> Dispatching Success </span>'}
-        description={`Build a Profitable, Efficient, and High-Demand Dispatching Career with Real-World Training. Learn how to manage loads, communicate with drivers, and handle logistics like a pro. This course equips you with in-demand skills to launch a successful dispatching business or work with top freight companies.`}
-        right_image={turckleft}
-      />
+      {/* <CourseSyllabus title={'Truck Dispatching Course<br/> <span class="text-primary"> Syllabus</span>'} Syllabus_data={Syllabus_data} /> */}
+      <BecomeStudent 
+        title={'Learn to Transform Pixels ​<sapn class="text-primary">Into Story with Us </span>'}
+        description={`Demand for skilled video editors is ever-growing. Whether you aspire to work in film, advertising, or social media, our Video Editing Course equips you with the skills needed to succeed.`}
+        right_image={video_left_banner}
+        />
       <FaqSection faq_data={faq_data} />
       <Journeywithb2b2 />
     </div>
   );
 };
 
-export default TruckDispatcher;
+export default VideoEditing;

@@ -2,11 +2,9 @@ import Image from "next/image";
 import React from "react";
 import Description from "../UiUx/Description";
 import titlewhitebg from "../../../../public/images/titlewhitebg.webp";
-import boylike from "../../../../public/images/boylike.webp";
-import smallbublebg from "../../../../public/images/smallbublebg.webp";
 import Title from "../UiUx/Title";
 import Buttons from "../UiUx/Buttons";
-const CoursesCareer = ({ items, featuresMain ,title ,description }) => {
+const CoursesCareer = ({ items, featuresMain ,title ,description,left_banner}) => {
     return (
         <div className="main-bg py-12 md:py-18">
             <section className="cus_container m-auto">
@@ -66,7 +64,7 @@ const CoursesCareer = ({ items, featuresMain ,title ,description }) => {
                     <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] md:pt-12">
                         <div className="boy relative w-full  hidden md:block">
                             <Image
-                                src={boylike}
+                                src={left_banner}
                                 width={1000}
                                 height={500}
                                 alt="boy"

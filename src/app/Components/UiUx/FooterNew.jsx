@@ -18,17 +18,17 @@ const footerData = [
       {
         id: 1,
         page_name: "Graphic Design",
-        page_links: "/graphic-design-training"
+        page_links: "/graphic-design-course"
       },
       {
         id: 2,
         page_name: "Truck Dispatch",
-        page_links: "/truck-dispatch-training"
+        page_links: "/truck-dispatching"
       },
       {
         id: 3,
         page_name: "Freight Broker",
-        page_links: ""
+        page_links: "/freight-broker"
       },
       {
         id: 4,
@@ -43,17 +43,17 @@ const footerData = [
       {
         id: 6,
         page_name: "Web Development",
-        page_links: "/"
+        page_links: "/web-development-course"
       },
       {
         id: 7,
         page_name: "Full Stack Development",
-        page_links: "/"
+        page_links: "/full-stack-development"
       },
       {
         id: 8,
         page_name: "Wordpress",
-        page_links: "/"
+        page_links: "/wordpress-training-course"
       },
       {
         id: 9,
@@ -63,12 +63,12 @@ const footerData = [
       {
         id: 10,
         page_name: "Web Designing",
-        page_links: "/"
+        page_links: "/web-designing-course"
       },
       {
         id: 11,
         page_name: "Video Editing",
-        page_links: "/"
+        page_links: "/video-editing"
       },
       {
         id: 12,
@@ -76,6 +76,7 @@ const footerData = [
         page_links: "/"
       }
     ]
+
   },
   {
     title: "Useful Links",

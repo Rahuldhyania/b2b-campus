@@ -7,13 +7,11 @@ import CourseProgram from "../Courses/CourseProgram";
 import CourseCareerSupport from "../Courses/CourseCareerSupport";
 import WhyChoose from "../Courses/WhyChoose";
 import CanJoin from "../Courses/CanJoin";
-import CanadaUSA from "../Courses/CanadaUSA";
 import CourseSyllabus from "../Courses/CourseSyllabus";
-import BecomeStudent from "../Courses/BecomeStudent";
 import AboutCourse from "../Courses/AboutCourse";
 import graphic_left from "../../../../public/images/graphic_left.webp";
 import graphic_right from "../../../../public/images/graphic_right.webp";
-
+import graphic_left_banner from "../../../../public/images/graphic_left_banner.webp"
 const faq_data = [
     {
         q: "Is this course good for beginners?",
@@ -302,6 +300,7 @@ const GraphicDesign = () => {
             />
             <CoursesCareer
                 items={items}
+                left_banner={graphic_left_banner}
                 featuresMain={featuresMain}
                 title={'Why Graphic Design is the  <br/> <span class="text-primary">Next Big Career</s  pan>'}
                 description={"Work with top brands, startups, and international clients"}

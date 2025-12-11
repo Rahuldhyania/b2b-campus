@@ -1,0 +1,264 @@
+import React from 'react'
+import FaqSection from './FaqSection'
+import Journeywithb2b2 from './Journeywithb2b2'
+import CoursesBanner from "../Courses/CoursesBanner";
+import CoursesCareer from "../Courses/CoursesCareer";
+import CourseProgram from "../Courses/CourseProgram";
+import CourseCareerSupport from "../Courses/CourseCareerSupport";
+import WhyChoose from "../Courses/WhyChoose";
+import CanJoin from "../Courses/CanJoin";
+import BecomeStudent from "../Courses/BecomeStudent";
+import AboutCourse from "../Courses/AboutCourse";
+import videoediting_bannerleft from "../../../../public/images/videoediting_bannerleft.webp";
+import videoediting_bannerright from "../../../../public/images/videoediting_bannerright.webp";
+import video_left_banner from "../../../../public/images/video_left_banner.webp"
+const faq_data = [
+    {
+        q: "Is this course good for beginners?",
+        a:
+            "Yes! Even if you have zero experience, we teach from basics to advanced in a simple and friendly way."
+    },
+    {
+        q: "Will I really learn practical skills?",
+        a:
+            "Definitely. You will learn 100% practical skills, real projects, assignments, and hands-on sessions — exactly what companies want."
+    },
+    {
+        q: "How will this course help my career?",
+        a:
+            "This course is designed to make you job-ready, build real skills, and help you create a stable, successful future."
+    },
+    {
+        q: "Do you provide placement support?",
+        a:
+            "Yes. We help with resume making, interview preparation, mock interviews, and job opportunities through our network."
+    },
+    {
+        q: "Who are the teachers?",
+        a:
+            "You will learn from experienced and reliable trainers who explain everything clearly and support you throughout the journey."
+    },
+    {
+        q: "What makes your teaching style unique?",
+        a:
+            "We use a smart, modern, student-friendly teaching method with easy examples, practical demos, and step-by-step explanation."
+    },
+    {
+        q: "Is the course affordable for students?",
+        a:
+            "Yes. We provide high-quality training at student-friendly fees, with the best value in the market."
+    },
+    {
+        q: "How do you help in interviews?",
+        a: `We train you with:\n• Mock interviews\n• Confidence-building sessions\n• Communication tips\n• Company-level interview questions`
+    },
+    {
+        q: "What do current students like the most?",
+        a: `Students love our:\n• Trendy, modern learning environment\n• Friendly teachers\n• Practical approach\n• Real project experience\n• Motivating atmosphere\n• Personal attention\n• Easy explanations\n• Lifetime guidance\n• Strong career focus`
+    },
+    {
+        q: "How can I join the course?",
+        a:
+            "Simple! Just contact us → Attend a quick counseling session → Choose batch → Start learning."
+    }
+];
+const FreightBroker = () => {
+    const Syllabus_data = [
+        {
+            title: "Module 1 - Introduction",
+            points: [
+                "What is dispatch business?",
+                "Required skills",
+                "Course overview",
+
+            ],
+        },
+        {
+            title: "Module 2 - Parties Involved",
+            points: ["Role of a dispatcher", "Benefits of dispatcher services", "Owner operations and small fleet owner"],
+        },
+        {
+            title: "Module 3 - Clients",
+            points: ["Setting up with your client – contact", "Requesting documents from your client", "Download – sample carrier profile form.", "Download –  Sample of documents you will be requesting.", "Verbal agreement – Scope of booking decision "],
+        },
+        {
+            title: "Module 4 - Equipment and Freight",
+            points: ["Types of Trucks", "Trailer types", "Weight", "Commodity"],
+        },
+        {
+            title: "Section 5 - Logistics",
+            points: ["Pick-up and delivery times and their importance", "Extra Stops (Multiple deliveries)"],
+        },
+        {
+            title: "Section 6 - Finding Freight",
+            points: ["Load boards –  electronic marketplace", "DAT", "Internet Truck Stop", "Private 3PL boards", "Posting trucks"],
+        },
+        {
+            title: "Module 7 - Booking Your First Load",
+            points: ["Getting the right information", "Acceptable rates and negotiation", "Negotiantion tips", "Checking broker’s credit", "Getting set up with broker"],
+        },
+    ];
+    const featuresMain = [
+        {
+            icon: "/images/globe2.webp",
+            title: "Massive Demand in the US Market",
+            subtitle:
+                "Thousands of openings as the logistics sector grows across USA & Canada.",
+        },
+        {
+            icon: "/images/usertea.webp",
+            title: "Work-from-Home Opportunities",
+            subtitle:
+                "Support brokers from anywhere in India with remote work flexibility.",
+        },
+        {
+            icon: "/images/moneyhigh.webp",
+            title: "High-Income Potential",
+            subtitle:
+                "Earn ₹30,000–₹1,00,000/month or up to $2,500 with international clients.",
+        },
+        {
+            icon: "/images/digree.webp",
+            title: "No Degree Required",
+            subtitle:
+                "Strong communication skills + professional training are enough to start.",
+        },
+    ];
+
+    const items = [
+        {
+            icon: "/images/45days.webp",
+            title: "45 Days",
+            subtitle: "Practical Training ",
+        },
+        {
+            icon: "/images/handmoney.webp",
+            title: "100%",
+            subtitle: "Placement Support",
+        },
+        {
+            icon: "/images/globeicon.webp",
+            title: "Global Work",
+            subtitle: "Work-from-Home or Abroad ",
+        },
+        {
+            icon: "/images/money.webp",
+            title: "INR / USD",
+            subtitle: "Flexible Earning Options",
+        },
+    ];
+    const program_data = [
+        { text: "US & Canada Freight Basics", icon: "/images/greencheck.webp" },
+        { text: "Shipper Search & Carrier Sourcing", icon: "/images/greencheck.webp" },
+        { text: "Rate Negotiation", icon: "/images/greencheck.webp" },
+        { text: "Broker–Shipper–Carrier Flow", icon: "/images/greencheck.webp" },
+        { text: "Load Booking & Carrier Relations", icon: "/images/greencheck.webp" },
+        { text: "Carrier Packets, BOL & COI", icon: "/images/greencheck.webp" },
+        { text: "Load Boards (DAT, Truckstop)", icon: "/images/greencheck.webp" },
+        { text: "Dispatch vs Brokerage", icon: "/images/greencheck.webp" },
+        { text: "KPIs & Daily Operations", icon: "/images/greencheck.webp" },
+    ];
+
+
+    const conjoin_data = [
+        { text: "Students & freshers", icon: "/images/greencheck.webp" },
+        { text: "Career switchers", icon: "/images/greencheck.webp" },
+        { text: "Housewifes (WFH roles)", icon: "/images/greencheck.webp" },
+        { text: "BPO/Call center workers", icon: "/images/greencheck.webp" },
+        { text: "Anyone wanting a high-income creative career", icon: "/images/greencheck.webp" },
+    ];
+    const featuresNumbered = [
+        {
+            id: 1,
+            number: 1,
+            title: "Expert US Freight Broker Trainers",
+            description:
+                "Learn directly from professionals with 7–15 years of real brokerage experience.",
+        },
+        {
+            id: 2,
+            number: 2,
+            title: "Live Brokerage Operations Training",
+            description:
+                "Work on real load boards, real scenarios, and daily logistics tasks.",
+        },
+        {
+            id: 3,
+            number: 3,
+            title: "1:1 Personal Mentorship",
+            description:
+                "Every student receives a dedicated mentor for continuous guidance.",
+        },
+        {
+            id: 4,
+            number: 4,
+            title: "English Skill Boost",
+            description:
+                "Improve communication for broker calls, emails & negotiations.",
+        },
+        {
+            id: 5,
+            number: 5,
+            title: "Work-from-Home Setup Help",
+            description:
+                "Get full support to build a professional, high-quality remote workspace.",
+        },
+        {
+            id: 6,
+            number: 6,
+            title: "Guaranteed Internship",
+            description:
+                "Start working on real brokerage tasks immediately after course completion.",
+        },
+    ];
+
+
+    return (
+        <div>
+            <CoursesBanner
+                highlightText={'Become a Certified Freight Broker'}
+                titleEnd={'in 45 Days'}
+                description={"Master US Logistics • Broker Operations • Carrier Management • High-Income Skills"}
+                leftposter={videoediting_bannerleft}
+                rightposter={videoediting_bannerright}
+            />
+            <CoursesCareer
+                items={items}
+                left_banner={video_left_banner}
+                featuresMain={featuresMain}
+                title={'Why Freight Broker is the <br/> <span class="text-primary">Next Big Career</span>'}
+                description={"Work directly with US logistics companies, carriers, brokers & shippers"}
+            />
+            <CourseProgram
+                program_data={program_data}
+                title={'<span class="text-primary">45 Days Intensive </span> <br/> Freight Broker Program'}
+            />
+            <AboutCourse
+                title={'About Freight Broker Training Course'}
+                description1={`
+                  The Freight Broker Training Course is a dynamic and industry-focused program crafted to equip aspiring freight brokers and agents with the essential skills and insider knowledge needed to thrive in the logistics and transportation sector.`}
+                description2={`
+                   Through this hands-on freight broker course, participants dive deep into real-world freight operations—learning how to connect shippers and carriers, negotiate rates, manage loads, and comply with federal regulations. The program also covers business setup, marketing, and load board mastery.`}
+                description3={`
+                   Learners of this freight broker training open doors to high-demand opportunities in one of the fastest-growing industries in North America.
+          `}
+            />
+            <CourseCareerSupport />
+            <WhyChoose featuresNumbered={featuresNumbered} />
+            <div className="main-bg">
+                <CanJoin conjoin_data={conjoin_data} />
+            </div>
+            {/* <CourseSyllabus title={'Truck Dispatching Course<br/> <span class="text-primary"> Syllabus</span>'} Syllabus_data={Syllabus_data} /> */}
+            <BecomeStudent
+                title={'Launch Your Career as a Certified ​<sapn class="text-primary">Freight Broker with Expert Training </span>'}
+                description={`Build a Successful, Profitable Freight Brokerage Business with Expert Guidance. Learn to connect shippers and carriers, manage logistics efficiently, and unlock high-income opportunities in the growing transportation industry.`}
+                right_image={video_left_banner}
+            />
+            <FaqSection faq_data={faq_data} />
+            <Journeywithb2b2 />
+        </div>
+    );
+};
+
+export default FreightBroker;
+

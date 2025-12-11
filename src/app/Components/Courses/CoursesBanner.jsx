@@ -37,13 +37,13 @@ const CoursesBanner = ({ highlightText, titleEnd, description, leftposter, right
                             width={1000}
                             height={500}
                             alt="boy"
-                            className=" mx-auto"
+                            className="max-h-[600px] object-contain mx-auto"
                         />
                     </div>
                     <div className='my-auto py-5 md:py-12'>
                         <Contactfrom />
                     </div>
-                    <div className="girl relative w-full hidden lg:block">
+                    <div className="girl relative w-full hidden lg:flex items-center h-full">
                         <Image
                             src={rightposter}
                             width={1000}

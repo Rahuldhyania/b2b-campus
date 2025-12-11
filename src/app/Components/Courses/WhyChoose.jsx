@@ -36,7 +36,7 @@ const WhyChoose = ({ featuresNumbered }) => {
                     </div>
                 </div>
 
-                <div className="md:max-w-[90%] mx-auto md:p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className=" mx-auto md:p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {featuresNumbered.map(({ id, number, title, description }) => (
                         <div
                             key={id}
@@ -93,7 +93,7 @@ const WhyChoose = ({ featuresNumbered }) => {
                             </div>
                             <div>
                                 <p className='text-base md:text-xl'>
-                                    Rated <span className='text-primary'>4.9/5</span> by <span className='text-primary'>2,000+ Students</span>
+                                    Rated <span className='text-primary'>4.9/5</span> by <span className='text-primary'>1254+ Students</span>
                                 </p>
                             </div>
                         </div>

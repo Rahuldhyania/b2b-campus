@@ -9,17 +9,10 @@ const nextConfig = {
         destination: "/",
         permanent: true
       },
-      { source: "/video-editing", destination: "/", permanent: true },
-      { source: "/web-designing-course", destination: "/", permanent: true },
-      { source: "/web-development-course", destination: "/", permanent: true },
+      // { source: "/video-editing", destination: "/video-editing", permanent: true },
       { source: "/iot", destination: "/", permanent: true },
       {
         source: "/c-and-c-plus-plus-course",
-        destination: "/",
-        permanent: true
-      },
-      {
-        source: "/wordpress-training-course",
         destination: "/",
         permanent: true
       },
@@ -43,7 +36,6 @@ const nextConfig = {
         permanent: true
       },
       { source: "/personality-development", destination: "/", permanent: true },
-      { source: "/freight-broker", destination: "/", permanent: true },
       {
         source: "/graphic-designing-course-in-chandigarh",
         destination: "/",
@@ -168,7 +160,32 @@ const nextConfig = {
         source: "/python-training-in-chandigarh",
         destination: "/",
         permanent: true
-      }
+      },
+      {
+        source: "/our-story",
+        destination: "/",
+        permanent: true
+      },
+      {
+        source: "/resources",
+        destination: "/",
+        permanent: true
+      },
+      {
+        source: "/connect",
+        destination: "/",
+        permanent: true
+      },
+      {
+        source: "/graphic-design-training",
+        destination: "/",
+        permanent: true
+      },
+      {
+        source: "/truck-dispatch-training",
+        destination: "/",
+        permanent: true
+      },
     ];
   }
 };

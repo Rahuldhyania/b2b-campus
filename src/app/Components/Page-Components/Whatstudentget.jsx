@@ -31,10 +31,12 @@ export default function Whatstudentget() {
                             text_color={'text-secondary relative z-[2]'}
                         />
                     </div>
-                    <Description
+                   <div className="relative z-10">
+                     <Description
                         description={'Everything you need to become job-ready and industry-prepared'}
                         text_color={'text-secondary'}
                     />
+                   </div>
 
 
                 </div>

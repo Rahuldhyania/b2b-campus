@@ -6,10 +6,9 @@ import { usePathname } from "next/navigation";
 import B2BCAMPUSLOGO from "../../../../public/images/B2B CAMPUS LOGO-02 1.webp";
 import Buttons from "./Buttons";
 import { motion } from "framer-motion";
- 
 import arrowdown from "../../../../public/icons/arrowdown.svg";
 import menuarrow from "../../../../public/icons/menuarrow.svg";
- 
+
 const categories = [
     { name: "All Courses", key: "AllCourses" },
     { name: "Development", key: "Development" },
@@ -17,74 +16,81 @@ const categories = [
     { name: "Graphics", key: "Graphics" },
     { name: "Marketing & Business", key: "MarketingBusiness" },
 ];
- 
+
 const coursesData = {
-    Logistics: [
+    AllCourses: [
         { name: "Truck Dispatch", path: "/truck-dispatching" },
+        { name: "Digital Marketing", path: "/digital-marketing-course" },
+        { name: "Web Development", path: "/web-development-course" },
+        { name: "Graphic Design", path: "/graphic-design-course" },
         { name: "Freight Broker", path: "/freight-broker" },
-    ],
-    MarketingBusiness: [
-        { name: "Digital Marketing", path: "/" },
+        { name: "Internet of Things (IoT)", path: "/iot" },
+        { name: "AI Course", path: "/ai-course" },
+        { name: "Full Stack Development", path: "/full-stack-development" },
+        { name: "Wordpress", path: "/wordpress-training-course" },
+        { name: "Web Designing", path: "/web-designing-course" },
+        { name: "Video Editing", path: "/video-editing" },
+        // { name: "Personality Development", path: "/personality-development" },
+        { name: "Python & Java ", path: "/python-java-course" },
     ],
     Development: [
-        { name: "IOT", path: "/" },
-        { name: "AI Course", path: "/" },
+        { name: "Internet of Things (IoT)", path: "/iot" },
+        { name: "AI Course", path: "/ai-course" },
         { name: "Web Development", path: "/web-development-course" },
         { name: "Full Stack Development", path: "/full-stack-development" },
         { name: "Wordpress", path: "/wordpress-training-course" },
-        { name: "ReactJs", path: "/" },
         { name: "Web Designing", path: "/web-designing-course" },
+        { name: "Python & Java ", path: "/python-java-course" },
+    ],
+    Logistics: [
+        { name: "Truck Dispatch", path: "/truck-dispatching" },
+        { name: "Freight Broker", path: "/freight-broker" },
     ],
     Graphics: [
         { name: "Graphic Design", path: "/graphic-design-course" },
         { name: "Video Editing", path: "/video-editing" },
     ],
-    AllCourses: [
-        { name: "Truck Dispatch", path: "/truck-dispatching" },
-        { name: "Graphic Design", path: "/graphic-design-course" },
-        { name: "Freight Broker", path: "/freight-broker" },
-        { name: "Digital Marketing", path: "/" },
-        { name: "IOT", path: "/" },
-        { name: "AI Course", path: "/" },
-        { name: "Web Development", path: "/web-development-course" },
-        { name: "Full Stack Development", path: "/full-stack-development" },
-        { name: "Wordpress", path: "/wordpress-training-course" },
-        { name: "ReactJs", path: "/" },
-        { name: "Web Designing", path: "/web-designing-course" },
-        
-        { name: "Video Editing", path: "/video-editing" },
+    MarketingBusiness: [
+        { name: "Digital Marketing", path: "/digital-marketing-course" },
     ],
 };
- 
+
 export default function Header() {
     const [open, setOpen] = useState(false);
     const [megaOpen, setMegaOpen] = useState(false);
     const [activeCategory, setActiveCategory] = useState("AllCourses");
     const pathname = usePathname();
- 
+
     const menuItems = [
         { name: "Home", path: "/" },
         { name: "Courses", path: "/courses" },
         { name: "Placement", path: "/placement" },
         { name: "Our Story", path: "/our-story" },
-        { name: "Resources", path: "/resources" },
-        { name: "Connect", path: "/connect" },
+        { name: "Contact Us", path: "/contact-us" },
     ];
- 
+
+
     useEffect(() => {
-        document.body.style.overflow = megaOpen ? "hidden" : "";
+        const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+
+        if (megaOpen) {
+            document.body.style.overflow = "hidden";
+            document.body.style.paddingRight = `${scrollbarWidth}px`;
+        } else {
+            document.body.style.overflow = "";
+            document.body.style.paddingRight = "0px";
+        }
     }, [megaOpen]);
- 
+
+
     return (
         <nav className="relative z-50">
             <div className="flex justify-between xl:justify-around items-center flex-wrap gap-4 relative py-5 px-5 bg-white">
- 
-                {/* LOGO */}
+
                 <Link href="/">
-                    <Image src={B2BCAMPUSLOGO} width={211} height={46} alt="B2BCampus Logo" className="w-[150px] md:w-[211px]" />
+                    <Image src={B2BCAMPUSLOGO} width={1000} height={500} alt="B2BCampus Logo" className="w-[150px] md:w-[211px]" />
                 </Link>
- 
-                {/* DESKTOP MENU */}
+
                 <div className="hidden xl:block">
                     <ul className="flex items-center gap-10 text-[21px] font-medium">
                         {menuItems.map((item) => (
@@ -119,13 +125,12 @@ export default function Header() {
                         ))}
                     </ul>
                 </div>
- 
-                {/* BUTTON + MOBILE MENU */}
+
                 <div className="flex items-center gap-3">
                     <div className="hidden md:flex">
                         <Buttons btnname="Enroll Now" text_color="text-white" />
                     </div>
- 
+
                     <div className="xl:hidden cursor-pointer" onClick={() => setOpen(!open)}>
                         <div className="space-y-1">
                             <span className="block w-6 h-[3px] bg-gray-700 transition-all" style={{ rotate: open ? "45deg" : "0deg", translateY: open ? "8px" : "0px" }} />
@@ -134,13 +139,12 @@ export default function Header() {
                         </div>
                     </div>
                 </div>
- 
-                {/* MOBILE DROPDOWN */}
+
                 <div className={`xl:hidden absolute top-full left-0 w-full bg-white shadow-lg rounded-b-lg overflow-hidden transition-all duration-500 ${open ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}`}>
                     <ul className="flex flex-col gap-4 text-[18px] px-4 py-4">
                         {menuItems.map((item) => (
                             <li key={item.name}>
-                                <span className={`block py-2 px-2 ${pathname === item.path ? "text-purple-600 font-semibold" : "text-gray-700"}`}
+                                <span className={`flex py-2 px-2 ${pathname === item.path ? "text-purple-600 font-semibold" : "text-gray-700"}`}
                                     onClick={() => {
                                         if (item.name === "Courses") {
                                             setMegaOpen(true);
@@ -150,6 +154,18 @@ export default function Header() {
                                         }
                                     }}>
                                     {item.name}
+                                    {
+                                        item.name == "Courses" ?
+                                            <Image
+                                                src={arrowdown}
+                                                width={20}
+                                                height={20}
+                                                alt="arrowdown"
+                                                className={`ml-1 transition-transform duration-300 ${megaOpen ? "rotate-180" : "rotate-0"}`}
+                                            />
+                                            :
+                                            null
+                                    }
                                 </span>
                             </li>
                         ))}
@@ -157,26 +173,16 @@ export default function Header() {
                     </ul>
                 </div>
             </div>
- 
+
             {/* MEGA MENU */}
             {megaOpen && (
-                <>
-                    {/* BACKDROP */}
+                <div>
                     <div
                         className="fixed inset-0 bg-black/20 z-40"
                         onClick={() => setMegaOpen(false)}
                     />
- 
-                    {/* MEGA MENU BOX */}
-                    <div
-                        className=" max-h-[80vh]
-                fixed top-[60px] md:top-[86px] left-1/2 -translate-x-1/2
-                bg-white border border-[#D9D4FF]
-                shadow-[0_4px_20px_rgba(93,56,222,0.15)]
-                rounded-xl p-4 z-50 flex flex-col md:flex-row w-[95%] max-w-[1282px] gap-4 overflow-hidden
-            "
-                    >
-                        {/* CLOSE BUTTON FOR ALL SCREENS */}
+
+                    <div className=" max-h-[80vh] fixed top-[60px] md:top-[86px] left-1/2 -translate-x-1/2 bg-white border border-[#D9D4FF] shadow-[0_4px_20px_rgba(93,56,222,0.15)] rounded-xl p-4 z-50 flex flex-col md:flex-row w-[95%] max-w-[1282px] gap-4 overflow-hidden">
                         <div className="absolute top-2 right-2 z-50">
                             <button
                                 onClick={() => setMegaOpen(false)}
@@ -185,22 +191,21 @@ export default function Header() {
                                 ×
                             </button>
                         </div>
- 
-                        {/* LEFT SIDEBAR */}
-                        <div className="md:w-1/4 w-full md:border-r md:pb-12 pr-4 md:mb-4 md:mb-0">
+
+                        <div className="md:w-1/4 w-full md:border-r md:pb-12 pr-4 ">
                             <div className="flex flex-col gap-3 mb-4">
                                 <Image
                                     src={B2BCAMPUSLOGO}
                                     width={1000}
                                     height={500}
                                     alt="B2BCampus Logo"
-                                    className="w-[40px] md:w-[100px] md:h-[25px] hidden md:block"
+                                    className="w-10 md:w-[100px] md:h-[25px] hidden md:block"
                                 />
                                 <h2 className="text-xl text-[#5D38DE] font-semibold underline">
                                     Categories
                                 </h2>
                             </div>
- 
+
                             <ul className="overflow-y-auto max-h-[50vh] md:max-h-none">
                                 {categories.map((cat) => (
                                     <li
@@ -217,52 +222,35 @@ export default function Header() {
                                 ))}
                             </ul>
                         </div>
- 
-                        {/* RIGHT CONTENT SIDE */}
                         <div className="md:w-3/4 w-full py-3 md:px-6 overflow-y-auto h-full">
                             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                                 {coursesData[activeCategory]?.map((course, index) => (
                                     <Link key={index} href={course.path}>
                                         <motion.div
-                                            initial={{ opacity: 0, y: 20 }}
-                                            animate={{ opacity: 1, y: 0 }}
-                                            transition={{ duration: 0.4, delay: index * 0.1 }}
-                                            className="
-                                    bg-[#E4DFFF] rounded-lg shadow-md cursor-pointer
-                                    transition-all duration-300
-                                    hover:scale-105 hover:shadow-xl
-                                    px-2 py-5
-                                " 
-                                 onClick={() => setMegaOpen(!megaOpen)}
+                                            initial={{ opacity: 0, }}
+                                            animate={{ opacity: 1, }}
+                                            transition={{ duration: 0.4, delay: index * 0.11 }}
+                                            className="bg-[#E4DFFF] rounded-lg shadow-md cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-xl px-2 py-5"
+                                            onClick={() => setMegaOpen(!megaOpen)}
                                         >
                                             <div className="p-2">
                                                 <p className="text-[#5D38DE] font-semibold text-[14px] 2xl:base">
                                                     {course.name}
                                                 </p>
                                             </div>
- 
-                                            {/* <div className="px-2 pb-2 text-[12px] text-gray-600 leading-tight">
-                                                <Image
-                                                 src={menuarrow}
-                                                 alt="menuarrow"
-                                                 width={1000}
-                                                 height={500}
-                                                 className="max-w-6"
-                                                 />
-                                            </div> */}
                                         </motion.div>
                                     </Link>
                                 ))}
                             </div>
                         </div>
                     </div>
-                </>
+                </div>
             )}
- 
- 
- 
- 
- 
+
+
+
+
+
         </nav>
     );
 }

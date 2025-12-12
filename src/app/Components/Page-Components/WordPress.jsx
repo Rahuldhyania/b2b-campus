@@ -9,9 +9,8 @@ import WhyChoose from "../Courses/WhyChoose";
 import CanJoin from "../Courses/CanJoin";
 import CourseSyllabus from "../Courses/CourseSyllabus";
 import AboutCourse from "../Courses/AboutCourse";
-import graphic_left from "../../../../public/images/graphic_left.webp";
-import graphic_right from "../../../../public/images/graphic_right.webp";
-import graphic_left_banner from "../../../../public/images/graphic_left_banner.webp";
+import wordpress_leftbanner from "../../../../public/images/wordpress_leftbanner.webp";
+import wordpress_rightbanner from "../../../../public/images/wordpress_rightbanner.webp";
 import BecomeStudent from "../Courses/BecomeStudent";
 const faq_data = [
   {
@@ -304,12 +303,13 @@ const WordPress = () => {
         description={
           "Build Websites • E-Commerce Stores • Landing Pages • Client Projects"
         }
-        leftposter={graphic_left}
-        rightposter={graphic_right}
+        leftposter={wordpress_leftbanner}
+        rightposter={wordpress_rightbanner}
+        max_width={'max-w-[400px] m-auto'}
       />
       <CoursesCareer
         items={items}
-        left_banner={graphic_left_banner}
+        left_banner={wordpress_rightbanner}
         featuresMain={featuresMain}
         title={
           'Why WordPress is the  <br/> <span class="text-primary">Next Big Career</s  pan>'
@@ -317,6 +317,7 @@ const WordPress = () => {
         description={
           "Design & develop websites, blogs, e-commerce stores & business platforms."
         }
+        max_width={'max-w-[350px]'}
       />
       <CourseProgram
         program_data={program_data}
@@ -350,9 +351,9 @@ const WordPress = () => {
           'Learn to Create Stunning   ​<sapn class="text-primary"> Websites on WordPress </span>'
         }
         description={`Our WordPress Training Course is designed to equip you with the knowledge and skills needed to master the world’s most popular content management system`}
-        right_image={graphic_left_banner}
+        right_image={wordpress_rightbanner}
       />
-      <FaqSection faq_data={faq_data} />
+      {/* <FaqSection faq_data={faq_data} /> */}
       <Journeywithb2b2 />
     </div>
   );

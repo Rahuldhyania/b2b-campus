@@ -33,12 +33,12 @@ const footerData = [
       {
         id: 4,
         page_name: "IOT",
-        page_links: "/"
+        page_links: "/iot"
       },
       {
         id: 5,
         page_name: "AI Course",
-        page_links: "/"
+        page_links: "/ai-course"
       },
       {
         id: 6,
@@ -55,11 +55,11 @@ const footerData = [
         page_name: "Wordpress",
         page_links: "/wordpress-training-course"
       },
-      {
-        id: 9,
-        page_name: "ReactJs",
-        page_links: "/"
-      },
+      // {
+      //   id: 9,
+      //   page_name: "Personality Development",
+      //   page_links: "/personality-development"
+      // },
       {
         id: 10,
         page_name: "Web Designing",
@@ -73,11 +73,16 @@ const footerData = [
       {
         id: 12,
         page_name: "Digital Marketing",
-        page_links: "/"
+        page_links: "/digital-marketing-course"
+      },
+      {
+        id:13 ,
+         page_name: "Python/Java Course",
+        page_links: "/python-java-course"
       }
     ]
-
   },
+
   {
     title: "Useful Links",
     links: [

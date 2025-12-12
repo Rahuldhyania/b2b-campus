@@ -9,9 +9,9 @@ import WhyChoose from "../Courses/WhyChoose";
 import CanJoin from "../Courses/CanJoin";
 import BecomeStudent from "../Courses/BecomeStudent";
 import AboutCourse from "../Courses/AboutCourse";
-import videoediting_bannerleft from "../../../../public/images/videoediting_bannerleft.webp";
-import videoediting_bannerright from "../../../../public/images/videoediting_bannerright.webp";
-import video_left_banner from "../../../../public/images/video_left_banner.webp"
+import freightbroker_leftbanner from "../../../../public/images/freightbroker_leftbanner.webp";
+import freightbroker_rightbanner from "../../../../public/images/freightbroker_rightbanner.webp";
+import freight_leftposter from "../../../../public/images/freight_leftposter.webp"
 const faq_data = [
     {
         q: "Is this course good for beginners?",
@@ -219,12 +219,12 @@ const FreightBroker = () => {
                 highlightText={'Become a Certified Freight Broker'}
                 titleEnd={'in 45 Days'}
                 description={"Master US Logistics • Broker Operations • Carrier Management • High-Income Skills"}
-                leftposter={videoediting_bannerleft}
-                rightposter={videoediting_bannerright}
+                leftposter={freightbroker_leftbanner}
+                rightposter={freightbroker_rightbanner}
             />
             <CoursesCareer
                 items={items}
-                left_banner={video_left_banner}
+                left_banner={freight_leftposter}
                 featuresMain={featuresMain}
                 title={'Why Freight Broker is the <br/> <span class="text-primary">Next Big Career</span>'}
                 description={"Work directly with US logistics companies, carriers, brokers & shippers"}
@@ -252,9 +252,9 @@ const FreightBroker = () => {
             <BecomeStudent
                 title={'Launch Your Career as a Certified ​<sapn class="text-primary">Freight Broker with Expert Training </span>'}
                 description={`Build a Successful, Profitable Freight Brokerage Business with Expert Guidance. Learn to connect shippers and carriers, manage logistics efficiently, and unlock high-income opportunities in the growing transportation industry.`}
-                right_image={video_left_banner}
+                right_image={freight_leftposter}
             />
-            <FaqSection faq_data={faq_data} />
+            {/* <FaqSection faq_data={faq_data} /> */}
             <Journeywithb2b2 />
         </div>
     );

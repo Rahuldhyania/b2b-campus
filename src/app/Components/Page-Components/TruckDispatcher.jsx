@@ -17,54 +17,47 @@ import boylike from "../../../../public/images/boylike.webp";
 import turckleft from "../../../../public/images/turckleft.webp";
 const faq_data = [
   {
-    q: "Is this course good for beginners?",
-    a:
-      "Yes! Even if you have zero experience, we teach from basics to advanced in a simple and friendly way."
+    q: "What does the B2B Campus truck dispatching course cover for students in Mohali?",
+    a: "The course covers load management, freight coordination, communication skills, carrier relations, software training, and complete practical dispatching knowledge through flexible online and offline classes in Mohali."
   },
   {
-    q: "Will I really learn practical skills?",
-    a:
-      "Definitely. You will learn 100% practical skills, real projects, assignments, and hands-on sessions — exactly what companies want."
+    q: "How long is the truck dispatching course at B2B Campus in Mohali?",
+    a: "The program duration varies from two to three months, offering flexible schedules for students. Both online and offline classes are available to support beginners and working professionals effectively."
   },
   {
-    q: "How will this course help my career?",
-    a:
-      "This course is designed to make you job-ready, build real skills, and help you create a stable, successful future."
+    q: "Does B2B Campus provide practical training during truck dispatching classes in Mohali?",
+    a: "Yes, students receive hands-on practice with real load boards, dispatching tools, communication scenarios, and industry workflows in both online and offline modes for practical skill development."
   },
   {
-    q: "Do you provide placement support?",
-    a:
-      "Yes. We help with resume making, interview preparation, mock interviews, and job opportunities through our network."
+    q: "Do students need prior logistics experience to join the truck dispatching course?",
+    a: "No prior experience is required. Beginners can easily enrol as the B2B Campus course starts with fundamentals and gradually progresses to advanced dispatching concepts and real-work activities."
   },
   {
-    q: "Who are the teachers?",
-    a:
-      "You will learn from experienced and reliable trainers who explain everything clearly and support you throughout the journey."
+    q: "Does B2B Campus offer placement support after course completion in Mohali?",
+    a: "Yes, B2B Campus provides placement assistance, interview guidance, resume preparation, and job referrals to help students secure truck dispatching or logistics roles successfully after training."
   },
   {
-    q: "What makes your teaching style unique?",
-    a:
-      "We use a smart, modern, student-friendly teaching method with easy examples, practical demos, and step-by-step explanation."
+    q: "What study materials are provided in the truck dispatching course at B2B Campus?",
+    a: "Students receive notes, dispatching templates, software training access, practice files, and recorded class sessions to support learning in both online and offline training modes."
   },
   {
-    q: "Is the course affordable for students?",
-    a:
-      "Yes. We provide high-quality training at student-friendly fees, with the best value in the market."
+    q: "Who teaches the truck dispatching course at B2B Campus in Mohali?",
+    a: "Experienced industry professionals conduct training, offering real-world dispatching insights, updated market knowledge, and practical guidance to prepare students for professional dispatching careers."
   },
   {
-    q: "How do you help in interviews?",
-    a: `We train you with:\n• Mock interviews\n• Confidence-building sessions\n• Communication tips\n• Company-level interview questions`
+    q: "Can students shift between online and offline classes during the course?",
+    a: "Yes, B2B Campus allows flexible switching between online and offline batches, enabling students to continue learning conveniently based on schedule changes or personal requirements."
   },
   {
-    q: "What do current students like the most?",
-    a: `Students love our:\n• Trendy, modern learning environment\n• Friendly teachers\n• Practical approach\n• Real project experience\n• Motivating atmosphere\n• Personal attention\n• Easy explanations\n• Lifetime guidance\n• Strong career focus`
+    q: "Does the truck dispatching course cover the US freight market and load boards?",
+    a: "Yes, the curriculum includes US trucking basics, load board usage, carrier coordination, freight rates, and dispatching responsibilities for a strong international dispatching career foundation."
   },
   {
-    q: "How can I join the course?",
-    a:
-      "Simple! Just contact us → Attend a quick counseling session → Choose batch → Start learning."
+    q: "How can students enrol in the B2B Campus truck dispatching course in Mohali?",
+    a: "Students can register online or visit the Mohali campus. Basic details, identification documents, and chosen batch mode are required for completing the admission process smoothly."
   }
 ];
+
 const TruckDispatcher = () => {
   const Syllabus_data = [
     {

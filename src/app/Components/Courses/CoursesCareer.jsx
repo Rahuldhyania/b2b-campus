@@ -4,7 +4,7 @@ import Description from "../UiUx/Description";
 import titlewhitebg from "../../../../public/images/titlewhitebg.webp";
 import Title from "../UiUx/Title";
 import Buttons from "../UiUx/Buttons";
-const CoursesCareer = ({ items, featuresMain ,title ,description,left_banner}) => {
+const CoursesCareer = ({ items, featuresMain ,title ,description,left_banner ,max_width}) => {
     return (
         <div className="main-bg py-12 md:py-18">
             <section className="cus_container m-auto">
@@ -68,7 +68,7 @@ const CoursesCareer = ({ items, featuresMain ,title ,description,left_banner}) =
                                 width={1000}
                                 height={500}
                                 alt="boy"
-                                className=" mx-auto relative top-1.5 md:top-0"
+                                className={`mx-auto relative top-1.5 md:top-0 ${max_width ? max_width : ''}`}
                             />
                         </div>
                         <section className="flex items-center pt-6 lg:pt-0">

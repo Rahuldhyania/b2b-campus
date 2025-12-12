@@ -9,9 +9,9 @@ import WhyChoose from "../Courses/WhyChoose";
 import CanJoin from "../Courses/CanJoin";
 import BecomeStudent from "../Courses/BecomeStudent";
 import AboutCourse from "../Courses/AboutCourse";
-import videoediting_bannerleft from "../../../../public/images/videoediting_bannerleft.webp";
-import videoediting_bannerright from "../../../../public/images/videoediting_bannerright.webp";
-import video_left_banner from "../../../../public/images/video_left_banner.webp"
+import fullstack_leftbanner from "../../../../public/images/fullstack_leftbanner.webp";
+import fullstack_rightbanner from "../../../../public/images/fullstack_rightbanner.webp";
+import fullstack_leftposter from "../../../../public/images/fullstack_leftposter.webp"
 const faq_data = [
     {
         q: "Is this course good for beginners?",
@@ -210,21 +210,18 @@ const Fullstackdevelopment = () => {
                 "Gain hands-on experience by working on real development assignments after training.",
         },
     ];
-
-
-
     return (
         <div>
             <CoursesBanner
                 highlightText={'Become a Full Stack Developer'}
                 titleEnd={'in 6 Months'}
                 description={"Master Frontend • Backend • Databases • APIs • Deployment • Real Projects"}
-                leftposter={videoediting_bannerleft}
-                rightposter={videoediting_bannerright}
+                leftposter={fullstack_leftbanner}
+                rightposter={fullstack_rightbanner}
             />
             <CoursesCareer
                 items={items}
-                left_banner={video_left_banner}
+                left_banner={fullstack_leftposter}
                 featuresMain={featuresMain}
                 title={'Why Full Stack Development is the <br/> <span class="text-primary">Next Big Career</span>'}
                 description={"Work directly with US logistics companies, carriers, brokers & shippers"}
@@ -252,9 +249,9 @@ const Fullstackdevelopment = () => {
             <BecomeStudent
                 title={'Launch Your Career as a Skilled ​<sapn class="text-primary"> Full Stack Developer with Expert Training </span>'}
                 description={`Build a successful, high-growth tech career with step-by-step guidance from experienced software engineers. Learn to develop responsive front-end interfaces, build powerful back-end systems, manage databases, and deploy real-world applications—unlocking top-paying opportunities in the global IT industry.`}
-                right_image={video_left_banner}
+                right_image={fullstack_leftposter}
             />
-            <FaqSection faq_data={faq_data} />
+            {/* <FaqSection faq_data={faq_data} /> */}
             <Journeywithb2b2 />
         </div>
     );

@@ -13,55 +13,48 @@ import graphic_left from "../../../../public/images/graphic_left.webp";
 import graphic_right from "../../../../public/images/graphic_right.webp";
 import graphic_left_banner from "../../../../public/images/graphic_left_banner.webp"
 const faq_data = [
-    {
-        q: "Is this course good for beginners?",
-        a:
-            "Yes! Even if you have zero experience, we teach from basics to advanced in a simple and friendly way."
-    },
-    {
-        q: "Will I really learn practical skills?",
-        a:
-            "Definitely. You will learn 100% practical skills, real projects, assignments, and hands-on sessions — exactly what companies want."
-    },
-    {
-        q: "How will this course help my career?",
-        a:
-            "This course is designed to make you job-ready, build real skills, and help you create a stable, successful future."
-    },
-    {
-        q: "Do you provide placement support?",
-        a:
-            "Yes. We help with resume making, interview preparation, mock interviews, and job opportunities through our network."
-    },
-    {
-        q: "Who are the teachers?",
-        a:
-            "You will learn from experienced and reliable trainers who explain everything clearly and support you throughout the journey."
-    },
-    {
-        q: "What makes your teaching style unique?",
-        a:
-            "We use a smart, modern, student-friendly teaching method with easy examples, practical demos, and step-by-step explanation."
-    },
-    {
-        q: "Is the course affordable for students?",
-        a:
-            "Yes. We provide high-quality training at student-friendly fees, with the best value in the market."
-    },
-    {
-        q: "How do you help in interviews?",
-        a: `We train you with:\n• Mock interviews\n• Confidence-building sessions\n• Communication tips\n• Company-level interview questions`
-    },
-    {
-        q: "What do current students like the most?",
-        a: `Students love our:\n• Trendy, modern learning environment\n• Friendly teachers\n• Practical approach\n• Real project experience\n• Motivating atmosphere\n• Personal attention\n• Easy explanations\n• Lifetime guidance\n• Strong career focus`
-    },
-    {
-        q: "How can I join the course?",
-        a:
-            "Simple! Just contact us → Attend a quick counseling session → Choose batch → Start learning."
-    }
+  {
+    q: "What is the duration of the graphic designing course offered?",
+    a: "The graphic designing course is a two to three-month program designed to teach essential design tools, concepts, and practical skills for beginners and aspiring designers."
+  },
+  {
+    q: "What software will I learn during the graphic designing course?",
+    a: "Students learn industry-standard tools including Adobe Photoshop, Illustrator, Canva, and other essential design applications used by professional designers."
+  },
+  {
+    q: "Do I need any prior experience to enrol in the graphic designing course?",
+    a: "No prior experience is required. The course starts from basics, making it suitable for beginners and students with zero design knowledge."
+  },
+  {
+    q: "Is this graphic designing course available online and offline?",
+    a: "Yes, the course is offered in both online and offline modes to provide flexible learning options for students with different schedules."
+  },
+  {
+    q: "Will I get practical assignments in the graphic designing course?",
+    a: "Yes, students work on live projects, creative assignments, branding tasks, and portfolio-building activities to develop strong practical design skills."
+  },
+  {
+    q: "Does the graphic designing course include portfolio development?",
+    a: "Absolutely. Students create a professional portfolio showcasing posters, logos, branding designs, social media creatives, and more for future job opportunities."
+  },
+  {
+    q: "Are certificates provided after completing the graphic designing course?",
+    a: "Yes, a recognized course completion certificate is awarded after successfully finishing all modules and assignments."
+  },
+  {
+    q: "What career opportunities are available after this course?",
+    a: "Students can work as graphic designers, logo designers, social media designers, brand designers, freelancers, or junior creative artists in agencies and companies."
+  },
+  {
+    q: "Is placement assistance available for graphic designing students?",
+    a: "Yes, placement support, interview preparation, and job guidance are provided to help students start careers in the design industry."
+  },
+  {
+    q: "What are the eligibility criteria for the graphic designing course?",
+    a: "Anyone with basic computer knowledge and creativity can join. There are no age or education restrictions."
+  }
 ];
+
 const GraphicDesign = () => {
     const Syllabus_data = [
         {
@@ -209,7 +202,6 @@ const GraphicDesign = () => {
                 "Anyone can begin — good communication skills and professional training are sufficient.",
         },
     ];
-
     const items = [
         {
             icon: "/images/45days.webp",

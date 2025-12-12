@@ -29,117 +29,237 @@ import Description from "../UiUx/Description";
 import Buttons from "../UiUx/Buttons";
 
 export const Coursesbtn = [
-    { id: 1, btn: "All Courses" },
-    { id: 2, btn: "Logistics" },
-    { id: 5, btn: "Marketing & Bussiness" },
-    { id: 4, btn: "Graphics" },
-    { id: 3, btn: "Development" },
-
+  { id: 1, btn: "All Courses" },
+  { id: 2, btn: "Logistics" },
+  { id: 5, btn: "Marketing & Bussiness" },
+  { id: 4, btn: "Graphics" },
+  { id: 3, btn: "Development" }
 ];
 
 const allCourses = [
-    { id: 1, title: "Graphic Design", des: "Create visuals that stand out", category: "Graphics", icon: GraphicIcon, color: "#0A9DFF", buttonText: "Learn more", img: arrowicon },
-    { id: 2, title: "Truck Dispatch", des: "Optimized trips, better earnings", category: "Logistics", icon: TruckIcon, color: "#60A5FA", buttonText: "Learn more", img: arrows2 },
-    { id: 6, title: "Freight Broker", des: "Connecting shippers and carriers", category: "Logistics", icon: icon4, color: "#60A5FA", buttonText: "Learn more", img: arrows2 },
-    { id: 3, title: "IOT", des: "Automate, connect, and control", category: "Development", icon: icon11, color: "#0A9DFF", buttonText: "Learn more", img: arrows4 },
-    { id: 4, title: "AI Course", des: "Master future-ready skills", category: "Development", icon: icon12, color: "#0A9DFF", buttonText: "Learn more", img: arrows4 },
-    { id: 8, title: "Web Development", des: "Your vision—built for the web", category: "Development", icon: DevIcon, color: "#0A9DFF", buttonText: "Learn more", img: arrows4 },
-    { id: 7, title: "Full Stack Development", des: "Building end-to-end digital solutions", category: "Development", icon: icon7, color: "#0A9DFF", buttonText: "Learn more", img: arrows4 },
-    { id: 11, title: "Wordpress", des: "Build websites fast and easy ", category: "Development", icon: icon9, color: "#0A9DFF", buttonText: "Learn more", img: arrows4 },
-    { id: 13, title: "ReactJs", des: "Automate, connect, and control", category: "Development", icon: icon11, color: "#0A9DFF", buttonText: "Learn more", img: arrows4 },
-
-    { id: 10, title: "Web Designing", des: "Designs that shape great websites", category: "Development", icon: icon8, color: "#0A9DFF", buttonText: "Learn more", img: arrows4 },
-
-    { id: 5, title: "Video Editing", des: "Edit that tells your story", category: "Graphics", icon: VideoIcon, color: "#0A9DFF", buttonText: "Learn more", img: arrow1 },
-
-    { id: 12, title: "Digital Marketing", des: "Grow your brand online", category: "Marketing & Bussiness", icon: icon10, color: "#0A9DFF", buttonText: "Learn more", img: arrows5 },
+  {
+    id: 1,
+    title: "Graphic Design",
+    des: "Create visuals that stand out",
+    category: "Graphics",
+    icon: GraphicIcon,
+    color: "#0A9DFF",
+    buttonText: "Learn more",
+    page_link: "/graphic-design-course",
+    img: arrowicon
+  },
+  {
+    id: 2,
+    title: "Truck Dispatch",
+    des: "Optimized trips, better earnings",
+    category: "Logistics",
+    icon: TruckIcon,
+    color: "#60A5FA",
+    buttonText: "Learn more",
+    page_link: "/truck-dispatching",
+    img: arrows2
+  },
+  {
+    id: 6,
+    title: "Freight Broker",
+    des: "Connecting shippers and carriers",
+    category: "Logistics",
+    icon: icon4,
+    color: "#60A5FA",
+    buttonText: "Learn more",
+    page_link: "/freight-broker",
+    img: arrows2
+  },
+  {
+    id: 3,
+    title: "IOT",
+    des: "Automate, connect, and control",
+    category: "Development",
+    icon: icon11,
+    color: "#0A9DFF",
+    buttonText: "Learn more",
+    page_link: "/iot",
+    img: arrows4
+  },
+  {
+    id: 4,
+    title: "AI Course",
+    des: "Master future-ready skills",
+    category: "Development",
+    icon: icon12,
+    color: "#0A9DFF",
+    buttonText: "Learn more",
+    page_link: "/ai-course",
+    img: arrows4
+  },
+  {
+    id: 8,
+    title: "Web Development",
+    des: "Your vision—built for the web",
+    category: "Development",
+    icon: DevIcon,
+    color: "#0A9DFF",
+    buttonText: "Learn more",
+    page_link: "/web-development-course",
+    img: arrows4
+  },
+  {
+    id: 7,
+    title: "Full Stack Development",
+    des: "Building end-to-end digital solutions",
+    category: "Development",
+    icon: icon7,
+    color: "#0A9DFF",
+    buttonText: "Learn more",
+    page_link: "/full-stack-development",
+    img: arrows4
+  },
+  {
+    id: 11,
+    title: "Wordpress",
+    des: "Build websites fast and easy",
+    category: "Development",
+    icon: icon9,
+    color: "#0A9DFF",
+    buttonText: "Learn more",
+    page_link: "/wordpress-training-course",
+    img: arrows4
+  },
+  {
+    id: 13,
+    title: "Personality Development",
+    des: "Unlock your potential with essential soft skills",
+    category: "Development",
+    icon: icon11,
+    color: "#0A9DFF",
+    buttonText: "Learn more",
+    page_link: "/personality-development",   
+    img: arrows4
+  },
+  {
+    id: 10,
+    title: "Web Designing",
+    des: "Designs that shape great websites",
+    category: "Development",
+    icon: icon8,
+    color: "#0A9DFF",
+    buttonText: "Learn more",
+    page_link: "/web-designing-course",
+    img: arrows4
+  },
+  {
+    id: 5,
+    title: "Video Editing",
+    des: "Edit that tells your story",
+    category: "Graphics",
+    icon: VideoIcon,
+    color: "#0A9DFF",
+    buttonText: "Learn more",
+    page_link: "/video-editing",
+    img: arrow1
+  },
+  {
+    id: 12,
+    title: "Digital Marketing",
+    des: "Grow your brand online",
+    category: "Marketing & Bussiness",
+    icon: icon10,
+    color: "#0A9DFF",
+    buttonText: "Learn more",
+    page_link: "/digital-marketing-course",
+    img: arrows5
+  }
 ];
 
+
 export default function PopularCourses({ clickscroll }) {
-    const [activeTab, setActiveTab] = useState("All Courses");
-    const [filteredCourses, setFilteredCourses] = useState(allCourses);
-    const [mobileVisibleCount, setMobileVisibleCount] = useState(5);
+  const [activeTab, setActiveTab] = useState("All Courses");
+  const [filteredCourses, setFilteredCourses] = useState(allCourses);
+  const [mobileVisibleCount, setMobileVisibleCount] = useState(5);
 
-    const handleTabClick = (tab) => {
-        setActiveTab(tab);
-        if (tab === "All Courses") {
-            setFilteredCourses(allCourses);
-        } else {
-            setFilteredCourses(allCourses.filter(c => c.category === tab));
-        }
-        setMobileVisibleCount(5);
-    };
+  const handleTabClick = tab => {
+    setActiveTab(tab);
+    if (tab === "All Courses") {
+      setFilteredCourses(allCourses);
+    } else {
+      setFilteredCourses(allCourses.filter(c => c.category === tab));
+    }
+    setMobileVisibleCount(5);
+  };
 
-    const handleLoadMore = () => {
-        setMobileVisibleCount(prev => prev + 5);
-    };
+  const handleLoadMore = () => {
+    setMobileVisibleCount(prev => prev + 5);
+  };
 
-    const mobileCoursesToShow = filteredCourses.slice(0, mobileVisibleCount);
+  const mobileCoursesToShow = filteredCourses.slice(0, mobileVisibleCount);
 
-    return (
-        <div className="main-bg py-9">
-            <div className="relative py-3">
-                <img
-                    src={titlewhitebg.src}
-                    alt="bubble-bg"
-                    className="absolute hidden md:block top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[480px] md:w-[530px] sm:w-60 pointer-events-none select-none opacity-90"
-                />
-                <div className="relative z-10 text-center">
-                    <Title
-                        title={'<span class="text-primary">Popular </span> Courses'}
-                        text_color={'text-secondary'}
-                    />
-                </div>
-            </div>
-
-            {/* Desktop Tabs */}
-            <div className=" hidden md:flex flex-wrap justify-center gap-3  m-auto">
-                <div className="bg-[#CEC5FF] gap-3 p-4 grid grid-cols-5 rounded-2xl">
-                    {Coursesbtn.map((item) => (
-                        <button
-                            key={item.id}
-                            onClick={() => handleTabClick(item.btn)}
-                            className={`px-6 py-3 rounded-xl text-[16px] transition-all duration-300 ease-in-out ${activeTab === item.btn
-                                ? "bg-[#6346FA] text-white"
-                                : "bg-[#E4DFFF] hover:bg-[#6346FA] hover:text-white"
-                                }`}
-                        >
-                            {item.btn}
-                        </button>
-                    ))}
-                </div>
-            </div>
-
-            {/* Mobile Tabs */}
-            <div className="px-3">
-                <div className="lg:w-[55%] m-auto flex md:hidden flex-wrap justify-start md:justify-center gap-3 bg-[#CEC5FF] p-4 rounded-2xl">
-                    {Coursesbtn.map((item) => (
-                        <button
-                            key={item.id}
-                            onClick={() => handleTabClick(item.btn)}
-                            className={`px-6 py-3 rounded-xl text-[16px] transition-all duration-300 ease-in-out ${activeTab === item.btn
-                                ? "bg-[#6346FA] text-white"
-                                : "bg-[#E4DFFF] hover:bg-[#6346FA] hover:text-white"
-                                }`}
-                        >
-                            {item.btn}
-                        </button>
-                    ))}
-                </div>
-            </div>
-
-            {/* Cards */}
-            <div className="lg:block hidden">
-                <ServicesSection courses={filteredCourses} clickscroll={clickscroll} />
-            </div>
-
-            {/* Mobile Cards with Load More */}
-            <div className="md:hidden">
-                <ServicesSection courses={filteredCourses} clickscroll={clickscroll} />
-                 <div className="buttons text-[25px] flex justify-center m-auto mt-[2%]" onClick={clickscroll}>
-                    <Buttons btnname='Enquire Now' text_color={'text-white'} />
-                </div>
-            </div>
+  return (
+    <div className="main-bg py-9">
+      <div className="relative py-3">
+        <img
+          src={titlewhitebg.src}
+          alt="bubble-bg"
+          className="absolute hidden md:block top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[480px] md:w-[530px] sm:w-60 pointer-events-none select-none opacity-90"
+        />
+        <div className="relative z-10 text-center">
+          <Title
+            title={'<span class="text-primary">Popular </span> Courses'}
+            text_color={"text-secondary"}
+          />
         </div>
-    );
+      </div>
+
+      {/* Desktop Tabs */}
+      <div className=" hidden md:flex flex-wrap justify-center gap-3  m-auto">
+        <div className="bg-[#CEC5FF] gap-3 p-4 grid grid-cols-5 rounded-2xl">
+          {Coursesbtn.map(item =>
+            <button
+              key={item.id}
+              onClick={() => handleTabClick(item.btn)}
+              className={`px-6 py-3 rounded-xl text-[16px] transition-all duration-300 ease-in-out ${activeTab ===
+              item.btn
+                ? "bg-[#6346FA] text-white"
+                : "bg-[#E4DFFF] hover:bg-[#6346FA] hover:text-white"}`}
+            >
+              {item.btn}
+            </button>
+          )}
+        </div>
+      </div>
+
+      {/* Mobile Tabs */}
+      <div className="px-3">
+        <div className="lg:w-[55%] m-auto flex md:hidden flex-wrap justify-start md:justify-center gap-3 bg-[#CEC5FF] p-4 rounded-2xl">
+          {Coursesbtn.map(item =>
+            <button
+              key={item.id}
+              onClick={() => handleTabClick(item.btn)}
+              className={`px-6 py-3 rounded-xl text-[16px] transition-all duration-300 ease-in-out ${activeTab ===
+              item.btn
+                ? "bg-[#6346FA] text-white"
+                : "bg-[#E4DFFF] hover:bg-[#6346FA] hover:text-white"}`}
+            >
+              {item.btn}
+            </button>
+          )}
+        </div>
+      </div>
+
+      {/* Cards */}
+      <div className="lg:block hidden">
+        <ServicesSection courses={filteredCourses} clickscroll={clickscroll} />
+      </div>
+
+      {/* Mobile Cards with Load More */}
+      <div className="md:hidden">
+        <ServicesSection courses={filteredCourses} clickscroll={clickscroll} />
+        <div
+          className="buttons text-[25px] flex justify-center m-auto mt-[2%]"
+          onClick={clickscroll}
+        >
+          <Buttons btnname="Enquire Now" text_color={"text-white"} />
+        </div>
+      </div>
+    </div>
+  );
 }

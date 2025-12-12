@@ -9,9 +9,9 @@ import WhyChoose from "../Courses/WhyChoose";
 import CanJoin from "../Courses/CanJoin";
 import CourseSyllabus from "../Courses/CourseSyllabus";
 import AboutCourse from "../Courses/AboutCourse";
-import graphic_left from "../../../../public/images/graphic_left.webp";
-import graphic_right from "../../../../public/images/graphic_right.webp";
-import graphic_left_banner from "../../../../public/images/graphic_left_banner.webp"
+import webdev_leftbanner from "../../../../public/images/webdev_leftbanner.webp";
+import webdev_rightbanner from "../../../../public/images/webdev_rightbanner.webp";
+import webdev_leftposter from "../../../../public/images/webdev_leftposter.webp"
 const faq_data = [
     {
         q: "Is this course good for beginners?",
@@ -307,12 +307,12 @@ const WebDevelopment = () => {
                 highlightText={'Become a Professional Web Developer'}
                 titleEnd={'in 3 Months'}
                 description={"Master Frontend Development • Responsive Websites • Live Projects • Portfolio Building"}
-                leftposter={graphic_left}
-                rightposter={graphic_right}
+                leftposter={webdev_leftbanner}
+                rightposter={webdev_rightbanner}
             />
             <CoursesCareer
                 items={items}
-                left_banner={graphic_left_banner}
+                left_banner={webdev_leftposter}
                 featuresMain={featuresMain}
                 title={'Why Web Development is the <br/> <span class="text-primary">Next Big Career</s  pan>'}
                 description={"Build websites for brands, companies, creators & international clients"}
@@ -338,7 +338,7 @@ const WebDevelopment = () => {
             </div>
             <CourseSyllabus title={'Web Development Course <br/> <span class="text-primary"> Syllabus</span>'} Syllabus_data={Syllabus_data} />
             {/* <BecomeStudent /> */}
-            <FaqSection faq_data={faq_data} />
+            {/* <FaqSection faq_data={faq_data} /> */}
             <Journeywithb2b2 />
         </div>
     );

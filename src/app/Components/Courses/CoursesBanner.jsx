@@ -5,7 +5,7 @@ import Contactfrom from '../Page-Components/Contactfrom';
 import bublebg from "../../../../public/images/bublebg.webp";
 
 import bannerbggradient from "../../../../public/images/bannerbg-gradient.webp";
-const CoursesBanner = ({ highlightText, titleEnd, description, leftposter, rightposter }) => {
+const CoursesBanner = ({ highlightText, titleEnd, description, leftposter, rightposter ,max_width}) => {
     return (
         <div className="bg-cover bg-no-repeat bg-bottom"
             style={{ backgroundImage: `url(${bannerbggradient.src})` }}
@@ -49,7 +49,7 @@ const CoursesBanner = ({ highlightText, titleEnd, description, leftposter, right
                             width={1000}
                             height={500}
                             alt="girl"
-                            className=" mx-auto"
+                            className={`max-h-[600px] object-contain mx-auto ${max_width ? max_width : ''}`}
                         />
                     </div>
                 </div>

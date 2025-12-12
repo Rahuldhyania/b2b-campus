@@ -335,7 +335,7 @@ const WebDesigning = () => {
                 description={`Our comprehensive Web Design Training Course is designed to equip you with the skills and knowledge needed to create stunning and user-friendly websites`}
                 right_image={graphic_left_banner}
             />
-            <FaqSection faq_data={faq_data} />
+            {/* <FaqSection faq_data={faq_data} /> */}
             <Journeywithb2b2 />
         </div>
     );

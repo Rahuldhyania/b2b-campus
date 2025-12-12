@@ -14,52 +14,44 @@ import videoediting_bannerright from "../../../../public/images/videoediting_ban
 import video_left_banner from "../../../../public/images/video_left_banner.webp"
 const faq_data = [
   {
-    q: "Is this course good for beginners?",
-    a:
-      "Yes! Even if you have zero experience, we teach from basics to advanced in a simple and friendly way."
+    q: "What is the duration of the video editing course offered?",
+    a: "The video editing course runs for two to three months, covering both beginner and advanced editing techniques with hands-on software training."
   },
   {
-    q: "Will I really learn practical skills?",
-    a:
-      "Definitely. You will learn 100% practical skills, real projects, assignments, and hands-on sessions — exactly what companies want."
+    q: "Which video editing software will I learn in this course?",
+    a: "Students learn Adobe Premiere Pro, After Effects, Filmora, and essential tools used by professional editors."
   },
   {
-    q: "How will this course help my career?",
-    a:
-      "This course is designed to make you job-ready, build real skills, and help you create a stable, successful future."
+    q: "Do I need prior editing experience to join the video editing course?",
+    a: "No experience is needed. The course is perfectly designed for beginners and individuals who want to start editing from scratch."
   },
   {
-    q: "Do you provide placement support?",
-    a:
-      "Yes. We help with resume making, interview preparation, mock interviews, and job opportunities through our network."
+    q: "Is this video editing course available in online and offline modes?",
+    a: "Yes, students can choose between online or offline classes depending on their convenience and learning preference."
   },
   {
-    q: "Who are the teachers?",
-    a:
-      "You will learn from experienced and reliable trainers who explain everything clearly and support you throughout the journey."
+    q: "Will I get practical editing projects during the course?",
+    a: "Yes, students work on real videos, YouTube edits, cinematic sequences, social media reels, and promotional videos to build confidence."
   },
   {
-    q: "What makes your teaching style unique?",
-    a:
-      "We use a smart, modern, student-friendly teaching method with easy examples, practical demos, and step-by-step explanation."
+    q: "Does the course include motion graphics or animation basics?",
+    a: "Yes, the course includes introductory modules on motion graphics, transitions, special effects, and basic animation using After Effects."
   },
   {
-    q: "Is the course affordable for students?",
-    a:
-      "Yes. We provide high-quality training at student-friendly fees, with the best value in the market."
+    q: "Will I receive a certificate after completing the video editing course?",
+    a: "Yes, all students receive a professional certificate after completing the training and required video editing projects."
   },
   {
-    q: "How do you help in interviews?",
-    a: `We train you with:\n• Mock interviews\n• Confidence-building sessions\n• Communication tips\n• Company-level interview questions`
+    q: "What career opportunities are available after the video editing course?",
+    a: "Students can work as video editors, YouTube editors, content creators, post-production assistants, reel editors, and freelance video professionals."
   },
   {
-    q: "What do current students like the most?",
-    a: `Students love our:\n• Trendy, modern learning environment\n• Friendly teachers\n• Practical approach\n• Real project experience\n• Motivating atmosphere\n• Personal attention\n• Easy explanations\n• Lifetime guidance\n• Strong career focus`
+    q: "Does the video editing course offer placement support?",
+    a: "Yes, students receive placement help, portfolio guidance, and interview training to start careers in media, production, or content creation."
   },
   {
-    q: "How can I join the course?",
-    a:
-      "Simple! Just contact us → Attend a quick counseling session → Choose batch → Start learning."
+    q: "What equipment do I need for the video editing course?",
+    a: "A laptop with basic editing capability is recommended. Software installation support and technical guidance are provided during the course."
   }
 ];
 const VideoEditing = () => {

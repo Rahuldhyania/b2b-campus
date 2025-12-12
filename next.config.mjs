@@ -5,13 +5,6 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: "/digital-marketing-course",
-        destination: "/",
-        permanent: true
-      },
-      // { source: "/video-editing", destination: "/video-editing", permanent: true },
-      { source: "/iot", destination: "/", permanent: true },
-      {
         source: "/c-and-c-plus-plus-course",
         destination: "/",
         permanent: true
@@ -19,7 +12,6 @@ const nextConfig = {
       { source: "/php-training-course", destination: "/", permanent: true },
       { source: "/laravel-course", destination: "/web-development-course", permanent: true },
       { source: "/ai-ml-and-data-science", destination: "/", permanent: true },
-      { source: "/ai-course", destination: "/", permanent: true },
       { source: "/flutter", destination: "/", permanent: true },
       { source: "/react-js-course", destination: "/", permanent: true },
       { source: "/react-native", destination: "/", permanent: true },

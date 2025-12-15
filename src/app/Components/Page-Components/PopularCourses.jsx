@@ -15,6 +15,8 @@ import icon9 from "../../../../public/images/icon9.webp";
 import icon10 from "../../../../public/images/icon10.webp";
 import icon11 from "../../../../public/images/icon11.webp";
 import icon12 from "../../../../public/images/icon12.webp";
+import devops from "../../../../public/icons/devops.svg";
+import cyber from "../../../../public/icons/cyber.svg";
 import arrowicon from "../../../../public/images/arrowicon.webp";
 import MarketingIcon from "../../../../public/images/MarketingIcon.webp";
 
@@ -37,6 +39,28 @@ export const Coursesbtn = [
 ];
 
 const allCourses = [
+    {
+    id: 6,
+    title: "Freight Broker",
+    des: "B2B Campus – Where Freight Broker Careers Begin and Global Logistics Professionals Are Built.",
+    category: "Logistics",
+    icon: icon4,
+    color: "#60A5FA",
+    buttonText: "Learn more",
+    page_link: "/freight-broker",
+    img: arrows2
+  },
+    {
+    id: 2,
+    title: "Truck Dispatch",
+    des: "B2B Campus – Learn Truck Dispatch Once, Work Globally Forever.",
+    category: "Logistics",
+    icon: TruckIcon,
+    color: "#60A5FA",
+    buttonText: "Learn more",
+    page_link: "/truck-dispatching",
+    img: arrows2
+  },
   {
     id: 1,
     title: "Graphic Design",
@@ -48,27 +72,38 @@ const allCourses = [
     page_link: "/graphic-design-course",
     img: arrowicon
   },
-  {
-    id: 2,
-    title: "Truck Dispatch",
-    des: "Optimized trips, better earnings",
-    category: "Logistics",
-    icon: TruckIcon,
-    color: "#60A5FA",
+   {
+    id: 4,
+    title: "AI Course",
+    des: "B2B Campus – Learn Artificial Intelligence Today, Lead Tomorrow’s Technology.",
+    category: "Development",
+    icon: icon12,
+    color: "#0A9DFF",
     buttonText: "Learn more",
-    page_link: "/truck-dispatching",
-    img: arrows2
+    page_link: "/ai-course",
+    img: arrows4
   },
-  {
-    id: 6,
-    title: "Freight Broker",
-    des: "Connecting shippers and carriers",
-    category: "Logistics",
-    icon: icon4,
-    color: "#60A5FA",
+     {
+    id: 14,
+    title: "Cyber Security",
+    des: "B2B Campus – Learn Cyber Security Today, Protect the Digital World Tomorrow.",
+    category: "Development",
+    icon: cyber,
+    color: "#0A9DFF",
     buttonText: "Learn more",
-    page_link: "/freight-broker",
-    img: arrows2
+    page_link: "/ai-course",
+    img: arrows4
+  },
+       {
+    id: 15,
+    title: "DevOps Engineer",
+    des: "B2B Campus – Learn DevOps Today, Automate and Deploy Tomorrow.",
+    category: "Development",
+    icon: devops,
+    color: "#0A9DFF",
+    buttonText: "Learn more",
+    page_link: "/ai-course",
+    img: arrows4
   },
   {
     id: 3,
@@ -81,17 +116,7 @@ const allCourses = [
     page_link: "/iot",
     img: arrows4
   },
-  {
-    id: 4,
-    title: "AI Course",
-    des: "Master future-ready skills",
-    category: "Development",
-    icon: icon12,
-    color: "#0A9DFF",
-    buttonText: "Learn more",
-    page_link: "/ai-course",
-    img: arrows4
-  },
+ 
   {
     id: 8,
     title: "Web Development",
@@ -125,17 +150,17 @@ const allCourses = [
     page_link: "/wordpress-training-course",
     img: arrows4
   },
-  {
-    id: 13,
-    title: "Personality Development",
-    des: "Unlock your potential with essential soft skills",
-    category: "Development",
-    icon: icon11,
-    color: "#0A9DFF",
-    buttonText: "Learn more",
-    page_link: "/personality-development",   
-    img: arrows4
-  },
+  // {
+  //   id: 13,
+  //   title: "Personality Development",
+  //   des: "Unlock your potential with essential soft skills",
+  //   category: "Development",
+  //   icon: icon11,
+  //   color: "#0A9DFF",
+  //   buttonText: "Learn more",
+  //   page_link: "/personality-development",   
+  //   img: arrows4
+  // },
   {
     id: 10,
     title: "Web Designing",

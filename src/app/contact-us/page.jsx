@@ -1,15 +1,25 @@
-import React from 'react'
-import PageBanner from '../Components/Page-Components/PageBanner'
+import React from 'react';
+import ContactusBanner from '../Components/Page-Components/ContactusBanner';
 
+export const metadata = {
+    title : ''
+}
 const page = () => {
     return (
         <div>
-            <PageBanner
-                banner_title={`Contact us for any inquiries or assistance — we are here to help! <br/>Phone: <a class="text-primary" href="tel:+919878300209">+91 98783 00209</a>, <a class="text-primary" href="tel:+918360116967">+91 83601 16967</a> • <br/>
-Email: <a class="text-primary" href="mailto:hello@campus.b2bcampus.com">hello@campus.b2bcampus.com<br/>
-</a> •
-Address: <span class="text-primary">F-209, Industrial Area Phase 8-B, Sector 74, Mohali, 160074</span>`}
-            />
+            <ContactusBanner />
+            <div>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3510.6488903132645!2d76.69220059999999!3d30.711305399999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fef709990df93%3A0xb9ae31b247ff7455!2sB2B%20Campus!5e1!3m2!1sen!2sin!4v1765804894499!5m2!1sen!2sin"
+                    width="100%"
+                    height="500"
+                    style={{ border: 0 }}   
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+            </div>
+
         </div>
     )
 }

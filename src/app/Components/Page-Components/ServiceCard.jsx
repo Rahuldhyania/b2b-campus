@@ -13,22 +13,22 @@ const ServiceCard = ({
   linkpage
 }) => {
   return (
-    <div className="group relative w-full ] rounded-2xl p-6 md:p-3 
-            flex flex-col justify-between bg-white border border-[#5D38DE66]
-            transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:bg-[#CEC5FF] gap-y-2">
-      <Image
-        src={icon}
-        alt={title}
-        width={1000}
-        height={500}
-        className="transition-transform duration-300 group-hover:scale-110 max-w-16"
-        style={{ filter: `drop-shadow(0 0 6px ${color})` }}
-      />
+    <div className="group relative w-full ] rounded-2xl p-6 md:p-auto md:px-4 md:py-6 flex flex-col justify-between bg-white border border-[#5D38DE66] transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:bg-[#CEC5FF] gap-y-2">
+      <div className="flex justify-between items-center">
+        <Image
+          src={icon}
+          alt={title}
+          width={1000}
+          height={500}
+          className="transition-transform duration-300 group-hover:scale-110 max-w-16"
+          style={{ filter: `drop-shadow(0 0 6px ${color})` }}
+        />
 
-      <h2 className="text-[#6346FA] text-2xl ">
-        {title}
-      </h2>
-      <p className="text-black text-[14px]">
+        <h2 className="text-[#6346FA] text-2xl text-end">
+          {title}
+        </h2>
+      </div>
+      <p className="text-black text-[14px] pt-2">
         {des}
       </p>
 

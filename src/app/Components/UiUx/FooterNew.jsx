@@ -16,9 +16,9 @@ const footerData = [
     title: "Industrial Training",
     links: [
       {
-        id: 1,
-        page_name: "Graphic Design",
-        page_links: "/graphic-design-course"
+        id: 3,
+        page_name: "Freight Broker",
+        page_links: "/freight-broker"
       },
       {
         id: 2,
@@ -26,20 +26,31 @@ const footerData = [
         page_links: "/truck-dispatching"
       },
       {
-        id: 3,
-        page_name: "Freight Broker",
-        page_links: "/freight-broker"
-      },
-      {
-        id: 4,
-        page_name: "IOT",
-        page_links: "/iot"
+        id: 1,
+        page_name: "Graphic Design",
+        page_links: "/graphic-design-course"
       },
       {
         id: 5,
         page_name: "AI Course",
         page_links: "/ai-course"
       },
+      {
+        id: 14,
+        page_name: "Devops Engineer",
+        page_links: "/devops-course"
+      },
+      {
+        id: 15,
+        page_name: "Cyber Security",
+        page_links: "/cyber-security-course"
+      },
+      {
+        id: 4,
+        page_name: "IOT",
+        page_links: "/iot"
+      },
+
       {
         id: 6,
         page_name: "Web Development",
@@ -76,8 +87,8 @@ const footerData = [
         page_links: "/digital-marketing-course"
       },
       {
-        id:13 ,
-         page_name: "Python/Java Course",
+        id: 13,
+        page_name: "Python/Java Course",
         page_links: "/python-java-course"
       }
     ]
@@ -286,7 +297,7 @@ const FooterNew = () => {
               </span>
             </div>
           </div>
-          <div className="pt-8">
+          <div className="pt-8 md:pt-0">
             <h3 className="text-white text-3xl md:text-4xl pb-3">
               {footerData[1].title}
             </h3>

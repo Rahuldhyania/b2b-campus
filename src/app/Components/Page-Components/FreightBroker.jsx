@@ -124,7 +124,6 @@ const FreightBroker = () => {
                 "Strong communication skills + professional training are enough to start.",
         },
     ];
-
     const items = [
         {
             icon: "/images/45days.webp",
@@ -148,18 +147,16 @@ const FreightBroker = () => {
         },
     ];
     const program_data = [
-        { text: "US & Canada Freight Basics", icon: "/images/greencheck.webp" },
-        { text: "Shipper Search & Carrier Sourcing", icon: "/images/greencheck.webp" },
-        { text: "Rate Negotiation", icon: "/images/greencheck.webp" },
-        { text: "Broker–Shipper–Carrier Flow", icon: "/images/greencheck.webp" },
-        { text: "Load Booking & Carrier Relations", icon: "/images/greencheck.webp" },
-        { text: "Carrier Packets, BOL & COI", icon: "/images/greencheck.webp" },
-        { text: "Load Boards (DAT, Truckstop)", icon: "/images/greencheck.webp" },
-        { text: "Dispatch vs Brokerage", icon: "/images/greencheck.webp" },
-        { text: "KPIs & Daily Operations", icon: "/images/greencheck.webp" },
+        { text: "Freight broker fundamentals & US/Canada market overview", icon: "/images/greencheck.webp" },
+        { text: "Shipper & carrier sourcing strategies", icon: "/images/greencheck.webp" },
+        { text: "Load boards, freight lanes & pricing optimization", icon: "/images/greencheck.webp" },
+        { text: "Rate negotiation techniques & confirmations", icon: "/images/greencheck.webp" },
+        { text: "Contracts, compliance & risk management", icon: "/images/greencheck.webp" },
+        { text: "Client acquisition & starting your freight brokerage business", icon: "/images/greencheck.webp" },
+        { text: "Broker–Shipper–Carrier workflow & documentation", icon: "/images/greencheck.webp" },
+        { text: "KPIs, daily operations & performance tracking", icon: "/images/greencheck.webp" },
+        { text: "Real-world load booking & carrier management", icon: "/images/greencheck.webp" }
     ];
-
-
     const conjoin_data = [
         { text: "Students & freshers", icon: "/images/greencheck.webp" },
         { text: "Career switchers", icon: "/images/greencheck.webp" },
@@ -171,47 +168,46 @@ const FreightBroker = () => {
         {
             id: 1,
             number: 1,
-            title: "Expert US Freight Broker Trainers",
+            title: "Trusted Training Institute in Mohali, Punjab",
             description:
-                "Learn directly from professionals with 7–15 years of real brokerage experience.",
+                "Recognized institute offering quality freight broker training."
         },
         {
             id: 2,
             number: 2,
-            title: "Live Brokerage Operations Training",
+            title: "Industry-Experienced Freight & Logistics Mentors",
             description:
-                "Work on real load boards, real scenarios, and daily logistics tasks.",
+                "Learn from mentors with real US & Canada brokerage experience."
         },
         {
             id: 3,
             number: 3,
-            title: "1:1 Personal Mentorship",
+            title: "US & Canada Market–Focused Curriculum",
             description:
-                "Every student receives a dedicated mentor for continuous guidance.",
+                "Curriculum tailored for US & Canada freight brokerage."
         },
         {
             id: 4,
             number: 4,
-            title: "English Skill Boost",
+            title: "Live Load Board & Negotiation Training",
             description:
-                "Improve communication for broker calls, emails & negotiations.",
+                "Hands-on training with real load boards and client negotiations."
         },
         {
             id: 5,
             number: 5,
-            title: "Work-from-Home Setup Help",
+            title: "Offline Classroom + Online Live Classes",
             description:
-                "Get full support to build a professional, high-quality remote workspace.",
+                "Flexible learning with offline and live online sessions."
         },
         {
             id: 6,
             number: 6,
-            title: "Guaranteed Internship",
+            title: "Career Guidance, Freelancing & Business Support",
             description:
-                "Start working on real brokerage tasks immediately after course completion.",
-        },
+                "Expert support for career, freelancing, and business growth."
+        }
     ];
-
 
     return (
         <div>

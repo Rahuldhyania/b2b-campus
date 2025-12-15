@@ -19,23 +19,27 @@ const categories = [
 
 const coursesData = {
     AllCourses: [
+        { name: "Freight Broker", path: "/freight-broker" },
         { name: "Truck Dispatch", path: "/truck-dispatching" },
         { name: "Digital Marketing", path: "/digital-marketing-course" },
+        { name: "AI Course", path: "/ai-course" },
+        { name: "Cyber Security", path: "/cyber-security-course" },
+        { name: "DevOps Engineer", path: "/devops-course" },
         { name: "Web Development", path: "/web-development-course" },
         { name: "Graphic Design", path: "/graphic-design-course" },
-        { name: "Freight Broker", path: "/freight-broker" },
         { name: "Internet of Things (IoT)", path: "/iot" },
-        { name: "AI Course", path: "/ai-course" },
         { name: "Full Stack Development", path: "/full-stack-development" },
         { name: "Wordpress", path: "/wordpress-training-course" },
         { name: "Web Designing", path: "/web-designing-course" },
         { name: "Video Editing", path: "/video-editing" },
-        // { name: "Personality Development", path: "/personality-development" },
+
         { name: "Python & Java ", path: "/python-java-course" },
     ],
     Development: [
-        { name: "Internet of Things (IoT)", path: "/iot" },
+        { name: "Cyber Security", path: "/cyber-security-course" },
         { name: "AI Course", path: "/ai-course" },
+        { name: "DevOps Engineer", path: "/devops-course" },
+        { name: "Internet of Things (IoT)", path: "/iot" },
         { name: "Web Development", path: "/web-development-course" },
         { name: "Full Stack Development", path: "/full-stack-development" },
         { name: "Wordpress", path: "/wordpress-training-course" },

@@ -27,12 +27,12 @@ const WhyChoose = ({ featuresNumbered }) => {
                             title={'<span class="text-primary">Why Choose Our Institute?</span> <br/>'}
                             text_color={'text-secondary'}
                         />
-                        <div className='pt-3'>
+                        {/* <div className='pt-3'>
                             <Description
                                 description={'Practical, real-world training by US logistics experts.'}
                                 text_color={'text-secondary'}
                             />
-                        </div>
+                        </div> */}
                     </div>
                 </div>
 

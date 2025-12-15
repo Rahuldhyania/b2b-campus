@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Title from '../UiUx/Title';
 import Description from '../UiUx/Description';
 import Buttons from '../UiUx/Buttons';
+import Professionalskill from '../Page-Components/Professionalskill';
 const CanJoin = ({ conjoin_data }) => {
     return (
         <div>
@@ -71,6 +72,7 @@ const CanJoin = ({ conjoin_data }) => {
                     </section>
                 </div>
             </section>
+            <Professionalskill/>
         </div>
     )
 }

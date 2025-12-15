@@ -97,29 +97,30 @@ const TruckDispatcher = () => {
   const featuresMain = [
     {
       icon: "/images/globe2.webp",
-      title: "Massive Global Demand",
+      title: "Truck Dispatcher Opportunities in US & Canada",
       subtitle:
-        "The USA & Canada logistics industry is growing fast with thousands of new dispatcher openings.",
+        "Kickstart your career with high demand roles in the US & Canada logistics industry."
     },
     {
       icon: "/images/usertea.webp",
-      title: "Work-from-Home Flexibility",
+      title: "Remote Dispatch Executive from India",
       subtitle:
-        "Earn from anywhere in India while working with international trucking companies.",
+        "Work from anywhere in India managing shipments and coordinating with international trucking companies."
     },
     {
       icon: "/images/moneyhigh.webp",
-      title: "High-Income Potential",
+      title: "Freelance Truck Dispatcher Potential",
       subtitle:
-        "Make ₹25,000–₹85,000 per month or up to $2,000/month with global clients.",
+        "Earn ₹40,000–₹1,50,000+ per month depending on skills and workload."
     },
     {
       icon: "/images/digree.webp",
       title: "No Degree Required",
       subtitle:
-        "Anyone can start — strong communication skills and proper training are enough.",
+        "Anyone can start — strong communication skills and proper training are enough."
     },
   ];
+
   const items = [
     {
       icon: "/images/45days.webp",
@@ -143,15 +144,15 @@ const TruckDispatcher = () => {
     },
   ];
   const program_data = [
-    { text: "US & Canada Trucking System", icon: "/images/greencheck.webp" },
-    { text: "Live Load Booking (DAT, Truckstop)", icon: "/images/greencheck.webp" },
-    { text: "Broker Communication", icon: "/images/greencheck.webp" },
-    { text: "Rate Negotiation", icon: "/images/greencheck.webp" },
-    { text: "Load Planning & Route Optimization", icon: "/images/greencheck.webp" },
-    { text: "Safety & Compliance", icon: "/images/greencheck.webp" },
-    { text: "Carrier Packets + Invoicing", icon: "/images/greencheck.webp" },
-    { text: "Live Dispatch Practice with Real Loads", icon: "/images/greencheck.webp" },
-    { text: "Real-Time Operations", icon: "/images/greencheck.webp" },
+    { text: "Truck dispatch fundamentals (US & Canada market)", icon: "/images/greencheck.webp" },
+    { text: "Working with drivers, brokers & freight companies", icon: "/images/greencheck.webp" },
+    { text: "Load boards (DAT, Truckstop – demo training)", icon: "/images/greencheck.webp" },
+    { text: "Rate negotiation & route planning", icon: "/images/greencheck.webp" },
+    { text: "Time zones, compliance & dispatch documentation", icon: "/images/greencheck.webp" },
+    { text: "Billing, invoicing & problem handling", icon: "/images/greencheck.webp" },
+    { text: "How to start your own truck dispatch business", icon: "/images/greencheck.webp" },
+    { text: "Real-world dispatch workflow & operations", icon: "/images/greencheck.webp" },
+    { text: "Career growth & work-from-home setup guidance", icon: "/images/greencheck.webp" }
   ];
   const conjoin_data = [
     { text: "Students & freshers", icon: "/images/greencheck.webp" },
@@ -164,41 +165,42 @@ const TruckDispatcher = () => {
   const featuresNumbered = [
     {
       id: 1,
-      number: 1, // correct property name
-      title: "Expert US Logistics Trainers",
-      description: "Learn directly from professionals with 7–15 years of real industry experience.",
+      number: 1,
+      title: "Trusted logistics & IT training institute in Mohali",
+      description: "Recognized institute offering professional truck dispatch and logistics training."
     },
     {
       id: 2,
       number: 2,
-      title: "Live Dispatch Training",
-      description: "Work on real loads and real scenarios — not just theory.",
+      title: "Trainers with real truck dispatch industry experience",
+      description: "Learn from mentors who have hands-on experience in US & Canada freight operations."
     },
     {
       id: 3,
       number: 3,
-      title: "1:1 Personal Mentorship",
-      description: "Every student gets a dedicated mentor for guidance.",
+      title: "US & Canada market-oriented curriculum",
+      description: "Curriculum designed to meet real-world logistics and dispatch requirements of US & Canada markets."
     },
     {
       id: 4,
       number: 4,
-      title: "English Skill Boost",
-      description: "Improve communication for calls, emails, and client interaction.",
+      title: "Live load boards & dispatch workflow training",
+      description: "Gain practical skills with real load boards and end-to-end dispatch workflow practice."
     },
     {
       id: 5,
       number: 5,
-      title: "Work-from-Home Setup Help",
-      description: "Get complete guidance to build a professional remote workspace.",
+      title: "Offline classroom + Online live sessions",
+      description: "Flexible learning options with interactive offline and live online sessions."
     },
     {
       id: 6,
       number: 6,
-      title: "Guaranteed Internship",
-      description: "Gain hands-on experience immediately after completing the course.",
-    },
+      title: "Job, freelancing & agency-setup guidance",
+      description: "Get career support, freelancing tips, and guidance to start your own dispatch agency."
+    }
   ];
+
   return (
     <div>
       <CoursesBanner

@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import React, { useState } from "react";
-import footerlogo from "../../../../public/images/footerlogo.webp";
+import footerlogo from "../../../../public/images/footerlogo.png";
 import Image from "next/image";
 
 import Footerfacebook from "../../../../public/images/Footerfacebook.webp";

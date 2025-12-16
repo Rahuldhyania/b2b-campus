@@ -114,7 +114,54 @@ const allVideoCourses = [
         des: "Boost your website traffic",
         category: "Marketing & Bussiness",
         videoLink: "https://www.youtube.com/watch?v=HJwRUpkgY3Q",
-    }
+    },
+//   sdfsad
+        {
+        id: 15,
+        title: "Marketing & Bussiness",
+        des: "Boost your website traffic",
+        category: "Graphics",
+        videoLink: "https://www.youtube.com/watch?v=G1Fr_3xvMF8",
+    },
+    
+        {
+        id: 16,
+        title: "Marketing & Bussiness",
+        des: "Boost your website traffic",
+        category: "Marketing & Bussiness",
+        videoLink: "https://www.youtube.com/watch?v=LPJxf7yq8Ao",
+    },
+    
+        {
+        id: 17,
+        title: "Marketing & Bussiness",
+        des: "Boost your website traffic",
+        category: "Marketing & Bussiness",
+        videoLink: "https://www.youtube.com/watch?v=f6Ma7Jsdiic",
+    },
+    
+        {
+        id: 18,
+        title: "Marketing & Bussiness",
+        des: "Boost your website traffic",
+        category: "Marketing & Bussiness",
+        videoLink: "https://www.youtube.com/watch?v=HJwRUpkgY3Q",
+    },
+        {
+        id: 19,
+        title: "Marketing & Bussiness",
+        des: "Boost your website traffic",
+        category: "Graphics",
+        videoLink: "https://www.youtube.com/watch?v=1G4yvwvHyRU",
+    },
+        {
+        id: 20,
+        title: "Marketing & Bussiness",
+        des: "Boost your website traffic",
+        category: "Truck Dispatching",
+        videoLink: "https://www.youtube.com/watch?v=9_Z_SavZPNM",
+    },
+    
 ];
 
 // Helper Functions

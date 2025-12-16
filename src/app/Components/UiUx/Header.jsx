@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import B2BCAMPUSLOGO from "../../../../public/images/B2B CAMPUS LOGO-02 1.webp";
+import B2BCAMPUSLOGO from "../../../../public/images/B2B CAMPUS LOGO-02 1.png";
 import Buttons from "./Buttons";
 import { motion } from "framer-motion";
 import arrowdown from "../../../../public/icons/arrowdown.svg";

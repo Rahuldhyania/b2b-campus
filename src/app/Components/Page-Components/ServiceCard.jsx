@@ -28,7 +28,7 @@ const ServiceCard = ({
           {title}
         </h2>
       </div>
-      <p className="text-black text-[14px] pt-2">
+      <p className="text-black text-[12px] 2xl:text-[14px] pt-2">
         {des}
       </p>
 
@@ -50,8 +50,7 @@ const ServiceCard = ({
 export default function ServicesSection({ courses, clickscroll }) {
   return (
     <div className="py-10">
-      <div className="md:w-[90%] cus_container grid 
-                grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+      <div className="md:w-[90%] cus_container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6">
         {courses.map(item =>
           <ServiceCard
             key={item.id}

@@ -12,6 +12,8 @@ import AboutCourse from "../Courses/AboutCourse";
 import freightbroker_leftbanner from "../../../../public/images/freightbroker_leftbanner.webp";
 import freightbroker_rightbanner from "../../../../public/images/freightbroker_rightbanner.webp";
 import freight_leftposter from "../../../../public/images/freight_leftposter.webp"
+import CourseDetail from '../Courses/CourseDetail';
+import CareerOpportunities from '../Courses/CareerOpportunities';
 const faq_data = [
     {
         q: "Is this course good for beginners?",
@@ -208,7 +210,38 @@ const FreightBroker = () => {
                 "Expert support for career, freelancing, and business growth."
         }
     ];
-
+    const course_detail = [
+        'Course Duration: 30–45 Days',
+        'Training Mode: Offline (Mohali) | Online (India)',
+        'Eligibility: 12th pass, basic English & computer skills',
+        'Certification: Yes (B2B Campus)'
+    ];
+    const careeropportunitie = [
+        {
+            id: 1,
+            title: "Freight Broker (US & Canada Market)",
+            description:
+                "Build a successful career as a Freight Broker handling US & Canada logistics operations. Learn end-to-end freight brokerage processes, carrier management, rate negotiation, and real-time shipment coordination for international markets."
+        },
+        {
+            id: 2,
+            title: "Remote Freight Broker from India",
+            description:
+                "Work as a Remote Freight Broker from India and manage international shipments digitally. Get trained to work with US & Canadian clients, use industry-standard brokerage tools, and earn in global markets while working from home."
+        },
+        {
+            id: 3,
+            title: "Logistics Coordinator / Brokerage Executive",
+            description:
+                "Start your career as a Logistics Coordinator or Brokerage Executive by managing loads, tracking shipments, communicating with carriers, and ensuring smooth freight operations across domestic and international routes."
+        },
+        {
+            id: 4,
+            title: "Start Your Own Freight Brokerage Business",
+            description:
+                "Learn how to launch and grow your own Freight Brokerage Business. From legal setup and compliance to client acquisition, carrier onboarding, and profit scaling — get complete guidance to become an independent freight broker."
+        }
+    ];
     return (
         <div>
             <CoursesBanner
@@ -230,14 +263,25 @@ const FreightBroker = () => {
                 title={'<span class="text-primary">45 Days Intensive </span> <br/> Freight Broker Program'}
             />
             <AboutCourse
-                title={'About Freight Broker Training Course'}
+                title={'Freight Broker Course by B2B Campus Mohali, Punjab (India)'}
                 description1={`
-                  The Freight Broker Training Course is a dynamic and industry-focused program crafted to equip aspiring freight brokers and agents with the essential skills and insider knowledge needed to thrive in the logistics and transportation sector.`}
+                  Build a Global Career in US & Canada Freight Brokerage with B2B Campus.`}
                 description2={`
-                   Through this hands-on freight broker course, participants dive deep into real-world freight operations—learning how to connect shippers and carriers, negotiate rates, manage loads, and comply with federal regulations. The program also covers business setup, marketing, and load board mastery.`}
+                   B2B Campus, Mohali offers a professionally designed Freight Broker Course for students, working professionals, and entrepreneurs who want to build a successful career in the US & Canada logistics and freight brokerage industry. Our program focuses on real-world brokerage operations, not just theory, making you industry-ready from day one.`}
                 description3={`
-                   Learners of this freight broker training open doors to high-demand opportunities in one of the fastest-growing industries in North America.
-          `}
+                   With expert trainers, practical tools, and live market exposure, B2B Campus prepares you to work confidently with shippers, carriers, and dispatchers, negotiate profitable freight rates, and manage complete brokerage operations.
+            `}
+            />
+            <CourseDetail
+                course_detail={course_detail}
+            />
+            <CareerOpportunities
+                careeropportunitie={careeropportunitie}
+                lowerdata={true}
+                lower_title1='Learn at B2B Campus, Mohali'
+                lower_description1={'Located in Mohali, Punjab, B2B Campus provides an ideal learning environment with hands-on training, personalized mentoring, and industry exposure for global logistics careers.'}
+                lower_title2={'Enroll with B2B Campus Today'}
+                lower_description2={'Take the first step toward a high-growth logistics career.'}
             />
             <CourseCareerSupport />
             <WhyChoose featuresNumbered={featuresNumbered} />

@@ -9,7 +9,7 @@ const ContactusBanner = () => {
         >
             <div className="cus_container py-12 md:py-16">
                 <div className="grid grid-cols-[3fr_2fr] gap-6">
-                    <div>
+                    <div className='flex items-center'>
                         <div>
                             <Title
                                 title={'Get in touch with us'}
@@ -31,7 +31,7 @@ const ContactusBanner = () => {
                                             <rect width="24" height="24" fill="none" />
                                             <path fill="#6346fa" d="M19.07 13.88L13 19.94V22h2.06l6.06-6.07m1.58-2.35l-1.28-1.28a.52.52 0 0 0-.38-.17c-.15.01-.29.06-.39.17l-1 1l2.05 2l1-1c.19-.2.19-.52 0-.72M11 18H4V8l8 5l8-5v2h2V6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h7zm9-12l-8 5l-8-5z" />
                                         </svg>
-                                        Email : <span className='mx-3'> <a href="mailto:hello@campus.b2bcampus.com" target='_blank'>hello@campus.b2bcampus.com</a></span>
+                                        Email : <span className='mx-3'> <a href="mailto:hello@b2bcampus.com" target='_blank'>hello@b2bcampus.com</a></span>
                                     </p>
                                 </div>
                                 <div>

@@ -39,7 +39,7 @@ export const Coursesbtn = [
 ];
 
 const allCourses = [
-    {
+  {
     id: 6,
     title: "Freight Broker",
     des: "B2B Campus – Where Freight Broker Careers Begin and Global Logistics Professionals Are Built.",
@@ -50,7 +50,7 @@ const allCourses = [
     page_link: "/freight-broker",
     img: arrows2
   },
-    {
+  {
     id: 2,
     title: "Truck Dispatch",
     des: "B2B Campus – Learn Truck Dispatch Once, Work Globally Forever.",
@@ -64,7 +64,7 @@ const allCourses = [
   {
     id: 1,
     title: "Graphic Design",
-    des: "Create visuals that stand out",
+    des: "B2B Campus – Learn Graphic Design and Create Visuals That Make Brands Stand Out.",
     category: "Graphics",
     icon: GraphicIcon,
     color: "#0A9DFF",
@@ -72,7 +72,7 @@ const allCourses = [
     page_link: "/graphic-design-course",
     img: arrowicon
   },
-   {
+  {
     id: 4,
     title: "AI Course",
     des: "B2B Campus – Learn Artificial Intelligence Today, Lead Tomorrow’s Technology.",
@@ -83,7 +83,7 @@ const allCourses = [
     page_link: "/ai-course",
     img: arrows4
   },
-     {
+  {
     id: 14,
     title: "Cyber Security",
     des: "B2B Campus – Learn Cyber Security Today, Protect the Digital World Tomorrow.",
@@ -94,7 +94,7 @@ const allCourses = [
     page_link: "/ai-course",
     img: arrows4
   },
-       {
+  {
     id: 15,
     title: "DevOps Engineer",
     des: "B2B Campus – Learn DevOps Today, Automate and Deploy Tomorrow.",
@@ -107,8 +107,8 @@ const allCourses = [
   },
   {
     id: 3,
-    title: "IOT",
-    des: "Automate, connect, and control",
+    title: "Internet of Things (IOT)",
+    des: "B2B Campus – Learn IoT and Build Smart, Connected, and Automated Solutions.",
     category: "Development",
     icon: icon11,
     color: "#0A9DFF",
@@ -116,11 +116,10 @@ const allCourses = [
     page_link: "/iot",
     img: arrows4
   },
- 
   {
     id: 8,
     title: "Web Development",
-    des: "Your vision—built for the web",
+    des: "B2B Campus – Learn Web Development and Build High-Performance Modern Websites.",
     category: "Development",
     icon: DevIcon,
     color: "#0A9DFF",
@@ -131,7 +130,7 @@ const allCourses = [
   {
     id: 7,
     title: "Full Stack Development",
-    des: "Building end-to-end digital solutions",
+    des: "B2B Campus – Learn Full Stack Development and Build End-to-End Digital Products.",
     category: "Development",
     icon: icon7,
     color: "#0A9DFF",
@@ -142,7 +141,7 @@ const allCourses = [
   {
     id: 11,
     title: "Wordpress",
-    des: "Build websites fast and easy",
+    des: "B2B Campus – Learn WordPress and Build Professional Websites with Ease.",
     category: "Development",
     icon: icon9,
     color: "#0A9DFF",
@@ -150,21 +149,10 @@ const allCourses = [
     page_link: "/wordpress-training-course",
     img: arrows4
   },
-  // {
-  //   id: 13,
-  //   title: "Personality Development",
-  //   des: "Unlock your potential with essential soft skills",
-  //   category: "Development",
-  //   icon: icon11,
-  //   color: "#0A9DFF",
-  //   buttonText: "Learn more",
-  //   page_link: "/personality-development",   
-  //   img: arrows4
-  // },
   {
     id: 10,
     title: "Web Designing",
-    des: "Designs that shape great websites",
+    des: "B2B Campus – Learn Web Designing and Craft User-Friendly, Creative Interfaces.",
     category: "Development",
     icon: icon8,
     color: "#0A9DFF",
@@ -175,7 +163,7 @@ const allCourses = [
   {
     id: 5,
     title: "Video Editing",
-    des: "Edit that tells your story",
+    des: "B2B Campus – Learn Video Editing and Create Impactful Visual Stories.",
     category: "Graphics",
     icon: VideoIcon,
     color: "#0A9DFF",
@@ -186,7 +174,7 @@ const allCourses = [
   {
     id: 12,
     title: "Digital Marketing",
-    des: "Grow your brand online",
+    des: "B2B Campus – Learn Digital Marketing and Grow Brands in the Online World.",
     category: "Marketing & Bussiness",
     icon: icon10,
     color: "#0A9DFF",
@@ -195,6 +183,7 @@ const allCourses = [
     img: arrows5
   }
 ];
+
 
 
 export default function PopularCourses({ clickscroll }) {

@@ -10,7 +10,7 @@ function ContactForm({ onCloseModal }) {
     lastname: "",
     mobile: "",
     email: "",
-    course: "",
+    notes: "",
     sheetType: "b2bcampus contact"
   });
 
@@ -37,7 +37,7 @@ function ContactForm({ onCloseModal }) {
       mobile: formData.mobile,
       email: formData.email,
 
-      "cf_1192[]": formData.course,
+      cf_1196: formData.notes, // Notes field
       cf_1298: formData.sheetType
     };
 
@@ -60,7 +60,7 @@ function ContactForm({ onCloseModal }) {
           lastname: "",
           mobile: "",
           email: "",
-          course: "",
+          notes: "",
           sheetType: "b2bcampus contact"
         });
 
@@ -83,8 +83,7 @@ function ContactForm({ onCloseModal }) {
             Thank you for filling out the form!
           </h2>
           <p className="text-gray-600 text-center mb-6">
-            Thank you for filling out the form! <br />
-            Our team will get in touch with you shortly to guide you further.
+            Our team will get in touch with you shortly. <br />
             Get ready to start your journey with the No.1 Training Institute in Mohali!
           </p>
         </div>
@@ -135,41 +134,15 @@ function ContactForm({ onCloseModal }) {
               required
             />
 
-            <select
-              name="course"
-              value={formData.course}
+            {/* Notes Textarea */}
+            <textarea
+              name="notes"
+              value={formData.notes}
               onChange={handleChange}
-              className="border border-gray-300 rounded-lg px-4 py-3 bg-purple-50 w-full"
-              required
-            >
-              <option value="">Select Course</option>
-              <option value="Truck Dispatch">Truck Dispatch</option>
-              <option value="Freight Broker">Freight Broker</option>
-              <option value="Artificial Intelligence & Data Science">
-                Artificial Intelligence / Data Science
-              </option>
-              <option value="IOT">Internet Of Things (IOT)</option>
-              <option value="Web Designing">Web Designing</option>
-              <option value="Web Development">Web Development</option>
-              <option value="Digital Marketing">Digital Marketing</option>
-              <option value="Graphic Designing">Graphic Designing</option>
-              <option value="Video Editing">Video Editing</option>
-              <option value="WordPress">WordPress</option>
-              <option value="PHP">PHP</option>
-              <option value="React Js">React Js</option>
-              <option value="React Native">React Native</option>
-              <option value="Python">Python</option>
-              <option value="Mern Stack">MERN Stack</option>
-              <option value="Shopify App Development">
-                Shopify App Development
-              </option>
-              <option value="Shopify Theme Development">
-                Shopify Theme Development
-              </option>
-              <option value="Personality Development">
-                Personality Development
-              </option>
-            </select>
+              placeholder="Your Message / Notes"
+              rows="4"
+              className="border border-gray-300 rounded-lg px-4 py-3 bg-purple-50 w-full resize-none"
+            />
 
             <input type="hidden" name="sheetType" value="b2bcampus contact" />
 
@@ -181,7 +154,6 @@ function ContactForm({ onCloseModal }) {
               />
             </div>
           </div>
-
         </form>
       )}
     </div>

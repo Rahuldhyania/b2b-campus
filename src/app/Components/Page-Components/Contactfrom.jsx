@@ -1,7 +1,6 @@
 "use client";
-
 import React, { useState } from "react";
-// import "./Newcrmform.css";
+import { Coursesdata } from "@/app/Data/CoursesData";
 import { toast } from "react-toastify";
 import Buttons from "../UiUx/Buttons";
 function Contactfrom({ onCloseModal }) {
@@ -19,7 +18,6 @@ function Contactfrom({ onCloseModal }) {
       [e.target.name]: e.target.value
     });
   };
-
   const handleSubmit = async e => {
     e.preventDefault();
 
@@ -65,7 +63,6 @@ function Contactfrom({ onCloseModal }) {
       toast.error("Server error!");
     }
   };
-
   return (
     <div className="p-4 border-2 border-[#6346FA66] bg-white shadow-[0px_0px_13px_7px_#00000038] rounded-3xl">
       <div className="form-wrapper h-max">
@@ -89,7 +86,6 @@ function Contactfrom({ onCloseModal }) {
                   Let us help you with enrollment, courses, and more.
                 </p>
 
-                {/* Bind form to handleSubmit */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <input
                     type="text"
@@ -136,38 +132,13 @@ function Contactfrom({ onCloseModal }) {
                     required
                   >
                     <option value="">Select Cource</option>
-                    <option value="Truck Dispatch">
-                      Truck Dispatch
-                    </option>
-                    <option value="Freight Broker">
-                      Freight Broker
-                    </option>
-                    <option value="Artificial intelligence & Data Science">Artificial Intelligence / Data Science</option>
-                    <option value="IOT">Internet Of Things(IOT)</option>
-                    <option value="Web Designing">Web Designing</option>
-                    <option value="Web Development">Web Development</option>
-                    <option value="Digital marketing">
-                      Digital marketing
-                    </option>
-                    <option value="Video Editing">Video Editing</option>
-                    <option value="Graphic Designing">
-                      Graphic Designing
-                    </option>
-                    <option value="Wordpress">Wordpress</option>
-                    <option value="Php">Php</option>
-                    <option value="React Js">React Js</option>
-                    <option value="React Native">React Native</option>
-                    <option value="Python">Python</option>
-                    <option value="Mern Stack">Mern Stack</option>
-                    <option value="Shopify App Development">
-                      Shopify App Development
-                    </option>
-                    <option value="Shopify Theme Development">
-                      Shopify Theme Development
-                    </option>
-                    <option value="Personality Development">
-                      Personality Development
-                    </option>
+                    {
+                      Coursesdata.map((data, index) => (
+                        <option value={data.name} key={index}>
+                          {data.name}
+                        </option>
+                      ))
+                    }
                   </select>
 
                   <div className="buttons text-[25px] flex justify-center mt-6 mb-6 sm:col-span-2">

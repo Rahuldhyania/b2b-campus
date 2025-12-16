@@ -227,6 +227,15 @@ const FooterNew = () => {
                 className="max-w-[220px] m-auto md:m-0"
               />
             </Link>
+            <div className="flex gap-3 sm:gap-4 mt-2 sm:mt-0 pt-4">
+            {socialLinks.map((item, i) =>
+              <Link href={item.url} key={i} target="_blank">
+                <div className="p-3 sm:p-[11px] rounded-full bg-[#4924C9] flex justify-center items-center transition-transform duration-300 hover:scale-110">
+                  <Image src={item.icon} width={20} height={20} alt="" />
+                </div>
+              </Link>
+            )}
+          </div>
           </div>
           <div>
             <Newletterfrom />
@@ -366,15 +375,6 @@ const FooterNew = () => {
           <p className="text-base opacity-80 text-center sm:text-left text-white">
             © B2B Campus. All Rights Reserved 2025.
           </p>
-          <div className="flex gap-3 sm:gap-4 mt-2 sm:mt-0">
-            {socialLinks.map((item, i) =>
-              <Link href={item.url} key={i} target="_blank">
-                <div className="p-3 sm:p-[11px] rounded-full bg-[#4924C9] flex justify-center items-center transition-transform duration-300 hover:scale-110">
-                  <Image src={item.icon} width={20} height={20} alt="" />
-                </div>
-              </Link>
-            )}
-          </div>
         </div>
       </div>
     </div>

@@ -65,44 +65,44 @@ const faq_data = [
   }
 ];
 const Homewrap = () => {
-    const enrolRef = useRef(null);
-    const [width, setWidth] = useState(1200); 
-    useEffect(() => {
-        setWidth(window.innerWidth);
-        console.log(window.innerWidth, "innerWidth");
-    }, []);
+  const enrolRef = useRef(null);
+  const [width, setWidth] = useState(1200);
+  useEffect(() => {
+    setWidth(window.innerWidth);
+    console.log(window.innerWidth, "innerWidth");
+  }, []);
 
-    const scrollToEnrolment = () => {
-        enrolRef.current?.scrollIntoView({
-            behavior: "smooth",
-            top: width < 768 ? 700 : 0,
-        });
-    };
+  const scrollToEnrolment = () => {
+    enrolRef.current?.scrollIntoView({
+      behavior: "smooth",
+      top: width < 768 ? 700 : 0,
+    });
+  };
 
-    return (
-        <div>
-            <div className="" ref={enrolRef}>
-                <Banner />
-            </div>
-            <div className="main-bg">
-                <WhyChooseSection />
-            </div>
-            <PopularCourses clickscroll={scrollToEnrolment} />
-            <Youtubevideo />
-            <TrainingSection clickscroll={scrollToEnrolment}/>
-            <Professionalskill clickscroll={scrollToEnrolment}/>
-            <Whatstudentget />
-            <div className="main-bg">
-                <Teachcareer clickscroll={scrollToEnrolment} />
-                <CampusProgram clickscroll={scrollToEnrolment} />
-            </div>
-            <TestimonialsSlider />
-            <TopCompanys clickscroll={scrollToEnrolment} />
-            <FeaturedIn clickscroll={scrollToEnrolment}/>
-            <FaqSection faq_data={faq_data} />
-            <Journeywithb2b2 />
-        </div>
-    );
+  return (
+    <div>
+      <div className="" ref={enrolRef}>
+        <Banner />
+      </div>
+      <div className="main-bg">
+        <WhyChooseSection />
+      </div>
+      <PopularCourses clickscroll={scrollToEnrolment} />
+      <Youtubevideo />
+      <TrainingSection clickscroll={scrollToEnrolment} />
+      <Professionalskill clickscroll={scrollToEnrolment} />
+      <Whatstudentget />
+      <div className="main-bg">
+        <Teachcareer clickscroll={scrollToEnrolment} />
+        <CampusProgram clickscroll={scrollToEnrolment} />
+      </div>
+      <TestimonialsSlider />
+      <TopCompanys clickscroll={scrollToEnrolment} />
+      <FeaturedIn clickscroll={scrollToEnrolment} />
+      <FaqSection faq_data={faq_data} />
+      <Journeywithb2b2 />
+    </div>
+  );
 };
 
 export default Homewrap;

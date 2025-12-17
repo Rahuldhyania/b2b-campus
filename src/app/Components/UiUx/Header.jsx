@@ -9,17 +9,14 @@ import EnrollModal from "./EnrollModal";
 import { motion } from "framer-motion";
 import arrowdown from "../../../../public/icons/arrowdown.svg";
 import menuarrow from "../../../../public/icons/menuarrow.svg";
-<<<<<<< HEAD
 import { hasEnrollmentToken, removeEnrollmentToken } from "@/lib/enrollment";
 
-=======
 import Footerfacebook from "../../../../public/images/Footerfacebook.webp";
 import linkedin from "../../../../public/images/linkedin.webp";
 import insta from "../../../../public/images/insta.webp";
 import pinterest from "../../../../public/icons/pinterest.svg";
 import twitter from "../../../../public/icons/twitter.svg";
 import youtube from "../../../../public/icons/youtube.svg";
->>>>>>> 8ca086a1c48b89c042070a2e9bd8b860702d547f
 const categories = [
   { name: "All Courses", key: "AllCourses" },
   { name: "Development", key: "Development" },
@@ -392,114 +389,27 @@ export default function Header() {
             onClick={() => setMegaOpen(false)}
           />
 
-<<<<<<< HEAD
-          <div className=" max-h-[80vh] fixed top-[60px] md:top-[86px] left-1/2 -translate-x-1/2 bg-white border border-[#D9D4FF] shadow-[0_4px_20px_rgba(93,56,222,0.15)] rounded-xl p-4 z-50 flex flex-col md:flex-row w-[95%] max-w-[1282px] gap-4 overflow-hidden">
+          <div className="max-h-[80vh] fixed top-[60px] md:top-[86px] left-1/2 -translate-x-1/2 bg-white border border-[#D9D4FF] shadow-[0_4px_20px_rgba(93,56,222,0.15)] rounded-xl p-4 z-50 flex flex-col md:flex-row w-[95%] max-w-[1282px] gap-4 overflow-hidden">
             <div className="absolute top-2 right-2 z-50">
               <button
                 onClick={() => setMegaOpen(false)}
-                className="text-gray-700 text-2xl font-bold"
+                className="text-gray-700 text-2xl font-bold hover:text-purple-600 transition-colors"
               >
                 ×
               </button>
-=======
-                    <div className="xl:hidden cursor-pointer" onClick={() => setOpen(!open)}>
-                        <div className="space-y-1">
-                            <span className="block w-6 h-[3px] bg-gray-700 transition-all" style={{ rotate: open ? "45deg" : "0deg", translateY: open ? "8px" : "0px" }} />
-                            <span className={`block w-6 h-[3px] bg-gray-700 transition-all ${open ? "opacity-0" : "opacity-100"}`} />
-                            <span className="block w-6 h-[3px] bg-gray-700 transition-all" style={{ rotate: open ? "-45deg" : "0deg", translateY: open ? "-8px" : "0px" }} />
-                        </div>
-                    </div>
-                </div>
-
-                <div className={`xl:hidden absolute top-full left-0 w-full bg-white shadow-lg rounded-b-lg overflow-hidden transition-all duration-500 ${open ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"}`}>
-                    <ul className="flex flex-col gap-4 text-[18px] px-4 py-4">
-                        {menuItems.map((item) => (
-                            <li key={item.name}>
-                                <Link
-                                    href={item.path}
-                                >
-                                    <span className={`flex py-2 px-2 ${pathname === item.path ? "text-purple-600 font-semibold" : "text-gray-700"}`}
-
-                                        onClick={() => {
-                                            if (item.name === "Courses") {
-                                                setMegaOpen(true);
-                                                setOpen(false);
-                                            } else {
-                                                setOpen(false);
-                                            }
-                                        }}>
-                                        {item.name}
-                                        {
-                                            item.name == "Courses" ?
-                                                <Image
-                                                    src={arrowdown}
-                                                    width={20}
-                                                    height={20}
-                                                    alt="arrowdown"
-                                                    className={`ml-1 transition-transform duration-300 ${megaOpen ? "rotate-180" : "rotate-0"}`}
-                                                />
-                                                :
-                                                null
-                                        }
-                                    </span>
-                                </Link>
-                            </li>
-                        ))}
-                        <Buttons btnname="Enroll Now" text_color="text-white" />
-                        <div className="pt-4">
-                            <div className="flex gap-2">
-                                {socialLinks.map((item, i) =>
-                                    <Link href={item.url} key={i} target="_blank">
-                                        <div className="p-3 sm:p-[11px] rounded-full bg-[#4924C9] flex justify-center items-center transition-transform duration-300 hover:scale-110">
-                                            <Image src={item.icon} width={18} height={18} alt="" />
-                                        </div>
-                                    </Link>
-                                )}
-                            </div>
-                        </div>
-                        <div className="pt-4 pb-6">
-                           <div className="flex items-start gap-3">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        className="w-7 h-7 md:w-12 md:h-12 shrink-0"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path
-                                            fill="#6346fa"
-                                            d="M19.5 22a1.5 1.5 0 0 0 1.5-1.5V17a1.5 1.5 0 0 0-1.5-1.5c-1.17 0-2.32-.18-3.42-.55a1.51 1.51 0 0 0-1.52.37l-1.44 1.44a14.77 14.77 0 0 1-5.89-5.89l1.43-1.43c.41-.39.56-.97.38-1.53c-.36-1.09-.54-2.24-.54-3.41A1.5 1.5 0 0 0 7 3H3.5A1.5 1.5 0 0 0 2 4.5C2 14.15 9.85 22 19.5 22"
-                                        />
-                                    </svg>
-
-                                    <p className="text-base md:text-2xl flex gap-2 leading-snug">
-                                        <span className="font-medium">Phone:</span>
-                                        
-                                        <a
-                                            href="tel:+919878300209"
-                                            className="ml-0 md:ml-3 hover:text-[var(--primary)] block md:inline"
-                                        >
-                                            +91 98783-00209
-                                        </a>
-                                    </p>
-                                </div>
-                        </div>
-                    </ul>
-                </div>
->>>>>>> 8ca086a1c48b89c042070a2e9bd8b860702d547f
             </div>
 
-            <div className="md:w-1/4 w-full md:border-r md:pb-12 pr-4 ">
-              <div className="flex flex-col gap-3 mb-4">
-                <Image
-                  src={B2BCAMPUSLOGO}
-                  width={1000}
-                  height={500}
-                  alt="B2BCampus Logo"
-                  className="w-10 md:w-[100px] md:h-[25px] hidden md:block"
-                />
-                <h2 className="text-xl text-[#5D38DE] font-semibold underline">
-                  Categories
-                </h2>
-              </div>
+            <div className="flex flex-col gap-3 mb-4">
+              <Image
+                src={B2BCAMPUSLOGO}
+                width={1000}
+                height={500}
+                alt="B2BCampus Logo"
+                className="w-10 md:w-[100px] md:h-[25px] hidden md:block"
+              />
+              <h2 className="text-xl text-[#5D38DE] font-semibold underline">
+                Categories
+              </h2>
 
               <ul className="overflow-y-auto max-h-[50vh] md:max-h-none">
                 {categories.map((cat) => (

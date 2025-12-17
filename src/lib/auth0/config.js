@@ -51,7 +51,7 @@ export async function getAuth0ManagementToken() {
         client_id: clientId,
         client_secret: clientSecret,
         audience: `https://${domain}/api/v2/`,
-        grant_type: 'client_credentials',
+        grant_type: 'client_credentials',   
       }),
     });
 

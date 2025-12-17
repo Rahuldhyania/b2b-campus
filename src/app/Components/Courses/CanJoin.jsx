@@ -72,7 +72,6 @@ const CanJoin = ({ conjoin_data }) => {
                     </section>
                 </div>
             </section>
-            <Professionalskill/>
         </div>
     )
 }

@@ -59,7 +59,6 @@ export async function getAuth0ManagementToken() {
       const error = await response.json();
       throw new Error(`Auth0 token request failed: ${JSON.stringify(error)}`);
     }
-
     const data = await response.json();
     return data.access_token;
   } catch (error) {

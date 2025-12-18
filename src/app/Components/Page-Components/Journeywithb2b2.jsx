@@ -8,15 +8,17 @@ import Buttons from '../UiUx/Buttons';
 import Image from 'next/image';
 import Contactfrom from './Contactfrom';
 import Contactfromfooter from './Contactfromfooter';
-import PlacedStudent from './PlacedStudent';
+import PlacedStudents from './PlacedStudent';
 
 const Journeywithb2b2 = ({ PlacedStudent }) => {
     return (
         <div>
             {
                 PlacedStudent === false ?
-                    null :
-                    <PlacedStudent showdata={1} rownumber={2} />
+                    <div>
+
+                    </div> :
+                    <PlacedStudents showdata={1} rownumber={2} />
             }
 
             <div className='md:py-12 pb-0 px-[3%]' >
@@ -60,73 +62,10 @@ const Journeywithb2b2 = ({ PlacedStudent }) => {
                                 <h2 className="text-[28px] sm:text-[47px] font-semibold text-[#6346FA] mb-2">
                                     Let&apos;s connect constellations
                                 </h2>
-
-                                {/* Form */}
                                 <Contactfromfooter />
-
-                                {/* Submit Button */}
-
                             </div>
                         </section>
-
                     </div>
-
-
-
-
-                    {/* <div className=" mobil-grp">
-                    <Image
-                        src={mobilegrp}
-                        width={1000}
-                        height={500}
-                        className='w-full max-w-[1386px] m-auto'
-                        alt='group img ' />
-                </div>
-
-                <section className=" absolute bottom-[45px] w-full flex justify-center py-16 px-4">
-                    <div className="max-w-2xl w-full text-center">
-
-                  
-                        <h2 className="text-[47px] text-start font-semibold text-[#6346FA]">
-                            Let’s connect constellations
-                        </h2>
-                        <p className="text-gray-600 mb-10 text-start text-[20.21px]">
-                            Let’s align our constellations! Reach out and let the magic of
-                            collaboration illuminate our skies.
-                        </p>
-
-               
-                        <form className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <input
-                                type="text"
-                                placeholder="First name"
-                                className="border border-gray-300 rounded-lg px-4 py-3 bg-purple-50 focus:outline-none focus:ring-2 focus:ring-purple-400"
-                            />
-                            <input
-                                type="text"
-                                placeholder="Last name"
-                                className="border border-gray-300 rounded-lg px-4 py-3 bg-purple-50 focus:outline-none focus:ring-2 focus:ring-purple-400"
-                            />
-                            <input
-                                type="email"
-                                placeholder="Email"
-                                className="border border-gray-300 rounded-lg px-4 py-3 bg-purple-50 focus:outline-none focus:ring-2 focus:ring-purple-400 col-span-1 sm:col-span-1"
-                            />
-                            <input
-                                type="text"
-                                placeholder="Phone Number"
-                                className="border border-gray-300 rounded-lg px-4 py-3 bg-purple-50 focus:outline-none focus:ring-2 focus:ring-purple-400"
-                            />
-                        </form>
-
-                
-                        <div className="buttons text-[25px] flex justify-center m-auto mt-[2%]">
-                            <Buttons btnname='Send it to the Moon' text_color={'text-white'} />
-                        </div>
-                    </div>
-                </section>
-                 */}
-
                 </div>
             </div>
         </div>
